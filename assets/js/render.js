@@ -26,7 +26,10 @@ function displayValue(v){
 
 /* ---- icône d'élément pour les dégâts / vol de vie élémentaires ---- */
 function elementIconFor(texte){
-  const m = texte.match(/^(Dommage|Vol de vie)\s+(Eau|Terre|Air|Feu|Neutre)/);
+  // Dégâts / vol de vie élémentaires : l'élément est entre parenthèses
+  // (ex: "Dommages : 20 à 22 (Feu)", "Vole 15 à 17 PDV (Eau)").
+  if (!/(Dommages|Vole)/.test(texte)) return "";
+  const m = texte.match(/\((Eau|Terre|Air|Feu|Neutre)\)/);
   if (!m) return "";
   const files = {
     "Eau": "WaterDamage.svg",
@@ -35,7 +38,7 @@ function elementIconFor(texte){
     "Feu": "FireDamage.svg",
     "Neutre": "NeutralDamage.svg",
   };
-  return `<img class="element" src="assets/img/icons/${files[m[2]]}" height="80%" alt="${m[2]}">`;
+  return `<img class="element" src="assets/img/icons/${files[m[1]]}" height="80%" alt="${m[1]}">`;
 }
 
 function buildEffectRows(effets, onglet, minRows = 5){
@@ -171,6 +174,66 @@ function renderHome(){
   `;
 }
 
+/* ---- ligne d'une statistique de morph ---- */
+function statCellHtml(stat){
+  const icon = stat.icone
+    ? `<img class="stat-cell-icon" src="${stat.icone}" alt="${stat.label}">`
+    : `<span class="stat-cell-icon placeholder"></span>`;
+  return `
+    <div class="stat-row-cell">
+      <span class="stat-cell-icon-wrap">${icon}</span>
+      <span class="stat-cell-label">${stat.label}</span>
+      <span class="stat-cell-sep"></span>
+      <span class="stat-cell-value">${displayValue(stat.value)}</span>
+    </div>`;
+}
+
+/* ---- tableau des caractéristiques de base d'une classe (section "Statistiques de base des morphs") ---- */
+function buildClassStatsTable(className){
+  const s = MORPH_STATS[className];
+  if (!s) return "";
+
+  const ICONS = {
+    "PV": "assets/img/icons/PV.svg",
+    "PA": "assets/img/icons/PA.svg",
+    "PM": "assets/img/icons/PM.svg",
+    "Initiative": "assets/img/icons/Ini.svg",
+    "Force": "assets/img/icons/EarthDamage.svg",
+    "Intelligence": "assets/img/icons/FireDamage.svg",
+    "Chance": "assets/img/icons/WaterDamage.svg",
+    "Agilité": "assets/img/icons/AirDamage.svg",
+    "Sagesse": "assets/img/icons/Wisdom.svg",
+    "Vitalité": "assets/img/icons/Vita.svg",
+  };
+
+  const stats = [
+    { label: "PV",          value: s.vie,          icone: ICONS["PV"] },
+    { label: "PA",          value: s.pa,           icone: ICONS["PA"] },
+    { label: "PM",          value: s.pm,           icone: ICONS["PM"] },
+    { label: "Initiative",  value: s.initiative,   icone: ICONS["Initiative"] },
+    { label: "Vitalité",    value: s.vitalite,     icone: ICONS["Vitalité"] },
+    { label: "Sagesse",     value: s.sagesse,      icone: ICONS["Sagesse"] },
+    { label: "Force",       value: s.force,        icone: ICONS["Force"] },
+    { label: "Intelligence", value: s.intelligence, icone: ICONS["Intelligence"] },
+    { label: "Chance",      value: s.chance,       icone: ICONS["Chance"] },
+    { label: "Agilité",     value: s.agilite,      icone: ICONS["Agilité"] },
+  ];
+
+  return `
+    <section class="class-stats-section">
+      <h3 class="class-stats-title">Caractéristiques</h3>
+      <div class="class-stats-table">
+        <div class="stat-row-cell stat-row-header">
+          <span class="stat-cell-icon-wrap"></span>
+          <span class="stat-cell-label">Caractéristique</span>
+          <span class="stat-cell-sep"></span>
+          <span class="stat-cell-value">Valeur</span>
+        </div>
+        ${stats.map(statCellHtml).join("")}
+      </div>
+    </section>`;
+}
+
 /* ---- page d'une classe : grille de sorts + panneau de détail ---- */
 function renderClass(className){
   const root = document.getElementById("app");
@@ -192,6 +255,7 @@ function renderClass(className){
           <div class="detail-placeholder">Sélectionne un sort pour voir ses détails.</div>
         </aside>
       </div>
+      ${buildClassStatsTable(className)}
     </div>
   `;
 }

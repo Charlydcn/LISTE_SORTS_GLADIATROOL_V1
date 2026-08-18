@@ -21,63 +21,31 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Change l'apparence : 10 tours (Point)"
+          "texte": "Etat Saoul (10 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PM non esquivable : 1, 10 tours (Point)"
+          "texte": "-1 PM (10 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Résist. % terre : 25, 10 tours (Point)"
+          "texte": "Effet inconnu #2182 (10 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Résist. % eau : 25, 10 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % air : 25, 10 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % feu : 25, 10 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % neutre : 25, 10 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Applique l'État TODO : 10 tours (Point)"
+          "texte": "Change l'apparence (10 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Change l'apparence : 10 tours (Point)"
+          "texte": "Etat Saoul (10 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Résist. % terre : 30, 10 tours (Point)"
+          "texte": "Effet inconnu #2182 (10 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Résist. % eau : 30, 10 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % air : 30, 10 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % feu : 30, 10 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % neutre : 30, 10 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Applique l'État TODO : 10 tours (Point)"
+          "texte": "Change l'apparence (10 tours)"
         }
       ]
     },
@@ -100,11 +68,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 16 à 21 (Point)"
+          "texte": "Dommages : 16 à 21 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 19 à 24 (Point)"
+          "texte": "Dommages : 19 à 24 (Feu)"
         }
       ]
     },
@@ -127,11 +95,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Faiblesse % feu : 10, 2 tours (Point)"
+          "texte": "10 % de faiblesse face au feu (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Faiblesse % feu : 12, 2 tours (Point)"
+          "texte": "12 % de faiblesse face au feu (2 tours)"
         }
       ]
     },
@@ -154,11 +122,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "-6 aux coups critiques (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Malus CC : 6, 3 tours (Point)"
+          "texte": "Fait reculer de 1 case(s)"
         }
       ]
     },
@@ -181,19 +149,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 13 à 22 (Air)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 13 à 22 (Point)"
+          "texte": "Fait reculer de 1 case(s)"
         },
         {
           "onglet": "critiques",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 15 à 24 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 15 à 24 (Point)"
+          "texte": "Fait reculer de 1 case(s)"
         }
       ]
     },
@@ -216,11 +184,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Faiblesse % eau : 10, 2 tours (Point)"
+          "texte": "10 % de faiblesse face à l'eau (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Faiblesse % eau : 12, 2 tours (Point)"
+          "texte": "12 % de faiblesse face à l'eau (2 tours)"
         }
       ]
     },
@@ -243,11 +211,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 14 à 22 (Point)"
+          "texte": "Dommages : 14 à 22 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 16 à 24 (Point)"
+          "texte": "Dommages : 16 à 24 (Terre)"
         }
       ]
     },
@@ -270,7 +238,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Porter (Point)"
+          "texte": "Porter un joueur"
         }
       ]
     },
@@ -293,11 +261,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Faiblesse % air : 10, 2 tours (Point)"
+          "texte": "10 % de faiblesse face à l'air (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Faiblesse % air : 12, 2 tours (Point)"
+          "texte": "12 % de faiblesse face à l'air (2 tours)"
         }
       ]
     },
@@ -320,19 +288,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Esquive PM : 50, 4 tours (Point)"
+          "texte": "Etat Enraciné (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Applique l'État TODO : 4 tours (Point)"
+          "texte": "+50 % de chance d'esquiver les pertes de PM (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Esquive PM : 100, 4 tours (Point)"
+          "texte": "Etat Enraciné (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Applique l'État TODO : 4 tours (Point)"
+          "texte": "+100 % de chance d'esquiver les pertes de PM (4 tours)"
         }
       ]
     },
@@ -355,7 +323,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Jeter (Point)"
+          "texte": "Jeter un joueur"
         }
       ]
     },
@@ -378,11 +346,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Faiblesse % terre : 10, 2 tours (Point)"
+          "texte": "10 % de faiblesse face à la terre (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Faiblesse % terre : 12, 2 tours (Point)"
+          "texte": "12 % de faiblesse face à la terre (2 tours)"
         }
       ]
     },
@@ -405,35 +373,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 4, 1 tours, 25% (Point)"
+          "texte": "Dans 25% des cas: Diminue les dommages de 150% (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "+EC : 15, 1 tours, 25% (Point)"
+          "texte": "Dans 25% des cas: +15 aux échecs critiques (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Enlève les envoûtements : 25% (Point)"
+          "texte": "Dans 25% des cas: Enlève les envoûtements"
         },
         {
           "onglet": "normaux",
-          "texte": "Diminue les dommages % : 150, 1 tours, 25% (Point)"
+          "texte": "Dans 25% des cas: PA perdus à la cible : 4 (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 4, 1 tours (Point)"
+          "texte": "Enlève les envoûtements"
         },
         {
           "onglet": "critiques",
-          "texte": "+EC : 15, 1 tours (Point)"
+          "texte": "Diminue les dommages de 150% (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Enlève les envoûtements (Point)"
+          "texte": "+15 aux échecs critiques (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Diminue les dommages % : 150, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 4 (1 tour)"
         }
       ]
     },
@@ -456,15 +424,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Enlève les envoûtements (Point)"
+          "texte": "Enlève les envoûtements"
         },
         {
           "onglet": "normaux",
-          "texte": "Change l'apparence (Point)"
+          "texte": "Change l'apparence"
         },
         {
           "onglet": "normaux",
-          "texte": "Enlève l'État TODO (Point)"
+          "texte": "Enlève l'état 'Saoul'"
         }
       ]
     },
@@ -487,11 +455,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 22 à 36 (Point)"
+          "texte": "Dommages : 22 à 36 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 36 à 45 (Point)"
+          "texte": "Dommages : 36 à 45 (Eau)"
         }
       ]
     },
@@ -514,43 +482,43 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 11, 3 tours (Point)"
+          "texte": "Change l'apparence (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+CC : 11, 3 tours (Point)"
+          "texte": "Etat Saoul (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "%dommages : 200, 3 tours (Point)"
+          "texte": "Augmente les dommages de 200% (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Change l'apparence : 3 tours (Point)"
+          "texte": "+11 de dommages (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Applique l'État TODO : 3 tours (Point)"
+          "texte": "+11 aux coups critiques (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 11, 4 tours (Point)"
+          "texte": "Change l'apparence (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+CC : 11, 4 tours (Point)"
+          "texte": "Etat Saoul (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "%dommages : 200, 4 tours (Point)"
+          "texte": "Augmente les dommages de 200% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Change l'apparence : 4 tours (Point)"
+          "texte": "+11 de dommages (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Applique l'État TODO : 4 tours (Point)"
+          "texte": "+11 aux coups critiques (4 tours)"
         }
       ]
     },
@@ -573,11 +541,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 16 à 30 (Cercle 2)"
+          "texte": "Dommages : 16 à 30 (Feu) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 26 à 40 (Cercle 2)"
+          "texte": "Dommages : 26 à 40 (Feu) (Cercle 2)"
         }
       ]
     },
@@ -600,11 +568,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 26 à 35 (Ligne 2)"
+          "texte": "Dommages : 26 à 35 (Terre) (Ligne 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 36 à 40 (Ligne 2)"
+          "texte": "Dommages : 36 à 40 (Terre) (Ligne 2)"
         }
       ]
     },
@@ -627,11 +595,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+PM : 3, 4 tours (Point)"
+          "texte": "+3 PM (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PM : 4, 4 tours (Point)"
+          "texte": "+4 PM (4 tours)"
         }
       ]
     },
@@ -654,7 +622,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 516"
         }
       ]
     },
@@ -677,11 +645,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (19) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (19) de 40% (4 tours)"
         }
       ]
     },
@@ -704,7 +672,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 2727"
         }
       ]
     }

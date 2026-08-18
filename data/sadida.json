@@ -21,11 +21,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 7, 4 tours (Cercle 10)"
+          "texte": "Dommages : 7 (Feu) (4 tours) (Cercle 10)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 12, 4 tours (Cercle 10)"
+          "texte": "Dommages : 12 (Feu) (4 tours) (Cercle 10)"
         }
       ]
     },
@@ -48,7 +48,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 114"
         }
       ]
     },
@@ -71,11 +71,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 11 à 18 (Point)"
+          "texte": "Dommages : 11 à 18 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 22 (Point)"
+          "texte": "Dommages : 22 (Terre)"
         }
       ]
     },
@@ -98,19 +98,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 6 à 10 (Point)"
+          "texte": "Dommages : 6 à 10 (Feu)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 6 à 10 (Point)"
+          "texte": "Dommages : 6 à 10 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 11 (Point)"
+          "texte": "Dommages : 11 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 11 (Point)"
+          "texte": "Dommages : 11 (Eau)"
         }
       ]
     },
@@ -133,19 +133,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 11 à 20 (Cercle 2)"
+          "texte": "PM perdus : 2 à 4 (1 tour) (Cercle 2)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PM : 2 à 4, 1 tours (Cercle 2)"
+          "texte": "Dommages : 11 à 20 (Feu) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 25 (Cercle 2)"
+          "texte": "PM perdus : 3 à 5 (1 tour) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PM : 3 à 5, 1 tours (Cercle 2)"
+          "texte": "Dommages : 25 (Feu) (Cercle 2)"
         }
       ]
     },
@@ -168,7 +168,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque créature statique (Point)"
+          "texte": "Invoque une créature statique"
         }
       ]
     },
@@ -191,7 +191,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature : 1 tours (Point)"
+          "texte": "Invoque : 42 (1 tour)"
         }
       ]
     },
@@ -214,7 +214,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Enlève les envoûtements : 1 tours (Point)"
+          "texte": "Enlève les envoûtements (1 tour)"
         }
       ]
     },
@@ -237,7 +237,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 116"
         }
       ]
     },
@@ -260,7 +260,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 117"
         }
       ]
     },
@@ -283,11 +283,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 16 à 18 (Cercle 4)"
+          "texte": "Dommages : 16 à 18 (Terre) (Cercle 4)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 19 (Cercle 4)"
+          "texte": "Dommages : 19 (Terre) (Cercle 4)"
         }
       ]
     },
@@ -310,19 +310,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 63 à 67 (Point)"
+          "texte": "-4 PM (2 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PM non esquivable : 4, 2 tours (Point)"
+          "texte": "PDV rendus : 63 à 67"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 68 (Point)"
+          "texte": "-5 PM (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perte PM non esquivable : 5, 2 tours (Point)"
+          "texte": "PDV rendus : 68"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 115"
         }
       ]
     },
@@ -368,11 +368,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 6 à 65 (Point)"
+          "texte": "Dommages : 6 à 65 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 65 (Point)"
+          "texte": "Dommages : 65 (Terre)"
         }
       ]
     },
@@ -395,11 +395,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 17 à 27 (Point)"
+          "texte": "Dommages : 17 à 27 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 26 à 27 (Point)"
+          "texte": "Dommages : 26 à 27 (Eau)"
         }
       ]
     },
@@ -422,19 +422,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre : 8, 6 tours (Cercle 10)"
+          "texte": "Dommages : 8 (Neutre) (6 tours) (Cercle 10)"
         },
         {
           "onglet": "normaux",
-          "texte": "-Intelligence : 200, 6 tours (Cercle 10)"
+          "texte": "-200 en intelligence (6 tours) (Cercle 10)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre : 10, 6 tours (Cercle 10)"
+          "texte": "Dommages : 10 (Neutre) (6 tours) (Cercle 10)"
         },
         {
           "onglet": "critiques",
-          "texte": "-Intelligence : 400, 6 tours (Cercle 10)"
+          "texte": "-400 en intelligence (6 tours) (Cercle 10)"
         }
       ]
     },
@@ -457,27 +457,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 16, 4 tours, pas les ennemis (Point)"
+          "texte": "Change l'apparence (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Change l'apparence : 4 tours, pas les ennemis (Point)"
+          "texte": "-100 PM (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PA non esquivable : 100, 4 tours, pas les ennemis (Point)"
+          "texte": "Réduction magique de 1000 (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PM non esquivable : 100, 4 tours, pas les ennemis (Point)"
+          "texte": "Réduction physique de 1000 (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Résistance magique : 1000, 4 tours, pas les ennemis (Point)"
+          "texte": "-100 PA (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Résistance physique : 1000, 4 tours, pas les ennemis (Point)"
+          "texte": "PDV rendus : 16 (4 tours)"
         }
       ]
     },
@@ -500,11 +500,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Air : 41 à 45, seulement invocations (Point)"
+          "texte": "Vole 41 à 45 PDV (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Air : 51 à 55, seulement invocations (Point)"
+          "texte": "Vole 51 à 55 PDV (Air)"
         }
       ]
     },
@@ -527,11 +527,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Créa invocation : 4, 5 tours (Point)"
+          "texte": "+4 créatures invocables (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Créa invocation : 5, 5 tours (Point)"
+          "texte": "+5 créatures invocables (5 tours)"
         }
       ]
     },
@@ -554,11 +554,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Poison TODO pdv/PA : 3 tours (Point)"
+          "texte": "1 PA utilisés font perdre 2 PDV (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Poison TODO pdv/PA : 4 tours (Point)"
+          "texte": "1 PA utilisés font perdre 2 PDV (4 tours)"
         }
       ]
     },
@@ -581,11 +581,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (4) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (4) de 40% (4 tours)"
         }
       ]
     },
@@ -608,7 +608,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 2750"
         }
       ]
     }

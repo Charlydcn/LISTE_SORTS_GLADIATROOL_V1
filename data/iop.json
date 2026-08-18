@@ -21,11 +21,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 9 à 13 (Point)"
+          "texte": "Dommages : 9 à 13 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 11 à 15 (Point)"
+          "texte": "Dommages : 11 à 15 (Terre)"
         }
       ]
     },
@@ -48,7 +48,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Téléportation (Point)"
+          "texte": "Téléporte à une distance de 6 cases maximum."
         }
       ]
     },
@@ -71,19 +71,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 5 à 9 (Neutre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre : 5 à 9 (Point)"
+          "texte": "Fait reculer de 4 case(s)"
         },
         {
           "onglet": "critiques",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 6 à 10 (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre : 6 à 10 (Point)"
+          "texte": "Fait reculer de 4 case(s)"
         }
       ]
     },
@@ -106,11 +106,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 9 à 16, 5 tours (Point)"
+          "texte": "+9 à 16 de dommages (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 11 à 18, 5 tours (Point)"
+          "texte": "+11 à 18 de dommages (5 tours)"
         }
       ]
     },
@@ -133,15 +133,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 11 à 20, pas les alliés (Croix 1)"
+          "texte": "Dommages : 11 à 20 (Air) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 3, 3 tours, pas les ennemis (Croix 1)"
+          "texte": "+3 de dommages (3 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 21, pas les alliés (Croix 1)"
+          "texte": "Dommages : 21 (Air) (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+6 de dommages (3 tours) (Croix 1)"
         }
       ]
     },
@@ -164,11 +168,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 10 à 17 (Ligne 63)"
+          "texte": "Dommages : 10 à 17 (Feu) (Ligne 63)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 18 (Ligne 63)"
+          "texte": "Dommages : 18 (Feu) (Ligne 63)"
         }
       ]
     },
@@ -191,11 +195,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 5 à 10, 2 tours, pas les ennemis (Cercle 63)"
+          "texte": "+5 à 10 de dommages (2 tours) (Cercle 63)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 20, 2 tours, pas les ennemis (Cercle 63)"
+          "texte": "+20 de dommages (2 tours) (Cercle 63)"
         }
       ]
     },
@@ -218,11 +222,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 11 à 12, 1 tours (Point)"
+          "texte": "+11 à 12 de dommages (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 11 à 12, 2 tours (Point)"
+          "texte": "+11 à 12 de dommages (2 tours)"
         }
       ]
     },
@@ -245,23 +249,23 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre %vie : 1, seulement le lanceur (Point)"
+          "texte": "+50 aux dommages physiques"
         },
         {
           "onglet": "normaux",
-          "texte": "%dommages : 50 (Point)"
+          "texte": "Dommages : 1% de la vie de l'attaquant (Neutre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommages physiques : 50 (Point)"
+          "texte": "Augmente les dommages de 50%"
         },
         {
           "onglet": "critiques",
-          "texte": "%dommages : 60 (Point)"
+          "texte": "+60 aux dommages physiques"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommages physiques : 60 (Point)"
+          "texte": "Augmente les dommages de 60%"
         }
       ]
     },
@@ -284,19 +288,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 11 à 16 (Ligne 2)"
+          "texte": "Dommages : 11 à 16 (Feu) (Ligne 2)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PM : 2, 1 tours (Ligne 2)"
+          "texte": "PM perdus : 2 (1 tour) (Ligne 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 20 (Ligne 2)"
+          "texte": "Dommages : 20 (Feu) (Ligne 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PM : 2, 1 tours (Ligne 2)"
+          "texte": "PM perdus : 2 (1 tour) (Ligne 2)"
         }
       ]
     },
@@ -319,7 +323,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases (Croix 1)"
+          "texte": "Fait reculer de 1 case(s) (Croix 1)"
         }
       ]
     },
@@ -342,27 +346,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Eau : 1 à 3 (Point)"
+          "texte": "Dommages : 1 à 40 (Air)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Feu : 1 à 3 (Point)"
+          "texte": "Vole 1 à 3 PDV (Eau)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 1 à 40 (Point)"
+          "texte": "Vole 1 à 3 PDV (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Eau : 4 (Point)"
+          "texte": "Dommages : 1 à 45 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Feu : 4 (Point)"
+          "texte": "Vole 4 PDV (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 1 à 45 (Point)"
+          "texte": "Vole 4 PDV (Feu)"
         }
       ]
     },
@@ -385,11 +389,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%dommages : 100, 5 tours (Point)"
+          "texte": "Augmente les dommages de 100% (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "%dommages : 100, 7 tours (Point)"
+          "texte": "Augmente les dommages de 100% (7 tours)"
         }
       ]
     },
@@ -412,19 +416,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 11 à 40 (Point)"
+          "texte": "Dommages : 11 à 40 (Feu)"
         },
         {
           "onglet": "normaux",
-          "texte": "Malus CC : 2 à 3, 2 tours (Point)"
+          "texte": "-2 à 3 aux coups critiques (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 41 à 42 (Point)"
+          "texte": "Dommages : 41 à 42 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Malus CC : 2 à 3, 3 tours (Point)"
+          "texte": "-2 à 3 aux coups critiques (3 tours)"
         }
       ]
     },
@@ -447,11 +451,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Vitalité : 251 à 300, 20 tours (Point)"
+          "texte": "+251 à 300 en vitalité (20 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Vitalité : 350, 20 tours (Point)"
+          "texte": "+350 en vitalité (20 tours)"
         }
       ]
     },
@@ -474,11 +478,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 36 à 40 (Point)"
+          "texte": "Dommages : 36 à 40 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 41 à 45 (Point)"
+          "texte": "Dommages : 41 à 45 (Feu)"
         }
       ]
     },
@@ -501,11 +505,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 26 à 40 (Cercle 2)"
+          "texte": "Dommages : 26 à 40 (Air) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 41 à 55 (Cercle 2)"
+          "texte": "Dommages : 41 à 55 (Air) (Cercle 2)"
         }
       ]
     },
@@ -528,11 +532,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 13 à 21 (Point)"
+          "texte": "Dommages : 13 à 21 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 18 à 26 (Point)"
+          "texte": "Dommages : 18 à 26 (Terre)"
         }
       ]
     },
@@ -555,19 +559,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 51 à 70 (Point)"
+          "texte": "Dommages : 51 à 70 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Boost dégâts après lancement : 4 tours, seulement le lanceur (Point)"
+          "texte": "Augmente les dégâts de base du sort 159 de 250 (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 61 à 80 (Point)"
+          "texte": "Dommages : 61 à 80 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Boost dégâts après lancement : 4 tours, seulement le lanceur (Point)"
+          "texte": "Augmente les dégâts de base du sort 159 de 260 (4 tours)"
         }
       ]
     },
@@ -590,11 +594,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 13 à 39, pas le lanceur (Croix 3)"
+          "texte": "Dommages : 13 à 39 (Terre) (Croix 3)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 18 à 44, pas le lanceur (Croix 3)"
+          "texte": "Dommages : 18 à 44 (Terre) (Croix 3)"
         }
       ]
     },
@@ -617,11 +621,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (6) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (6) de 40% (4 tours)"
         }
       ]
     },
@@ -644,11 +648,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maximise les effets aléatoires : 2 tours, pas le lanceur (Point)"
+          "texte": "Maximise les effets aléatoires (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maximise les effets aléatoires : 3 tours, pas le lanceur (Point)"
+          "texte": "Maximise les effets aléatoires (3 tours)"
         }
       ]
     }

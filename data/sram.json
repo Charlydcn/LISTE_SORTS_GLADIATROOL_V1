@@ -21,11 +21,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 11 à 13 (Point)"
+          "texte": "Dommages : 11 à 13 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 20 (Point)"
+          "texte": "Dommages : 20 (Terre)"
         }
       ]
     },
@@ -48,11 +48,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Force : 80, 5 tours (Point)"
+          "texte": "+80 en force (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Force : 110, 5 tours (Point)"
+          "texte": "+110 en force (5 tours)"
         }
       ]
     },
@@ -75,19 +75,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 12 à 16 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 12 à 16 (Point)"
+          "texte": "Fait reculer de 4 case(s)"
         },
         {
           "onglet": "critiques",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 17 à 21 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 17 à 21 (Point)"
+          "texte": "Fait reculer de 5 case(s)"
         }
       ]
     },
@@ -110,19 +110,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Bonus PO : 1, 2 tours (Point)"
+          "texte": "Dévoile tous les objets invisibles (Cercle 8)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perception (Cercle 8)"
+          "texte": "+1 à la portée (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PO : 2, 2 tours (Point)"
+          "texte": "Dévoile tous les objets invisibles (Cercle 8)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perception (Cercle 8)"
+          "texte": "+2 à la portée (2 tours)"
         }
       ]
     },
@@ -145,7 +145,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 0) TODO"
+          "texte": "Pose un piège de rang 6 (Cercle 0)"
         }
       ]
     },
@@ -168,11 +168,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 8 à 9, 2 tours (Point)"
+          "texte": "Dommages : 8 à 9 (Air) (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 10 à 11, 2 tours (Point)"
+          "texte": "Dommages : 10 à 11 (Air) (2 tours)"
         }
       ]
     },
@@ -195,7 +195,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Pousse jusqu'à la case (Point)"
+          "texte": "Pousse jusqu'à la case visée"
         }
       ]
     },
@@ -218,27 +218,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 11 à 25, pas le lanceur (Croix 1)"
+          "texte": "Dommages : 11 à 25 (Air) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol Agilité : 25, 3 tours, pas le lanceur (Croix 1)"
+          "texte": "25 vol d'agilité (3 tours) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol Force : 25, 3 tours, pas le lanceur (Croix 1)"
+          "texte": "25 vol de force (3 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 16 à 30, pas le lanceur (Croix 1)"
+          "texte": "Dommages : 16 à 30 (Air) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol Agilité : 30, 3 tours, pas le lanceur (Croix 1)"
+          "texte": "30 vol d'agilité (3 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol Force : 30, 3 tours, pas le lanceur (Croix 1)"
+          "texte": "30 vol de force (3 tours) (Croix 1)"
         }
       ]
     },
@@ -261,7 +261,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 3) TODO"
+          "texte": "Pose un piège de rang 6 (Cercle 3)"
         }
       ]
     },
@@ -284,19 +284,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 18 à 32 (Point)"
+          "texte": "Vole 1 à 250 d'or"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol de kamas : 1 à 250 (Point)"
+          "texte": "Dommages : 18 à 32 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 35 (Point)"
+          "texte": "Dommages : 35 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de kamas : 1 à 500 (Point)"
+          "texte": "Vole 1 à 500 d'or"
         }
       ]
     },
@@ -319,7 +319,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 1) TODO"
+          "texte": "Pose un piège de rang 6 (Cercle 1)"
         }
       ]
     },
@@ -342,11 +342,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+PM : 2, 3 tours (Point)"
+          "texte": "Rend le personnage invisible (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Invisibilité : 3 tours (Point)"
+          "texte": "+2 PM (3 tours)"
         }
       ]
     },
@@ -369,7 +369,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 1) TODO"
+          "texte": "Pose un piège de rang 1 (Cercle 1)"
         }
       ]
     },
@@ -392,7 +392,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Double du Sram (Point)"
+          "texte": "Crée un double du lanceur de sort"
         }
       ]
     },
@@ -415,11 +415,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+CC : 10, 4 tours (Point)"
+          "texte": "+10 aux coups critiques (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+CC : 10, 5 tours (Point)"
+          "texte": "+10 aux coups critiques (5 tours)"
         }
       ]
     },
@@ -442,11 +442,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 41 à 60 (Point)"
+          "texte": "Dommages : 41 à 60 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 131 à 150 (Point)"
+          "texte": "Dommages : 131 à 150 (Terre)"
         }
       ]
     },
@@ -469,7 +469,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 2) TODO"
+          "texte": "Pose un piège de rang 6 (Cercle 2)"
         }
       ]
     },
@@ -492,7 +492,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invisibilité : 3 tours, pas les ennemis (Point)"
+          "texte": "Rend le personnage invisible (3 tours)"
         }
       ]
     },
@@ -515,7 +515,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 2) TODO"
+          "texte": "Pose un piège de rang 6 (Cercle 2)"
         }
       ]
     },
@@ -538,7 +538,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée un piège (Cercle 0) TODO"
+          "texte": "Pose un piège de rang 6 (Cercle 0)"
         }
       ]
     },
@@ -561,11 +561,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (5) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (5) de 40% (4 tours)"
         }
       ]
     },
@@ -588,7 +588,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Minimise les effets aléatoires : 2 tours (Point)"
+          "texte": "Minimise les effets aléatoires (2 tours)"
         }
       ]
     }

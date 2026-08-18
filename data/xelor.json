@@ -21,15 +21,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 3, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 3 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -52,27 +52,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Renvoie de dommages : 8, 3 tours (Point)"
+          "texte": "Dommages retournés : 8 (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Renvoie de dommages : 9, 3 tours (Point)"
+          "texte": "Dommages retournés : 9 (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -95,27 +95,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 12 à 22 (Point)"
+          "texte": "Dommages : 12 à 22 (Feu)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 25 (Point)"
+          "texte": "Dommages : 25 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -138,35 +138,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 10 à 15 (Point)"
+          "texte": "Dommages : 10 à 15 (Air)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 2, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 2 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 16 (Point)"
+          "texte": "Dommages : 16 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 2, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 2 (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -189,19 +189,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "-2 PA (2 tours) (Cercle 4)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PA non esquivable : 2, 2 tours (Cercle 4)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "normaux",
-          "texte": "Applique l'État TODO : 5 tours (Cercle 63)"
+          "texte": "Etat Flou (5 tours) (Cercle 63)"
         }
       ]
     },
@@ -224,15 +224,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Invoque : 250"
         },
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -255,15 +255,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "-8 % de chance d'esquiver les pertes de PA (8 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "-Esquive PA : 8, 8 tours (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -286,15 +286,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Téléportation : 1 tours (Point)"
+          "texte": "Téléporte à une distance de 63 cases maximum. (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -317,19 +317,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 2, 1 tours, seulement le lanceur (Point)"
+          "texte": "+2 PA (2 tours) (Croix 3)"
         },
         {
           "onglet": "normaux",
-          "texte": "+PA : 2, 2 tours, pas les ennemis (Croix 3)"
+          "texte": "PA perdus à la cible : 2 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10%, seulement le lanceur (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90%, seulement le lanceur (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -352,15 +352,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Téléportation (Point)"
+          "texte": "Téléporte à une distance de 1 cases maximum."
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -383,27 +383,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 41 à 45 (Point)"
+          "texte": "Dommages : 41 à 45 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 46 à 50 (Point)"
+          "texte": "Dommages : 46 à 50 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -426,35 +426,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 13 à 29 (Point)"
+          "texte": "Dommages : 13 à 29 (Feu)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol PO : 1, 1 tours (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Vole 1 PO (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 18 à 34 (Point)"
+          "texte": "Dommages : 18 à 34 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol PO : 1, 2 tours (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Vole 1 PO (2 tours)"
         }
       ]
     },
@@ -477,27 +477,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 15 à 24 (Point)"
+          "texte": "Dommages : 15 à 24 (Air)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 17 à 26 (Point)"
+          "texte": "Dommages : 17 à 26 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -520,19 +520,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Renvoie de dommages : 8, 3 tours (Point)"
+          "texte": "+80 % de chance d'esquiver les pertes de PA (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dommages retournés : 8 (3 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Esquive PA : 80, 3 tours (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -555,35 +555,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol PA : 1 (Point)"
+          "texte": "Dommages : 31 à 35 (Eau)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 31 à 35 (Point)"
+          "texte": "Vole 1 PA"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol PA : 1 à 2 (Point)"
+          "texte": "Dommages : 36 à 40 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 36 à 40 (Point)"
+          "texte": "Vole 1 à 2 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -606,35 +606,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 9 à 20 (Cercle 2)"
+          "texte": "PA perdus à la cible : 1 (1 tour) (Cercle 2)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 1, 1 tours (Cercle 2)"
+          "texte": "Dommages : 9 à 20 (Feu) (Cercle 2)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 16 à 27 (Cercle 2)"
+          "texte": "PA perdus à la cible : 2 (1 tour) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 2, 1 tours (Cercle 2)"
+          "texte": "Dommages : 16 à 27 (Feu) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -657,15 +657,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Invoque : 264"
         },
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -688,15 +688,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol PA : 2, 1 tours (Point)"
+          "texte": "Vole 2 PA (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -719,35 +719,31 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 28, 5 tours (Point)"
+          "texte": "Change l'apparence (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 28, 5 tours (Point)"
+          "texte": "-1 PM (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 10, 5 tours (Point)"
+          "texte": "+100 % de chance d'esquiver les pertes de PA (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "+10 de dommages (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Change l'apparence : 5 tours (Point)"
+          "texte": "Dommages réduits de 28 (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Esquive PA : 100, 5 tours (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PM non esquivable : 1, 5 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -770,35 +766,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 6 à 13 (Point)"
+          "texte": "Dommages : 6 à 13 (Feu)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 2, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 2 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 11 à 18 (Point)"
+          "texte": "Dommages : 11 à 18 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 2, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 2 (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+          "texte": "Dans 90% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 90% (Point)"
+          "texte": "Dans 10% des cas: Ajoute +1 PA"
         }
       ]
     },
@@ -821,11 +817,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (7) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (7) de 40% (4 tours)"
         }
       ]
     },
@@ -848,7 +844,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Raulebaque (Cercle 63)"
+          "texte": "Retour à la position de départ (Cercle 63)"
         }
       ]
     }

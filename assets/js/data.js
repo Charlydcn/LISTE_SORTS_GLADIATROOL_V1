@@ -45,6 +45,23 @@ const CLASS_FILES = [
 
 const CLASSES = CLASS_FILES.map((c) => c.name);
 
+/* ---- Statistiques de base des morphs (source : docs/GLADIATROOL_REBALANCING.md) ---- */
+/* Ordre : Vie, PA, PM, Vitalité, Sagesse, Force(Terre), Intelligence(Feu), Chance(Eau), Agilité(Air), Initiative */
+const MORPH_STATS = {
+  "Feca":     { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 200, intelligence: 300, chance: 60, agilite: 60,  initiative: 497 },
+  "Osamodas": { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 150, intelligence: 300, chance: 300, agilite: 60,  initiative: 500 },
+  "Enutrof":  { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 250, intelligence: 100, chance: 200, agilite: 60,  initiative: 500 },
+  "Sram":     { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 300, intelligence: 150, chance: 60,  agilite: 300, initiative: 500 },
+  "Xelor":    { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 150, intelligence: 300, chance: 60,  agilite: 60,  initiative: 500 },
+  "Ecaflip":  { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 300, intelligence: 60,  chance: 60,  agilite: 200, initiative: 500 },
+  "Eniripsa": { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 200, intelligence: 300, chance: 60,  agilite: 60,  initiative: 500 },
+  "Iop":      { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 300, intelligence: 60,  chance: 60,  agilite: 60,  initiative: 500 },
+  "Crâ":      { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 250, intelligence: 250, chance: 60,  agilite: 150, initiative: 500 },
+  "Sadida":   { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 300, intelligence: 300, chance: 300, agilite: 75,  initiative: 500 },
+  "Sacrieur": { vie: 1250, pa: 8, pm: 4, vitalite: 1250, sagesse: 150, force: 150, intelligence: 150, chance: 150, agilite: 150, initiative: 500 },
+  "Pandawa":  { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 250, intelligence: 250, chance: 250, agilite: 250, initiative: 500 }
+};
+
 let SPELLS = [];
 let COMMON_SPELLS = [];
 

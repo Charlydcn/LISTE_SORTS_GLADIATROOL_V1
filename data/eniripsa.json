@@ -21,11 +21,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 17 à 25 (Point)"
+          "texte": "PDV rendus : 17 à 25"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 40 (Point)"
+          "texte": "PDV rendus : 40"
         }
       ]
     },
@@ -48,11 +48,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 16 à 18 (Point)"
+          "texte": "Dommages : 16 à 18 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 19 (Point)"
+          "texte": "Dommages : 19 (Air)"
         }
       ]
     },
@@ -75,15 +75,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre %vie : 2, seulement le lanceur (Point)"
+          "texte": "PA perdus à la cible : 2 à 3 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 2 à 3, 1 tours, pas le lanceur (Point)"
+          "texte": "Dommages : 2% de la vie de l'attaquant (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 2 à 3, 1 tours, pas le lanceur (Point)"
+          "texte": "PA perdus à la cible : 2 à 3 (1 tour)"
         }
       ]
     },
@@ -106,11 +106,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 11 à 14 (Point)"
+          "texte": "PDV rendus : 11 à 14"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 20 (Point)"
+          "texte": "PDV rendus : 20"
         }
       ]
     },
@@ -133,11 +133,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 11 à 16 (Point)"
+          "texte": "Dommages : 11 à 16 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 25 (Point)"
+          "texte": "Dommages : 25 (Feu)"
         }
       ]
     },
@@ -160,15 +160,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre %vie : 10, seulement le lanceur (Point)"
+          "texte": "+2 PA (5 tours) (Croix 5)"
         },
         {
           "onglet": "normaux",
-          "texte": "+PA : 2, 5 tours, pas les ennemis (Croix 5)"
+          "texte": "Dommages : 10% de la vie de l'attaquant (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PA : 2 à 3, 5 tours, pas les ennemis (Croix 5)"
+          "texte": "+2 à 3 PA (5 tours) (Croix 5)"
         }
       ]
     },
@@ -191,11 +191,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 30, 2 tours (Point)"
+          "texte": "Dommages réduits de 30 (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommages réduits : 38, 2 tours (Point)"
+          "texte": "Dommages réduits de 38 (2 tours)"
         }
       ]
     },
@@ -218,7 +218,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Fait reculer de 1 case(s)"
         }
       ]
     },
@@ -241,7 +241,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 39"
         }
       ]
     },
@@ -264,11 +264,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 7 à 11 (Cercle 3)"
+          "texte": "PDV rendus : 7 à 11 (Cercle 3)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 12 (Cercle 3)"
+          "texte": "PDV rendus : 12 (Cercle 3)"
         }
       ]
     },
@@ -291,11 +291,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 3 à 6, 5 tours (Point)"
+          "texte": "PDV rendus : 3 à 6 (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 6, 5 tours (Point)"
+          "texte": "PDV rendus : 6 (5 tours)"
         }
       ]
     },
@@ -318,11 +318,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Renvoie de dommages : 1 à 9, 3 tours (Point)"
+          "texte": "Dommages retournés : 1 à 9 (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Renvoie de dommages : 1 à 9, 6 tours (Point)"
+          "texte": "Dommages retournés : 1 à 9 (6 tours)"
         }
       ]
     },
@@ -345,7 +345,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Enlève les envoûtements : pas les ennemis (Point)"
+          "texte": "Enlève les envoûtements"
         }
       ]
     },
@@ -368,11 +368,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Eau : 31 à 40 (Point)"
+          "texte": "Vole 31 à 40 PDV (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Eau : 41 (Point)"
+          "texte": "Vole 41 PDV (Eau)"
         }
       ]
     },
@@ -395,15 +395,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 36 à 45 (Point)"
+          "texte": "Dommages pour le lanceur : 36 à 45"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage au lanceur : 36 à 45 (Point)"
+          "texte": "PDV rendus : 36 à 45"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 36 à 45 (Point)"
+          "texte": "PDV rendus : 36 à 45"
         }
       ]
     },
@@ -426,11 +426,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Retrait PM : 4, 3 tours (Point)"
+          "texte": "PM perdus : 4 (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PM : 4, 4 tours (Point)"
+          "texte": "PM perdus : 4 (4 tours)"
         }
       ]
     },
@@ -453,11 +453,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Bonus PO : 3, 1 tours (Point)"
+          "texte": "+3 à la portée (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Bonus PO : 3, 2 tours (Point)"
+          "texte": "+3 à la portée (2 tours)"
         }
       ]
     },
@@ -480,11 +480,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 5, 1 tours (Cercle 4)"
+          "texte": "PA perdus à la cible : 5 (1 tour) (Cercle 4)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 6, 1 tours (Cercle 4)"
+          "texte": "PA perdus à la cible : 6 (1 tour) (Cercle 4)"
         }
       ]
     },
@@ -507,19 +507,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 80 à 125, pas les ennemis (Cercle 63)"
+          "texte": "PDV rendus : 80 à 125 (Cercle 63)"
         },
         {
           "onglet": "normaux",
-          "texte": "Applique l'État TODO : 5 tours, pas les ennemis (Cercle 63)"
+          "texte": "Etat Altruiste (5 tours) (Cercle 63)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 126, pas les ennemis (Cercle 63)"
+          "texte": "PDV rendus : 126 (Cercle 63)"
         },
         {
           "onglet": "critiques",
-          "texte": "Applique l'État TODO : 5 tours, pas les ennemis (Cercle 63)"
+          "texte": "Etat Altruiste (5 tours) (Cercle 63)"
         }
       ]
     },
@@ -542,11 +542,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 401 à 500 (Point)"
+          "texte": "PDV rendus : 401 à 500"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 851 (Point)"
+          "texte": "PDV rendus : 851"
         }
       ]
     },
@@ -569,11 +569,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (3) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (3) de 40% (4 tours)"
         }
       ]
     },
@@ -596,11 +596,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Change l'apparence : 1 tours, seulement le lanceur (Point)"
+          "texte": "1679"
         },
         {
           "onglet": "normaux",
-          "texte": "Applique un sort : pas le lanceur (Point)"
+          "texte": "Change l'apparence (1 tour)"
         }
       ]
     }

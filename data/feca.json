@@ -21,11 +21,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Réduit les dommages élémentaires : 14, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 14 (4 tours) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Réduit les dommages élémentaires : 15, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 15 (4 tours) (Cercle 2)"
         }
       ]
     },
@@ -48,19 +48,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre : 6 à 15 (Point)"
+          "texte": "PA perdus à la cible : 2 à 3 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 2 à 3, 1 tours (Point)"
+          "texte": "Dommages : 6 à 15 (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre : 16 (Point)"
+          "texte": "PA perdus à la cible : 3 (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Retrait PA : 3, 1 tours (Point)"
+          "texte": "Dommages : 16 (Neutre)"
         }
       ]
     },
@@ -83,11 +83,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 9 à 13 (Point)"
+          "texte": "Dommages : 9 à 13 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 15 (Point)"
+          "texte": "Dommages : 15 (Feu)"
         }
       ]
     },
@@ -110,7 +110,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Renvoie de sort : 1 tours (Point)"
+          "texte": "Renvoie un sort de niveau 6 maximum (1 tour)"
         }
       ]
     },
@@ -133,11 +133,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 900, 2 tours (Cercle 63)"
+          "texte": "Dommages réduits de 900 (2 tours) (Cercle 63)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommages réduits : 1000, 2 tours (Cercle 63)"
+          "texte": "Dommages réduits de 1000 (2 tours) (Cercle 63)"
         }
       ]
     },
@@ -160,11 +160,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Réduit les dommages élémentaires : 16, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 16 (4 tours) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Réduit les dommages élémentaires : 17, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 17 (4 tours) (Cercle 2)"
         }
       ]
     },
@@ -187,43 +187,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Résist. % terre : 45, 4 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % eau : 45, 4 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % air : 45, 4 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % feu : 45, 4 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % neutre : 45, 4 tours (Point)"
+          "texte": "Effet inconnu #2182 (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Résist. % terre : 55, 4 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % eau : 55, 4 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % air : 55, 4 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % feu : 55, 4 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % neutre : 55, 4 tours (Point)"
+          "texte": "Effet inconnu #2182 (4 tours)"
         }
       ]
     },
@@ -246,19 +214,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre : 21 à 35 (Point)"
+          "texte": "Dommages : 21 à 35 (Neutre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol Force : 20, 3 tours (Point)"
+          "texte": "20 vol de force (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre : 31 à 37 (Point)"
+          "texte": "Dommages : 31 à 37 (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol Force : 20, 4 tours (Point)"
+          "texte": "20 vol de force (4 tours)"
         }
       ]
     },
@@ -281,11 +249,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 11 à 22 (Point)"
+          "texte": "Dommages : 11 à 22 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 25 (Point)"
+          "texte": "Dommages : 25 (Feu)"
         }
       ]
     },
@@ -308,7 +276,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée une glyphe : 2 tours (Cercle 3) TODO"
+          "texte": "Pose un glyphe de rang 6 (2 tours) (Cercle 3)"
         }
       ]
     },
@@ -331,7 +299,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Téléportation : 1 tours (Point)"
+          "texte": "Téléporte à une distance de 9 cases maximum. (1 tour)"
         }
       ]
     },
@@ -354,7 +322,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée une glyphe : 3 tours (Cercle 3) TODO"
+          "texte": "Pose un glyphe de rang 6 (3 tours) (Cercle 3)"
         }
       ]
     },
@@ -377,7 +345,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée une glyphe : 3 tours (Cercle 3) TODO"
+          "texte": "Pose un glyphe de rang 6 (3 tours) (Cercle 3)"
         }
       ]
     },
@@ -400,26 +368,26 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Esquive PM : 50, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 16 (4 tours) (Cercle 2)"
         },
         {
           "onglet": "normaux",
-          "texte": "Réduit les dommages élémentaires : 16, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "+50 % de chance d'esquiver les pertes de PM (4 tours) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Esquive PM : 55, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 17 (4 tours) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Réduit les dommages élémentaires : 17, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "+55 % de chance d'esquiver les pertes de PM (4 tours) (Cercle 2)"
         }
       ]
     },
     {
       "id": 15,
       "position": 15,
-      "nom": "Glyphe d'immobilisation",
+      "nom": "Glyphe d'Immobilisation",
       "pa": 3,
       "po": "0–6",
       "porteeModifiable": false,
@@ -435,7 +403,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée une glyphe : 3 tours (Cercle 4) TODO"
+          "texte": "Pose un glyphe de rang 6 (3 tours) (Cercle 4)"
         }
       ]
     },
@@ -458,11 +426,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommages physiques : 25, 5 tours (Point)"
+          "texte": "+25 aux dommages physiques (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommages physiques : 30, 5 tours (Point)"
+          "texte": "+30 aux dommages physiques (5 tours)"
         }
       ]
     },
@@ -485,7 +453,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Crée une glyphe : 4 tours (Cercle 2) TODO"
+          "texte": "Pose un glyphe de rang 6 (4 tours) (Cercle 2)"
         }
       ]
     },
@@ -508,19 +476,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Esquive PA : 50, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 16 (4 tours) (Cercle 2)"
         },
         {
           "onglet": "normaux",
-          "texte": "Réduit les dommages élémentaires : 16, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "+50 % de chance d'esquiver les pertes de PA (4 tours) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Esquive PA : 55, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "Dommages réduits de 17 (4 tours) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Réduit les dommages élémentaires : 17, 4 tours, pas les ennemis (Cercle 2)"
+          "texte": "+55 % de chance d'esquiver les pertes de PA (4 tours) (Cercle 2)"
         }
       ]
     },
@@ -543,11 +511,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 16 à 24 (Point)"
+          "texte": "Dommages : 16 à 24 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 18 à 26 (Point)"
+          "texte": "Dommages : 18 à 26 (Eau)"
         }
       ]
     },
@@ -570,7 +538,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 1500, 1 tours (Point)"
+          "texte": "Dommages réduits de 1500 (1 tour)"
         }
       ]
     },
@@ -593,11 +561,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (4) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (4) de 40% (4 tours)"
         }
       ]
     },
@@ -620,51 +588,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Résist. % terre : 25, 1 tours (Point)"
+          "texte": "Effet inconnu #2182 (1 tour)"
         },
         {
           "onglet": "normaux",
-          "texte": "Résist. % eau : 25, 1 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % air : 25, 1 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % feu : 25, 1 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Résist. % neutre : 25, 1 tours (Point)"
-        },
-        {
-          "onglet": "normaux",
-          "texte": "Applique l'État TODO : 1 tours (Point)"
+          "texte": "Etat Affaibli (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Résist. % terre : 30, 1 tours (Point)"
+          "texte": "Effet inconnu #2182 (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Résist. % eau : 30, 1 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % air : 30, 1 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % feu : 30, 1 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Résist. % neutre : 30, 1 tours (Point)"
-        },
-        {
-          "onglet": "critiques",
-          "texte": "Applique l'État TODO : 1 tours (Point)"
+          "texte": "Etat Affaibli (1 tour)"
         }
       ]
     }

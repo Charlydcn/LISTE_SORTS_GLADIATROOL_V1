@@ -20,11 +20,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 1 à 7 (Point)"
+          "texte": "Dommages : 1 à 7 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 8 (Point)"
+          "texte": "Dommages : 8 (Feu)"
         }
       ]
     },
@@ -47,35 +47,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Eau : 31 à 40, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 31 à 40 PDV (Air)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Terre : 31 à 40, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 31 à 40 PDV (Eau)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Air : 31 à 40, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 31 à 40 PDV (Feu)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Feu : 31 à 40, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 31 à 40 PDV (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Eau : 41 à 50, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 41 à 50 PDV (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Terre : 41 à 50, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 41 à 50 PDV (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Air : 41 à 50, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 41 à 50 PDV (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Feu : 41 à 50, 25% (Point)"
+          "texte": "Dans 25% des cas: Vole 41 à 50 PDV (Terre)"
         }
       ]
     },
@@ -98,19 +98,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 38 à 47 (Point)"
+          "texte": "Dommages : 38 à 47 (Air)"
         },
         {
           "onglet": "normaux",
-          "texte": "Malus PO : 1, 5 tours (Point)"
+          "texte": "-1 à la portée (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 49 (Point)"
+          "texte": "Dommages : 49 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Malus PO : 1, 6 tours (Point)"
+          "texte": "-1 à la portée (6 tours)"
         }
       ]
     },
@@ -133,11 +133,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque créature statique (Point)"
+          "texte": "Pose un glyphe de rang 3 (8 tours) (Cercle 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "Crée une glyphe : 8 tours (Cercle 1) TODO"
+          "texte": "Invoque une créature statique"
         }
       ]
     },
@@ -160,7 +160,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases : pas le lanceur (Croix 1)"
+          "texte": "Fait reculer de 4 case(s) (Croix 1)"
         }
       ]
     },
@@ -183,11 +183,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 3 à 30, pas le lanceur (Cercle 2)"
+          "texte": "Dommages : 3 à 30 (Feu) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 31, pas le lanceur (Cercle 2)"
+          "texte": "Dommages : 31 (Feu) (Cercle 2)"
         }
       ]
     },
@@ -210,11 +210,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 246"
         },
         {
           "onglet": "critiques",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 2630"
         }
       ]
     },
@@ -237,11 +237,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 262"
         },
         {
           "onglet": "critiques",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 1108"
         }
       ]
     }

@@ -344,27 +344,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 6 à 19 (Point)"
+          "texte": "Dommages : 6 à 19 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Soin : 5 à 12, pas les alliés (Point)"
+          "texte": "PDV rendus : 5 à 12"
         },
         {
           "onglet": "normaux",
-          "texte": "Soin : 8 à 22, pas les ennemis (Point)"
+          "texte": "PDV rendus : 8 à 22"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 9 à 24 (Point)"
+          "texte": "Dommages : 9 à 24 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 1 à 5, pas les alliés (Point)"
+          "texte": "PDV rendus : 1 à 5"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 23 à 27, pas les ennemis (Point)"
+          "texte": "PDV rendus : 23 à 27"
         }
       ]
     },
@@ -387,11 +387,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Chance dommages subis/soins : 3 tours, pas les ennemis (Point)"
+          "texte": "50% dommages subis x3, sinon soigné de x2 (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Chance dommages subis/soins : 3 tours, pas les ennemis (Point)"
+          "texte": "50% dommages subis x4, sinon soigné de x3 (3 tours)"
         }
       ]
     },
@@ -414,11 +414,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+CC : 10, 5 tours (Point)"
+          "texte": "+10 aux coups critiques (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+CC : 11, 5 tours (Point)"
+          "texte": "+11 aux coups critiques (5 tours)"
         }
       ]
     },
@@ -441,7 +441,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Téléportation (Point)"
+          "texte": "Téléporte à une distance de 1 cases maximum."
         }
       ]
     },
@@ -464,15 +464,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre %vie : 1 à 5, seulement le lanceur (Point)"
+          "texte": "Augmente les dommages de 100% (2 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "%dommages : 100, 2 tours (Point)"
+          "texte": "Dommages : 1 à 5% de la vie de l'attaquant (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "%dommages : 200, 2 tours (Point)"
+          "texte": "Augmente les dommages de 200% (2 tours)"
         }
       ]
     },
@@ -495,11 +495,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 19 à 31 (Point)"
+          "texte": "Dommages : 19 à 31 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 22 à 34 (Point)"
+          "texte": "Dommages : 22 à 34 (Feu)"
         }
       ]
     },
@@ -522,27 +522,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 36 à 50, pas le lanceur (Point)"
+          "texte": "Dommages : 36 à 50 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 36 à 50, 50%, seulement le lanceur (Point)"
+          "texte": "Dans 50% des cas: Dommages : 36 à 50 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Pas d'effet : 50%, seulement le lanceur (Point)"
+          "texte": "Dans 50% des cas: Pas d'effet supplémentaire"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 50, pas le lanceur (Point)"
+          "texte": "Dommages : 50 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 50, 50%, seulement le lanceur (Point)"
+          "texte": "Dans 50% des cas: Dommages : 50 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Pas d'effet : 50%, seulement le lanceur (Point)"
+          "texte": "Dans 50% des cas: Pas d'effet supplémentaire"
         }
       ]
     },
@@ -565,19 +565,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 1 à 50, 50% (Point)"
+          "texte": "Dans 50% des cas: Dommages : 1 à 50 (Eau)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 1 à 50, 50% (Point)"
+          "texte": "Dans 50% des cas: Dommages : 1 à 50 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 55, 50% (Point)"
+          "texte": "Dans 50% des cas: Dommages : 55 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 55, 50% (Point)"
+          "texte": "Dans 50% des cas: Dommages : 55 (Eau)"
         }
       ]
     },
@@ -600,11 +600,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 24 à 29 (Ligne 3)"
+          "texte": "Dommages : 24 à 29 (Terre) (Ligne 3)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 35 (Ligne 3)"
+          "texte": "Dommages : 35 (Terre) (Ligne 3)"
         }
       ]
     },
@@ -627,11 +627,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre %vie : 1, 1 tours, seulement le lanceur (Point)"
+          "texte": "+140 à 250 en vitalité (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Vitalité : 140 à 250, 5 tours (Point)"
+          "texte": "Dommages : 1% de la vie de l'attaquant (Neutre) (1 tour)"
         }
       ]
     },
@@ -654,15 +654,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 21 à 45 (Point)"
+          "texte": "Dommages : 21 à 45 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 21 à 45 (Point)"
+          "texte": "-1 PA (8 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perte PA non esquivable : 1, 8 tours (Point)"
+          "texte": "Dommages : 21 à 45 (Terre)"
         }
       ]
     },
@@ -685,19 +685,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 6 à 11, 2 tours (Point)"
+          "texte": "Dévoile tous les objets invisibles (Cercle 9)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perception (Cercle 9)"
+          "texte": "+6 à 11 de dommages (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 12, 2 tours (Point)"
+          "texte": "Dévoile tous les objets invisibles (Cercle 9)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perception (Cercle 9)"
+          "texte": "+12 de dommages (2 tours)"
         }
       ]
     },
@@ -720,23 +720,23 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Retrait PA : 1, 1 tours (Point)"
+          "texte": "PA perdus à la cible : 1 (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 12 à 41 (Point)"
+          "texte": "Dommages : 12 à 41 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 12 à 41 (Point)"
+          "texte": "Dommages : 12 à 41 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 12 à 41 (Point)"
+          "texte": "Dommages : 12 à 41 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 12 à 41 (Point)"
+          "texte": "Dommages : 12 à 41 (Terre)"
         }
       ]
     },
@@ -759,35 +759,35 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+PA : 2 à 5, 4 tours (Cercle 6)"
+          "texte": "-1 à 4 PA (4 tours) (Cercle 6)"
         },
         {
           "onglet": "normaux",
-          "texte": "+PM : 2 à 5, 4 tours (Cercle 6)"
+          "texte": "+2 à 5 PA (4 tours) (Cercle 6)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PA non esquivable : 1 à 4, 4 tours (Cercle 6)"
+          "texte": "-1 à 4 PM (4 tours) (Cercle 6)"
         },
         {
           "onglet": "normaux",
-          "texte": "Perte PM non esquivable : 1 à 4, 4 tours (Cercle 6)"
+          "texte": "+2 à 5 PM (4 tours) (Cercle 6)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PA : 2 à 5, 8 tours (Cercle 6)"
+          "texte": "-1 à 4 PA (8 tours) (Cercle 6)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PM : 2 à 5, 8 tours (Cercle 6)"
+          "texte": "+2 à 5 PA (8 tours) (Cercle 6)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perte PA non esquivable : 1 à 4, 8 tours (Cercle 6)"
+          "texte": "-1 à 4 PM (8 tours) (Cercle 6)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perte PM non esquivable : 1 à 4, 8 tours (Cercle 6)"
+          "texte": "+2 à 5 PM (8 tours) (Cercle 6)"
         }
       ]
     },
@@ -810,15 +810,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 16 à 25 (Croix 1)"
+          "texte": "Dommages : 16 à 25 (Feu) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 18 à 27 (Croix 1)"
+          "texte": "-2 à la portée (12 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Malus PO : 2, 12 tours (Croix 1)"
+          "texte": "Dommages : 18 à 27 (Feu) (Croix 1)"
         }
       ]
     },
@@ -841,7 +841,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 45"
         }
       ]
     },
@@ -864,11 +864,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Agilité : 65 à 135, 5 tours (Point)"
+          "texte": "+65 à 135 en agilité (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Agilité : 70 à 210, 5 tours (Point)"
+          "texte": "+70 à 210 en agilité (5 tours)"
         }
       ]
     },
@@ -891,27 +891,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre : 4 à 38, 2 tours (Cercle 8)"
+          "texte": "Dommages : 4 à 38 (Neutre) (2 tours) (Cercle 8)"
         },
         {
           "onglet": "normaux",
-          "texte": "Soin : 4 à 38, 2 tours, pas les alliés (Cercle 8)"
+          "texte": "PDV rendus : 4 à 38 (2 tours) (Cercle 8)"
         },
         {
           "onglet": "normaux",
-          "texte": "Soin : 11 à 50, 2 tours, pas les ennemis (Cercle 8)"
+          "texte": "PDV rendus : 11 à 50 (2 tours) (Cercle 8)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre : 7 à 76, 2 tours (Cercle 8)"
+          "texte": "Dommages : 7 à 76 (Neutre) (2 tours) (Cercle 8)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 7 à 76, 2 tours, pas les alliés (Cercle 8)"
+          "texte": "PDV rendus : 7 à 76 (2 tours) (Cercle 8)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 21 à 100, 2 tours, pas les ennemis (Cercle 8)"
+          "texte": "PDV rendus : 21 à 100 (2 tours) (Cercle 8)"
         }
       ]
     },
@@ -934,19 +934,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 13 à 37 (Point)"
+          "texte": "Dommages : 13 à 37 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Repousse TODO cases (Point)"
+          "texte": "Dommages : 13 à 75 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 13 à 75 (Point)"
+          "texte": "Fait reculer de 5 case(s)"
         },
         {
           "onglet": "critiques",
-          "texte": "Perte PM non esquivable : 1, 8 tours (Point)"
+          "texte": "-1 PM (8 tours)"
         }
       ]
     },
@@ -969,11 +969,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (6) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (6) de 40% (4 tours)"
         }
       ]
     },
@@ -996,27 +996,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Repousse TODO cases : pas les alliés (Point)"
+          "texte": "Vole 19 à 28 PDV (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Terre : 19 à 28, pas les alliés (Point)"
+          "texte": "PDV rendus : 36 à 75"
         },
         {
           "onglet": "normaux",
-          "texte": "Soin : 36 à 75, pas les ennemis (Point)"
+          "texte": "Fait reculer de 2 case(s)"
         },
         {
           "onglet": "critiques",
-          "texte": "Repousse TODO cases : pas les alliés (Point)"
+          "texte": "Vole 29 à 33 PDV (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Terre : 29 à 33, pas les alliés (Point)"
+          "texte": "PDV rendus : 76 à 80"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 76 à 80, pas les ennemis (Point)"
+          "texte": "Fait reculer de 2 case(s)"
         }
       ]
     }

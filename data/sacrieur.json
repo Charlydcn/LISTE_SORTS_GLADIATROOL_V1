@@ -21,19 +21,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 200 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 220 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         }
       ]
     },
@@ -56,19 +56,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Terre : 13 à 22 (Point)"
+          "texte": "Dommages : 13 à 22 (Terre)"
         },
         {
           "onglet": "normaux",
-          "texte": "Vol Agilité : 20, 3 tours (Point)"
+          "texte": "20 vol d'agilité (3 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Terre : 25 (Point)"
+          "texte": "Dommages : 25 (Terre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol Agilité : 20, 4 tours (Point)"
+          "texte": "20 vol d'agilité (4 tours)"
         }
       ]
     },
@@ -91,19 +91,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 200 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 220 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         }
       ]
     },
@@ -126,7 +126,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Attire TODO cases (Point)"
+          "texte": "Fait avancer de 7 case(s)"
         }
       ]
     },
@@ -149,15 +149,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Transfert de vie : 10, pas le lanceur, pas les ennemis (Cercle 4)"
+          "texte": "Donne 10 % de sa vie (Cercle 4)"
         },
         {
           "onglet": "critiques",
-          "texte": "Transfert de vie : 10, pas le lanceur, pas les ennemis (Cercle 4)"
+          "texte": "Donne 10 % de sa vie (Cercle 4)"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 10, pas les ennemis (Point)"
+          "texte": "PDV rendus : 10 (Cercle 4)"
         }
       ]
     },
@@ -180,11 +180,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Air : 13 à 19 (Point)"
+          "texte": "Dommages : 13 à 19 (Air)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Air : 19 à 25 (Point)"
+          "texte": "Dommages : 19 à 25 (Air)"
         }
       ]
     },
@@ -207,19 +207,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 200 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 220 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         }
       ]
     },
@@ -242,7 +242,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Échange de place : pas les ennemis (Point)"
+          "texte": "Echange les places de 2 joueurs"
         }
       ]
     },
@@ -265,11 +265,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Eau : 22 à 26, pas le lanceur (Croix 1)"
+          "texte": "Vole 22 à 26 PDV (Eau) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Eau : 27 à 31, pas le lanceur (Croix 1)"
+          "texte": "Vole 27 à 31 PDV (Eau) (Croix 1)"
         }
       ]
     },
@@ -292,7 +292,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Sacrifice : 5 tours, pas les ennemis (Cercle 2)"
+          "texte": "Echange les places de 2 joueurs (5 tours) (Cercle 2)"
         }
       ]
     },
@@ -315,19 +315,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Châtiment TODO sur TODO tours : 2 tours (Point)"
+          "texte": "Châtiment de 200 sur 2 tour(s) (2 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Applique l'État TODO : 2 tours (Point)"
+          "texte": "Etat Affaibli (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Châtiment TODO sur TODO tours : 2 tours (Point)"
+          "texte": "Châtiment de 220 sur 2 tour(s) (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Applique l'État TODO : 2 tours (Point)"
+          "texte": "Etat Affaibli (2 tours)"
         }
       ]
     },
@@ -350,11 +350,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie Feu : 23 à 27 (Point)"
+          "texte": "Vole 23 à 27 PDV (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie Feu : 28 à 32 (Point)"
+          "texte": "Vole 28 à 32 PDV (Feu)"
         }
       ]
     },
@@ -377,19 +377,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 200 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "%érosion : 5, 5 tours (Point)"
+          "texte": "Châtiment de 220 sur 5 tour(s) (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+          "texte": "+5% de dégâts subis permanents (5 tours)"
         }
       ]
     },
@@ -412,11 +412,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Esquive en reculant de 1 case : 1 tours (Point)"
+          "texte": "Esquive 100% des coups en reculant de 1 case(s) (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Esquive en reculant de 1 case : 2 tours (Point)"
+          "texte": "Esquive 100% des coups en reculant de 1 case(s) (2 tours)"
         }
       ]
     },
@@ -439,7 +439,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Échange de place : pas les alliés (Point)"
+          "texte": "Echange les places de 2 joueurs"
         }
       ]
     },
@@ -462,11 +462,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage %vie attaquant (cellule) : 30 (Point)"
+          "texte": "Dommages : 30% de la vie de l'attaquant (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage %vie attaquant (cellule) : 35 (Point)"
+          "texte": "Dommages : 35% de la vie de l'attaquant (Neutre)"
         }
       ]
     },
@@ -489,27 +489,27 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre %vie : 1, 1 tours, seulement le lanceur (Point)"
+          "texte": "Dommages : 9 à 13 (Eau) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 9 à 13 (Croix 1)"
+          "texte": "+8 de dommages (4 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 8, 4 tours, seulement le lanceur (Point)"
+          "texte": "Dommages : 1% de la vie de l'attaquant (Neutre) (1 tour)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre %vie : 1, 1 tours, seulement le lanceur (Point)"
+          "texte": "Dommages : 11 à 15 (Eau) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 11 à 15 (Croix 1)"
+          "texte": "+8 de dommages (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 8, 4 tours, seulement le lanceur (Point)"
+          "texte": "Dommages : 1% de la vie de l'attaquant (Neutre) (1 tour)"
         }
       ]
     },
@@ -532,7 +532,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 434"
         }
       ]
     },
@@ -555,7 +555,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Échange de place (Point)"
+          "texte": "Echange les places de 2 joueurs"
         }
       ]
     },
@@ -578,15 +578,15 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Vol de vie fixe : 200, pas les ennemis (Point)"
+          "texte": "Vole 200 PDV (fixe)"
         },
         {
           "onglet": "critiques",
-          "texte": "Vol de vie fixe : 200, pas les ennemis (Point)"
+          "texte": "Vole 200 PDV (fixe)"
         },
         {
           "onglet": "critiques",
-          "texte": "PDV rendus : 100, pas les ennemis (Point)"
+          "texte": "PDV rendus : 100"
         }
       ]
     },
@@ -609,11 +609,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (5) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (5) de 40% (4 tours)"
         }
       ]
     },
@@ -636,19 +636,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%érosion : 10, 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+          "texte": "Châtiment de 120 sur 5 tour(s) (5 tours) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+          "texte": "+10% de dégâts subis permanents (5 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "%érosion : 10, 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+          "texte": "Châtiment de 130 sur 5 tour(s) (5 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "Châtiment TODO sur TODO tours : 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+          "texte": "+10% de dégâts subis permanents (5 tours) (Croix 1)"
         }
       ]
     }

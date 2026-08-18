@@ -21,11 +21,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 13 à 22 (Point)"
+          "texte": "Dommages : 13 à 22 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 24 (Point)"
+          "texte": "Dommages : 24 (Feu)"
         }
       ]
     },
@@ -48,19 +48,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+PM : 4, 10 tours, seulement invocations (Croix 1)"
+          "texte": "+4 PM (10 tours) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "+PM : 2, 2 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "+2 PM (2 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PM : 5, 10 tours, seulement invocations (Croix 1)"
+          "texte": "+5 PM (10 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PM : 3, 2 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "+3 PM (2 tours) (Croix 1)"
         }
       ]
     },
@@ -83,19 +83,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 9 à 16, 11 tours, seulement invocations (Croix 1)"
+          "texte": "+9 à 16 de dommages (11 tours) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Dommages : 8, 2 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "+8 de dommages (2 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 24, 11 tours, seulement invocations (Croix 1)"
+          "texte": "+24 de dommages (11 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Dommages : 12, 2 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "+12 de dommages (2 tours) (Croix 1)"
         }
       ]
     },
@@ -118,11 +118,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 3 à 10 (Point)"
+          "texte": "Dommages : 3 à 10 (Feu)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 12 (Point)"
+          "texte": "Dommages : 12 (Feu)"
         }
       ]
     },
@@ -145,19 +145,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Soin : 35 à 40, seulement invocations (Point)"
+          "texte": "PDV rendus : 35 à 40"
         },
         {
           "onglet": "normaux",
-          "texte": "Soin : 29 à 35, pas le lanceur, pas les invocations (Point)"
+          "texte": "PDV rendus : 29 à 35"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 69 à 80, seulement invocations (Point)"
+          "texte": "PDV rendus : 69 à 80"
         },
         {
           "onglet": "critiques",
-          "texte": "Soin : 35 à 36, pas le lanceur, pas les invocations (Point)"
+          "texte": "PDV rendus : 35 à 36"
         }
       ]
     },
@@ -180,11 +180,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Créa invocation : 5, 5 tours (Point)"
+          "texte": "+5 créatures invocables (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Créa invocation : 6, 5 tours (Point)"
+          "texte": "+6 créatures invocables (5 tours)"
         }
       ]
     },
@@ -207,19 +207,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+PA : 4, 5 tours, seulement invocations (Croix 1)"
+          "texte": "+4 PA (5 tours) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "+PA : 2, 2 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "+2 PA (2 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PA : 5, 5 tours, seulement invocations (Croix 1)"
+          "texte": "+5 PA (5 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "+PA : 2, 3 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "+2 PA (3 tours) (Croix 1)"
         }
       ]
     },
@@ -242,19 +242,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 21, 8 tours, seulement invocations (Point)"
+          "texte": "Dommages réduits de 21 (8 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "Dommages réduits : 14, 2 tours, pas le lanceur, pas les invocations (Point)"
+          "texte": "Dommages réduits de 14 (2 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommages réduits : 28, 8 tours, seulement invocations (Point)"
+          "texte": "Dommages réduits de 28 (8 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommages réduits : 19, 2 tours, pas le lanceur, pas les invocations (Point)"
+          "texte": "Dommages réduits de 19 (2 tours)"
         }
       ]
     },
@@ -277,19 +277,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "%dommages : 100, 7 tours, seulement invocations (Croix 1)"
+          "texte": "Augmente les dommages de 100% (7 tours) (Croix 1)"
         },
         {
           "onglet": "normaux",
-          "texte": "%dommages : 55, 2 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "Augmente les dommages de 55% (2 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "%dommages : 120, 7 tours, seulement invocations (Croix 1)"
+          "texte": "Augmente les dommages de 120% (7 tours) (Croix 1)"
         },
         {
           "onglet": "critiques",
-          "texte": "%dommages : 60, 3 tours, pas le lanceur, pas les invocations (Croix 1)"
+          "texte": "Augmente les dommages de 60% (3 tours) (Croix 1)"
         }
       ]
     },
@@ -312,11 +312,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Neutre : 301 à 305, seulement invocations (Point)"
+          "texte": "Dommages : 301 à 305 (Neutre)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Neutre : 601 à 610, seulement invocations (Point)"
+          "texte": "Dommages : 601 à 610 (Neutre)"
         }
       ]
     },
@@ -339,7 +339,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 239"
         }
       ]
     },
@@ -362,19 +362,19 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "+Vitalité : 201 à 250, 7 tours, seulement invocations (Point)"
+          "texte": "+201 à 250 en vitalité (7 tours)"
         },
         {
           "onglet": "normaux",
-          "texte": "+Vitalité : 201 à 250, 5 tours, pas le lanceur, pas les invocations (Point)"
+          "texte": "+201 à 250 en vitalité (5 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Vitalité : 275, 7 tours, seulement invocations (Point)"
+          "texte": "+275 en vitalité (7 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "+Vitalité : 275, 5 tours, pas le lanceur, pas les invocations (Point)"
+          "texte": "+275 en vitalité (5 tours)"
         }
       ]
     },
@@ -397,11 +397,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Eau : 11 à 14 (Point)"
+          "texte": "Dommages : 11 à 14 (Eau)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Eau : 14 à 17 (Point)"
+          "texte": "Dommages : 14 à 17 (Eau)"
         }
       ]
     },
@@ -424,7 +424,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 43"
         }
       ]
     },
@@ -447,7 +447,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 36"
         }
       ]
     },
@@ -470,11 +470,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Dommage Feu : 18 à 37, pas le lanceur (Cercle 2)"
+          "texte": "Dommages : 18 à 37 (Feu) (Cercle 2)"
         },
         {
           "onglet": "critiques",
-          "texte": "Dommage Feu : 39, pas le lanceur (Cercle 2)"
+          "texte": "Dommages : 39 (Feu) (Cercle 2)"
         }
       ]
     },
@@ -497,7 +497,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 41"
         }
       ]
     },
@@ -520,7 +520,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 40"
         }
       ]
     },
@@ -543,7 +543,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 44"
         }
       ]
     },
@@ -566,7 +566,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Invoque une créature (Point)"
+          "texte": "Invoque : 37"
         }
       ]
     },
@@ -589,11 +589,11 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (7) de 35% (4 tours)"
         },
         {
           "onglet": "critiques",
-          "texte": "Maîtrises : 4 tours (Point)"
+          "texte": "Augmente les dommages (7) de 40% (4 tours)"
         }
       ]
     },
@@ -616,7 +616,7 @@
       "effets": [
         {
           "onglet": "normaux",
-          "texte": "Laisse spirituelle : 60 (Point)"
+          "texte": "Invoque le dernier allié mort avec 60 % de ses PDV"
         }
       ]
     }
