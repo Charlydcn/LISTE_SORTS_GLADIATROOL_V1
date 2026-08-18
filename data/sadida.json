@@ -1,0 +1,616 @@
+{
+  "classe": "Sadida",
+  "morphId": 110,
+  "sorts": [
+    {
+      "id": 181,
+      "position": 1,
+      "nom": "Tremblement",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/181.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 7, 4 tours (Cercle 10)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 12, 4 tours (Cercle 10)"
+        }
+      ]
+    },
+    {
+      "id": 182,
+      "position": 2,
+      "nom": "La Folle",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "1",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/182.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 183,
+      "position": 3,
+      "nom": "Ronce",
+      "pa": 3,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/183.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 11 à 18 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 22 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 184,
+      "position": 4,
+      "nom": "Feu de Brousse",
+      "pa": 3,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/184.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 6 à 10 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 6 à 10 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 11 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 11 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 185,
+      "position": 5,
+      "nom": "Herbe Folle",
+      "pa": 3,
+      "po": "0–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/185.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 11 à 20 (Cercle 2)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PM : 2 à 4, 1 tours (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 25 (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PM : 3 à 5, 1 tours (Cercle 2)"
+        }
+      ]
+    },
+    {
+      "id": 186,
+      "position": 6,
+      "nom": "Arbre",
+      "pa": 3,
+      "po": "1–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/186.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque créature statique (Point)"
+        }
+      ]
+    },
+    {
+      "id": 187,
+      "position": 7,
+      "nom": "La Surpuissante",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/187.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature : 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 188,
+      "position": 8,
+      "nom": "Ronce Insolente",
+      "pa": 3,
+      "po": "0–12",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/188.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Enlève les envoûtements : 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 189,
+      "position": 9,
+      "nom": "La Sacrifiée",
+      "pa": 2,
+      "po": "1–2",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/189.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 190,
+      "position": 10,
+      "nom": "La Gonflable",
+      "pa": 4,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/190.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 191,
+      "position": 11,
+      "nom": "Ronces Multiples",
+      "pa": 3,
+      "po": "0–7",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/191.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 16 à 18 (Cercle 4)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 19 (Cercle 4)"
+        }
+      ]
+    },
+    {
+      "id": 192,
+      "position": 12,
+      "nom": "Ronce Apaisante",
+      "pa": 2,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/192.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 63 à 67 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 4, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 68 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perte PM non esquivable : 5, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 193,
+      "position": 13,
+      "nom": "La Bloqueuse",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "1",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/193.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 194,
+      "position": 14,
+      "nom": "Ronces Agressives",
+      "pa": 4,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/194.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 6 à 65 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 65 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 195,
+      "position": 15,
+      "nom": "Larme",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/195.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 17 à 27 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 26 à 27 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 196,
+      "position": 16,
+      "nom": "Vent Empoisonné",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "7",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/196.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre : 8, 6 tours (Cercle 10)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "-Intelligence : 200, 6 tours (Cercle 10)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Neutre : 10, 6 tours (Cercle 10)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "-Intelligence : 400, 6 tours (Cercle 10)"
+        }
+      ]
+    },
+    {
+      "id": 197,
+      "position": 17,
+      "nom": "Puissance Sylvestre",
+      "pa": 2,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "10",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/197.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 16, 4 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Change l'apparence : 4 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PA non esquivable : 100, 4 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 100, 4 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résistance magique : 1000, 4 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résistance physique : 1000, 4 tours, pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 198,
+      "position": 18,
+      "nom": "Sacrifice Poupesque",
+      "pa": 2,
+      "po": "1–3",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/198.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Air : 41 à 45, seulement invocations (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Air : 51 à 55, seulement invocations (Point)"
+        }
+      ]
+    },
+    {
+      "id": 199,
+      "position": 19,
+      "nom": "Connaissance des Poupées",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/199.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Créa invocation : 4, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Créa invocation : 5, 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 200,
+      "position": 20,
+      "nom": "Poison Paralysant",
+      "pa": 3,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 1,
+      "parCible": 1,
+      "icone": "assets/img/spells/200.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Poison TODO pdv/PA : 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Poison TODO pdv/PA : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 390,
+      "position": 29,
+      "nom": "Maîtrise des Bâtons",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/390.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 426,
+      "position": 30,
+      "nom": "Arbre de vie",
+      "pa": 5,
+      "po": "6–6",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/426.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    }
+  ]
+}

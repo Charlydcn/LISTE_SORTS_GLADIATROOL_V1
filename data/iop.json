@@ -1,0 +1,656 @@
+{
+  "classe": "Iop",
+  "morphId": 108,
+  "sorts": [
+    {
+      "id": 141,
+      "position": 1,
+      "nom": "Pression",
+      "pa": 2,
+      "po": "1–2",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/141.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 9 à 13 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 11 à 15 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 142,
+      "position": 2,
+      "nom": "Bond",
+      "pa": 5,
+      "po": "1–6",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/142.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Téléportation (Point)"
+        }
+      ]
+    },
+    {
+      "id": 143,
+      "position": 3,
+      "nom": "Intimidation",
+      "pa": 2,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/143.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre : 5 à 9 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Neutre : 6 à 10 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 144,
+      "position": 4,
+      "nom": "Compulsion",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/144.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 9 à 16, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 11 à 18, 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 145,
+      "position": 5,
+      "nom": "Epée Divine",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/145.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 11 à 20, pas les alliés (Croix 1)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 3, 3 tours, pas les ennemis (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 21, pas les alliés (Croix 1)"
+        }
+      ]
+    },
+    {
+      "id": 146,
+      "position": 6,
+      "nom": "Epée du destin",
+      "pa": 4,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/146.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 10 à 17 (Ligne 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 18 (Ligne 63)"
+        }
+      ]
+    },
+    {
+      "id": 147,
+      "position": 7,
+      "nom": "Guide de Bravoure",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 1,
+      "parCible": 1,
+      "icone": "assets/img/spells/147.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 5 à 10, 2 tours, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 20, 2 tours, pas les ennemis (Cercle 63)"
+        }
+      ]
+    },
+    {
+      "id": 148,
+      "position": 8,
+      "nom": "Amplification",
+      "pa": 1,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/148.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 11 à 12, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 11 à 12, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 149,
+      "position": 9,
+      "nom": "Mutilation",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 5,
+      "parCible": 0,
+      "icone": "assets/img/spells/149.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre %vie : 1, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "%dommages : 50 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommages physiques : 50 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%dommages : 60 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommages physiques : 60 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 150,
+      "position": 10,
+      "nom": "Couper",
+      "pa": 3,
+      "po": "1–3",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/150.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 11 à 16 (Ligne 2)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PM : 2, 1 tours (Ligne 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 20 (Ligne 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PM : 2, 1 tours (Ligne 2)"
+        }
+      ]
+    },
+    {
+      "id": 151,
+      "position": 11,
+      "nom": "Souffle",
+      "pa": 2,
+      "po": "2–8",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/151.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Croix 1)"
+        }
+      ]
+    },
+    {
+      "id": 152,
+      "position": 12,
+      "nom": "Epée du Jugement",
+      "pa": 4,
+      "po": "1–3",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/152.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Eau : 1 à 3 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Feu : 1 à 3 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 1 à 40 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Eau : 4 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Feu : 4 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 1 à 45 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 153,
+      "position": 13,
+      "nom": "Puissance",
+      "pa": 4,
+      "po": "0–2",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/153.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%dommages : 100, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%dommages : 100, 7 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 154,
+      "position": 14,
+      "nom": "Epée Destructrice",
+      "pa": 4,
+      "po": "1–2",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/154.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 11 à 40 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Malus CC : 2 à 3, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 41 à 42 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Malus CC : 2 à 3, 3 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 155,
+      "position": 15,
+      "nom": "Vitalité",
+      "pa": 3,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/155.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Vitalité : 251 à 300, 20 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Vitalité : 350, 20 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 156,
+      "position": 16,
+      "nom": "Tempête de Puissance",
+      "pa": 3,
+      "po": "3–5",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 3,
+      "icone": "assets/img/spells/156.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 36 à 40 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 41 à 45 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 157,
+      "position": 17,
+      "nom": "Epée Céleste",
+      "pa": 4,
+      "po": "0–4",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/157.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 26 à 40 (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 41 à 55 (Cercle 2)"
+        }
+      ]
+    },
+    {
+      "id": 158,
+      "position": 18,
+      "nom": "Concentration",
+      "pa": 2,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 3,
+      "icone": "assets/img/spells/158.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 13 à 21 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 18 à 26 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 159,
+      "position": 19,
+      "nom": "Colère de Iop",
+      "pa": 7,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/159.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 51 à 70 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Boost dégâts après lancement : 4 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 61 à 80 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Boost dégâts après lancement : 4 tours, seulement le lanceur (Point)"
+        }
+      ]
+    },
+    {
+      "id": 160,
+      "position": 20,
+      "nom": "Epée de Iop",
+      "pa": 4,
+      "po": "1–4",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/160.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 13 à 39, pas le lanceur (Croix 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 18 à 44, pas le lanceur (Croix 3)"
+        }
+      ]
+    },
+    {
+      "id": 391,
+      "position": 29,
+      "nom": "Maîtrise des Epées",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/391.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 410,
+      "position": 30,
+      "nom": "Brokle",
+      "pa": 3,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/410.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maximise les effets aléatoires : 2 tours, pas le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maximise les effets aléatoires : 3 tours, pas le lanceur (Point)"
+        }
+      ]
+    }
+  ]
+}

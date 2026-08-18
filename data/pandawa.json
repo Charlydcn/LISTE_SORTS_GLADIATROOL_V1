@@ -1,0 +1,712 @@
+{
+  "classe": "Pandawa",
+  "morphId": 112,
+  "sorts": [
+    {
+      "id": 686,
+      "position": 1,
+      "nom": "Picole",
+      "pa": 1,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/686.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Change l'apparence : 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 1, 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résist. % terre : 25, 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résist. % eau : 25, 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résist. % air : 25, 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résist. % feu : 25, 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Résist. % neutre : 25, 10 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Change l'apparence : 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Résist. % terre : 30, 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Résist. % eau : 30, 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Résist. % air : 30, 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Résist. % feu : 30, 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Résist. % neutre : 30, 10 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Applique l'État TODO : 10 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 687,
+      "position": 2,
+      "nom": "Poing Enflammé",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/687.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 16 à 21 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 19 à 24 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 688,
+      "position": 3,
+      "nom": "Vulnérabilité Incandescente",
+      "pa": 2,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/688.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Faiblesse % feu : 10, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Faiblesse % feu : 12, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 689,
+      "position": 4,
+      "nom": "Epouvante",
+      "pa": 2,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/689.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Malus CC : 6, 3 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 690,
+      "position": 5,
+      "nom": "Souffle Alcoolisé",
+      "pa": 3,
+      "po": "1–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/690.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 13 à 22 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 15 à 24 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 691,
+      "position": 6,
+      "nom": "Vulnérabilité Aqueuse",
+      "pa": 2,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/691.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Faiblesse % eau : 10, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Faiblesse % eau : 12, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 692,
+      "position": 7,
+      "nom": "Gueule de Bois",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/692.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 14 à 22 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 16 à 24 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 693,
+      "position": 8,
+      "nom": "Karcham",
+      "pa": 1,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/693.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Porter (Point)"
+        }
+      ]
+    },
+    {
+      "id": 694,
+      "position": 9,
+      "nom": "Vulnérabilité Venteuse",
+      "pa": 2,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/694.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Faiblesse % air : 10, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Faiblesse % air : 12, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 695,
+      "position": 10,
+      "nom": "Stabilisation",
+      "pa": 2,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/695.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Esquive PM : 50, 4 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Esquive PM : 100, 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Applique l'État TODO : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 696,
+      "position": 11,
+      "nom": "Chamrak",
+      "pa": 1,
+      "po": "1–6",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/696.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Jeter (Point)"
+        }
+      ]
+    },
+    {
+      "id": 697,
+      "position": 12,
+      "nom": "Vulnérabilité Terrestre",
+      "pa": 2,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/697.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Faiblesse % terre : 10, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Faiblesse % terre : 12, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 698,
+      "position": 13,
+      "nom": "Souillure",
+      "pa": 2,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/698.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 4, 1 tours, 25% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+EC : 15, 1 tours, 25% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Enlève les envoûtements : 25% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Diminue les dommages % : 150, 1 tours, 25% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 4, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+EC : 15, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Enlève les envoûtements (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Diminue les dommages % : 150, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 699,
+      "position": 14,
+      "nom": "Lait de Bambou",
+      "pa": 1,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/699.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Enlève les envoûtements (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Change l'apparence (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Enlève l'État TODO (Point)"
+        }
+      ]
+    },
+    {
+      "id": 700,
+      "position": 15,
+      "nom": "Vague à Lame",
+      "pa": 4,
+      "po": "1–5",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/700.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 22 à 36 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 36 à 45 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 701,
+      "position": 16,
+      "nom": "Colère de Zatoïshwan",
+      "pa": 6,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/701.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 11, 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 11, 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "%dommages : 200, 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Change l'apparence : 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 11, 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 11, 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%dommages : 200, 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Change l'apparence : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Applique l'État TODO : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 702,
+      "position": 17,
+      "nom": "Flasque Explosive",
+      "pa": 2,
+      "po": "2–5",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/702.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 16 à 30 (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 26 à 40 (Cercle 2)"
+        }
+      ]
+    },
+    {
+      "id": 703,
+      "position": 18,
+      "nom": "Pandatak",
+      "pa": 4,
+      "po": "1–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/703.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 26 à 35 (Ligne 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 36 à 40 (Ligne 2)"
+        }
+      ]
+    },
+    {
+      "id": 704,
+      "position": 19,
+      "nom": "Pandanlku",
+      "pa": 2,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/704.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+PM : 3, 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PM : 4, 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 705,
+      "position": 20,
+      "nom": "Lien Spiritueux",
+      "pa": 2,
+      "po": "1–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "8",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/705.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 397,
+      "position": 29,
+      "nom": "Maîtrise des Haches",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/397.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 423,
+      "position": 30,
+      "nom": "Ivresse",
+      "pa": 4,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/423.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    }
+  ]
+}

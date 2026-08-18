@@ -1,0 +1,648 @@
+{
+  "classe": "Enutrof",
+  "morphId": 103,
+  "sorts": [
+    {
+      "id": 41,
+      "position": 1,
+      "nom": "Sac Animé",
+      "pa": 1,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "7",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/41.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 42,
+      "position": 2,
+      "nom": "Chance",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/42.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Chance : 61 à 70, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Chance : 120, 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 43,
+      "position": 3,
+      "nom": "Lancer de Pelle",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/43.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 11 à 16 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 25 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 44,
+      "position": 4,
+      "nom": "Roulage de Pelle",
+      "pa": 3,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/44.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 9 à 15 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 15 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 45,
+      "position": 5,
+      "nom": "Clé Réductrice",
+      "pa": 1,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/45.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Malus PO : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Malus PO : 5, 6 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 46,
+      "position": 6,
+      "nom": "Désinvocation",
+      "pa": 3,
+      "po": "1–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/46.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 71 à 130, seulement invocations (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 130, seulement invocations (Point)"
+        }
+      ]
+    },
+    {
+      "id": 47,
+      "position": 7,
+      "nom": "Boîte de Pandore",
+      "pa": 2,
+      "po": "0–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/47.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 30, 50% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 10, 3 tours, 50% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 40, 50% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 11, 3 tours, 50% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 48,
+      "position": 8,
+      "nom": "Remblai",
+      "pa": 4,
+      "po": "2–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/48.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 7 à 12 (Croix 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 15 (Croix 3)"
+        }
+      ]
+    },
+    {
+      "id": 49,
+      "position": 9,
+      "nom": "Pelle Fantomatique",
+      "pa": 4,
+      "po": "0–9",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/10",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/49.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 16 à 20 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 20 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Enlève les envoûtements (Point)"
+        }
+      ]
+    },
+    {
+      "id": 50,
+      "position": 10,
+      "nom": "Maladresse",
+      "pa": 1,
+      "po": "1–13",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/50.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PM : 3, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PM : 4, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 51,
+      "position": 11,
+      "nom": "Lancer de Pièces",
+      "pa": 2,
+      "po": "0–12",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 3,
+      "icone": "assets/img/spells/51.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 1 à 8 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 16 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 52,
+      "position": 12,
+      "nom": "Cupidité",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/52.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Force : 150, 5 tours (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Intelligence : 150, 5 tours (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Force : 200, 5 tours (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Intelligence : 200, 5 tours (Cercle 63)"
+        }
+      ]
+    },
+    {
+      "id": 53,
+      "position": 13,
+      "nom": "Force de l'Age",
+      "pa": 4,
+      "po": "1–4",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/53.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol PM : 1 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 21 à 25 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol PM : 2 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 25 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 54,
+      "position": 14,
+      "nom": "Maladresse de Masse",
+      "pa": 5,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "10",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/54.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 1 à 3, 3 tours (Cercle 8)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 2 à 4, 3 tours (Cercle 8)"
+        }
+      ]
+    },
+    {
+      "id": 55,
+      "position": 15,
+      "nom": "Accélération",
+      "pa": 3,
+      "po": "0–63",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/55.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+PM : 3, 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PM : 4, 3 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 56,
+      "position": 16,
+      "nom": "Pelle du Jugement",
+      "pa": 4,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/5",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/56.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 12 à 20 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 15 à 23 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PM : 3, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 57,
+      "position": 17,
+      "nom": "Pelle Animée",
+      "pa": 2,
+      "po": "1–1",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/57.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 58,
+      "position": 18,
+      "nom": "Pelle Massacrante",
+      "pa": 5,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/58.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 45 à 50 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 53 à 58 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 59,
+      "position": 19,
+      "nom": "Corruption",
+      "pa": 7,
+      "po": "1–5",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/59.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 100, pas les alliés (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 260, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Passe le tour (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 4 tours, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 80, pas les alliés (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 280, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Passe le tour (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Applique l'État TODO : 4 tours, pas les ennemis (Cercle 63)"
+        }
+      ]
+    },
+    {
+      "id": 60,
+      "position": 20,
+      "nom": "Coffre Animé",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "63",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/60.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 396,
+      "position": 29,
+      "nom": "Maîtrise des Pelles",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/396.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 425,
+      "position": 30,
+      "nom": "Retraite anticipée",
+      "pa": 4,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "7",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/425.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 100, 1 tours (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 1 tours (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 5 tours (Cercle 63)"
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,856 @@
+{
+  "classe": "Xelor",
+  "morphId": 105,
+  "sorts": [
+    {
+      "id": 81,
+      "position": 1,
+      "nom": "Ralentissement",
+      "pa": 1,
+      "po": "3–9",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 4,
+      "parCible": 1,
+      "icone": "assets/img/spells/81.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 3, 1 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 82,
+      "position": 2,
+      "nom": "Contre",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 1,
+      "parCible": 0,
+      "icone": "assets/img/spells/82.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Renvoie de dommages : 8, 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Renvoie de dommages : 9, 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 83,
+      "position": 3,
+      "nom": "Aiguille",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/83.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 12 à 22 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 25 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 84,
+      "position": 4,
+      "nom": "Gelure",
+      "pa": 3,
+      "po": "3–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/84.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 10 à 15 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 16 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 85,
+      "position": 5,
+      "nom": "Flou",
+      "pa": 3,
+      "po": "4–4",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/85.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PA non esquivable : 2, 2 tours (Cercle 4)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 5 tours (Cercle 63)"
+        }
+      ]
+    },
+    {
+      "id": 86,
+      "position": 6,
+      "nom": "Aiguille Chercheuse",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/86.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 87,
+      "position": 7,
+      "nom": "Démotivation",
+      "pa": 1,
+      "po": "1–14",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/87.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "-Esquive PA : 8, 8 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 88,
+      "position": 8,
+      "nom": "Téléportation",
+      "pa": 4,
+      "po": "1–63",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "15",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/88.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Téléportation : 1 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 89,
+      "position": 9,
+      "nom": "Dévouement",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/89.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 2, 1 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PA : 2, 2 tours, pas les ennemis (Croix 3)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10%, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90%, seulement le lanceur (Point)"
+        }
+      ]
+    },
+    {
+      "id": 90,
+      "position": 10,
+      "nom": "Fuite",
+      "pa": 1,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 3,
+      "parCible": 0,
+      "icone": "assets/img/spells/90.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Téléportation (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 91,
+      "position": 11,
+      "nom": "Frappe de Xélor",
+      "pa": 4,
+      "po": "1–5",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/91.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 41 à 45 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 46 à 50 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 92,
+      "position": 12,
+      "nom": "Rayon Obscur",
+      "pa": 4,
+      "po": "1–9",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/35",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/92.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 13 à 29 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Vol PO : 1, 1 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 18 à 34 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol PO : 1, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 93,
+      "position": 13,
+      "nom": "Flétrissement",
+      "pa": 3,
+      "po": "1–8",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/93.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 15 à 24 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 17 à 26 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 94,
+      "position": 14,
+      "nom": "Protection Aveuglante",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/94.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Renvoie de dommages : 8, 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Esquive PA : 80, 3 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 95,
+      "position": 15,
+      "nom": "Horloge",
+      "pa": 4,
+      "po": "1–4",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/95.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol PA : 1 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 31 à 35 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol PA : 1 à 2 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 36 à 40 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 96,
+      "position": 16,
+      "nom": "Poussière Temporelle",
+      "pa": 5,
+      "po": "0–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/96.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 9 à 20 (Cercle 2)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 1, 1 tours (Cercle 2)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 16 à 27 (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 2, 1 tours (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 97,
+      "position": 17,
+      "nom": "Cadran de Xélor",
+      "pa": 1,
+      "po": "1–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/97.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 98,
+      "position": 18,
+      "nom": "Vol du Temps",
+      "pa": 4,
+      "po": "3–6",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/98.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol PA : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 99,
+      "position": 19,
+      "nom": "Momification",
+      "pa": 5,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "15",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/99.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommages réduits : 28, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommages réduits : 28, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 10, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Change l'apparence : 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Esquive PA : 100, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 1, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 100,
+      "position": 20,
+      "nom": "Sablier de Xélor",
+      "pa": 2,
+      "po": "3–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/100.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 6 à 13 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 90% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 11 à 18 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PA (lanceur) : 1, 10% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 90% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 393,
+      "position": 29,
+      "nom": "Maîtrise des Marteaux",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/393.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 424,
+      "position": 30,
+      "nom": "Raulebaque",
+      "pa": 6,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "7",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/424.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Raulebaque (Cercle 63)"
+        }
+      ]
+    }
+  ]
+}

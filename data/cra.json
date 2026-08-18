@@ -1,0 +1,704 @@
+{
+  "classe": "Crâ",
+  "morphId": 109,
+  "sorts": [
+    {
+      "id": 161,
+      "position": 1,
+      "nom": "Flèche Magique",
+      "pa": 4,
+      "po": "1–12",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/161.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 20 à 22 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Vol PO : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 24 à 26 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol PO : 2, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 162,
+      "position": 2,
+      "nom": "Tir Critique",
+      "pa": 2,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/162.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 14, 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 14, 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%dommages : 50, 3 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 163,
+      "position": 3,
+      "nom": "Flèche Glacée",
+      "pa": 3,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/163.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 9 à 10 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 2, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 12 à 13 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 2, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 164,
+      "position": 4,
+      "nom": "Flèche Empoisonnée",
+      "pa": 4,
+      "po": "2–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/164.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre : 9 à 10, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Neutre : 12, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 165,
+      "position": 5,
+      "nom": "Flèche Enflammée",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/165.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Ligne 4)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 21 à 23 (Ligne 4)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Repousse TODO cases (Ligne 4)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 27 à 29 (Ligne 4)"
+        }
+      ]
+    },
+    {
+      "id": 166,
+      "position": 6,
+      "nom": "Tir Puissant",
+      "pa": 3,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/166.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%dommages : 250, 2 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%dommages : 290, 2 tours, pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 167,
+      "position": 7,
+      "nom": "Flèche d'Expiation",
+      "pa": 4,
+      "po": "8–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/167.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 37 à 39 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Boost dégâts après lancement : 3 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 43 à 45 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Boost dégâts après lancement : 3 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Applique l'État TODO : 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 168,
+      "position": 8,
+      "nom": "Oeil de Taupe",
+      "pa": 3,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/168.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Eau : 15 à 17 (Cercle 3)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Malus PO : 6, 3 tours (Cercle 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Eau : 19 à 21 (Cercle 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Malus PO : 6, 3 tours (Cercle 3)"
+        }
+      ]
+    },
+    {
+      "id": 169,
+      "position": 9,
+      "nom": "Flèche de Recul",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/169.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 18 à 21 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 21 à 24 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 170,
+      "position": 10,
+      "nom": "Flèche d'Immobilisation",
+      "pa": 2,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/170.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol PM : 1 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 9 à 10 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol PM : 1 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 12 à 13 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 171,
+      "position": 11,
+      "nom": "Flèche Punitive",
+      "pa": 4,
+      "po": "6–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/171.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 31 à 33 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Boost dégâts après lancement : 2 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 37 à 39 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Boost dégâts après lancement : 2 tours, seulement le lanceur (Point)"
+        }
+      ]
+    },
+    {
+      "id": 172,
+      "position": 12,
+      "nom": "Tir Eloigné",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/172.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PO : 6, 3 tours (Cercle 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PO : 7, 3 tours (Cercle 3)"
+        }
+      ]
+    },
+    {
+      "id": 173,
+      "position": 13,
+      "nom": "Flèche Harcelante",
+      "pa": 3,
+      "po": "1–12",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/173.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 13 à 15 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 17 à 19 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 174,
+      "position": 14,
+      "nom": "Flèche Cinglante",
+      "pa": 3,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/174.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 13 à 14 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 3, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 17 à 18 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perte PM non esquivable : 3, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 175,
+      "position": 15,
+      "nom": "Flèche Destructrice",
+      "pa": 4,
+      "po": "5–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/175.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 26 à 28 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Malus Dommages : 20, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 36 à 38 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Malus Dommages : 20, 1 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 176,
+      "position": 16,
+      "nom": "Flèche Persécutrice",
+      "pa": 3,
+      "po": "5–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/176.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 11 à 13 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 11 à 13 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 14 à 16 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 14 à 16 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 177,
+      "position": 17,
+      "nom": "Flèche Ralentissante",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/177.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 21 à 23 (Cercle 2)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 2 (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 29 à 31 (Cercle 2)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Retrait PA : 2 (Cercle 2)"
+        }
+      ]
+    },
+    {
+      "id": 178,
+      "position": 18,
+      "nom": "Flèche Absorbante",
+      "pa": 4,
+      "po": "5–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/178.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Air : 26 à 28 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Air : 36 à 38 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 179,
+      "position": 19,
+      "nom": "Flèche Explosive",
+      "pa": 4,
+      "po": "1–8",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/179.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 20 à 24 (Cercle 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 28 à 32 (Cercle 3)"
+        }
+      ]
+    },
+    {
+      "id": 180,
+      "position": 20,
+      "nom": "Maîtrise de l'Arc",
+      "pa": 2,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/180.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 60, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 70, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 392,
+      "position": 29,
+      "nom": "Maîtrise des Arcs",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/392.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 418,
+      "position": 30,
+      "nom": "Flèche de dispersion",
+      "pa": 3,
+      "po": "1–12",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/418.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases (Croix 2)"
+        }
+      ]
+    }
+  ]
+}

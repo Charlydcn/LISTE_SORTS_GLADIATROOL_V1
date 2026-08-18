@@ -1,0 +1,1024 @@
+{
+  "classe": "Ecaflip",
+  "morphId": 106,
+  "sorts": [
+    {
+      "id": 101,
+      "position": 1,
+      "nom": "Roulette",
+      "pa": 1,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "1",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/101.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 5000, 3%, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PA : 2 à 3, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PA : 2 à 3, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PA : 2 à 3, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PA : 1, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 50, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 50, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 50, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 50, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 50, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 50, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PO : 5, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PO : 5, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Bonus PO : 5, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Force : 400, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Force : 400, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Force : 400, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Agilité : 400, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Agilité : 400, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Agilité : 400, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Chance : 400, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Chance : 400, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Chance : 400, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Intelligence : 400, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Intelligence : 400, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Intelligence : 400, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PM : 2 à 3, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PM : 2 à 3, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PM : 2 à 3, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Enlève les envoûtements : 2%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Enlève les envoûtements : 2%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Enlève les envoûtements : 2% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Passe le tour : 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Passe le tour : 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Passe le tour : 3% (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Soins : 50, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Soins : 50, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Soins : 50, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 5000, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PA : 3, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PA : 3, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PA : 3, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PA : 1, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 60, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 60, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 60, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 60, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 60, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 60, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PO : 6, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PO : 6, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Bonus PO : 6, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Force : 500, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Force : 500, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Force : 500, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Agilité : 500, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Agilité : 500, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Agilité : 500, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Chance : 500, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Chance : 500, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Chance : 500, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Intelligence : 500, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Intelligence : 500, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Intelligence : 500, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PM : 3, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PM : 3, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PM : 3, 1 tours, 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Enlève les envoûtements : 2%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Enlève les envoûtements : 2%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Enlève les envoûtements : 2% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Passe le tour : 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Passe le tour : 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Passe le tour : 3% (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Soins : 60, 1 tours, 3%, pas les ennemis (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Soins : 60, 1 tours, 3%, seulement le lanceur (Cercle 63)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Soins : 60, 1 tours, 3% (Cercle 63)"
+        }
+      ]
+    },
+    {
+      "id": 102,
+      "position": 2,
+      "nom": "Pile ou Face",
+      "pa": 3,
+      "po": "0–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/102.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 6 à 19 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 5 à 12, pas les alliés (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 8 à 22, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 9 à 24 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 1 à 5, pas les alliés (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 23 à 27, pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 103,
+      "position": 3,
+      "nom": "Chance d'Ecaflip",
+      "pa": 2,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/103.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Chance dommages subis/soins : 3 tours, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Chance dommages subis/soins : 3 tours, pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 104,
+      "position": 4,
+      "nom": "Trèfle",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/104.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+CC : 10, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+CC : 11, 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 105,
+      "position": 5,
+      "nom": "Bond du Félin",
+      "pa": 1,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 5,
+      "parCible": 0,
+      "icone": "assets/img/spells/105.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Téléportation (Point)"
+        }
+      ]
+    },
+    {
+      "id": 106,
+      "position": 6,
+      "nom": "Roue de la Fortune",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/106.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre %vie : 1 à 5, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "%dommages : 100, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%dommages : 200, 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 107,
+      "position": 7,
+      "nom": "Topkaj",
+      "pa": 3,
+      "po": "1–5",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/107.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 19 à 31 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 22 à 34 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 108,
+      "position": 8,
+      "nom": "Esprit Félin",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/108.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 36 à 50, pas le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 36 à 50, 50%, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Pas d'effet : 50%, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 50, pas le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 50, 50%, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Pas d'effet : 50%, seulement le lanceur (Point)"
+        }
+      ]
+    },
+    {
+      "id": 109,
+      "position": 9,
+      "nom": "Bluff",
+      "pa": 3,
+      "po": "1–4",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/109.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 1 à 50, 50% (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 1 à 50, 50% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 55, 50% (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 55, 50% (Point)"
+        }
+      ]
+    },
+    {
+      "id": 110,
+      "position": 10,
+      "nom": "Griffe Joueuse",
+      "pa": 4,
+      "po": "1–4",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/110.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 24 à 29 (Ligne 3)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 35 (Ligne 3)"
+        }
+      ]
+    },
+    {
+      "id": 111,
+      "position": 11,
+      "nom": "Contrecoup",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/111.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre %vie : 1, 1 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Vitalité : 140 à 250, 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 112,
+      "position": 12,
+      "nom": "Griffe de Ceangal",
+      "pa": 4,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/112.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 21 à 45 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 21 à 45 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perte PA non esquivable : 1, 8 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 113,
+      "position": 13,
+      "nom": "Perception",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "1",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/113.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 6 à 11, 2 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perception (Cercle 9)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 12, 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perception (Cercle 9)"
+        }
+      ]
+    },
+    {
+      "id": 114,
+      "position": 14,
+      "nom": "Rekop",
+      "pa": 4,
+      "po": "1–4",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/2",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/114.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Retrait PA : 1, 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 12 à 41 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 12 à 41 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 12 à 41 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 12 à 41 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 115,
+      "position": 15,
+      "nom": "Odorat",
+      "pa": 5,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "7",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/115.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+PA : 2 à 5, 4 tours (Cercle 6)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+PM : 2 à 5, 4 tours (Cercle 6)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PA non esquivable : 1 à 4, 4 tours (Cercle 6)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Perte PM non esquivable : 1 à 4, 4 tours (Cercle 6)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PA : 2 à 5, 8 tours (Cercle 6)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+PM : 2 à 5, 8 tours (Cercle 6)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perte PA non esquivable : 1 à 4, 8 tours (Cercle 6)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perte PM non esquivable : 1 à 4, 8 tours (Cercle 6)"
+        }
+      ]
+    },
+    {
+      "id": 116,
+      "position": 16,
+      "nom": "Langue Râpeuse",
+      "pa": 4,
+      "po": "1–4",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/30",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/116.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Feu : 16 à 25 (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Feu : 18 à 27 (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Malus PO : 2, 12 tours (Croix 1)"
+        }
+      ]
+    },
+    {
+      "id": 117,
+      "position": 17,
+      "nom": "Griffe Invocatrice",
+      "pa": 3,
+      "po": "1–4",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/117.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 118,
+      "position": 18,
+      "nom": "Réflexes",
+      "pa": 2,
+      "po": "0–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/118.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "+Agilité : 65 à 135, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Agilité : 70 à 210, 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 119,
+      "position": 19,
+      "nom": "Tout ou rien",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/119.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre : 4 à 38, 2 tours (Cercle 8)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 4 à 38, 2 tours, pas les alliés (Cercle 8)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 11 à 50, 2 tours, pas les ennemis (Cercle 8)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Neutre : 7 à 76, 2 tours (Cercle 8)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 7 à 76, 2 tours, pas les alliés (Cercle 8)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 21 à 100, 2 tours, pas les ennemis (Cercle 8)"
+        }
+      ]
+    },
+    {
+      "id": 120,
+      "position": 20,
+      "nom": "Destin d'Ecaflip",
+      "pa": 4,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/20",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/120.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 13 à 37 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Repousse TODO cases (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 13 à 75 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Perte PM non esquivable : 1, 8 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 391,
+      "position": 29,
+      "nom": "Maîtrise des Epées",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/391.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 412,
+      "position": 30,
+      "nom": "Félintion",
+      "pa": 4,
+      "po": "4–4",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/412.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Repousse TODO cases : pas les alliés (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Terre : 19 à 28, pas les alliés (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Soin : 36 à 75, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Repousse TODO cases : pas les alliés (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Terre : 29 à 33, pas les alliés (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 76 à 80, pas les ennemis (Point)"
+        }
+      ]
+    }
+  ]
+}

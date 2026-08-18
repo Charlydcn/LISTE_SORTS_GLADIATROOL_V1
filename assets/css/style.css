@@ -1,0 +1,523 @@
+:root{
+  --cream: #e7e3cd;
+  --cream-row-a: #ddd8bc;
+  --cream-row-b: #d3ceae;
+  --cream-row-c: #cbc6a4;
+  --tab-inactive: #c9c4a4;
+  --border-dark: #a39d78;
+  --border-outer: #8f8a68;
+  --gold: #b68d3c;
+  --gold-dark: #6e5322;
+  --text-main: #1c1a12;
+  --text-muted: #4a4636;
+  --orange: #e07b1e;
+  --red: #c0392b;
+  --green: #3e8e3e;
+  --page-bg: #24261f;
+}
+
+*{ box-sizing: border-box; }
+
+body{
+  margin: 0;
+  padding: 12px 16px;
+  background: var(--page-bg);
+  font-family: "Segoe UI", Arial, Helvetica, sans-serif;
+  color: var(--text-main);
+}
+
+.page-title{
+  color: #e7e3cd;
+  font-size: 11px;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  text-align: center;
+  opacity: .55;
+  margin: 0 0 14px;
+}
+
+.class-section{
+  max-width: 760px;
+  margin: 0 auto 56px;
+}
+
+.class-heading{
+  color: #f1e9c9;
+  font-size: 20px;
+  font-weight: 700;
+  border-bottom: 2px solid #5a5738;
+  padding-bottom: 6px;
+  margin: 0 0 12px;
+  letter-spacing: .02em;
+}
+
+.spell-list{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 36px;
+}
+
+/* ==========================================================================
+   CARTE DE SORT
+   ========================================================================== */
+
+.spell-card{
+  width: 718px;
+  max-width: 100%;
+  background: var(--cream);
+  border: 1px solid var(--border-outer);
+  border-radius: 6px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0,0,0,.45);
+  font-size: 14px;
+}
+
+
+/* ---- header: icon + name + level + PO/PA ---- */
+.spell-header{
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  padding: 16px 18px 6px;
+  gap: 14px;
+}
+
+.spell-header-left{
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.spell-icon{
+  width: 68px;
+  height: 68px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: 3px solid var(--gold);
+  outline: 1px solid var(--gold-dark);
+  outline-offset: -1px;
+  background: radial-gradient(circle at 35% 30%, #2b2f22 0%, #16180f 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spell-icon svg{
+  width: 40px;
+  height: 40px;
+  fill: #e9e4cd;
+  opacity: .92;
+}
+
+.spell-icon .spell-icon-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  padding: 0;
+  display: block;
+}
+
+.spell-name-block .spell-name{
+  font-size: 21px;
+  font-weight: 700;
+  margin: 2px 0 2px;
+  color: var(--text-main);
+}
+
+.spell-name-block .spell-level{
+  font-size: 13px;
+  color: #4a4636;
+}
+
+.spell-cost{
+  text-align: right;
+  font-size: 14px;
+  color: var(--text-main);
+  white-space: nowrap;
+  padding-top: 2px;
+}
+
+.spell-cost .po{ margin: 0 0 2px; }
+.spell-cost .pa{ font-weight: 600; }
+
+/* ---- description ---- */
+.spell-description{
+  padding: 8px 18px 18px;
+  font-size: 14px;
+  color: var(--text-main);
+  line-height: 1.4;
+}
+
+/* ---- Effets section ---- */
+.section-heading{
+  padding: 0 18px;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 10px;
+  color: var(--text-main);
+}
+
+.effect-tabs{
+  display: flex;
+  padding: 0 18px;
+  gap: 2px;
+}
+
+.effect-tab{
+  padding: 8px 18px;
+  font-size: 13px;
+  font-weight: 600;
+  background: var(--tab-inactive);
+  color: #6f6a4f;
+  border-radius: 6px 6px 0 0;
+  cursor: pointer;
+  user-select: none;
+}
+
+.effect-tab.active{
+  background: var(--cream-row-a);
+  color: var(--text-main);
+}
+
+.effects-box{
+  margin: 0 18px 18px;
+  border-radius: 0 4px 4px 4px;
+  overflow: hidden;
+  min-height: 128px;
+}
+
+.effect-row{
+  padding: 11px 16px;
+  font-size: 14px;
+  color: var(--text-main);
+}
+
+.effect-row:nth-child(odd){ background: var(--cream-row-a); }
+.effect-row:nth-child(even){ background: var(--cream-row-b); }
+
+.effect-row .element{
+  vertical-align: middle;
+  margin-right: 6px;
+  height: 1.25rem;
+}
+
+.effect-row.empty{
+  color: transparent;
+}
+
+/* ---- Autres caractéristiques ---- */
+.stats-wrap{
+  padding: 0 18px 20px;
+}
+
+.stats-grid{
+  display: flex;
+  align-items: stretch;
+  border-top: 1px solid var(--border-dark);
+}
+
+.stats-col{
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 50%;
+  min-width: 0;
+}
+
+.stats-col.left{
+  border-right: 1px solid var(--border-dark);
+}
+
+.stat-row{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 8px 16px;
+  font-size: 13.5px;
+}
+
+.stats-col.left .stat-row{ padding-right: 20px; }
+.stats-col.right .stat-row{ padding-left: 20px; }
+
+.stat-row:nth-child(odd){ background: rgba(0,0,0,.025); }
+
+.stat-label{ color: var(--text-main); }
+
+.stat-value{
+  font-weight: 700;
+  color: var(--text-main);
+}
+
+.stat-icon{
+  font-weight: 900;
+  font-size: 14px;
+}
+
+.stat-icon.yes{ color: var(--green); }
+.stat-icon.no{ color: var(--red); }
+
+/* footer credit removed for clean screenshots */
+
+/* ==========================================================================
+   PAGE D'ACCUEIL — 12 LIENS DE CLASSES
+   ========================================================================== */
+
+.class-grid{
+  max-width: 760px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+.class-link{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  padding: 12px 8px;
+  background: var(--cream);
+  border: 1px solid var(--border-outer);
+  border-radius: 6px;
+  color: var(--text-main);
+  text-decoration: none;
+  box-shadow: 0 6px 18px rgba(0,0,0,.35);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.class-link:hover{
+  transform: translateY(-3px);
+  box-shadow: 0 12px 26px rgba(0,0,0,.5);
+}
+
+.class-link-icon{
+  width: 40px;
+  height: 40px;
+  border-radius: 4px;
+  outline-offset: -1px;
+  background: radial-gradient(circle at 35% 30%, #2b2f22 0%, #16180f 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.2rem;
+}
+
+.class-link-icon svg{
+  width: 24px;
+  height: 24px;
+  fill: #e9e4cd;
+  opacity: .92;
+}
+
+.class-icon-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.class-link-name{
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.class-link-count{
+  font-size: 12px;
+  color: var(--text-muted);
+}
+
+/* ---- section "Sorts communs" sur la page d'accueil ---- */
+.common-section{
+  max-width: 1240px;
+  margin: 56px auto 0;
+}
+
+.common-toggle{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 4px 8px;
+  border: none;
+  background: none;
+  color: #f1e9c9;
+  font-size: 20px;
+  font-weight: 700;
+  font-family: inherit;
+  text-align: left;
+  border-bottom: 2px solid #5a5738;
+  cursor: pointer;
+  letter-spacing: .02em;
+}
+
+.common-toggle:hover{
+  color: #fff;
+}
+
+.common-chevron{
+  display: inline-block;
+  transition: transform .15s ease;
+}
+
+.common-toggle.open .common-chevron{
+  transform: rotate(180deg);
+}
+
+.common-body{
+  margin-top: 12px;
+}
+
+/* ---- page d'une classe ---- */
+.class-page{
+  max-width: 1240px;
+  margin: 0 auto;
+}
+
+.back-link{
+  display: inline-block;
+  color: #f1e9c9;
+  text-decoration: none;
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.back-link:hover{ text-decoration: underline; }
+
+.class-heading{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.class-heading-icon{
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.class-heading-icon .class-icon-img{
+  width: 100%;
+  height: 100%;
+  padding: 0;
+}
+
+.class-heading .class-count{
+  font-size: 14px;
+  font-weight: 400;
+  color: #5a5738;
+}
+
+/* ---- layout grille de sorts + panneau de détail ---- */
+.class-layout{
+  display: flex;
+  align-items: flex-start;
+  gap: 18px;
+}
+
+.spell-grid{
+  flex: 1 1 auto;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 8px;
+  min-width: 0;
+}
+
+.spell-tile{
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 10px;
+  padding: 8px 10px;
+  background: var(--cream);
+  border: 1px solid var(--border-outer);
+  border-radius: 6px;
+  cursor: pointer;
+  color: var(--text-main);
+  font-family: inherit;
+  text-align: left;
+  box-shadow: 0 4px 12px rgba(0,0,0,.3);
+  transition: transform .12s ease, box-shadow .12s ease;
+}
+
+.spell-tile:hover{
+  transform: translateY(-2px);
+  box-shadow: 0 10px 22px rgba(0,0,0,.45);
+}
+
+.spell-tile-icon{
+  width: 32px;
+  height: 32px;
+  flex-shrink: 0;
+  border-radius: 4px;
+  border: none;
+  outline: none;
+  outline-offset: unset;
+  background: radial-gradient(circle at 35% 30%, #2b2f22 0%, #16180f 75%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.spell-tile-icon svg{
+  width: 18px;
+  height: 18px;
+  fill: #e9e4cd;
+  opacity: .92;
+}
+
+.spell-tile-icon .spell-icon-img{
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+.spell-tile-name{
+  font-size: 13px;
+  font-weight: 600;
+  padding-top: 3px;
+}
+
+.spell-detail{
+  flex: 0 0 520px;
+  width: 520px;
+  max-width: 100%;
+  position: sticky;
+  top: 20px;
+}
+
+.spell-detail .spell-card{
+  width: 100%;
+}
+
+.spell-detail .detail-placeholder{
+  padding: 40px 20px;
+  text-align: center;
+  color: #b7b29a;
+  font-size: 14px;
+  background: rgba(231,227,205,.06);
+  border: 1px dashed #5a5738;
+  border-radius: 6px;
+}
+
+@media (max-width: 1020px){
+  .class-layout{ flex-direction: column; }
+  .spell-detail{
+    flex: 1 1 auto;
+    width: 100%;
+    position: static;
+  }
+}
+
+@media (max-width: 560px){
+  .class-grid{ grid-template-columns: repeat(2, 1fr); }
+  .spell-grid{ grid-template-columns: repeat(2, 1fr); }
+}
+
+@media (max-width: 900px){
+  .class-grid{ grid-template-columns: repeat(3, 1fr); }
+}

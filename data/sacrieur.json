@@ -1,0 +1,656 @@
+{
+  "classe": "Sacrieur",
+  "morphId": 111,
+  "sorts": [
+    {
+      "id": 431,
+      "position": 1,
+      "nom": "Châtiment Forcé",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/431.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 432,
+      "position": 2,
+      "nom": "Pied du Sacrieur",
+      "pa": 3,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/35",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/432.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Terre : 13 à 22 (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Vol Agilité : 20, 3 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Terre : 25 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol Agilité : 20, 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 433,
+      "position": 3,
+      "nom": "Châtiment Osé",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/433.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 434,
+      "position": 4,
+      "nom": "Attirance",
+      "pa": 3,
+      "po": "2–14",
+      "porteeModifiable": true,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 1,
+      "icone": "assets/img/spells/434.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Attire TODO cases (Point)"
+        }
+      ]
+    },
+    {
+      "id": 435,
+      "position": 5,
+      "nom": "Transfert de Vie",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 6,
+      "parCible": 0,
+      "icone": "assets/img/spells/435.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Transfert de vie : 10, pas le lanceur, pas les ennemis (Cercle 4)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Transfert de vie : 10, pas le lanceur, pas les ennemis (Cercle 4)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Soin : 10, pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 436,
+      "position": 6,
+      "nom": "Assaut",
+      "pa": 3,
+      "po": "1–3",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/35",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/436.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Air : 13 à 19 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Air : 19 à 25 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 437,
+      "position": 7,
+      "nom": "Châtiment Agile",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/437.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 438,
+      "position": 8,
+      "nom": "Transposition",
+      "pa": 4,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "-",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/438.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Échange de place : pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 439,
+      "position": 9,
+      "nom": "Dissolution",
+      "pa": 4,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 2,
+      "parCible": 0,
+      "icone": "assets/img/spells/439.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Eau : 22 à 26, pas le lanceur (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Eau : 27 à 31, pas le lanceur (Croix 1)"
+        }
+      ]
+    },
+    {
+      "id": 440,
+      "position": 10,
+      "nom": "Sacrifice",
+      "pa": 3,
+      "po": "1–5",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/440.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Sacrifice : 5 tours, pas les ennemis (Cercle 2)"
+        }
+      ]
+    },
+    {
+      "id": 441,
+      "position": 11,
+      "nom": "Châtiment Vitalesque",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/441.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Châtiment TODO sur TODO tours : 2 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Applique l'État TODO : 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Châtiment TODO sur TODO tours : 2 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Applique l'État TODO : 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 442,
+      "position": 12,
+      "nom": "Absorption",
+      "pa": 4,
+      "po": "1–3",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/40",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 2,
+      "icone": "assets/img/spells/442.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie Feu : 23 à 27 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie Feu : 28 à 32 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 443,
+      "position": 13,
+      "nom": "Châtiment Spirituel",
+      "pa": 3,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/45",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/443.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%érosion : 5, 5 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 444,
+      "position": 14,
+      "nom": "Dérobade",
+      "pa": 3,
+      "po": "0–6",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/444.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Esquive en reculant de 1 case : 1 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Esquive en reculant de 1 case : 2 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 445,
+      "position": 15,
+      "nom": "Coopération",
+      "pa": 4,
+      "po": "1–10",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "3",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/445.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Échange de place : pas les alliés (Point)"
+        }
+      ]
+    },
+    {
+      "id": 446,
+      "position": 16,
+      "nom": "Punition",
+      "pa": 4,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "2",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/446.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage %vie attaquant (cellule) : 30 (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage %vie attaquant (cellule) : 35 (Point)"
+        }
+      ]
+    },
+    {
+      "id": 447,
+      "position": 17,
+      "nom": "Furie",
+      "pa": 3,
+      "po": "1–3",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/447.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Neutre %vie : 1, 1 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Dommage Eau : 9 à 13 (Croix 1)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "+Dommages : 8, 4 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Neutre %vie : 1, 1 tours, seulement le lanceur (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Dommage Eau : 11 à 15 (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "+Dommages : 8, 4 tours, seulement le lanceur (Point)"
+        }
+      ]
+    },
+    {
+      "id": 448,
+      "position": 18,
+      "nom": "Epée volante",
+      "pa": 4,
+      "po": "1–3",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "4",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/448.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Invoque une créature (Point)"
+        }
+      ]
+    },
+    {
+      "id": 449,
+      "position": 19,
+      "nom": "Détour",
+      "pa": 1,
+      "po": "1–1",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "-",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 6,
+      "parCible": 0,
+      "icone": "assets/img/spells/449.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Échange de place (Point)"
+        }
+      ]
+    },
+    {
+      "id": 450,
+      "position": 20,
+      "nom": "Folie sanguinaire",
+      "pa": 1,
+      "po": "1–7",
+      "porteeModifiable": true,
+      "lancerEnLigne": false,
+      "ligneDeVue": false,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "-",
+      "parTour": 6,
+      "parCible": 6,
+      "icone": "assets/img/spells/450.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Vol de vie fixe : 200, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Vol de vie fixe : 200, pas les ennemis (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "PDV rendus : 100, pas les ennemis (Point)"
+        }
+      ]
+    },
+    {
+      "id": 395,
+      "position": 29,
+      "nom": "Maîtrise des Dagues",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": false,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "6",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/395.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "Maîtrises : 4 tours (Point)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Maîtrises : 4 tours (Point)"
+        }
+      ]
+    },
+    {
+      "id": 421,
+      "position": 30,
+      "nom": "Douleur partagée",
+      "pa": 2,
+      "po": "0–0",
+      "porteeModifiable": false,
+      "lancerEnLigne": true,
+      "ligneDeVue": true,
+      "cc": "1/50",
+      "ec": "1/100",
+      "relance": "5",
+      "parTour": 0,
+      "parCible": 0,
+      "icone": "assets/img/spells/421.svg",
+      "commun": false,
+      "effets": [
+        {
+          "onglet": "normaux",
+          "texte": "%érosion : 10, 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+        },
+        {
+          "onglet": "normaux",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "%érosion : 10, 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+        },
+        {
+          "onglet": "critiques",
+          "texte": "Châtiment TODO sur TODO tours : 5 tours, seulement alliés (pas lanceur) (Croix 1)"
+        }
+      ]
+    }
+  ]
+}
