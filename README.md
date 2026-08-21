@@ -33,7 +33,43 @@ npm install       # installer les dépendances
 npm run dev       # serveur de développement Vite (HMR)
 npm run build     # build de production : tsc && vite build → dist/
 npm run preview   # prévisualiser le build de production
+npm test -- --run # tests unitaires et d'intégration frontend, une fois
+npm run test:watch # tests frontend en surveillance
+npm run test:coverage # mêmes tests avec rapport coverage/ et résumé terminal
+npm run test:db   # tests pgTAP sur Supabase local uniquement
+npm run test:e2e  # parcours Playwright Chromium (Supabase local requis)
 ```
+
+## Tests automatisés
+
+Les tests Vitest couvrent les validateurs JSON et réponses Supabase, les stores Zustand,
+les sessions, les overrides/réinitialisations, l'historique, les commentaires et l'état
+d'erreur visible de l'application. Supabase est toujours mocké à la frontière
+`src/lib/supabase.ts` : aucun test frontend ne contacte un projet distant.
+
+Les tests PostgreSQL se trouvent dans `supabase/tests/database/` et utilisent pgTAP via
+la CLI Supabase. Ils vérifient les migrations, les privilèges anon/authenticated, les RPC,
+l'historique et les champs système des commentaires. Le fichier `supabase/seed.sql` ne
+crée qu'un utilisateur de test local (`admin@example.test` / `admin-test-password`).
+
+Prérequis pour la base et les E2E : Docker Desktop lancé, puis une instance Supabase
+locale non liée à un projet distant.
+
+```powershell
+npx supabase start
+npm run test:db
+
+# Copier l'anon key affichée par `npx supabase status -o env` dans la variable suivante.
+$env:E2E_RUN_LOCAL = "1"
+$env:E2E_SUPABASE_URL = "http://127.0.0.1:54321"
+$env:E2E_SUPABASE_ANON_KEY = "<anon-key-locale>"
+npx playwright install chromium
+npm run test:e2e
+```
+
+`test:db` et les E2E ne démarrent jamais `db reset`, `db push`, `link` ni une connexion
+à une base distante. Sans `E2E_RUN_LOCAL=1` et une anon key locale, les scénarios
+Playwright sont volontairement ignorés.
 
 ## Configuration Supabase
 
@@ -54,21 +90,9 @@ Les migrations :
 2. Dans Supabase Dashboard, créer manuellement les deux utilisateurs dans **Authentication > Users**.
 3. Dans les réglages Authentication, désactiver les nouvelles inscriptions publiques (« Allow new users to sign up »). L'application ne propose de toute façon aucun écran d'inscription.
 
-Avec la CLI Supabase :
-
-```bash
-npx supabase@latest login
-npx supabase@latest link --project-ref nfruhrvninbkvtnosgwk
-npx supabase@latest db push
-```
-
-La CLI demande le mot de passe PostgreSQL lors du lien si nécessaire. En connexion directe avec `psql`, le format est :
-
-```text
-postgresql://postgres:${SUPABASE_DB_PASSWORD}@db.nfruhrvninbkvtnosgwk.supabase.co:5432/postgres
-```
-
-Conserver le mot de passe dans `.env.local` (ignoré par Git) ou dans une variable d'environnement, jamais dans la commande enregistrée ou dans un fichier versionné.
+Pour le développement et les tests, utiliser uniquement `supabase/config.toml` et
+`npx supabase start` local. Les opérations de liaison, de push ou de reset d'une base
+distante ne font pas partie de ce dépôt ni de ses scripts de test.
 
 ## Modèle de sécurité
 
