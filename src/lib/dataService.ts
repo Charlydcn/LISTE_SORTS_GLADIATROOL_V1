@@ -1,5 +1,12 @@
-/* Chargement de la baseline JSON. Supabase n'altère jamais ces objets source. */
-const CLASS_ICONS = Object.freeze({
+import type { ClassStats, Spell } from "../types";
+
+export interface ClassFile {
+  name: string;
+  file: string;
+  morphId: number;
+}
+
+export const CLASS_ICONS: Record<string, string> = {
   Feca: "assets/img/classes/1M.svg",
   Osamodas: "assets/img/classes/2M.svg",
   Enutrof: "assets/img/classes/3M.svg",
@@ -12,9 +19,9 @@ const CLASS_ICONS = Object.freeze({
   Sadida: "assets/img/classes/10M.svg",
   Sacrieur: "assets/img/classes/11M.svg",
   Pandawa: "assets/img/classes/12M.svg",
-});
+};
 
-const CLASS_FILES = Object.freeze([
+export const CLASS_FILES: ClassFile[] = [
   { name: "Feca", file: "feca.json", morphId: 101 },
   { name: "Osamodas", file: "osamodas.json", morphId: 102 },
   { name: "Enutrof", file: "enutrof.json", morphId: 103 },
@@ -27,11 +34,11 @@ const CLASS_FILES = Object.freeze([
   { name: "Sadida", file: "sadida.json", morphId: 110 },
   { name: "Sacrieur", file: "sacrieur.json", morphId: 111 },
   { name: "Pandawa", file: "pandawa.json", morphId: 112 },
-]);
+];
 
-const CLASSES = CLASS_FILES.map((entry) => entry.name);
+export const CLASSES: string[] = CLASS_FILES.map((entry) => entry.name);
 
-const BASE_MORPH_STATS = Object.freeze({
+export const BASE_MORPH_STATS: Record<string, ClassStats> = {
   Feca: { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 200, intelligence: 300, chance: 60, agilite: 60, initiative: 497 },
   Osamodas: { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 150, intelligence: 300, chance: 300, agilite: 60, initiative: 500 },
   Enutrof: { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 250, intelligence: 100, chance: 200, agilite: 60, initiative: 500 },
@@ -44,47 +51,56 @@ const BASE_MORPH_STATS = Object.freeze({
   Sadida: { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 300, intelligence: 300, chance: 300, agilite: 75, initiative: 500 },
   Sacrieur: { vie: 1250, pa: 8, pm: 4, vitalite: 1250, sagesse: 150, force: 150, intelligence: 150, chance: 150, agilite: 150, initiative: 500 },
   Pandawa: { vie: 850, pa: 8, pm: 4, vitalite: 850, sagesse: 150, force: 250, intelligence: 250, chance: 250, agilite: 250, initiative: 500 },
-});
+};
 
-let BASE_SPELLS = [];
-let BASE_COMMON_SPELLS = [];
-let SPELLS = [];
-let COMMON_SPELLS = [];
-let MORPH_STATS = {};
-
-function cloneData(value) {
-  return JSON.parse(JSON.stringify(value));
+export function cloneData<T>(value: T): T {
+  return JSON.parse(JSON.stringify(value)) as T;
 }
 
-async function loadBaselineData() {
-  const classData = await Promise.all(CLASS_FILES.map(async (entry) => {
-    const response = await fetch(`data/${entry.file}`);
-    if (!response.ok) throw new Error(`Impossible de charger ${entry.file}`);
-    return response.json();
-  }));
+interface ClassDataJson {
+  classe: string;
+  morphId: number;
+  sorts: Omit<Spell, "classe" | "morphId">[];
+}
+
+interface CommonDataJson {
+  classe: string;
+  sorts: Omit<Spell, "classe" | "morphId">[];
+}
+
+export interface BaselineData {
+  baseSpells: Spell[];
+  baseCommonSpells: Spell[];
+  baseMorphStats: Record<string, ClassStats>;
+}
+
+export async function loadBaselineData(): Promise<BaselineData> {
+  const classData = await Promise.all(
+    CLASS_FILES.map(async (entry) => {
+      const response = await fetch(`data/${entry.file}`);
+      if (!response.ok) throw new Error(`Impossible de charger ${entry.file}`);
+      return (await response.json()) as ClassDataJson;
+    }),
+  );
 
   const commonResponse = await fetch("data/sortsCommuns.json");
   if (!commonResponse.ok) throw new Error("Impossible de charger sortsCommuns.json");
-  const commonData = await commonResponse.json();
+  const commonData = (await commonResponse.json()) as CommonDataJson;
 
-  BASE_SPELLS = classData.flatMap((data) => data.sorts.map((spell) => ({
+  const baseSpells: Spell[] = classData.flatMap((data) =>
+    data.sorts.map((spell) => ({
+      ...spell,
+      classe: data.classe,
+      morphId: data.morphId,
+    }) as Spell),
+  );
+
+  const baseCommonSpells: Spell[] = commonData.sorts.map((spell) => ({
     ...spell,
-    classe: data.classe,
-    morphId: data.morphId,
-  })));
-  BASE_COMMON_SPELLS = commonData.sorts.map((spell) => ({ ...spell, classe: "Sorts communs" }));
-  SPELLS = cloneData(BASE_SPELLS);
-  COMMON_SPELLS = cloneData(BASE_COMMON_SPELLS);
-  MORPH_STATS = cloneData(BASE_MORPH_STATS);
-}
+    classe: "Sorts communs",
+  }) as Spell);
 
-window.AppData = {
-  loadBaselineData,
-  cloneData,
-  resetEffective() {
-    SPELLS = cloneData(BASE_SPELLS);
-    COMMON_SPELLS = cloneData(BASE_COMMON_SPELLS);
-    MORPH_STATS = cloneData(BASE_MORPH_STATS);
-  },
-  getBaselineSpells: () => [...BASE_SPELLS, ...BASE_COMMON_SPELLS],
-};
+  const baseMorphStats = cloneData(BASE_MORPH_STATS);
+
+  return { baseSpells, baseCommonSpells, baseMorphStats };
+}

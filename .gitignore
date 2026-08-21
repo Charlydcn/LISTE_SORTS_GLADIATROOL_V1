@@ -5,6 +5,10 @@ tools
 test_output
 docs
 
+# Dépendances et artefacts Vite
+node_modules/
+dist/
+
 # Secrets locaux (ne jamais versionner)
 .env
 .env.*

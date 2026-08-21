@@ -1,0 +1,61 @@
+import { useLocation } from "react-router-dom";
+import { useSessionStore } from "../lib/sessionStore";
+import { useModalStore } from "../lib/modalStore";
+import { useHistoryStore } from "../lib/historyStore";
+import { useToastStore } from "../lib/toastStore";
+import { CLASSES } from "../lib/dataService";
+import { errorMessage } from "../lib/utils";
+import { HistoryModal } from "./HistoryModal";
+
+function currentClassFilter(pathname: string): string {
+  const match = pathname.match(/^\/classe\/(.+)$/);
+  if (match) {
+    const className = decodeURIComponent(match[1]);
+    if (CLASSES.includes(className)) return className;
+  }
+  return "";
+}
+
+export function Header() {
+  const mode = useSessionStore((s) => s.mode);
+  const user = useSessionStore((s) => s.user);
+  const location = useLocation();
+
+  if (mode === "login" || mode === "loading") {
+    return <header id="app-header" />;
+  }
+
+  const isAdmin = mode === "admin";
+
+  function openGlobalHistory() {
+    const classFilter = currentClassFilter(location.pathname);
+    useHistoryStore.getState().open(null, { classFilter });
+    useModalStore.getState().open("Historique global", <HistoryModal />, { wide: true });
+  }
+
+  async function leave() {
+    try {
+      await useSessionStore.getState().leave();
+    } catch (error) {
+      useToastStore.getState().showToast(errorMessage(error), "error");
+    }
+  }
+
+  return (
+    <header id="app-header">
+      <nav className="app-toolbar" aria-label="Actions de session">
+        {isAdmin ? (
+          <span className="session-identity">{user?.email || "Administrateur"}</span>
+        ) : (
+          <span className="session-identity guest">Mode invité</span>
+        )}
+        <button type="button" className="toolbar-button" onClick={openGlobalHistory}>
+          Historique
+        </button>
+        <button type="button" className="toolbar-button" onClick={() => void leave()}>
+          {isAdmin ? "Déconnexion" : "Se connecter"}
+        </button>
+      </nav>
+    </header>
+  );
+}
