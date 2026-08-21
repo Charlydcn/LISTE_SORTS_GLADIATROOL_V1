@@ -187,13 +187,20 @@ export const useDataStore = create<DataState>((set, get) => ({
     if (!client) throw new Error("Supabase JS n'a pas pu être chargé.");
     const oldValue = get().getEffectiveValue(entityType, entityKey, fieldKey);
     const baselineValue = get().getBaselineValue(entityType, entityKey, fieldKey);
-    const { data, error } = await client.rpc("apply_override", {
-      p_entity_type: entityType,
-      p_entity_key: String(entityKey),
-      p_field_key: fieldKey,
-      p_new_value: newValue,
-      p_baseline_value: baselineValue,
-    });
+    const isSpellIcon = entityType === "spell" && fieldKey === "icone";
+    const { data, error } = isSpellIcon
+      ? await client.rpc("apply_spell_icon_override", {
+          p_entity_key: String(entityKey),
+          p_new_value: newValue,
+          p_baseline_value: baselineValue,
+        })
+      : await client.rpc("apply_override", {
+          p_entity_type: entityType,
+          p_entity_key: String(entityKey),
+          p_field_key: fieldKey,
+          p_new_value: newValue,
+          p_baseline_value: baselineValue,
+        });
     if (error) throw error;
     const rawResult = Array.isArray(data) ? data[0] : data;
     if (!rawResult) throw new Error("La sauvegarde n'a retourné aucun résultat.");

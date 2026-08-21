@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import type { Spell } from "../types";
 import { CLASS_ICONS } from "../lib/dataService";
 
@@ -20,8 +20,18 @@ export function HistoryIcon() {
 }
 
 export function SpellIcon({ spell }: { spell: Spell }) {
-  if (spell.icone) {
-    return <img className="spell-icon-img" src={spell.icone} alt={spell.nom} loading="lazy" />;
+  const [failed, setFailed] = useState(false);
+  useEffect(() => setFailed(false), [spell.icone]);
+  if (spell.icone && !failed) {
+    return (
+      <img
+        className="spell-icon-img"
+        src={spell.icone}
+        alt={spell.nom}
+        loading="lazy"
+        onError={() => setFailed(true)}
+      />
+    );
   }
   return <DefaultIcon />;
 }

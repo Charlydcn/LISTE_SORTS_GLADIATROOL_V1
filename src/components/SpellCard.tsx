@@ -10,6 +10,7 @@ import { EditableField, InlineEditor } from "./EditableField";
 import { ResetButton } from "./ResetButton";
 import { CommentsSection } from "./CommentsSection";
 import { HistoryModal } from "./HistoryModal";
+import { SpellImageEditor } from "./SpellImageEditor";
 
 function EffectRows({ effects, tab }: { effects: Effect[]; tab: EffectTab }) {
   const rows = effects.filter((effect) => effect.onglet === tab);
@@ -130,7 +131,7 @@ export function SpellCard({ spell }: { spell: Spell }) {
       <div className="spell-header">
         <div className="spell-header-left">
           <div className="spell-icon">
-            <SpellIcon spell={spell} />
+            {isAdmin ? <SpellImageEditor spell={spell} /> : <SpellIcon spell={spell} />}
           </div>
           <div className="spell-name-block">
             <EditableField

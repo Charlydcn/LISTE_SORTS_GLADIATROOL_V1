@@ -18,6 +18,7 @@ Application de listing des sorts Dofus Retro, refactorisée en **Vite + React 18
 - `public/assets/img/` contient les SVG (260 sorts, 12 classes, 11 icônes).
 - Supabase Auth gère les deux comptes administrateurs.
 - Supabase stocke uniquement les overrides propriété par propriété, leur historique complet et les commentaires.
+- Les administrateurs peuvent remplacer l'icône d'un sort par un fichier SVG, PNG, JPEG ou WebP de 2 Mo maximum. Les icônes personnalisées sont stockées dans le bucket public Supabase `spell-images` ; les icônes JSON locales restent la référence de réinitialisation.
 - Au démarrage, l'application charge la baseline, récupère les overrides autorisés par la session, puis construit les valeurs effectives en mémoire.
 - Les fichiers JSON et les réponses Supabase critiques sont validés à l'exécution avant d'alimenter les stores.
 - Il n'y a ni backend applicatif, ni Realtime. Le build produit un site entièrement statique.
@@ -89,6 +90,8 @@ Les migrations :
 1. Appliquer dans l'ordre tous les fichiers de `supabase/migrations/` qui ne sont pas encore présents sur la base distante.
 2. Dans Supabase Dashboard, créer manuellement les deux utilisateurs dans **Authentication > Users**.
 3. Dans les réglages Authentication, désactiver les nouvelles inscriptions publiques (« Allow new users to sign up »). L'application ne propose de toute façon aucun écran d'inscription.
+
+La migration `005_spell_images.sql` crée le bucket public `spell-images`, autorise les comptes authentifiés à y ajouter ou supprimer des fichiers et ajoute l'override `icone` sans historique. Elle doit être appliquée avant d'utiliser le bouton **Modifier** affiché sur l'icône d'un sort. Le remplacement et la réinitialisation ne suppriment jamais les fichiers présents dans `public/assets/img/`.
 
 Pour le développement et les tests, utiliser uniquement `supabase/config.toml` et
 `npx supabase start` local. Les opérations de liaison, de push ou de reset d'une base

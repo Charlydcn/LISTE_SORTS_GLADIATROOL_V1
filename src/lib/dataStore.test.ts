@@ -102,6 +102,32 @@ describe("overrides effectifs", () => {
     expect(useDataStore.getState().spells.filter((spell) => spell.id === 390).map((spell) => spell.pa)).toEqual([4, 4]);
   });
 
+  it("enregistre une icône sans passer par la RPC historisée", async () => {
+    supabaseMock.rpc.mockResolvedValue({
+      data: [{
+        override_id: "override-icon-390",
+        history_id: null,
+        saved_at: "2026-08-21T10:00:00.000Z",
+        author_label: "admin@example.test",
+        was_changed: true,
+      }],
+      error: null,
+    });
+
+    const url = "https://example.supabase.co/storage/v1/object/public/spell-images/390/icon.svg";
+    await useDataStore.getState().save("spell", "390", "icone", url);
+
+    expect(supabaseMock.rpc).toHaveBeenCalledWith("apply_spell_icon_override", {
+      p_entity_key: "390",
+      p_new_value: url,
+      p_baseline_value: null,
+    });
+    expect(useDataStore.getState().spells.filter((spell) => spell.id === 390).map((spell) => spell.icone)).toEqual([
+      url,
+      url,
+    ]);
+  });
+
   it("réinitialise les valeurs locales seulement après une réponse reset_overrides valide", async () => {
     const row = {
       id: "override-390",

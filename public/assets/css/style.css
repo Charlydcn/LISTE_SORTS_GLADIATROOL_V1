@@ -118,6 +118,17 @@ body{
   display: block;
 }
 
+.spell-image-editor{ position: relative; width: 100%; height: 100%; display: flex; align-items: center; justify-content: center; }
+.spell-image-input{ position: absolute; width: 1px; height: 1px; opacity: 0; pointer-events: none; }
+.spell-image-button{
+  position: absolute; inset: auto 3px 3px; border: 1px solid rgba(233,228,205,.65); border-radius: 3px;
+  padding: 2px 4px; background: rgba(22,24,15,.88); color: #f1e9c9; cursor: pointer;
+  font-size: 9px; font-weight: 700; line-height: 1.2; opacity: 0; transition: opacity .15s;
+}
+.spell-image-editor:hover .spell-image-button,
+.spell-image-button:focus-visible{ opacity: 1; }
+.spell-image-button:disabled{ cursor: wait; opacity: 1; }
+
 .spell-name-block .spell-name{
   font-size: 21px;
   font-weight: 700;

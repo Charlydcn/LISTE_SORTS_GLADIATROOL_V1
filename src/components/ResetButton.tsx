@@ -4,6 +4,7 @@ import { useDataStore } from "../lib/dataStore";
 import { useSessionStore } from "../lib/sessionStore";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage } from "../lib/utils";
+import { removeStoredSpellImages } from "../lib/spellImageService";
 
 interface ResetButtonProps {
   scope: string;
@@ -44,6 +45,17 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
     setConfirming(false);
     try {
       const count = await useDataStore.getState().reset(rows);
+      const imageUrls = rows.filter((row) => row.field_key === "icone").map((row) => row.value);
+      try {
+        await removeStoredSpellImages(imageUrls);
+      } catch (cleanupError) {
+        console.error("Impossible de supprimer une icône réinitialisée :", cleanupError);
+        useToastStore.getState().showToast(
+          "Réinitialisation effectuée, mais un ancien fichier image n’a pas pu être supprimé.",
+          "error",
+        );
+        return;
+      }
       useToastStore
         .getState()
         .showToast(
