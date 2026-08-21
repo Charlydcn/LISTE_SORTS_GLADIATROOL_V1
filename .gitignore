@@ -4,3 +4,9 @@ cache
 tools
 test_output
 docs
+
+# Secrets locaux (ne jamais versionner)
+.env
+.env.*
+!.env.example
+secrets.env
