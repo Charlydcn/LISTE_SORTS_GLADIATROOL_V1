@@ -491,6 +491,10 @@ body{
   padding-top: 3px;
 }
 
+.spell-tile.is-overridden .spell-tile-name{
+  box-shadow: inset 0 -2px 0 rgba(182,141,60,.85);
+}
+
 .spell-detail{
   flex: 0 0 520px;
   width: 520px;
@@ -748,17 +752,6 @@ button:disabled{ cursor: wait; opacity: .58; }
 .effects-editable .inline-editor{ display: flex; padding: 10px; background: var(--cream-row-a); }
 .effect-tab{ border: 0; font-family: inherit; }
 .spell-tile.selected{ outline: 2px solid var(--gold); outline-offset: 1px; }
-
-.tippy-box[data-theme~="gladiatrool"]{
-  background: #211f18;
-  color: #f2ecd2;
-  border: 1px solid #706744;
-  box-shadow: 0 7px 22px rgba(0,0,0,.42);
-  font-size: 12px;
-}
-.tippy-box[data-theme~="gladiatrool"] > .tippy-content{ padding: 8px 10px; white-space: pre-line; }
-.tippy-box[data-theme~="gladiatrool"][data-placement^="top"] > .tippy-arrow::before{ border-top-color: #211f18; }
-.tippy-box[data-theme~="gladiatrool"][data-placement^="bottom"] > .tippy-arrow::before{ border-bottom-color: #211f18; }
 
 /* Modales et historique */
 body.modal-open{ overflow: hidden; }

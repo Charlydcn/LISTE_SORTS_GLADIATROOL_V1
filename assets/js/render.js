@@ -87,17 +87,6 @@ function classIconHtml(className) {
     : DEFAULT_ICON_SVG;
 }
 
-function tooltipFor(override) {
-  if (!override) return "";
-  const parts = [
-    `Ancienne valeur : ${window.AppHistory.valueText(override.previous_value)}`,
-    `Modifié le ${formatDate(override.updated_at)}`,
-  ];
-  if (window.AppSession.isAdmin()) parts.push(`Par ${override.updated_by_label || "Auteur inconnu"}`);
-  parts.push("Voir l’historique");
-  return parts.join("\n");
-}
-
 function historyIconHtml() {
   return `<svg class="history-icon" viewBox="0 0 24 24" aria-hidden="true">
     <circle cx="12" cy="12" r="8.5"></circle>
@@ -105,25 +94,9 @@ function historyIconHtml() {
   </svg>`;
 }
 
-function initializeTooltips(scope = document) {
-  if (typeof window.tippy !== "function") return;
-  const targets = [...scope.querySelectorAll("[data-tippy-content]")].filter((element) => !element._tippy);
-  if (!targets.length) return;
-  window.tippy(targets, {
-    allowHTML: false,
-    appendTo: () => document.body,
-    delay: [140, 0],
-    duration: [140, 100],
-    maxWidth: 280,
-    placement: "top",
-    theme: "gladiatrool",
-  });
-}
-
 function editableField(entityType, entityKey, fieldKey, valueHtml, inputType = "text", extraClass = "") {
   const override = window.AppStore.getOverride(entityType, entityKey, fieldKey);
   const changedClass = override ? "is-overridden" : "";
-  const tooltip = override ? ` data-tippy-content="${escapeAttribute(tooltipFor(override))}"` : "";
   const attrs = `data-entity-type="${escapeAttribute(entityType)}" data-entity-key="${escapeAttribute(entityKey)}" data-field-key="${escapeAttribute(fieldKey)}" data-input-type="${escapeAttribute(inputType)}"`;
   const trigger = window.AppSession.isAdmin()
     ? `<button type="button" class="editable-trigger" data-editable ${attrs} aria-label="Modifier ${escapeAttribute(window.AppHistory.fieldLabel(fieldKey))}">${valueHtml}</button>`
@@ -131,7 +104,7 @@ function editableField(entityType, entityKey, fieldKey, valueHtml, inputType = "
   const history = override
     ? `<button type="button" class="field-history" data-property-history ${attrs} aria-label="Voir l'historique de ${escapeAttribute(window.AppHistory.fieldLabel(fieldKey))}">${historyIconHtml()}</button>`
     : "";
-  return `<span class="editable-field ${changedClass} ${extraClass}"${tooltip}>${trigger}${history}</span>`;
+  return `<span class="editable-field ${changedClass} ${extraClass}">${trigger}${history}</span>`;
 }
 
 function editableEffects(spell, tab) {
@@ -143,8 +116,7 @@ function editableEffects(spell, tab) {
     ? `<div class="editable-trigger effects-edit-trigger" role="button" tabindex="0" data-editable ${attrs} aria-label="Modifier les effets ${tab}">${rows}</div>`
     : `<div class="field-value">${rows}</div>`;
   const history = override ? `<button type="button" class="field-history effects-history" data-property-history ${attrs}>${historyIconHtml()} <span>Historique</span></button>` : "";
-  const tooltip = override ? ` data-tippy-content="${escapeAttribute(tooltipFor(override))}"` : "";
-  return `<div class="editable-field effects-editable ${override ? "is-overridden" : ""}"${tooltip}>${trigger}${history}</div>`;
+  return `<div class="editable-field effects-editable ${override ? "is-overridden" : ""}">${trigger}${history}</div>`;
 }
 
 function statRow(label, entityKey, fieldKey, value, inputType = "text") {
@@ -204,7 +176,8 @@ function buildCard(spell) {
 
 function buildSpellTile(spell) {
   const selected = String(selectedSpellId) === String(spell.id) && selectedSpellClass === spell.classe;
-  return `<button type="button" class="spell-tile ${selected ? "selected" : ""}" data-spell="${spell.id}" data-spell-class="${escapeAttribute(spell.classe)}">
+  const hasActiveOverride = window.AppStore.listOverrides({ entityType: "spell", entityKeys: [spell.id] }).length > 0;
+  return `<button type="button" class="spell-tile ${selected ? "selected" : ""} ${hasActiveOverride ? "is-overridden" : ""}" data-spell="${spell.id}" data-spell-class="${escapeAttribute(spell.classe)}">
     <div class="spell-tile-icon">${spellIconHtml(spell)}</div>
     <span class="spell-tile-name">${escapeHtml(spell.nom)}</span>
   </button>`;
@@ -296,7 +269,6 @@ function renderApp() {
   const route = getRoute();
   if (route.view === "class") renderClass(route.className);
   else renderHome();
-  initializeTooltips();
 }
 
 function renderSelectedDetail() {
@@ -308,7 +280,6 @@ function renderSelectedDetail() {
   const detail = document.getElementById(route.view === "class" ? "spell-detail" : "common-spell-detail");
   if (!detail) return;
   detail.innerHTML = buildCard(spell);
-  initializeTooltips(detail);
   if (window.AppSession.isAdmin()) window.AppComments.list(spell.id);
 }
 
