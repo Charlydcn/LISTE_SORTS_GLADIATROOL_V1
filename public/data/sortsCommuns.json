@@ -15,7 +15,7 @@
       "relance": "-",
       "parTour": 0,
       "parCible": 3,
-      "icone": null,
+      "icone": "assets/img/spells/350.svg",
       "commun": true,
       "effets": [
         {
@@ -42,7 +42,7 @@
       "relance": "2",
       "parTour": 0,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/364.svg",
       "commun": true,
       "effets": [
         {
@@ -93,7 +93,7 @@
       "relance": "3",
       "parTour": 0,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/366.svg",
       "commun": true,
       "effets": [
         {
@@ -128,7 +128,7 @@
       "relance": "6",
       "parTour": 0,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/367.svg",
       "commun": true,
       "effets": [
         {
@@ -155,7 +155,7 @@
       "relance": "2",
       "parTour": 0,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/368.svg",
       "commun": true,
       "effets": [
         {
@@ -178,7 +178,7 @@
       "relance": "-",
       "parTour": 0,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/369.svg",
       "commun": true,
       "effets": [
         {
@@ -205,7 +205,7 @@
       "relance": "6",
       "parTour": 0,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/370.svg",
       "commun": true,
       "effets": [
         {
@@ -232,7 +232,7 @@
       "relance": "6",
       "parTour": 1,
       "parCible": 0,
-      "icone": null,
+      "icone": "assets/img/spells/373.svg",
       "commun": true,
       "effets": [
         {
