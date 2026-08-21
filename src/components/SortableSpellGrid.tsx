@@ -12,8 +12,8 @@ import {
 } from "@dnd-kit/core";
 import { restrictToParentElement } from "@dnd-kit/modifiers";
 import {
-  arrayMove,
-  rectSortingStrategy,
+  arraySwap,
+  rectSwappingStrategy,
   SortableContext,
   sortableKeyboardCoordinates,
 } from "@dnd-kit/sortable";
@@ -77,13 +77,13 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
     if (oldIndex < 0 || newIndex < 0) return;
 
     const previousIds = ids;
-    const nextIds = arrayMove(ids, oldIndex, newIndex);
+    const nextIds = arraySwap(ids, oldIndex, newIndex);
     const reordered = nextIds.map((id) => byId.get(id)).filter((spell): spell is Spell => Boolean(spell));
     setIds(nextIds);
     saving.current = true;
     try {
       await useDataStore.getState().reorderSpells(className, reordered);
-      useToastStore.getState().showToast("Ordre des sorts enregistré.", "success");
+      useToastStore.getState().showToast("Positions des sorts échangées.", "success");
     } catch (error) {
       setIds(previousIds);
       useToastStore.getState().showToast(errorMessage(error), "error");
@@ -102,7 +102,7 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
       onDragCancel={clearDrag}
       onDragEnd={(event) => void handleDragEnd(event)}
     >
-      <SortableContext items={ids} strategy={rectSortingStrategy}>
+      <SortableContext items={ids} strategy={rectSwappingStrategy}>
         <div className="spell-grid">
           {visibleSpells.map((spell) => (
             <SpellTile
