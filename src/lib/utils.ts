@@ -37,11 +37,12 @@ export function formatDate(value: unknown): string {
 }
 
 export function displayValue(value: unknown): string {
-  return value === null || value === undefined || value === "" ? "—" : String(value);
+  return value === null || value === undefined || value === "" ? "-" : String(value);
 }
 
 export const SPELL_FIELDS = [
   "nom",
+  "description",
   "pa",
   "po",
   "porteeModifiable",
@@ -71,6 +72,7 @@ export const CLASS_STAT_FIELDS = [
 
 export const FIELD_LABELS: Record<string, string> = {
   nom: "Nom",
+  description: "Description",
   pa: "PA",
   po: "PO",
   porteeModifiable: "Portée modifiable",
@@ -99,7 +101,7 @@ export function fieldLabel(field: string): string {
 }
 
 export function valueText(value: unknown): string {
-  if (value === null || value === undefined || value === "") return "—";
+  if (value === null || value === undefined || value === "") return "-";
   if (typeof value === "boolean") return value ? "Oui" : "Non";
   if (Array.isArray(value)) return value.length ? value.join("\n") : "(aucun effet)";
   if (typeof value === "object") return JSON.stringify(value, null, 2);

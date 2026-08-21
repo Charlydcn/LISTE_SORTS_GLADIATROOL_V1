@@ -37,7 +37,7 @@ describe("validation des données externes", () => {
   it("indique le fichier et le chemin du champ invalide", () => {
     const invalid = { ...spell, nom: "" };
     expect(() => parseClassData({ classe: "Feca", morphId: 101, sorts: [invalid] }, "feca.json", "Feca", 101)).toThrow(
-      "Données invalides dans feca.json — sorts.0.nom",
+      "Données invalides dans feca.json - sorts.0.nom",
     );
   });
 

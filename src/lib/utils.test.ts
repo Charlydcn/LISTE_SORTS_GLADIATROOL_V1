@@ -10,7 +10,7 @@ describe("utilitaires de présentation", () => {
   it("normalise les messages et les valeurs affichées", () => {
     expect(errorMessage(undefined)).toBe("Une erreur inattendue est survenue.");
     expect(errorMessage(new Error("Invalid login credentials"))).toBe("Email ou mot de passe incorrect.");
-    expect(displayValue(null)).toBe("—");
+    expect(displayValue(null)).toBe("-");
     expect(displayValue(0)).toBe("0");
     expect(valueText(true)).toBe("Oui");
     expect(valueText([])).toBe("(aucun effet)");

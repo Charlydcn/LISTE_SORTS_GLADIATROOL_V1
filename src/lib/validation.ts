@@ -11,6 +11,7 @@ const baselineSpellSchema = z
     id: z.number().int(),
     position: z.number().int().optional(),
     nom: z.string().min(1),
+    description: z.string().optional(),
     pa: z.union([z.number(), z.string()]),
     po: z.string(),
     porteeModifiable: z.boolean(),
@@ -91,7 +92,7 @@ function validationError(source: string, error: unknown): Error {
     .slice(0, 3)
     .map((issue) => `${issue.path.join(".") || "racine"} : ${issue.message}`)
     .join(" ; ");
-  return new Error(`Données invalides dans ${source} — ${details}`);
+  return new Error(`Données invalides dans ${source} - ${details}`);
 }
 
 function parseWithSource<T>(schema: z.ZodType<T>, value: unknown, source: string): T {
@@ -111,7 +112,7 @@ export function parseClassData(
   const parsed = parseWithSource(classDataSchema, value, source);
   if (parsed.classe !== expectedClass || parsed.morphId !== expectedMorphId) {
     throw new Error(
-      `Données invalides dans ${source} — classe ou morphId inattendu ` +
+      `Données invalides dans ${source} - classe ou morphId inattendu ` +
         `(attendu : ${expectedClass}/${expectedMorphId}).`,
     );
   }
@@ -125,7 +126,7 @@ export function parseCommonData(
   const parsed = parseWithSource(commonDataSchema, value, source);
   if (parsed.classe !== "Sorts communs") {
     throw new Error(
-      `Données invalides dans ${source} — classe inattendue (attendu : Sorts communs).`,
+      `Données invalides dans ${source} - classe inattendue (attendu : Sorts communs).`,
     );
   }
   return parsed as {

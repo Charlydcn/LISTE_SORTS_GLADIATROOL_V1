@@ -38,6 +38,10 @@ export function SpellIcon({ spell }: { spell: Spell }) {
 
 export function TrashIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5" fill="none" stroke="currentColor" strokeWidth="1.8" /></svg>; }
 
+export function LoginIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v14h-5M5 12h10m-3-3 3 3-3 3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>; }
+
+export function LogoutIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 5H5v14h5m9-7H9m3-3-3 3 3 3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>; }
+
 export function ClassIcon({ className }: { className: string }) {
   const url = CLASS_ICONS[className];
   if (url) {

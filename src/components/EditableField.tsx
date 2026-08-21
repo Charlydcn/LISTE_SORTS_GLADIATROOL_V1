@@ -183,7 +183,7 @@ export function EditableField({
     useHistoryStore
       .getState()
       .open({ entityType, entityKey: String(entityKey), fieldKey });
-    openModal(`Historique — ${fieldLabel(fieldKey)}`, <HistoryModal />, { wide: true });
+    openModal(`Historique - ${fieldLabel(fieldKey)}`, <HistoryModal />, { wide: true });
   }
 
   if (editing) {

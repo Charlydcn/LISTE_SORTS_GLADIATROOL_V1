@@ -7,7 +7,7 @@ import { useToastStore } from "../lib/toastStore";
 
 type Props = { className: string; common?: boolean; onCreated: (spell: Spell) => void };
 
-const defaults = { nom: "Nouveau sort", pa: 3, po: "1 à 6", cc: "1/50", ec: "—", relance: "—", parTour: "", parCible: "", porteeModifiable: true, ligneDeVue: true, lancerEnLigne: false, effetsNormaux: "", effetsCritiques: "" };
+const defaults = { nom: "Nouveau sort", description: "", pa: 3, po: "1 à 6", cc: "1/50", ec: "-", relance: "-", parTour: "", parCible: "", porteeModifiable: true, ligneDeVue: true, lancerEnLigne: false, effetsNormaux: "", effetsCritiques: "" };
 
 function lines(value: string) { return value.split(/\r?\n/).map((line) => line.trim()).filter(Boolean); }
 
@@ -31,7 +31,7 @@ export function SpellCreator({ className, common = false, onCreated }: Props) {
     setBusy(true); setError("");
     try {
       const spell = await useDataStore.getState().createSpell(className, {
-        nom: values.nom.trim(), pa: values.pa, po: values.po.trim(), cc: values.cc.trim(), ec: values.ec.trim(), relance: values.relance.trim(),
+        nom: values.nom.trim(), description: values.description.trim(), pa: values.pa, po: values.po.trim(), cc: values.cc.trim(), ec: values.ec.trim(), relance: values.relance.trim(),
         parTour: values.parTour === "" ? null : Number(values.parTour), parCible: values.parCible === "" ? null : Number(values.parCible),
         porteeModifiable: values.porteeModifiable, ligneDeVue: values.ligneDeVue, lancerEnLigne: values.lancerEnLigne,
         icone: null, commun: common, effets: [...normal.map((texte) => ({ onglet: "normaux" as const, texte })), ...lines(values.effetsCritiques).map((texte) => ({ onglet: "critiques" as const, texte }))],
@@ -56,7 +56,8 @@ export function SpellCreator({ className, common = false, onCreated }: Props) {
   return <form className="spell-card spell-creator" onSubmit={create}>
     <div className="spell-creator-title">Nouveau sort</div>
     <label>Nom<input value={values.nom} onChange={(e) => set("nom", e.target.value)} required /></label>
-    <div className="creator-grid"><label>PA<input type="number" value={values.pa} onChange={(e) => set("pa", Number(e.target.value))} required /></label><label>PO<input value={values.po} onChange={(e) => set("po", e.target.value)} required /></label><label>Coup critique<input value={values.cc} onChange={(e) => set("cc", e.target.value)} required /></label><label>Échec critique<input value={values.ec} onChange={(e) => set("ec", e.target.value)} required /></label><label>Relance<input value={values.relance} onChange={(e) => set("relance", e.target.value)} required /></label><label>Lancers/tour<input type="number" value={values.parTour} onChange={(e) => set("parTour", e.target.value)} /></label><label>Lancers/cible<input type="number" value={values.parCible} onChange={(e) => set("parCible", e.target.value)} /></label></div>
+    <label>Description<textarea rows={3} value={values.description} onChange={(e) => set("description", e.target.value)} /></label>
+    <div className="creator-grid"><label>PA<input type="number" value={values.pa} onChange={(e) => set("pa", Number(e.target.value))} required /></label><label>PO<input value={values.po} onChange={(e) => set("po", e.target.value)} required /></label><label>Coup critique<input value={values.cc} onChange={(e) => set("cc", e.target.value)} required /></label><label>Échec critique<input value={values.ec} onChange={(e) => set("ec", e.target.value)} required /></label><label>Relance (tours)<input value={values.relance} onChange={(e) => set("relance", e.target.value)} required /></label><label>Lancers/tour<input type="number" value={values.parTour} onChange={(e) => set("parTour", e.target.value)} /></label><label>Lancers/cible<input type="number" value={values.parCible} onChange={(e) => set("parCible", e.target.value)} /></label></div>
     <div className="creator-checks">{([ ["porteeModifiable", "Portée modifiable"], ["ligneDeVue", "Ligne de vue"], ["lancerEnLigne", "Lancer en ligne"] ] as const).map(([key, label]) => <label key={key}><input type="checkbox" checked={values[key]} onChange={(e) => set(key, e.target.checked)} /> {label}</label>)}</div>
     <label>Effets normaux<textarea rows={5} value={values.effetsNormaux} onChange={(e) => set("effetsNormaux", e.target.value)} required /></label><label>Effets critiques<textarea rows={4} value={values.effetsCritiques} onChange={(e) => set("effetsCritiques", e.target.value)} /></label>
     <div className="creator-image"><input ref={fileRef} type="file" accept=".svg,.png,.jpg,.jpeg,.webp,image/*" onChange={(event: ChangeEvent<HTMLInputElement>) => setFile(event.target.files?.[0] ?? null)} /><span>{file?.name ?? "Icône facultative"}</span></div>

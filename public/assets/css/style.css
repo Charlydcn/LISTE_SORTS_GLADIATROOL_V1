@@ -27,14 +27,17 @@ body{
 }
 
 .page-title{
+  display: block;
   color: #e7e3cd;
-  font-size: 11px;
+  font-size: .8rem;
   letter-spacing: .1em;
   text-transform: uppercase;
   text-align: center;
   opacity: .55;
   margin: 0 0 14px;
+  text-decoration: none;
 }
+.page-title:hover{ text-decoration: underline; }
 
 .class-section{
   max-width: 760px;
@@ -45,7 +48,6 @@ body{
   color: #f1e9c9;
   font-size: 20px;
   font-weight: 700;
-  border-bottom: 2px solid #5a5738;
   padding-bottom: 6px;
   margin: 0 0 12px;
   letter-spacing: .02em;
@@ -279,7 +281,7 @@ body{
 /* footer credit removed for clean screenshots */
 
 /* ==========================================================================
-   PAGE D'ACCUEIL — 12 LIENS DE CLASSES
+   PAGE D'ACCUEIL - 12 LIENS DE CLASSES
    ========================================================================== */
 
 .class-grid{
@@ -540,8 +542,6 @@ body{
 }
 .panel-heading-row h3{ margin: 0; font-size: 20px; letter-spacing: .02em; }
 .panel-heading-row .reset-button{ flex: 0 0 auto; color: #f1e9c9; border-color: #756f51; }
-.spells-panel-heading{ margin-top: 16px; }
-
 .class-stats-title{
   color: #f1e9c9;
   font-size: 20px;
@@ -724,6 +724,10 @@ button:focus-visible, a:focus-visible, input:focus-visible, textarea:focus-visib
 }
 
 .toolbar-button{ color: #f1e9c9; font-size: 12px; }
+.toolbar-icon-button{ display:inline-flex; align-items:center; justify-content:center; width:30px; height:30px; padding:5px; border-radius:4px; }
+.toolbar-icon-button:hover{ background:rgba(231,227,205,.12); text-decoration:none; }
+.toolbar-icon-button svg{ width:20px; height:20px; }
+.toolbar-icon-button .history-icon{ width:20px; height:20px; }
 .login-shell{ min-height: calc(100vh - 80px); display: grid; place-items: center; padding: 30px 0 70px; }
 .login-card{
   width: min(390px, 100%);
