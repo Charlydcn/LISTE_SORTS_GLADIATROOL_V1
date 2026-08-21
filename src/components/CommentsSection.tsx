@@ -4,6 +4,7 @@ import { supabase } from "../lib/supabase";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage, formatDate } from "../lib/utils";
 import { FragmentBr } from "./icons";
+import { parseCommentRows } from "../lib/validation";
 
 function CommentItem({
   comment,
@@ -135,7 +136,9 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
     setError(null);
     const { data, error: err } = await supabase
       .from("spell_comments")
-      .select("*")
+      .select(
+        "id,spell_id,body,created_at,updated_at,created_by_label,updated_by_label",
+      )
       .eq("spell_id", id)
       .order("created_at", { ascending: false });
     if (err) {
@@ -143,7 +146,11 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
       setLoading(false);
       return;
     }
-    setComments((data || []) as unknown as CommentRow[]);
+    try {
+      setComments(parseCommentRows(data ?? [], "la table spell_comments"));
+    } catch (validationError) {
+      setError(errorMessage(validationError));
+    }
     setLoading(false);
   }
 

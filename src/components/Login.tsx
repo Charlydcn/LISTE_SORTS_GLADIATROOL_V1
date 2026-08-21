@@ -1,6 +1,5 @@
 import { useState, type FormEvent } from "react";
 import { useSessionStore } from "../lib/sessionStore";
-import { useDataStore } from "../lib/dataStore";
 import { errorMessage } from "../lib/utils";
 import { DefaultIcon } from "./icons";
 
@@ -16,7 +15,6 @@ export function Login({ initialMessage = "" }: { initialMessage?: string }) {
     setMessage("");
     try {
       await useSessionStore.getState().signIn(email.trim(), password);
-      await useDataStore.getState().initialize();
     } catch (error) {
       setMessage(errorMessage(error));
       setBusy(false);
@@ -25,7 +23,6 @@ export function Login({ initialMessage = "" }: { initialMessage?: string }) {
 
   function enterGuest() {
     useSessionStore.getState().enterGuest();
-    void useDataStore.getState().initialize();
   }
 
   return (

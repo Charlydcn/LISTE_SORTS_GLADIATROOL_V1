@@ -6,6 +6,7 @@ import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
 import { HISTORY_PAGE_SIZE } from "./config";
 import { CLASS_STAT_FIELDS, fieldLabel, SPELL_FIELDS, valueText } from "./utils";
+import { parseHistoryRows } from "./validation";
 
 export type HistoryFilters = {
   entityType: string;
@@ -136,7 +137,7 @@ async function fetchPage(
   query = query.order("changed_at", { ascending: false }).range(offset, offset + size - 1);
   const { data, error } = await query;
   if (error) throw error;
-  return (data || []) as unknown as HistoryRow[];
+  return parseHistoryRows(data ?? [], `la table ${sourceTable()}`);
 }
 
 export const useHistoryStore = create<HistoryState>((set, get) => ({

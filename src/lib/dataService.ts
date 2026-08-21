@@ -1,4 +1,5 @@
 import type { ClassStats, Spell } from "../types";
+import { parseClassData, parseCommonData } from "./validation";
 
 export interface ClassFile {
   name: string;
@@ -57,21 +58,23 @@ export function cloneData<T>(value: T): T {
   return JSON.parse(JSON.stringify(value)) as T;
 }
 
-interface ClassDataJson {
-  classe: string;
-  morphId: number;
-  sorts: Omit<Spell, "classe" | "morphId">[];
-}
-
-interface CommonDataJson {
-  classe: string;
-  sorts: Omit<Spell, "classe" | "morphId">[];
-}
-
 export interface BaselineData {
   baseSpells: Spell[];
   baseCommonSpells: Spell[];
   baseMorphStats: Record<string, ClassStats>;
+}
+
+function assertSharedSpellsAreIdentical(spells: Omit<Spell, "classe" | "morphId">[]): void {
+  const signatures = new Map<string, string>();
+  spells.forEach((spell) => {
+    const key = String(spell.id);
+    const signature = JSON.stringify(spell);
+    const previous = signatures.get(key);
+    if (previous && previous !== signature) {
+      throw new Error(`Le sort partagé #${key} possède des définitions JSON différentes.`);
+    }
+    signatures.set(key, signature);
+  });
 }
 
 export async function loadBaselineData(): Promise<BaselineData> {
@@ -79,13 +82,18 @@ export async function loadBaselineData(): Promise<BaselineData> {
     CLASS_FILES.map(async (entry) => {
       const response = await fetch(`data/${entry.file}`);
       if (!response.ok) throw new Error(`Impossible de charger ${entry.file}`);
-      return (await response.json()) as ClassDataJson;
+      return parseClassData(await response.json(), entry.file, entry.name, entry.morphId);
     }),
   );
 
   const commonResponse = await fetch("data/sortsCommuns.json");
   if (!commonResponse.ok) throw new Error("Impossible de charger sortsCommuns.json");
-  const commonData = (await commonResponse.json()) as CommonDataJson;
+  const commonData = parseCommonData(await commonResponse.json(), "sortsCommuns.json");
+
+  assertSharedSpellsAreIdentical([
+    ...classData.flatMap((data) => data.sorts),
+    ...commonData.sorts,
+  ]);
 
   const baseSpells: Spell[] = classData.flatMap((data) =>
     data.sorts.map((spell) => ({

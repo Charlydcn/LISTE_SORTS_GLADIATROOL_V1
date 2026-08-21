@@ -3,6 +3,7 @@ import type { SessionMode, SessionUser } from "../types";
 import { supabase } from "./supabase";
 
 const GUEST_KEY = "gladiatrool_guest";
+let authListenerInstalled = false;
 
 interface SessionState {
   mode: SessionMode;
@@ -24,6 +25,23 @@ export const useSessionStore = create<SessionState>((set, get) => ({
       set({ mode: sessionStorage.getItem(GUEST_KEY) === "1" ? "guest" : "login", user: null });
       return;
     }
+    if (!authListenerInstalled) {
+      authListenerInstalled = true;
+      supabase.auth.onAuthStateChange((event, session) => {
+        if (session?.user) {
+          sessionStorage.removeItem(GUEST_KEY);
+          set({ mode: "admin", user: session.user });
+          return;
+        }
+        if (event !== "INITIAL_SESSION") {
+          set({
+            mode: sessionStorage.getItem(GUEST_KEY) === "1" ? "guest" : "login",
+            user: null,
+          });
+        }
+      });
+    }
+
     const { data, error } = await supabase.auth.getSession();
     if (error) throw error;
     if (data.session?.user) {

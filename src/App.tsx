@@ -13,6 +13,7 @@ import { Toasts } from "./components/Toasts";
 function AppShell() {
   const mode = useSessionStore((s) => s.mode);
   const status = useDataStore((s) => s.status);
+  const loadError = useDataStore((s) => s.loadError);
   const collaborationWarning = useDataStore((s) => s.collaborationWarning);
   const [initError, setInitError] = useState("");
 
@@ -25,12 +26,14 @@ function AppShell() {
         useSessionStore.setState({ mode: "login" });
         return;
       }
-      const currentMode = useSessionStore.getState().mode;
-      if (currentMode === "admin" || currentMode === "guest") {
-        await useDataStore.getState().initialize();
-      }
     })();
   }, []);
+
+  useEffect(() => {
+    if (mode === "admin" || mode === "guest") {
+      void useDataStore.getState().initialize();
+    }
+  }, [mode]);
 
   if (mode === "loading") {
     return (
@@ -50,6 +53,28 @@ function AppShell() {
       <>
         <Header />
         <Login initialMessage={initError} />
+        <Modal />
+        <Toasts />
+      </>
+    );
+  }
+
+  if (status === "error") {
+    return (
+      <>
+        <Header />
+        <div id="app">
+          <div className="error-box" role="alert">
+            {loadError || "Impossible de charger les données de l’application."}
+          </div>
+          <button
+            type="button"
+            className="primary-button"
+            onClick={() => void useDataStore.getState().initialize()}
+          >
+            Réessayer
+          </button>
+        </div>
         <Modal />
         <Toasts />
       </>

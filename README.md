@@ -19,7 +19,10 @@ Application de listing des sorts Dofus Retro, refactorisée en **Vite + React 18
 - Supabase Auth gère les deux comptes administrateurs.
 - Supabase stocke uniquement les overrides propriété par propriété, leur historique complet et les commentaires.
 - Au démarrage, l'application charge la baseline, récupère les overrides autorisés par la session, puis construit les valeurs effectives en mémoire.
+- Les fichiers JSON et les réponses Supabase critiques sont validés à l'exécution avant d'alimenter les stores.
 - Il n'y a ni backend applicatif, ni Realtime. Le build produit un site entièrement statique.
+
+Les sorts `390`, `391`, `393` et `395` apparaissent dans deux classes chacun. Leur identifiant est volontairement global : une modification effectuée depuis une classe est donc visible dans l'autre. Le chargement échoue explicitement si deux définitions JSON partageant un identifiant divergent.
 
 Tout utilisateur Supabase authentifié est administrateur. Un visiteur non authentifié doit choisir explicitement le mode invité, qui reste actif uniquement dans `sessionStorage`.
 

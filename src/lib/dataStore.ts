@@ -3,6 +3,12 @@ import type { ClassStats, OverrideRow, Spell } from "../types";
 import { cloneData, loadBaselineData, type BaselineData } from "./dataService";
 import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
+import { errorMessage } from "./utils";
+import {
+  parseApplyOverrideResult,
+  parseOverrideRows,
+  parseResetCount,
+} from "./validation";
 
 export function mapKey(entityType: string, entityKey: string, fieldKey: string): string {
   return `${entityType}\u0000${entityKey}\u0000${fieldKey}`;
@@ -53,7 +59,8 @@ export interface SaveResult {
 }
 
 interface DataState {
-  status: "idle" | "loading" | "ready";
+  status: "idle" | "loading" | "ready" | "error";
+  loadError: string;
   collaborationWarning: string;
   baseSpells: Spell[];
   baseCommonSpells: Spell[];
@@ -84,6 +91,7 @@ interface DataState {
 
 export const useDataStore = create<DataState>((set, get) => ({
   status: "idle",
+  loadError: "",
   collaborationWarning: "",
   baseSpells: [],
   baseCommonSpells: [],
@@ -120,12 +128,29 @@ export const useDataStore = create<DataState>((set, get) => ({
       overrides[mapKey(row.entity_type, row.entity_key, row.field_key)] = row;
       setEffectiveValue(spells, commonSpells, morphStats, row.entity_type, row.entity_key, row.field_key, row.value);
     });
-    set({ spells, commonSpells, morphStats, overrides, status: "ready", collaborationWarning: "" });
+    set({
+      spells,
+      commonSpells,
+      morphStats,
+      overrides,
+      status: "ready",
+      loadError: "",
+      collaborationWarning: "",
+    });
   },
 
   async initialize() {
-    set({ status: "loading" });
-    await get().loadBaseline();
+    set({ status: "loading", loadError: "", collaborationWarning: "" });
+    try {
+      await get().loadBaseline();
+    } catch (error) {
+      console.error(error);
+      set({
+        status: "error",
+        loadError: `Impossible de charger les données JSON : ${errorMessage(error)}`,
+      });
+      return;
+    }
     const client = supabase;
     if (!client) {
       get().resetEffective();
@@ -142,7 +167,7 @@ export const useDataStore = create<DataState>((set, get) => ({
         + (useSessionStore.getState().isAdmin() ? ",updated_by,updated_by_label" : "");
       const { data, error } = await client.from(table).select(select);
       if (error) throw error;
-      get().applyRows(data ? (data as unknown as OverrideRow[]) : []);
+      get().applyRows(parseOverrideRows(data ?? [], `la table ${table}`));
     } catch (error) {
       get().resetEffective();
       console.error(error);
@@ -170,17 +195,11 @@ export const useDataStore = create<DataState>((set, get) => ({
       p_baseline_value: baselineValue,
     });
     if (error) throw error;
-    const result = (Array.isArray(data) ? data[0] : data) as
-      | {
-          override_id: string;
-          history_id: string | null;
-          saved_at: string;
-          author_label: string;
-          was_changed: boolean;
-        }
-      | undefined;
-    if (!result) throw new Error("La sauvegarde n'a retourné aucun résultat.");
+    const rawResult = Array.isArray(data) ? data[0] : data;
+    if (!rawResult) throw new Error("La sauvegarde n'a retourné aucun résultat.");
+    const result = parseApplyOverrideResult(rawResult);
     if (!result.was_changed) return { changed: false };
+    if (!result.override_id) throw new Error("La sauvegarde n'a retourné aucun identifiant d'override.");
 
     const row: OverrideRow = {
       id: result.override_id,
@@ -231,7 +250,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       setEffectiveValue(spells, commonSpells, morphStats, row.entity_type, String(row.entity_key), row.field_key, baseline);
     });
     set({ spells, commonSpells, morphStats, overrides });
-    return Number(data || 0);
+    return parseResetCount(data);
   },
 
   listOverrides(opts) {
