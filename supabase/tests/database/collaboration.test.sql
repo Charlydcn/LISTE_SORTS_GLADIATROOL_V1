@@ -1,5 +1,5 @@
 begin;
-select plan(40);
+select plan(51);
 
 -- Les migrations sont rejouées par `supabase test db` dans une base locale neuve.
 select has_table('public', 'entity_overrides', 'La table des overrides existe après les migrations');
@@ -25,6 +25,7 @@ select ok(not has_table_privilege('anon', 'public.change_history', 'select'), 'a
 select ok(not has_function_privilege('anon', 'public.apply_override(text,text,text,jsonb,jsonb)', 'execute'), 'anon ne peut pas appeler apply_override');
 select ok(not has_function_privilege('anon', 'public.reset_overrides(jsonb)', 'execute'), 'anon ne peut pas appeler reset_overrides');
 select ok(not has_function_privilege('anon', 'public.apply_spell_icon_override(text,text,jsonb)', 'execute'), 'anon ne modifie pas les icones');
+select ok(not has_function_privilege('anon', 'public.reset_spell_class(text,bigint[],jsonb)', 'execute'), 'anon ne réinitialise pas une classe');
 
 select ok(has_table_privilege('authenticated', 'public.entity_overrides', 'select'), 'authenticated lit les overrides privés');
 select ok(has_table_privilege('authenticated', 'public.change_history', 'delete'), 'authenticated peut supprimer l historique');
@@ -32,11 +33,44 @@ select ok(has_table_privilege('authenticated', 'public.spell_comments', 'select,
 select ok(has_function_privilege('authenticated', 'public.apply_override(text,text,text,jsonb,jsonb)', 'execute'), 'authenticated peut appeler apply_override');
 select ok(has_function_privilege('authenticated', 'public.reset_overrides(jsonb)', 'execute'), 'authenticated peut appeler reset_overrides');
 select ok(has_function_privilege('authenticated', 'public.apply_spell_icon_override(text,text,jsonb)', 'execute'), 'authenticated modifie les icones');
+select ok(has_function_privilege('authenticated', 'public.reset_spell_class(text,bigint[],jsonb)', 'execute'), 'authenticated réinitialise une classe');
 
 set local role authenticated;
 select set_config('request.jwt.claim.sub', '11111111-1111-1111-1111-111111111111', true);
 select set_config('request.jwt.claim.email', 'admin@example.test', true);
 select set_config('request.jwt.claims', '{"sub":"11111111-1111-1111-1111-111111111111","email":"admin@example.test","role":"authenticated"}', true);
+
+select ok(
+  (select spell_id >= 1000000 from public.create_spell('Feca', '{
+    "nom":"Sort personnalisé", "pa":4, "po":"1 à 6", "cc":"1/50", "ec":"1/100", "relance":"0",
+    "porteeModifiable":true, "lancerEnLigne":false, "ligneDeVue":true,
+    "parTour":null, "parCible":null, "icone":null, "commun":false,
+    "effets":[{"onglet":"normaux","texte":"Effet"}]
+  }'::jsonb)),
+  'Les nouveaux sorts utilisent la plage d identifiants personnalisés'
+);
+select lives_ok(
+  $$select public.delete_spell(1, 'Feca')$$,
+  'Un sort natif peut être masqué avant la réinitialisation de classe'
+);
+select lives_ok(
+  $$select * from public.apply_override('spell_position', 'Feca/1', 'position', '8'::jsonb, '1'::jsonb)$$,
+  'Une position peut être préparée avant la réinitialisation de classe'
+);
+select lives_ok(
+  $$select * from public.apply_override('class_stat', 'Feca', 'vie', '900'::jsonb, '850'::jsonb)$$,
+  'Une statistique peut être préparée avant la réinitialisation de classe'
+);
+create temporary table class_reset_result as
+select * from public.reset_spell_class('Feca', array[1]::bigint[], '[]'::jsonb);
+select is(
+  (select (deleted_custom_count::text || '/' || restored_native_count::text) from class_reset_result),
+  '1/1', 'Le reset supprime les sorts personnalisés et restaure les sorts natifs'
+);
+select is((select count(*) from public.created_spells where class_name = 'Feca'), 0::bigint, 'Le catalogue personnalisé de la classe est vide');
+select is((select count(*) from public.deleted_native_spells where class_name = 'Feca'), 0::bigint, 'Tous les sorts natifs de la classe sont restaurés');
+select is((select count(*) from public.entity_overrides where entity_type = 'spell_position' and entity_key like 'Feca/%'), 0::bigint, 'Toutes les positions de la classe sont supprimées');
+select is((select count(*) from public.entity_overrides where entity_type = 'class_stat' and entity_key = 'Feca'), 0::bigint, 'Toutes les statistiques personnalisées de la classe sont supprimées');
 
 select throws_ok(
   $$select * from public.apply_override('spell', '390', 'pa', '"six"'::jsonb, '4'::jsonb)$$,

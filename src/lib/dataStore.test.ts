@@ -41,6 +41,8 @@ function installBaseline() {
     commonSpells: [],
     morphStats: {},
     overrides: {},
+    createdSpells: [],
+    deletedNativeSpells: [],
     loadError: "",
     collaborationWarning: "",
   });
@@ -181,5 +183,38 @@ describe("overrides effectifs", () => {
     await expect(useDataStore.getState().reset([row])).resolves.toBe(1);
     expect(supabaseMock.rpc).toHaveBeenCalledWith("reset_overrides", expect.any(Object));
     expect(useDataStore.getState().spells.filter((spell) => spell.id === 390).map((spell) => spell.pa)).toEqual([4, 4]);
+  });
+
+  it("réinitialise une classe complète et retire son catalogue personnalisé", async () => {
+    const custom = makeSpell(1_000_000, "Feca");
+    const { id: _id, classe: _classe, morphId: _morphId, ...customData } = custom;
+    useDataStore.setState({
+      createdSpells: [{ id: custom.id, class_name: "Feca", spell: customData, created_at: "2026-08-21T10:00:00.000Z" }],
+      deletedNativeSpells: [{ class_name: "Feca", spell_id: 390, deleted_at: "2026-08-21T10:00:00.000Z" }],
+    });
+    useDataStore.getState().applyRows([{
+      id: "position-custom",
+      entity_type: "spell_position",
+      entity_key: "Feca/1000000",
+      field_key: "position",
+      value: 1,
+      previous_value: null,
+      updated_at: "2026-08-21T10:00:00.000Z",
+    }]);
+    supabaseMock.rpc.mockResolvedValue({
+      data: [{ reset_count: 1, deleted_custom_count: 1, restored_native_count: 1 }],
+      error: null,
+    });
+
+    await expect(useDataStore.getState().resetClass("Feca")).resolves.toBe(3);
+
+    expect(supabaseMock.rpc).toHaveBeenCalledWith("reset_spell_class", expect.objectContaining({
+      p_class_name: "Feca",
+      p_native_spell_ids: [390, 391, 393, 395],
+    }));
+    expect(useDataStore.getState().createdSpells).toEqual([]);
+    expect(useDataStore.getState().deletedNativeSpells).toEqual([]);
+    expect(useDataStore.getState().spells.filter((spell) => spell.classe === "Feca").map((spell) => spell.id)).toEqual([390, 391, 393, 395]);
+    expect(Object.values(useDataStore.getState().overrides).some((row) => row.entity_type === "spell_position" && row.entity_key.startsWith("Feca/"))).toBe(false);
   });
 });

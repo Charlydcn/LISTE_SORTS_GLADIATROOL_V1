@@ -15,6 +15,11 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
   const overrides = useDataStore((s) => s.overrides);
   const spells = useDataStore((s) => s.spells);
+  const commonSpells = useDataStore((s) => s.commonSpells);
+  const baseSpells = useDataStore((s) => s.baseSpells);
+  const baseCommonSpells = useDataStore((s) => s.baseCommonSpells);
+  const createdSpells = useDataStore((s) => s.createdSpells);
+  const deletedNativeSpells = useDataStore((s) => s.deletedNativeSpells);
   const [confirming, setConfirming] = useState(false);
   const [busy, setBusy] = useState(false);
 
@@ -26,12 +31,13 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
       (row) => row.entity_type === "spell" && String(row.entity_key) === String(resetKey),
     );
   } else if (scope === "class-spells") {
-    const ids = spells
+    const ids = [...spells, ...commonSpells, ...baseSpells, ...baseCommonSpells]
       .filter((spell) => spell.classe === resetKey)
       .map((spell) => String(spell.id));
     rows = Object.values(overrides).filter(
       (row) => (row.entity_type === "spell" && ids.includes(String(row.entity_key)))
-        || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${String(resetKey)}/`)),
+        || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${String(resetKey)}/`))
+        || (row.entity_type === "class_stat" && row.entity_key === String(resetKey)),
     );
   } else if (scope === "class-stats") {
     rows = Object.values(overrides).filter(
@@ -39,14 +45,25 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
     );
   }
 
-  const overrideCount = rows.length;
+  const customRows = scope === "class-spells"
+    ? createdSpells.filter((row) => row.class_name === String(resetKey))
+    : [];
+  const restoredCount = scope === "class-spells"
+    ? deletedNativeSpells.filter((row) => row.class_name === String(resetKey)).length
+    : 0;
+  const resetCount = rows.length + customRows.length + restoredCount;
 
   async function performReset() {
     setBusy(true);
     setConfirming(false);
     try {
-      const count = await useDataStore.getState().reset(rows);
-      const imageUrls = rows.filter((row) => row.field_key === "icone").map((row) => row.value);
+      const count = scope === "class-spells"
+        ? await useDataStore.getState().resetClass(String(resetKey))
+        : await useDataStore.getState().reset(rows);
+      const imageUrls = [
+        ...rows.filter((row) => row.field_key === "icone").map((row) => row.value),
+        ...customRows.map((row) => row.spell.icone),
+      ];
       try {
         await removeStoredSpellImages(imageUrls);
       } catch (cleanupError) {
@@ -83,7 +100,7 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
     <button
       type="button"
       className={`reset-button ${confirming ? "confirming" : ""}`}
-      disabled={overrideCount === 0 || busy}
+      disabled={resetCount === 0 || busy}
       onClick={handleClick}
     >
       {busy ? "Réinitialisation…" : confirming ? "Vraiment ?" : "Réinitialiser"}

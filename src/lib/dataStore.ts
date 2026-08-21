@@ -9,6 +9,7 @@ import {
   parseCreatedSpellRows,
   parseDeletedNativeSpellRows,
   parseOverrideRows,
+  parseResetClassResult,
   parseResetCount,
 } from "./validation";
 
@@ -106,6 +107,7 @@ interface DataState {
   ) => Promise<SaveResult>;
   reorderSpells: (className: string, orderedSpells: Spell[]) => Promise<void>;
   reset: (rows: OverrideRow[]) => Promise<number>;
+  resetClass: (className: string) => Promise<number>;
   listOverrides: (opts?: { entityType?: string; entityKeys?: unknown[] }) => OverrideRow[];
   getSpellById: (id: unknown) => Spell | undefined;
   getEffectiveValue: (entityType: string, entityKey: string, fieldKey: string) => unknown;
@@ -341,6 +343,56 @@ export const useDataStore = create<DataState>((set, get) => ({
     });
     set({ spells, commonSpells, morphStats, overrides });
     return parseResetCount(data);
+  },
+
+  async resetClass(className) {
+    if (!useSessionStore.getState().isAdmin()) {
+      throw new Error("Cette action est réservée aux administrateurs.");
+    }
+    const client = supabase;
+    if (!client) throw new Error("Supabase JS n'a pas pu être chargé.");
+
+    const nativeSpells = [...get().baseSpells, ...get().baseCommonSpells]
+      .filter((spell) => spell.classe === className);
+    const customIds = new Set(get().createdSpells
+      .filter((row) => row.class_name === className)
+      .map((row) => String(row.id)));
+    const allIds = new Set([...nativeSpells.map((spell) => String(spell.id)), ...customIds]);
+    const rows = Object.values(get().overrides).filter(
+      (row) => (row.entity_type === "spell" && allIds.has(String(row.entity_key)))
+        || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${className}/`))
+        || (row.entity_type === "class_stat" && row.entity_key === className),
+    );
+    const targets = rows.map((row) => ({
+      entity_type: row.entity_type,
+      entity_key: String(row.entity_key),
+      field_key: row.field_key,
+      baseline_value: get().getBaselineValue(row.entity_type, row.entity_key, row.field_key),
+    }));
+
+    const { data, error } = await client.rpc("reset_spell_class", {
+      p_class_name: className,
+      p_native_spell_ids: nativeSpells.map((spell) => spell.id),
+      p_targets: targets,
+    });
+    if (error) throw error;
+    const result = parseResetClassResult(data);
+
+    const overrides = { ...get().overrides };
+    Object.values(overrides).forEach((row) => {
+      if ((row.entity_type === "spell" && allIds.has(String(row.entity_key)))
+        || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${className}/`))
+        || (row.entity_type === "class_stat" && row.entity_key === className)) {
+        delete overrides[mapKey(row.entity_type, String(row.entity_key), row.field_key)];
+      }
+    });
+    set({
+      overrides,
+      createdSpells: get().createdSpells.filter((row) => row.class_name !== className),
+      deletedNativeSpells: get().deletedNativeSpells.filter((row) => row.class_name !== className),
+    });
+    get().applyRows(Object.values(overrides));
+    return result.reset_count + result.deleted_custom_count + result.restored_native_count;
   },
 
   async reorderSpells(className, orderedSpells) {

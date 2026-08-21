@@ -4,6 +4,7 @@ import {
   parseClassData,
   parseCommentRows,
   parseOverrideRows,
+  parseResetClassResult,
   parseResetCount,
 } from "./validation";
 
@@ -60,9 +61,15 @@ describe("validation des données externes", () => {
     };
     expect(parseApplyOverrideResult(result)).toEqual(result);
     expect(parseResetCount(2)).toBe(2);
+    expect(parseResetClassResult([{
+      reset_count: 2,
+      deleted_custom_count: 1,
+      restored_native_count: 3,
+    }])).toEqual({ reset_count: 2, deleted_custom_count: 1, restored_native_count: 3 });
     expect(() => parseApplyOverrideResult({ ...result, was_changed: "yes" })).toThrow(
       "la réponse de apply_override",
     );
     expect(() => parseResetCount(-1)).toThrow("la réponse de reset_overrides");
+    expect(() => parseResetClassResult([])).toThrow("la réponse de reset_spell_class");
   });
 });

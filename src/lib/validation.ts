@@ -83,6 +83,12 @@ const applyOverrideResultSchema = z.object({
   was_changed: z.boolean(),
 });
 
+const resetClassResultSchema = z.object({
+  reset_count: z.number().int().nonnegative(),
+  deleted_custom_count: z.number().int().nonnegative(),
+  restored_native_count: z.number().int().nonnegative(),
+});
+
 function validationError(source: string, error: unknown): Error {
   if (!(error instanceof ZodError)) {
     return new Error(`Impossible de valider ${source}.`);
@@ -166,4 +172,13 @@ export function parseApplyOverrideResult(value: unknown): {
 
 export function parseResetCount(value: unknown): number {
   return parseWithSource(z.number().int().nonnegative(), value, "la réponse de reset_overrides");
+}
+
+export function parseResetClassResult(value: unknown): {
+  reset_count: number;
+  deleted_custom_count: number;
+  restored_native_count: number;
+} {
+  const row = Array.isArray(value) ? value[0] : value;
+  return parseWithSource(resetClassResultSchema, row, "la réponse de reset_spell_class");
 }
