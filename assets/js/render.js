@@ -98,18 +98,40 @@ function tooltipFor(override) {
   return parts.join("\n");
 }
 
+function historyIconHtml() {
+  return `<svg class="history-icon" viewBox="0 0 24 24" aria-hidden="true">
+    <circle cx="12" cy="12" r="8.5"></circle>
+    <path d="M12 7.5V12l3.2 2"></path>
+  </svg>`;
+}
+
+function initializeTooltips(scope = document) {
+  if (typeof window.tippy !== "function") return;
+  const targets = [...scope.querySelectorAll("[data-tippy-content]")].filter((element) => !element._tippy);
+  if (!targets.length) return;
+  window.tippy(targets, {
+    allowHTML: false,
+    appendTo: () => document.body,
+    delay: [140, 0],
+    duration: [140, 100],
+    maxWidth: 280,
+    placement: "top",
+    theme: "gladiatrool",
+  });
+}
+
 function editableField(entityType, entityKey, fieldKey, valueHtml, inputType = "text", extraClass = "") {
   const override = window.AppStore.getOverride(entityType, entityKey, fieldKey);
   const changedClass = override ? "is-overridden" : "";
-  const title = override ? ` title="${escapeAttribute(tooltipFor(override))}"` : "";
+  const tooltip = override ? ` data-tippy-content="${escapeAttribute(tooltipFor(override))}"` : "";
   const attrs = `data-entity-type="${escapeAttribute(entityType)}" data-entity-key="${escapeAttribute(entityKey)}" data-field-key="${escapeAttribute(fieldKey)}" data-input-type="${escapeAttribute(inputType)}"`;
   const trigger = window.AppSession.isAdmin()
     ? `<button type="button" class="editable-trigger" data-editable ${attrs} aria-label="Modifier ${escapeAttribute(window.AppHistory.fieldLabel(fieldKey))}">${valueHtml}</button>`
     : `<span class="field-value">${valueHtml}</span>`;
   const history = override
-    ? `<button type="button" class="field-history" data-property-history ${attrs} aria-label="Voir l'historique de ${escapeAttribute(window.AppHistory.fieldLabel(fieldKey))}">↺</button>`
+    ? `<button type="button" class="field-history" data-property-history ${attrs} aria-label="Voir l'historique de ${escapeAttribute(window.AppHistory.fieldLabel(fieldKey))}">${historyIconHtml()}</button>`
     : "";
-  return `<span class="editable-field ${changedClass} ${extraClass}"${title}>${trigger}${history}</span>`;
+  return `<span class="editable-field ${changedClass} ${extraClass}"${tooltip}>${trigger}${history}</span>`;
 }
 
 function editableEffects(spell, tab) {
@@ -120,8 +142,9 @@ function editableEffects(spell, tab) {
   const trigger = window.AppSession.isAdmin()
     ? `<div class="editable-trigger effects-edit-trigger" role="button" tabindex="0" data-editable ${attrs} aria-label="Modifier les effets ${tab}">${rows}</div>`
     : `<div class="field-value">${rows}</div>`;
-  const history = override ? `<button type="button" class="field-history effects-history" data-property-history ${attrs}>↺ <span>Historique</span></button>` : "";
-  return `<div class="editable-field effects-editable ${override ? "is-overridden" : ""}"${override ? ` title="${escapeAttribute(tooltipFor(override))}"` : ""}>${trigger}${history}</div>`;
+  const history = override ? `<button type="button" class="field-history effects-history" data-property-history ${attrs}>${historyIconHtml()} <span>Historique</span></button>` : "";
+  const tooltip = override ? ` data-tippy-content="${escapeAttribute(tooltipFor(override))}"` : "";
+  return `<div class="editable-field effects-editable ${override ? "is-overridden" : ""}"${tooltip}>${trigger}${history}</div>`;
 }
 
 function statRow(label, entityKey, fieldKey, value, inputType = "text") {
@@ -262,6 +285,7 @@ function renderApp() {
   const route = getRoute();
   if (route.view === "class") renderClass(route.className);
   else renderHome();
+  initializeTooltips();
 }
 
 function renderSelectedDetail() {
@@ -273,6 +297,7 @@ function renderSelectedDetail() {
   const detail = document.getElementById(route.view === "class" ? "spell-detail" : "common-spell-detail");
   if (!detail) return;
   detail.innerHTML = buildCard(spell);
+  initializeTooltips(detail);
   if (window.AppSession.isAdmin()) window.AppComments.list(spell.id);
 }
 
@@ -332,7 +357,7 @@ function beginEdit(trigger) {
     control = `<input class="inline-input" type="${type}" value="${escapeAttribute(current ?? "")}" aria-label="Nouvelle valeur" ${inputType === "number" ? "required" : ""}>`;
   }
   wrapper.innerHTML = `<span class="inline-editor" data-entity-type="${escapeAttribute(entityType)}" data-entity-key="${escapeAttribute(entityKey)}" data-field-key="${escapeAttribute(fieldKey)}" data-input-type="${escapeAttribute(inputType)}">
-    ${control}<span class="editor-actions"><button type="button" class="save-edit" aria-label="Enregistrer">✓</button><button type="button" class="cancel-edit" aria-label="Annuler">×</button></span><span class="save-status" aria-live="polite"></span>
+    ${control}<span class="editor-actions"><button type="button" class="save-edit">Enregistrer</button><button type="button" class="cancel-edit">Annuler</button></span><span class="save-status" aria-live="polite"></span>
   </span>`;
   wrapper.querySelector(".inline-input").focus();
 }
@@ -382,7 +407,11 @@ document.addEventListener("click", async (event) => {
     catch (error) { leave.disabled = false; showToast(errorMessage(error), "error"); }
     return;
   }
-  if (event.target.closest("[data-global-history]")) { window.AppHistory.open(); return; }
+  if (event.target.closest("[data-global-history]")) {
+    const route = getRoute();
+    window.AppHistory.open(null, { classFilter: route.view === "class" ? route.className : "" });
+    return;
+  }
   const propertyHistory = event.target.closest("[data-property-history]");
   if (propertyHistory) {
     window.AppHistory.open({ entityType: propertyHistory.dataset.entityType, entityKey: propertyHistory.dataset.entityKey, fieldKey: propertyHistory.dataset.fieldKey });

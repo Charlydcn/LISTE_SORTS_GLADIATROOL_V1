@@ -1,6 +1,6 @@
 /* Historique chargé à la demande, via la vue publique sans auteur pour les invités. */
 (function createHistoryService() {
-  const state = { rows: [], offset: 0, hasMore: false, filters: null, loading: false };
+  const state = { rows: [], offset: 0, hasMore: false, filters: null, classFilter: "", loading: false, requestId: 0 };
 
   function sourceTable() {
     return window.AppSession.isAdmin() ? "change_history" : "public_change_history";
@@ -10,15 +10,19 @@
     const size = window.APP_CONFIG.historyPageSize;
     let query = window.AppSupabase.client
       .from(sourceTable())
-      .select("id,entity_type,entity_key,field_key,old_value,new_value,changed_at" + (window.AppSession.isAdmin() ? ",changed_by,changed_by_label" : ""))
-      .order("changed_at", { ascending: false })
-      .range(offset, offset + size - 1);
+      .select("id,entity_type,entity_key,field_key,old_value,new_value,changed_at" + (window.AppSession.isAdmin() ? ",changed_by,changed_by_label" : ""));
     if (filters) {
       query = query
         .eq("entity_type", filters.entityType)
         .eq("entity_key", String(filters.entityKey))
         .eq("field_key", filters.fieldKey);
+    } else if (state.classFilter) {
+      const spells = state.classFilter === "Sorts communs" ? COMMON_SPELLS : SPELLS.filter((spell) => spell.classe === state.classFilter);
+      const entityKeys = [...new Set(spells.map((spell) => String(spell.id)))];
+      if (state.classFilter !== "Sorts communs") entityKeys.push(state.classFilter);
+      query = query.in("entity_key", entityKeys);
     }
+    query = query.order("changed_at", { ascending: false }).range(offset, offset + size - 1);
     const { data, error } = await query;
     if (error) throw error;
     return data || [];
@@ -47,9 +51,11 @@
 
   function contextLabel(row) {
     if (row.entity_type === "class_stat") return row.entity_key;
-    const spell = window.AppStore.getSpellById(row.entity_key);
+    const matches = [...SPELLS, ...COMMON_SPELLS].filter((spell) => String(spell.id) === String(row.entity_key));
+    const spell = matches[0];
     if (!spell) return `Sort #${row.entity_key}`;
-    return `${spell.classe} · ${spell.nom}`;
+    const classes = [...new Set(matches.map((item) => item.classe))].join(" / ");
+    return `${classes} · ${spell.nom}`;
   }
 
   function renderRows() {
@@ -72,28 +78,48 @@
       </article>`).join("")}</div>`;
   }
 
-  function renderModalContent() {
-    return `${renderRows()}${state.hasMore ? '<button type="button" class="secondary-button load-more" data-load-more-history>Charger plus</button>' : ""}`;
+  function renderClassFilter(disabled = false) {
+    if (state.filters) return "";
+    const options = ["", ...CLASSES, "Sorts communs"];
+    return `<div class="history-filter">
+      <label for="history-class-filter">Classe</label>
+      <select id="history-class-filter" data-history-class-filter ${disabled ? "disabled" : ""}>
+        ${options.map((className) => `<option value="${window.escapeAttribute(className)}" ${state.classFilter === className ? "selected" : ""}>${window.escapeHtml(className || "Toutes les classes")}</option>`).join("")}
+      </select>
+    </div>`;
   }
 
-  async function open(filters = null) {
+  function renderModalContent() {
+    return `${renderClassFilter()}${renderRows()}${state.hasMore ? '<button type="button" class="secondary-button load-more" data-load-more-history>Charger plus</button>' : ""}`;
+  }
+
+  async function reload() {
+    const requestId = ++state.requestId;
     state.rows = [];
     state.offset = 0;
-    state.filters = filters;
     state.loading = true;
-    const title = filters ? `Historique — ${fieldLabel(filters.fieldKey)}` : "Historique global";
-    window.AppModal.open(title, '<p class="loading-state">Chargement de l’historique…</p>', { wide: true });
+    const content = document.getElementById("modal-content");
+    if (content) content.innerHTML = `${renderClassFilter(true)}<p class="loading-state">Chargement de l’historique…</p>`;
     try {
-      const rows = await fetchPage(filters, 0);
+      const rows = await fetchPage(state.filters, 0);
+      if (requestId !== state.requestId) return;
       state.rows = rows;
       state.offset = rows.length;
       state.hasMore = rows.length === window.APP_CONFIG.historyPageSize;
       document.getElementById("modal-content").innerHTML = renderModalContent();
     } catch (error) {
-      document.getElementById("modal-content").innerHTML = `<p class="error-box">${window.escapeHtml(window.errorMessage(error))}</p>`;
+      if (requestId === state.requestId) document.getElementById("modal-content").innerHTML = `${renderClassFilter()}<p class="error-box">${window.escapeHtml(window.errorMessage(error))}</p>`;
     } finally {
-      state.loading = false;
+      if (requestId === state.requestId) state.loading = false;
     }
+  }
+
+  async function open(filters = null, options = {}) {
+    state.filters = filters;
+    state.classFilter = filters ? "" : (options.classFilter || "");
+    const title = filters ? `Historique — ${fieldLabel(filters.fieldKey)}` : "Historique global";
+    window.AppModal.open(title, `${renderClassFilter(true)}<p class="loading-state">Chargement de l’historique…</p>`, { wide: true });
+    await reload();
   }
 
   async function loadMore() {
@@ -132,6 +158,11 @@
     if (event.target.closest("[data-load-more-history]")) loadMore();
     const deleteButton = event.target.closest("[data-delete-history]");
     if (deleteButton) remove(deleteButton.dataset.deleteHistory);
+  });
+  document.addEventListener("change", (event) => {
+    if (!event.target.matches("[data-history-class-filter]")) return;
+    state.classFilter = event.target.value;
+    reload();
   });
 
   window.AppHistory = { open, fieldLabel, valueText };

@@ -84,12 +84,35 @@
     window.showToast("Commentaire modifié.", "success");
   }
 
-  async function remove(article) {
-    if (!window.confirm("Supprimer définitivement ce commentaire ?")) return;
+  async function remove(article, button) {
+    button.disabled = true;
+    button.textContent = "Suppression…";
     const { error } = await window.AppSupabase.client.from("spell_comments").delete().eq("id", article.dataset.commentId);
-    if (error) { window.showToast(window.errorMessage(error), "error"); return; }
+    if (error) {
+      window.showToast(window.errorMessage(error), "error");
+      button.disabled = false;
+      button.textContent = "Supprimer";
+      button.dataset.confirming = "false";
+      return;
+    }
     await list(activeSpellId);
     window.showToast("Commentaire supprimé.", "success");
+  }
+
+  function confirmRemoval(button, article) {
+    if (button.dataset.confirming === "true") {
+      remove(article, button);
+      return;
+    }
+    button.dataset.confirming = "true";
+    button.textContent = "Vraiment ?";
+    button.classList.add("confirming");
+    window.setTimeout(() => {
+      if (!button.isConnected || button.dataset.confirming !== "true") return;
+      button.dataset.confirming = "false";
+      button.textContent = "Supprimer";
+      button.classList.remove("confirming");
+    }, 4000);
   }
 
   document.addEventListener("submit", (event) => {
@@ -99,7 +122,8 @@
   document.addEventListener("click", (event) => {
     const article = event.target.closest("[data-comment-id]");
     if (event.target.closest("[data-edit-comment]") && article) beginEdit(article);
-    if (event.target.closest("[data-delete-comment]") && article) remove(article);
+    const deleteButton = event.target.closest("[data-delete-comment]");
+    if (deleteButton && article) confirmRemoval(deleteButton, article);
     if (event.target.closest("[data-cancel-comment]")) list(activeSpellId);
   });
 
