@@ -7,6 +7,9 @@ import { SpellCard } from "./SpellCard";
 import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
 import { useEditingStore } from "../lib/editingStore";
+import { ResetButton } from "./ResetButton";
+import { useToastStore } from "../lib/toastStore";
+import { errorMessage } from "../lib/utils";
 
 export function Home() {
   const spells = useDataStore((s) => s.spells);
@@ -19,6 +22,25 @@ export function Home() {
   const selected = selectedId
     ? commonSpells.find((spell) => String(spell.id) === selectedId)
     : null;
+
+  const orderedCommonSpells = [...commonSpells]
+    .sort((left, right) => (left.position ?? Number.MAX_SAFE_INTEGER) - (right.position ?? Number.MAX_SAFE_INTEGER));
+
+  async function moveCommonSpell(sourceId: string, targetId: string) {
+    if (sourceId === targetId) return;
+    const sourceIndex = orderedCommonSpells.findIndex((spell) => String(spell.id) === sourceId);
+    const targetIndex = orderedCommonSpells.findIndex((spell) => String(spell.id) === targetId);
+    if (sourceIndex < 0 || targetIndex < 0) return;
+    const reordered = [...orderedCommonSpells];
+    const [moved] = reordered.splice(sourceIndex, 1);
+    reordered.splice(targetIndex, 0, moved);
+    try {
+      await useDataStore.getState().reorderSpells("Sorts communs", reordered);
+      useToastStore.getState().showToast("Ordre des sorts enregistré.", "success");
+    } catch (error) {
+      useToastStore.getState().showToast(errorMessage(error), "error");
+    }
+  }
 
   return (
     <>
@@ -43,17 +65,19 @@ export function Home() {
       <div className="common-section">
         <div className="common-heading">
           <button type="button" className={`common-toggle ${commonOpen ? "open" : ""}`} aria-expanded={commonOpen} onClick={() => setCommonOpen((open) => !open)}><span className="common-chevron">▾</span> Sorts communs</button>
+          <div className="heading-actions"><ResetButton scope="class-spells" resetKey="Sorts communs" /></div>
         </div>
         <div className="common-body" hidden={!commonOpen}>
           {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { useEditingStore.getState().close(); setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
           <div className="class-layout">
             <div className="spell-grid">
-              {commonSpells.map((spell) => (
+              {orderedCommonSpells.map((spell) => (
                 <SpellTile
                   key={spell.id}
                   spell={spell}
                   selected={String(spell.id) === selectedId}
                   onSelect={() => { useEditingStore.getState().close(); setCreating(false); setSelectedId(String(spell.id)); }}
+                  onDropSpell={(sourceId) => void moveCommonSpell(sourceId, String(spell.id))}
                 />
               ))}
             </div>

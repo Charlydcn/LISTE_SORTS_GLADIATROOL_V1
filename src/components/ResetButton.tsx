@@ -30,7 +30,8 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
       .filter((spell) => spell.classe === resetKey)
       .map((spell) => String(spell.id));
     rows = Object.values(overrides).filter(
-      (row) => row.entity_type === "spell" && ids.includes(String(row.entity_key)),
+      (row) => (row.entity_type === "spell" && ids.includes(String(row.entity_key)))
+        || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${String(resetKey)}/`)),
     );
   } else if (scope === "class-stats") {
     rows = Object.values(overrides).filter(

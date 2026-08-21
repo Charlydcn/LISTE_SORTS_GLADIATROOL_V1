@@ -10,6 +10,8 @@ import { ResetButton } from "./ResetButton";
 import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
 import { useEditingStore } from "../lib/editingStore";
+import { useToastStore } from "../lib/toastStore";
+import { errorMessage } from "../lib/utils";
 
 export function ClassPage() {
   const params = useParams<{ classe: string }>();
@@ -23,10 +25,28 @@ export function ClassPage() {
     return <Navigate to="/" replace />;
   }
 
-  const classSpells = spells.filter((spell) => spell.classe === className);
+  const classSpells = spells
+    .filter((spell) => spell.classe === className)
+    .sort((left, right) => (left.position ?? Number.MAX_SAFE_INTEGER) - (right.position ?? Number.MAX_SAFE_INTEGER));
   const selected = selectedId
     ? classSpells.find((spell) => String(spell.id) === selectedId)
     : null;
+
+  async function moveSpell(sourceId: string, targetId: string) {
+    if (sourceId === targetId) return;
+    const sourceIndex = classSpells.findIndex((spell) => String(spell.id) === sourceId);
+    const targetIndex = classSpells.findIndex((spell) => String(spell.id) === targetId);
+    if (sourceIndex < 0 || targetIndex < 0) return;
+    const reordered = [...classSpells];
+    const [moved] = reordered.splice(sourceIndex, 1);
+    reordered.splice(targetIndex, 0, moved);
+    try {
+      await useDataStore.getState().reorderSpells(className, reordered);
+      useToastStore.getState().showToast("Ordre des sorts enregistré.", "success");
+    } catch (error) {
+      useToastStore.getState().showToast(errorMessage(error), "error");
+    }
+  }
 
   return (
     <div className="class-page">
@@ -53,6 +73,7 @@ export function ClassPage() {
               spell={spell}
               selected={String(spell.id) === selectedId}
               onSelect={() => { useEditingStore.getState().close(); setCreating(false); setSelectedId(String(spell.id)); }}
+              onDropSpell={(sourceId) => void moveSpell(sourceId, String(spell.id))}
             />
           ))}
         </div>

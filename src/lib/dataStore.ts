@@ -16,6 +16,16 @@ export function mapKey(entityType: string, entityKey: string, fieldKey: string):
   return `${entityType}\u0000${entityKey}\u0000${fieldKey}`;
 }
 
+function positionEntityKey(className: string, spellId: string): string {
+  return `${className}/${spellId}`;
+}
+
+function parsePositionEntityKey(entityKey: string): { className: string; spellId: string } | null {
+  const separator = entityKey.lastIndexOf("/");
+  if (separator < 1 || separator === entityKey.length - 1) return null;
+  return { className: entityKey.slice(0, separator), spellId: entityKey.slice(separator + 1) };
+}
+
 function effectLines(spell: Spell, tab: "normaux" | "critiques"): string[] {
   return spell.effets.filter((effect) => effect.onglet === tab).map((effect) => effect.texte);
 }
@@ -47,6 +57,14 @@ function setEffectiveValue(
     [...spells, ...commonSpells]
       .filter((spell) => String(spell.id) === String(entityKey))
       .forEach((spell) => assignSpellField(spell, fieldKey, value));
+    return;
+  }
+  if (entityType === "spell_position") {
+    const target = parsePositionEntityKey(entityKey);
+    if (!target) return;
+    [...spells, ...commonSpells]
+      .filter((spell) => spell.classe === target.className && String(spell.id) === target.spellId)
+      .forEach((spell) => { spell.position = value as number; });
     return;
   }
   if (entityType === "class_stat" && morphStats[entityKey]) {
@@ -86,6 +104,7 @@ interface DataState {
     fieldKey: string,
     newValue: unknown,
   ) => Promise<SaveResult>;
+  reorderSpells: (className: string, orderedSpells: Spell[]) => Promise<void>;
   reset: (rows: OverrideRow[]) => Promise<number>;
   listOverrides: (opts?: { entityType?: string; entityKeys?: unknown[] }) => OverrideRow[];
   getSpellById: (id: unknown) => Spell | undefined;
@@ -324,6 +343,17 @@ export const useDataStore = create<DataState>((set, get) => ({
     return parseResetCount(data);
   },
 
+  async reorderSpells(className, orderedSpells) {
+    const changes = orderedSpells.filter((spell, index) => spell.position !== index + 1);
+    if (!changes.length) return;
+    await Promise.all(changes.map((spell) => get().save(
+      "spell_position",
+      positionEntityKey(className, String(spell.id)),
+      "position",
+      orderedSpells.indexOf(spell) + 1,
+    )));
+  },
+
   listOverrides(opts) {
     const keySet = opts?.entityKeys ? new Set(opts.entityKeys.map(String)) : null;
     return Object.values(get().overrides).filter(
@@ -341,6 +371,14 @@ export const useDataStore = create<DataState>((set, get) => ({
   },
 
   getEffectiveValue(entityType, entityKey, fieldKey) {
+    if (entityType === "spell_position") {
+      const target = parsePositionEntityKey(entityKey);
+      if (!target) return undefined;
+      const spell = [...get().spells, ...get().commonSpells].find(
+        (item) => item.classe === target.className && String(item.id) === target.spellId,
+      );
+      return spell?.position;
+    }
     if (entityType === "spell") {
       const spell = get().getSpellById(entityKey);
       if (!spell) return undefined;
@@ -352,6 +390,14 @@ export const useDataStore = create<DataState>((set, get) => ({
   },
 
   getBaselineValue(entityType, entityKey, fieldKey) {
+    if (entityType === "spell_position") {
+      const target = parsePositionEntityKey(entityKey);
+      if (!target) return undefined;
+      const spell = [...get().baseSpells, ...get().baseCommonSpells].find(
+        (item) => item.classe === target.className && String(item.id) === target.spellId,
+      );
+      return spell?.position;
+    }
     if (entityType === "spell") {
       const spell = get()
         .getBaselineSpells()

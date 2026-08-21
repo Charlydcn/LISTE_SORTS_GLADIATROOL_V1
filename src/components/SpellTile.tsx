@@ -1,8 +1,7 @@
 import { useState } from "react";
 import type { Spell } from "../types";
 import { useDataStore } from "../lib/dataStore";
-import { SpellIcon } from "./icons";
-import { TrashIcon } from "./icons";
+import { DragHandleIcon, SpellIcon, TrashIcon } from "./icons";
 import { useSessionStore } from "../lib/sessionStore";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage } from "../lib/utils";
@@ -11,9 +10,10 @@ interface SpellTileProps {
   spell: Spell;
   selected: boolean;
   onSelect: () => void;
+  onDropSpell?: (spellId: string) => void;
 }
 
-export function SpellTile({ spell, selected, onSelect }: SpellTileProps) {
+export function SpellTile({ spell, selected, onSelect, onDropSpell }: SpellTileProps) {
   const overrides = useDataStore((s) => s.overrides);
   const hasActiveOverride = Object.values(overrides).some(
     (row) => row.entity_type === "spell" && String(row.entity_key) === String(spell.id),
@@ -31,16 +31,24 @@ export function SpellTile({ spell, selected, onSelect }: SpellTileProps) {
     finally { setBusy(false); }
   }
 
+  function beginDrag(event: React.DragEvent<HTMLButtonElement>) {
+    event.stopPropagation();
+    event.dataTransfer.effectAllowed = "move";
+    event.dataTransfer.setData("text/plain", String(spell.id));
+  }
+
   return (
     <div
       className={`spell-tile ${selected ? "selected" : ""} ${hasActiveOverride ? "is-overridden" : ""}`}
       onClick={onSelect}
+      onDragOver={onDropSpell ? (event) => event.preventDefault() : undefined}
+      onDrop={onDropSpell ? (event) => { event.preventDefault(); onDropSpell(event.dataTransfer.getData("text/plain")); } : undefined}
     >
       <div className="spell-tile-icon">
         <SpellIcon spell={spell} />
       </div>
       <span className="spell-tile-name">{spell.nom}</span>
-      {isAdmin ? <button type="button" className="spell-delete" aria-label={confirming ? `Confirmer la suppression de ${spell.nom}` : `Supprimer ${spell.nom}`} title={confirming ? "Confirmer la suppression" : "Supprimer"} disabled={busy} onClick={(event) => void remove(event)}>{confirming ? "✓" : <TrashIcon />}</button> : null}
+      {isAdmin ? <><button type="button" className="spell-drag-handle" draggable aria-label={`Déplacer ${spell.nom}`} title="Glisser-déposer pour déplacer" onDragStart={beginDrag} onClick={(event) => event.stopPropagation()}><DragHandleIcon /></button><button type="button" className="spell-delete" aria-label={confirming ? `Confirmer la suppression de ${spell.nom}` : `Supprimer ${spell.nom}`} title={confirming ? "Confirmer la suppression" : "Supprimer"} disabled={busy} onClick={(event) => void remove(event)}>{confirming ? "✓" : <TrashIcon />}</button></> : null}
     </div>
   );
 }

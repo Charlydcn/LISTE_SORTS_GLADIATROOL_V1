@@ -76,6 +76,21 @@ describe("overrides effectifs", () => {
     }
   });
 
+  it("applique une position indépendamment pour chaque classe", () => {
+    useDataStore.getState().applyRows([{
+      id: "position-feca-390",
+      entity_type: "spell_position",
+      entity_key: "Feca/390",
+      field_key: "position",
+      value: 8,
+      previous_value: 1,
+      updated_at: "2026-08-21T10:00:00.000Z",
+    }]);
+
+    expect(useDataStore.getState().spells.find((spell) => spell.classe === "Feca" && spell.id === 390)?.position).toBe(8);
+    expect(useDataStore.getState().spells.find((spell) => spell.classe === "Osamodas" && spell.id === 390)?.position).toBeUndefined();
+  });
+
   it("enregistre un override après avoir validé la réponse apply_override", async () => {
     supabaseMock.rpc.mockResolvedValue({
       data: [{

@@ -1,5 +1,5 @@
 begin;
-select plan(35);
+select plan(37);
 
 -- Les migrations sont rejouées par `supabase test db` dans une base locale neuve.
 select has_table('public', 'entity_overrides', 'La table des overrides existe après les migrations');
@@ -50,6 +50,15 @@ select is(
 select is(
   (select count(*) from public.change_history where entity_type = 'spell' and entity_key = '390' and field_key = 'pa'),
   1::bigint, 'Une modification crée une ligne d historique'
+);
+
+select is(
+  (select was_changed from public.apply_override('spell_position', 'Feca/390', 'position', '8'::jsonb, '1'::jsonb)),
+  true, 'La position d un sort est persistée'
+);
+select is(
+  (select value from public.entity_overrides where entity_type = 'spell_position' and entity_key = 'Feca/390' and field_key = 'position'),
+  '8'::jsonb, 'La position est indépendante de l identifiant global du sort'
 );
 select is(
   (select was_changed from public.apply_override('spell', '390', 'pa', '6'::jsonb, '4'::jsonb)),
