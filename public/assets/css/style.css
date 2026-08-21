@@ -26,6 +26,11 @@ body{
   color: var(--text-main);
 }
 
+.site-logo{
+  display: block;
+  margin: 0 auto;
+}
+
 .page-title{
   color: #e7e3cd;
   font-size: 11px;
