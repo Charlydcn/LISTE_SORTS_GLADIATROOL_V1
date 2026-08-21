@@ -42,7 +42,7 @@ Conserver le mot de passe dans `.env.local` (ignoré par Git) ou dans une variab
 - `anon` n'a aucun droit sur les tables sources ni sur `spell_comments`.
 - `authenticated` peut lire les auteurs, exécuter les écritures métier atomiques et gérer tous les commentaires.
 - Les identités et dates système sont déterminées côté PostgreSQL depuis le JWT signé (`auth.uid()` / email), jamais depuis une valeur libre du navigateur.
-- L'historique est un journal d'audit immuable : aucun client ne peut supprimer ses lignes.
+- L'historique est créé par les RPC métier. Un administrateur peut supprimer une ligne d’historique depuis l’interface, sans modifier la valeur active.
 
 ## Développement local
 
