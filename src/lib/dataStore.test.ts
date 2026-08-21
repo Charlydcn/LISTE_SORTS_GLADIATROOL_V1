@@ -111,8 +111,31 @@ describe("overrides effectifs", () => {
     expect(supabaseMock.rpc).not.toHaveBeenCalledWith("apply_spell_icon_override", expect.anything());
     for (const call of supabaseMock.rpc.mock.calls) {
       expect(call[0]).toBe("apply_override");
-      expect(call[1]).toMatchObject({ p_entity_type: "spell_position", p_field_key: "position" });
+      expect(call[1]).toMatchObject({ p_entity_type: "spell_position", p_field_key: "position", p_baseline_value: null });
     }
+  });
+
+  it("envoie une baseline nulle pour la première position d un sort personnalisé", async () => {
+    supabaseMock.rpc.mockResolvedValue({
+      data: [{
+        override_id: "position-custom",
+        history_id: "history-custom",
+        saved_at: "2026-08-21T10:00:00.000Z",
+        author_label: "admin@example.test",
+        was_changed: true,
+      }],
+      error: null,
+    });
+
+    await useDataStore.getState().save("spell_position", "Feca/1000000", "position", 1);
+
+    expect(supabaseMock.rpc).toHaveBeenCalledWith("apply_override", {
+      p_entity_type: "spell_position",
+      p_entity_key: "Feca/1000000",
+      p_field_key: "position",
+      p_new_value: 1,
+      p_baseline_value: null,
+    });
   });
 
   it("enregistre un override après avoir validé la réponse apply_override", async () => {

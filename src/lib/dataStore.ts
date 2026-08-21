@@ -272,19 +272,20 @@ export const useDataStore = create<DataState>((set, get) => ({
     if (!client) throw new Error("Supabase JS n'a pas pu être chargé.");
     const oldValue = get().getEffectiveValue(entityType, entityKey, fieldKey);
     const baselineValue = get().getBaselineValue(entityType, entityKey, fieldKey);
+    const databaseBaselineValue = baselineValue ?? null;
     const isSpellIcon = entityType === "spell" && fieldKey === "icone";
     const { data, error } = isSpellIcon
       ? await client.rpc("apply_spell_icon_override", {
           p_entity_key: String(entityKey),
           p_new_value: newValue,
-          p_baseline_value: baselineValue,
+          p_baseline_value: databaseBaselineValue,
         })
       : await client.rpc("apply_override", {
           p_entity_type: entityType,
           p_entity_key: String(entityKey),
           p_field_key: fieldKey,
           p_new_value: newValue,
-          p_baseline_value: baselineValue,
+          p_baseline_value: databaseBaselineValue,
         });
     if (error) throw error;
     const rawResult = Array.isArray(data) ? data[0] : data;
@@ -299,7 +300,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       entity_key: String(entityKey),
       field_key: fieldKey,
       value: newValue,
-      previous_value: oldValue,
+      previous_value: oldValue ?? null,
       updated_at: result.saved_at,
       updated_by: useSessionStore.getState().user?.id,
       updated_by_label: result.author_label,
@@ -327,7 +328,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       entity_type: row.entity_type,
       entity_key: String(row.entity_key),
       field_key: row.field_key,
-      baseline_value: get().getBaselineValue(row.entity_type, row.entity_key, row.field_key),
+      baseline_value: get().getBaselineValue(row.entity_type, row.entity_key, row.field_key) ?? null,
     }));
     const { data, error } = await client.rpc("reset_overrides", { p_targets: targets });
     if (error) throw error;
@@ -367,7 +368,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       entity_type: row.entity_type,
       entity_key: String(row.entity_key),
       field_key: row.field_key,
-      baseline_value: get().getBaselineValue(row.entity_type, row.entity_key, row.field_key),
+      baseline_value: get().getBaselineValue(row.entity_type, row.entity_key, row.field_key) ?? null,
     }));
 
     const { data, error } = await client.rpc("reset_spell_class", {
