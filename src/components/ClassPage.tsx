@@ -7,12 +7,16 @@ import { SpellTile } from "./SpellTile";
 import { SpellCard } from "./SpellCard";
 import { ClassStatsTable } from "./ClassStatsTable";
 import { ResetButton } from "./ResetButton";
+import { SpellCreator } from "./SpellCreator";
+import { useSessionStore } from "../lib/sessionStore";
 
 export function ClassPage() {
   const params = useParams<{ classe: string }>();
   const className = decodeURIComponent(params.classe || "");
   const spells = useDataStore((s) => s.spells);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [creating, setCreating] = useState(false);
+  const isAdmin = useSessionStore((s) => s.mode) === "admin";
 
   if (!CLASSES.includes(className)) {
     return <Navigate to="/" replace />;
@@ -37,7 +41,8 @@ export function ClassPage() {
       </h2>
       <div className="panel-heading-row spells-panel-heading">
         <h3>Sorts</h3>
-        <ResetButton scope="class-spells" resetKey={className} />
+        {isAdmin ? <button type="button" className="primary-button" onClick={() => { setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
+        <div className="heading-actions"><ResetButton scope="class-spells" resetKey={className} /></div>
       </div>
       <div className="class-layout">
         <div className="spell-grid">
@@ -51,7 +56,7 @@ export function ClassPage() {
           ))}
         </div>
         <aside className="spell-detail" id="spell-detail">
-          {selected ? (
+          {creating ? <SpellCreator className={className} onCreated={(spell) => { setCreating(false); setSelectedId(String(spell.id)); }} /> : selected ? (
             <SpellCard spell={selected} />
           ) : (
             <div className="detail-placeholder">Sélectionne un sort pour voir ses détails.</div>

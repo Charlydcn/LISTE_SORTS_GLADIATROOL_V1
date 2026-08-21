@@ -1,11 +1,13 @@
 import { create } from "zustand";
-import type { ClassStats, OverrideRow, Spell } from "../types";
+import type { ClassStats, CreatedSpellRow, DeletedNativeSpellRow, OverrideRow, Spell } from "../types";
 import { cloneData, loadBaselineData, type BaselineData } from "./dataService";
 import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
 import { errorMessage } from "./utils";
 import {
   parseApplyOverrideResult,
+  parseCreatedSpellRows,
+  parseDeletedNativeSpellRows,
   parseOverrideRows,
   parseResetCount,
 } from "./validation";
@@ -69,10 +71,15 @@ interface DataState {
   commonSpells: Spell[];
   morphStats: Record<string, ClassStats>;
   overrides: Record<string, OverrideRow>;
+  createdSpells: CreatedSpellRow[];
+  deletedNativeSpells: DeletedNativeSpellRow[];
   loadBaseline: () => Promise<BaselineData>;
   resetEffective: () => void;
   applyRows: (rows: OverrideRow[]) => void;
   initialize: () => Promise<void>;
+  createSpell: (className: string, spell: Omit<Spell, "id" | "classe" | "morphId">) => Promise<Spell>;
+  deleteSpell: (spell: Spell) => Promise<void>;
+  restoreNativeSpell: (spell: Spell) => Promise<void>;
   save: (
     entityType: string,
     entityKey: string,
@@ -100,6 +107,8 @@ export const useDataStore = create<DataState>((set, get) => ({
   commonSpells: [],
   morphStats: {},
   overrides: {},
+  createdSpells: [],
+  deletedNativeSpells: [],
 
   async loadBaseline() {
     const baseline = await loadBaselineData();
@@ -120,8 +129,14 @@ export const useDataStore = create<DataState>((set, get) => ({
   },
 
   applyRows(rows) {
-    const spells = cloneData(get().baseSpells);
-    const commonSpells = cloneData(get().baseCommonSpells);
+    const deleted = get().deletedNativeSpells;
+    const hidden = new Set(deleted.map((row) => `${row.class_name}\u0000${row.spell_id}`));
+    const spells = cloneData(get().baseSpells).filter((spell) => !hidden.has(`${spell.classe}\u0000${spell.id}`));
+    const commonSpells = cloneData(get().baseCommonSpells).filter((spell) => !hidden.has(`${spell.classe}\u0000${spell.id}`));
+    get().createdSpells.forEach((row) => {
+      const spell = { ...cloneData(row.spell), id: row.id, classe: row.class_name } as Spell;
+      if (spell.commun) commonSpells.push(spell); else spells.push(spell);
+    });
     const morphStats = cloneData(get().baseMorphStats);
     const overrides: Record<string, OverrideRow> = {};
     rows.forEach((row) => {
@@ -162,11 +177,24 @@ export const useDataStore = create<DataState>((set, get) => ({
       return;
     }
     try {
-      const table = useSessionStore.getState().isAdmin() ? "entity_overrides" : "public_entity_overrides";
+      const isAdmin = useSessionStore.getState().isAdmin();
+      const table = isAdmin ? "entity_overrides" : "public_entity_overrides";
       const select = "id,entity_type,entity_key,field_key,value,previous_value,updated_at"
         + (useSessionStore.getState().isAdmin() ? ",updated_by,updated_by_label" : "");
       const { data, error } = await client.from(table).select(select);
       if (error) throw error;
+      const createdTable = isAdmin ? "created_spells" : "public_created_spells";
+      const deletedTable = isAdmin ? "deleted_native_spells" : "public_deleted_native_spells";
+      const [createdResult, deletedResult] = await Promise.all([
+        client.from(createdTable).select("id,class_name,spell,created_at"),
+        client.from(deletedTable).select("class_name,spell_id,deleted_at"),
+      ]);
+      if (createdResult.error) throw createdResult.error;
+      if (deletedResult.error) throw deletedResult.error;
+      set({
+        createdSpells: parseCreatedSpellRows(createdResult.data ?? [], `la table ${createdTable}`),
+        deletedNativeSpells: parseDeletedNativeSpellRows(deletedResult.data ?? [], `la table ${deletedTable}`),
+      });
       get().applyRows(parseOverrideRows(data ?? [], `la table ${table}`));
     } catch (error) {
       get().resetEffective();
@@ -177,6 +205,40 @@ export const useDataStore = create<DataState>((set, get) => ({
           "Supabase est indisponible : les valeurs JSON sont affichées, mais elles peuvent ne pas représenter l’état collaboratif actuel.",
       });
     }
+  },
+
+  async createSpell(className, spell) {
+    if (!useSessionStore.getState().isAdmin()) throw new Error("Cette action est réservée aux utilisateurs connectés.");
+    if (!supabase) throw new Error("Supabase JS n'a pas pu être chargé.");
+    const { data, error } = await supabase.rpc("create_spell", { p_class_name: className, p_spell: spell });
+    if (error) throw error;
+    const result = Array.isArray(data) ? data[0] : data;
+    if (!result || !Number.isInteger(result.spell_id)) throw new Error("La création du sort n'a retourné aucun identifiant.");
+    const created: CreatedSpellRow = { id: result.spell_id, class_name: className, spell, created_at: result.created_at };
+    set({ createdSpells: [...get().createdSpells, created] });
+    get().applyRows(Object.values(get().overrides));
+    return get().getSpellById(created.id)!;
+  },
+
+  async deleteSpell(spell) {
+    if (!useSessionStore.getState().isAdmin()) throw new Error("Cette action est réservée aux utilisateurs connectés.");
+    if (!supabase) throw new Error("Supabase JS n'a pas pu être chargé.");
+    const { error } = await supabase.rpc("delete_spell", { p_spell_id: spell.id, p_class_name: spell.classe });
+    if (error) throw error;
+    const custom = get().createdSpells.some((row) => row.id === spell.id && row.class_name === spell.classe);
+    set(custom
+      ? { createdSpells: get().createdSpells.filter((row) => row.id !== spell.id || row.class_name !== spell.classe) }
+      : { deletedNativeSpells: [...get().deletedNativeSpells, { class_name: spell.classe, spell_id: spell.id, deleted_at: new Date().toISOString() }] });
+    get().applyRows(Object.values(get().overrides));
+  },
+
+  async restoreNativeSpell(spell) {
+    if (!useSessionStore.getState().isAdmin()) throw new Error("Cette action est réservée aux utilisateurs connectés.");
+    if (!supabase) throw new Error("Supabase JS n'a pas pu être chargé.");
+    const { error } = await supabase.rpc("restore_native_spell", { p_spell_id: spell.id, p_class_name: spell.classe });
+    if (error) throw error;
+    set({ deletedNativeSpells: get().deletedNativeSpells.filter((row) => row.class_name !== spell.classe || row.spell_id !== spell.id) });
+    get().applyRows(Object.values(get().overrides));
   },
 
   async save(entityType, entityKey, fieldKey, newValue) {
@@ -301,7 +363,11 @@ export const useDataStore = create<DataState>((set, get) => ({
   },
 
   getBaselineSpells() {
-    return [...get().baseSpells, ...get().baseCommonSpells];
+    return [
+      ...get().baseSpells,
+      ...get().baseCommonSpells,
+      ...get().createdSpells.map((row) => ({ ...cloneData(row.spell), id: row.id, classe: row.class_name }) as Spell),
+    ];
   },
 
   getOverride(entityType, entityKey, fieldKey) {

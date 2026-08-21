@@ -43,6 +43,19 @@ export interface OverrideRow {
   updated_by_label?: string;
 }
 
+export interface CreatedSpellRow {
+  id: number;
+  class_name: string;
+  spell: Omit<Spell, "id" | "classe" | "morphId">;
+  created_at: string;
+}
+
+export interface DeletedNativeSpellRow {
+  class_name: string;
+  spell_id: number;
+  deleted_at: string;
+}
+
 export interface HistoryRow {
   id: string;
   entity_type: string;

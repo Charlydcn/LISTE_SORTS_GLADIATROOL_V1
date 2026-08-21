@@ -1,5 +1,5 @@
 import { z, ZodError } from "zod";
-import type { CommentRow, HistoryRow, OverrideRow, Spell } from "../types";
+import type { CommentRow, CreatedSpellRow, DeletedNativeSpellRow, HistoryRow, OverrideRow, Spell } from "../types";
 
 const effectSchema = z.object({
   onglet: z.enum(["normaux", "critiques"]),
@@ -72,6 +72,9 @@ const commentRowSchema = z.object({
   updated_by_label: z.string().nullable(),
 });
 
+const createdSpellRowSchema = z.object({ id: z.number().int(), class_name: z.string().min(1), spell: baselineSpellSchema.omit({ id: true }), created_at: z.string().min(1) });
+const deletedNativeSpellRowSchema = z.object({ class_name: z.string().min(1), spell_id: z.number().int(), deleted_at: z.string().min(1) });
+
 const applyOverrideResultSchema = z.object({
   override_id: z.string().nullable(),
   history_id: z.string().nullable(),
@@ -141,6 +144,14 @@ export function parseHistoryRows(value: unknown, source: string): HistoryRow[] {
 
 export function parseCommentRows(value: unknown, source: string): CommentRow[] {
   return parseWithSource(z.array(commentRowSchema), value, source) as CommentRow[];
+}
+
+export function parseCreatedSpellRows(value: unknown, source: string): CreatedSpellRow[] {
+  return parseWithSource(z.array(createdSpellRowSchema), value, source) as CreatedSpellRow[];
+}
+
+export function parseDeletedNativeSpellRows(value: unknown, source: string): DeletedNativeSpellRow[] {
+  return parseWithSource(z.array(deletedNativeSpellRowSchema), value, source) as DeletedNativeSpellRow[];
 }
 
 export function parseApplyOverrideResult(value: unknown): {

@@ -4,12 +4,16 @@ import { CLASSES } from "../lib/dataService";
 import { ClassIcon } from "./icons";
 import { SpellTile } from "./SpellTile";
 import { SpellCard } from "./SpellCard";
+import { SpellCreator } from "./SpellCreator";
+import { useSessionStore } from "../lib/sessionStore";
 
 export function Home() {
   const spells = useDataStore((s) => s.spells);
   const commonSpells = useDataStore((s) => s.commonSpells);
   const [commonOpen, setCommonOpen] = useState(false);
   const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [creating, setCreating] = useState(false);
+  const isAdmin = useSessionStore((s) => s.mode) === "admin";
 
   const selected = selectedId
     ? commonSpells.find((spell) => String(spell.id) === selectedId)
@@ -36,14 +40,10 @@ export function Home() {
         })}
       </div>
       <div className="common-section">
-        <button
-          type="button"
-          className={`common-toggle ${commonOpen ? "open" : ""}`}
-          aria-expanded={commonOpen}
-          onClick={() => setCommonOpen((open) => !open)}
-        >
-          <span className="common-chevron">▾</span> Sorts communs
-        </button>
+        <div className="common-heading">
+          <button type="button" className={`common-toggle ${commonOpen ? "open" : ""}`} aria-expanded={commonOpen} onClick={() => setCommonOpen((open) => !open)}><span className="common-chevron">▾</span> Sorts communs</button>
+          {isAdmin ? <button type="button" className="primary-button" onClick={() => { setCreating(true); setSelectedId(null); setCommonOpen(true); }}>Nouveau sort</button> : null}
+        </div>
         <div className="common-body" hidden={!commonOpen}>
           <div className="class-layout">
             <div className="spell-grid">
@@ -57,7 +57,7 @@ export function Home() {
               ))}
             </div>
             <aside className="spell-detail" id="common-spell-detail">
-              {selected ? (
+              {creating ? <SpellCreator className="Sorts communs" common onCreated={(spell) => { setCreating(false); setSelectedId(String(spell.id)); }} /> : selected ? (
                 <SpellCard spell={selected} />
               ) : (
                 <div className="detail-placeholder">Sélectionne un sort pour voir ses détails.</div>
