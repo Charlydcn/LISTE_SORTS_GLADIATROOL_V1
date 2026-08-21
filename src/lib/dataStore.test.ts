@@ -91,6 +91,28 @@ describe("overrides effectifs", () => {
     expect(useDataStore.getState().spells.find((spell) => spell.classe === "Osamodas" && spell.id === 390)?.position).toBeUndefined();
   });
 
+  it("réordonne uniquement les positions sans appeler la sauvegarde d icône", async () => {
+    supabaseMock.rpc.mockResolvedValue({
+      data: [{
+        override_id: "position-override",
+        history_id: "position-history",
+        saved_at: "2026-08-21T10:00:00.000Z",
+        author_label: "admin@example.test",
+        was_changed: true,
+      }],
+      error: null,
+    });
+    const fecaSpells = useDataStore.getState().spells.filter((spell) => spell.classe === "Feca");
+
+    await useDataStore.getState().reorderSpells("Feca", [...fecaSpells].reverse());
+
+    expect(supabaseMock.rpc).not.toHaveBeenCalledWith("apply_spell_icon_override", expect.anything());
+    for (const call of supabaseMock.rpc.mock.calls) {
+      expect(call[0]).toBe("apply_override");
+      expect(call[1]).toMatchObject({ p_entity_type: "spell_position", p_field_key: "position" });
+    }
+  });
+
   it("enregistre un override après avoir validé la réponse apply_override", async () => {
     supabaseMock.rpc.mockResolvedValue({
       data: [{

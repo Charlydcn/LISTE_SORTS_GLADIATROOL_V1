@@ -1,4 +1,6 @@
 import { useState } from "react";
+import { useSortable } from "@dnd-kit/sortable";
+import { CSS } from "@dnd-kit/utilities";
 import type { Spell } from "../types";
 import { useDataStore } from "../lib/dataStore";
 import { DragHandleIcon, SpellIcon, TrashIcon } from "./icons";
@@ -6,16 +8,13 @@ import { useSessionStore } from "../lib/sessionStore";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage } from "../lib/utils";
 
-const SPELL_DRAG_TYPE = "application/x-gladiatrool-spell-id";
-
 interface SpellTileProps {
   spell: Spell;
   selected: boolean;
   onSelect: () => void;
-  onDropSpell?: (spellId: string) => void;
 }
 
-export function SpellTile({ spell, selected, onSelect, onDropSpell }: SpellTileProps) {
+export function SpellTile({ spell, selected, onSelect }: SpellTileProps) {
   const overrides = useDataStore((s) => s.overrides);
   const hasActiveOverride = Object.values(overrides).some(
     (row) => row.entity_type === "spell" && String(row.entity_key) === String(spell.id),
@@ -23,6 +22,10 @@ export function SpellTile({ spell, selected, onSelect, onDropSpell }: SpellTileP
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
   const [confirming, setConfirming] = useState(false);
   const [busy, setBusy] = useState(false);
+  const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
+    id: String(spell.id),
+    disabled: !isAdmin,
+  });
 
   async function remove(event: React.MouseEvent) {
     event.stopPropagation();
@@ -33,31 +36,18 @@ export function SpellTile({ spell, selected, onSelect, onDropSpell }: SpellTileP
     finally { setBusy(false); }
   }
 
-  function beginDrag(event: React.DragEvent<HTMLButtonElement>) {
-    event.stopPropagation();
-    event.dataTransfer.effectAllowed = "move";
-    event.dataTransfer.setData(SPELL_DRAG_TYPE, String(spell.id));
-  }
-
   return (
     <div
-      className={`spell-tile ${selected ? "selected" : ""} ${hasActiveOverride ? "is-overridden" : ""}`}
+      ref={setNodeRef}
+      style={{ transform: CSS.Transform.toString(transform), transition }}
+      className={`spell-tile ${selected ? "selected" : ""} ${hasActiveOverride ? "is-overridden" : ""} ${isDragging ? "is-dragging" : ""}`}
       onClick={onSelect}
-      onDragOver={onDropSpell ? (event) => {
-        if (event.dataTransfer.types.includes(SPELL_DRAG_TYPE)) event.preventDefault();
-      } : undefined}
-      onDrop={onDropSpell ? (event) => {
-        const sourceId = event.dataTransfer.getData(SPELL_DRAG_TYPE);
-        if (!sourceId) return;
-        event.preventDefault();
-        onDropSpell(sourceId);
-      } : undefined}
     >
       <div className="spell-tile-icon">
         <SpellIcon spell={spell} />
       </div>
       <span className="spell-tile-name">{spell.nom}</span>
-      {isAdmin ? <><button type="button" className="spell-drag-handle" draggable aria-label={`Déplacer ${spell.nom}`} title="Glisser-déposer pour déplacer" onDragStart={beginDrag} onClick={(event) => event.stopPropagation()}><DragHandleIcon /></button><button type="button" className="spell-delete" aria-label={confirming ? `Confirmer la suppression de ${spell.nom}` : `Supprimer ${spell.nom}`} title={confirming ? "Confirmer la suppression" : "Supprimer"} disabled={busy} onClick={(event) => void remove(event)}>{confirming ? "✓" : <TrashIcon />}</button></> : null}
+      {isAdmin ? <><button type="button" className="spell-drag-handle" aria-label={`Déplacer ${spell.nom}`} title="Glisser-déposer pour déplacer" onClick={(event) => event.stopPropagation()} {...attributes} {...listeners}><DragHandleIcon /></button><button type="button" className="spell-delete" aria-label={confirming ? `Confirmer la suppression de ${spell.nom}` : `Supprimer ${spell.nom}`} title={confirming ? "Confirmer la suppression" : "Supprimer"} disabled={busy} onClick={(event) => void remove(event)}>{confirming ? "✓" : <TrashIcon />}</button></> : null}
     </div>
   );
 }
