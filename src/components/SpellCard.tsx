@@ -11,6 +11,7 @@ import { ResetButton } from "./ResetButton";
 import { CommentsSection } from "./CommentsSection";
 import { HistoryModal } from "./HistoryModal";
 import { SpellImageEditor } from "./SpellImageEditor";
+import { editorKey, useEditingStore } from "../lib/editingStore";
 
 function EffectRows({ effects, tab }: { effects: Effect[]; tab: EffectTab }) {
   const rows = effects.filter((effect) => effect.onglet === tab);
@@ -35,7 +36,8 @@ function EditableEffects({ spell, tab }: { spell: Spell; tab: EffectTab }) {
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
   const override = useDataStore((s) => s.getOverride("spell", String(spell.id), fieldKey));
   const openModal = useModalStore((s) => s.open);
-  const [editing, setEditing] = useState(false);
+  const key = editorKey("spell", spell.id, fieldKey);
+  const editing = useEditingStore((s) => s.activeKey === key);
 
   function openHistory() {
     useHistoryStore.getState().open({ entityType: "spell", entityKey: String(spell.id), fieldKey });
@@ -50,7 +52,7 @@ function EditableEffects({ spell, tab }: { spell: Spell; tab: EffectTab }) {
           entityKey={spell.id}
           fieldKey={fieldKey}
           inputType="textarea"
-          onClose={() => setEditing(false)}
+          onClose={() => useEditingStore.getState().close(key)}
         />
       </div>
     );
@@ -62,11 +64,11 @@ function EditableEffects({ spell, tab }: { spell: Spell; tab: EffectTab }) {
       className="editable-trigger effects-edit-trigger"
       role="button"
       tabIndex={0}
-      onClick={() => setEditing(true)}
+      onClick={() => useEditingStore.getState().open(key)}
       onKeyDown={(event) => {
         if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
-          setEditing(true);
+          useEditingStore.getState().open(key);
         }
       }}
     >
@@ -168,7 +170,7 @@ export function SpellCard({ spell }: { spell: Spell }) {
           className={`effect-tab ${tab === "normaux" ? "active" : ""}`}
           role="tab"
           aria-selected={tab === "normaux"}
-          onClick={() => setTab("normaux")}
+          onClick={() => { useEditingStore.getState().close(); setTab("normaux"); }}
         >
           Normaux
         </button>
@@ -177,7 +179,7 @@ export function SpellCard({ spell }: { spell: Spell }) {
           className={`effect-tab ${tab === "critiques" ? "active" : ""}`}
           role="tab"
           aria-selected={tab === "critiques"}
-          onClick={() => setTab("critiques")}
+          onClick={() => { useEditingStore.getState().close(); setTab("critiques"); }}
         >
           Critiques
         </button>

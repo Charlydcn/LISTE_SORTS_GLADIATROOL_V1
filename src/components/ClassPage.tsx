@@ -9,6 +9,7 @@ import { ClassStatsTable } from "./ClassStatsTable";
 import { ResetButton } from "./ResetButton";
 import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
+import { useEditingStore } from "../lib/editingStore";
 
 export function ClassPage() {
   const params = useParams<{ classe: string }>();
@@ -43,7 +44,7 @@ export function ClassPage() {
         <h3>Sorts</h3>
         <div className="heading-actions"><ResetButton scope="class-spells" resetKey={className} /></div>
       </div>
-      {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
+      {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { useEditingStore.getState().close(); setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
       <div className="class-layout">
         <div className="spell-grid">
           {classSpells.map((spell) => (
@@ -51,13 +52,13 @@ export function ClassPage() {
               key={spell.id}
               spell={spell}
               selected={String(spell.id) === selectedId}
-              onSelect={() => setSelectedId(String(spell.id))}
+              onSelect={() => { useEditingStore.getState().close(); setCreating(false); setSelectedId(String(spell.id)); }}
             />
           ))}
         </div>
         <aside className="spell-detail" id="spell-detail">
           {creating ? <SpellCreator className={className} onCreated={(spell) => { setCreating(false); setSelectedId(String(spell.id)); }} /> : selected ? (
-            <SpellCard spell={selected} />
+            <SpellCard key={selected.id} spell={selected} />
           ) : (
             <div className="detail-placeholder">Sélectionne un sort pour voir ses détails.</div>
           )}

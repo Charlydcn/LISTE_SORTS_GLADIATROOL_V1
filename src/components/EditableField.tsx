@@ -7,6 +7,7 @@ import { errorMessage, fieldLabel } from "../lib/utils";
 import { HistoryIcon } from "./icons";
 import { HistoryModal } from "./HistoryModal";
 import { useHistoryStore } from "../lib/historyStore";
+import { editorKey, useEditingStore } from "../lib/editingStore";
 
 export type InputType = "text" | "number" | "nullable-number" | "boolean" | "textarea";
 
@@ -174,7 +175,8 @@ export function EditableField({
 }: EditableFieldProps) {
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
   const override = useDataStore((s) => s.getOverride(entityType, String(entityKey), fieldKey));
-  const [editing, setEditing] = useState(false);
+  const key = editorKey(entityType, entityKey, fieldKey);
+  const editing = useEditingStore((s) => s.activeKey === key);
   const openModal = useModalStore((s) => s.open);
 
   const changedClass = override ? "is-overridden" : "";
@@ -194,14 +196,14 @@ export function EditableField({
           entityKey={entityKey}
           fieldKey={fieldKey}
           inputType={inputType}
-          onClose={() => setEditing(false)}
+          onClose={() => useEditingStore.getState().close(key)}
         />
       </span>
     );
   }
 
   const trigger = isAdmin ? (
-    <button type="button" className="editable-trigger" data-editable onClick={() => setEditing(true)}>
+    <button type="button" className="editable-trigger" data-editable onClick={() => useEditingStore.getState().open(key)}>
       {children}
     </button>
   ) : (

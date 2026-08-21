@@ -6,6 +6,7 @@ import { SpellTile } from "./SpellTile";
 import { SpellCard } from "./SpellCard";
 import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
+import { useEditingStore } from "../lib/editingStore";
 
 export function Home() {
   const spells = useDataStore((s) => s.spells);
@@ -44,7 +45,7 @@ export function Home() {
           <button type="button" className={`common-toggle ${commonOpen ? "open" : ""}`} aria-expanded={commonOpen} onClick={() => setCommonOpen((open) => !open)}><span className="common-chevron">▾</span> Sorts communs</button>
         </div>
         <div className="common-body" hidden={!commonOpen}>
-          {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
+          {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { useEditingStore.getState().close(); setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
           <div className="class-layout">
             <div className="spell-grid">
               {commonSpells.map((spell) => (
@@ -52,13 +53,13 @@ export function Home() {
                   key={spell.id}
                   spell={spell}
                   selected={String(spell.id) === selectedId}
-                  onSelect={() => setSelectedId(String(spell.id))}
+                  onSelect={() => { useEditingStore.getState().close(); setCreating(false); setSelectedId(String(spell.id)); }}
                 />
               ))}
             </div>
             <aside className="spell-detail" id="common-spell-detail">
               {creating ? <SpellCreator className="Sorts communs" common onCreated={(spell) => { setCreating(false); setSelectedId(String(spell.id)); }} /> : selected ? (
-                <SpellCard spell={selected} />
+                <SpellCard key={selected.id} spell={selected} />
               ) : (
                 <div className="detail-placeholder">Sélectionne un sort pour voir ses détails.</div>
               )}
