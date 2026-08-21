@@ -141,12 +141,17 @@
     }
   }
 
-  async function remove(id) {
+  async function remove(id, button) {
     if (!window.AppSession.isAdmin()) return;
-    if (!window.confirm("Supprimer définitivement cette ligne d’historique ? La valeur actuelle ne sera pas modifiée.")) return;
+    button.disabled = true;
+    button.textContent = "Suppression…";
     const { error } = await window.AppSupabase.client.from("change_history").delete().eq("id", id);
     if (error) {
       window.showToast(window.errorMessage(error), "error");
+      button.disabled = false;
+      button.textContent = "Supprimer";
+      button.dataset.confirming = "false";
+      button.classList.remove("confirming");
       return;
     }
     state.rows = state.rows.filter((row) => row.id !== id);
@@ -154,10 +159,26 @@
     window.showToast("Ligne d’historique supprimée.", "success");
   }
 
+  function confirmRemoval(button) {
+    if (button.dataset.confirming === "true") {
+      remove(button.dataset.deleteHistory, button);
+      return;
+    }
+    button.dataset.confirming = "true";
+    button.textContent = "Vraiment ?";
+    button.classList.add("confirming");
+    window.setTimeout(() => {
+      if (!button.isConnected || button.dataset.confirming !== "true") return;
+      button.dataset.confirming = "false";
+      button.textContent = "Supprimer";
+      button.classList.remove("confirming");
+    }, 4000);
+  }
+
   document.addEventListener("click", (event) => {
     if (event.target.closest("[data-load-more-history]")) loadMore();
     const deleteButton = event.target.closest("[data-delete-history]");
-    if (deleteButton) remove(deleteButton.dataset.deleteHistory);
+    if (deleteButton) confirmRemoval(deleteButton);
   });
   document.addEventListener("change", (event) => {
     if (!event.target.matches("[data-history-class-filter]")) return;
