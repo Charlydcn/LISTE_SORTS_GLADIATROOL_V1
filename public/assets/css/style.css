@@ -446,6 +446,8 @@ body{
   grid-template-columns: repeat(2, 1fr);
   gap: 8px;
   min-width: 0;
+  position: relative;
+  isolation: isolate;
 }
 
 .spell-tile{
@@ -463,6 +465,9 @@ body{
   text-align: left;
   box-shadow: 0 4px 12px rgba(0,0,0,.3);
   transition: transform .12s ease, box-shadow .12s ease;
+  box-sizing: border-box;
+  min-width: 0;
+  will-change: transform;
 }
 
 .spell-tile:hover{
@@ -502,6 +507,10 @@ body{
   font-size: 13px;
   font-weight: 600;
   padding-top: 3px;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .spell-tile.is-overridden .spell-tile-name{
@@ -578,7 +587,11 @@ body{
 .spell-drag-handle{ touch-action:none; }
 .spell-drag-handle svg{ width:100%; height:100%; }
 .spell-tile:hover .spell-drag-handle, .spell-drag-handle:focus{ opacity:1; }
-.spell-tile.is-dragging{ z-index:20; opacity:.9; cursor:grabbing; box-shadow:0 14px 30px rgba(0,0,0,.55); }
+.spell-tile.is-dragging{ background:rgba(231,227,205,.16); border-style:dashed; box-shadow:none; cursor:grabbing; outline:none; }
+.spell-tile.is-dragging > *{ visibility:hidden; }
+.spell-drag-overlay{ pointer-events:none; margin:0; opacity:.98; cursor:grabbing; box-shadow:0 12px 26px rgba(0,0,0,.5); }
+.spell-drag-overlay:hover{ transform:none; box-shadow:0 12px 26px rgba(0,0,0,.5); }
+.spell-drag-overlay .spell-drag-handle.is-visible{ opacity:1; }
 .spell-creator{ padding:18px; box-sizing:border-box; }
 .spell-creator-title{ font-weight:700; font-size:18px; margin-bottom:14px; }
 .spell-creator label{ display:flex; flex-direction:column; gap:4px; font-size:13px; font-weight:600; margin-bottom:10px; }

@@ -25,6 +25,7 @@ export function SpellTile({ spell, selected, onSelect }: SpellTileProps) {
   const { attributes, listeners, setNodeRef, transform, transition, isDragging } = useSortable({
     id: String(spell.id),
     disabled: !isAdmin,
+    transition: { duration: 150, easing: "cubic-bezier(.2,.8,.2,1)" },
   });
 
   async function remove(event: React.MouseEvent) {

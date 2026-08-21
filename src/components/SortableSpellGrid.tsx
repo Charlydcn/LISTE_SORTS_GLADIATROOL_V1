@@ -2,12 +2,15 @@ import { useEffect, useMemo, useRef, useState } from "react";
 import {
   closestCenter,
   DndContext,
+  DragOverlay,
   KeyboardSensor,
   PointerSensor,
   useSensor,
   useSensors,
   type DragEndEvent,
+  type DragStartEvent,
 } from "@dnd-kit/core";
+import { restrictToParentElement } from "@dnd-kit/modifiers";
 import {
   arrayMove,
   rectSortingStrategy,
@@ -18,6 +21,7 @@ import type { Spell } from "../types";
 import { useDataStore } from "../lib/dataStore";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage } from "../lib/utils";
+import { DragHandleIcon, SpellIcon } from "./icons";
 import { SpellTile } from "./SpellTile";
 
 interface SortableSpellGridProps {
@@ -36,6 +40,8 @@ function orderedIds(spells: Spell[]): string[] {
 export function SortableSpellGrid({ className, spells, selectedId, onSelect }: SortableSpellGridProps) {
   const expectedIds = useMemo(() => orderedIds(spells), [spells]);
   const [ids, setIds] = useState(expectedIds);
+  const [activeId, setActiveId] = useState<string | null>(null);
+  const [activeSize, setActiveSize] = useState<{ width: number; height: number } | null>(null);
   const saving = useRef(false);
   const sensors = useSensors(
     useSensor(PointerSensor, { activationConstraint: { distance: 5 } }),
@@ -48,10 +54,23 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
 
   const byId = new Map(spells.map((spell) => [String(spell.id), spell]));
   const visibleSpells = ids.map((id) => byId.get(id)).filter((spell): spell is Spell => Boolean(spell));
+  const activeSpell = activeId ? byId.get(activeId) : null;
+
+  function handleDragStart(event: DragStartEvent) {
+    setActiveId(String(event.active.id));
+    const rect = event.active.rect.current.initial;
+    setActiveSize(rect ? { width: rect.width, height: rect.height } : null);
+  }
+
+  function clearDrag() {
+    setActiveId(null);
+    setActiveSize(null);
+  }
 
   async function handleDragEnd(event: DragEndEvent) {
     const activeId = String(event.active.id);
     const overId = event.over ? String(event.over.id) : null;
+    clearDrag();
     if (!overId || activeId === overId) return;
     const oldIndex = ids.indexOf(activeId);
     const newIndex = ids.indexOf(overId);
@@ -74,7 +93,15 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
   }
 
   return (
-    <DndContext sensors={sensors} collisionDetection={closestCenter} onDragEnd={(event) => void handleDragEnd(event)}>
+    <DndContext
+      sensors={sensors}
+      collisionDetection={closestCenter}
+      modifiers={[restrictToParentElement]}
+      autoScroll={false}
+      onDragStart={handleDragStart}
+      onDragCancel={clearDrag}
+      onDragEnd={(event) => void handleDragEnd(event)}
+    >
       <SortableContext items={ids} strategy={rectSortingStrategy}>
         <div className="spell-grid">
           {visibleSpells.map((spell) => (
@@ -87,6 +114,21 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
           ))}
         </div>
       </SortableContext>
+      <DragOverlay
+        dropAnimation={{ duration: 140, easing: "cubic-bezier(.2,.8,.2,1)" }}
+        zIndex={50}
+      >
+        {activeSpell ? (
+          <div
+            className="spell-tile spell-drag-overlay"
+            style={activeSize ? { width: activeSize.width, height: activeSize.height } : undefined}
+          >
+            <div className="spell-tile-icon"><SpellIcon spell={activeSpell} /></div>
+            <span className="spell-tile-name">{activeSpell.nom}</span>
+            <span className="spell-drag-handle is-visible" aria-hidden="true"><DragHandleIcon /></span>
+          </div>
+        ) : null}
+      </DragOverlay>
     </DndContext>
   );
 }
