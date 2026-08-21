@@ -1,5 +1,5 @@
 begin;
-select plan(37);
+select plan(40);
 
 -- Les migrations sont rejouées par `supabase test db` dans une base locale neuve.
 select has_table('public', 'entity_overrides', 'La table des overrides existe après les migrations');
@@ -59,6 +59,20 @@ select is(
 select is(
   (select value from public.entity_overrides where entity_type = 'spell_position' and entity_key = 'Feca/390' and field_key = 'position'),
   '8'::jsonb, 'La position est indépendante de l identifiant global du sort'
+);
+select is(
+  public.reset_overrides('[
+    {"entity_type":"spell_position","entity_key":"Feca/390","field_key":"position","baseline_value":1}
+  ]'::jsonb),
+  1, 'Le reset accepte une position de sort'
+);
+select is(
+  (select count(*) from public.entity_overrides where entity_type = 'spell_position' and entity_key = 'Feca/390' and field_key = 'position'),
+  0::bigint, 'Le reset supprime l override de position'
+);
+select is(
+  (select count(*) from public.change_history where entity_type = 'spell_position' and entity_key = 'Feca/390' and field_key = 'position'),
+  2::bigint, 'Le reset de position est historisé'
 );
 select is(
   (select was_changed from public.apply_override('spell', '390', 'pa', '6'::jsonb, '4'::jsonb)),
