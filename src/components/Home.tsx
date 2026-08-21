@@ -42,9 +42,9 @@ export function Home() {
       <div className="common-section">
         <div className="common-heading">
           <button type="button" className={`common-toggle ${commonOpen ? "open" : ""}`} aria-expanded={commonOpen} onClick={() => setCommonOpen((open) => !open)}><span className="common-chevron">▾</span> Sorts communs</button>
-          {isAdmin ? <button type="button" className="primary-button" onClick={() => { setCreating(true); setSelectedId(null); setCommonOpen(true); }}>Nouveau sort</button> : null}
         </div>
         <div className="common-body" hidden={!commonOpen}>
+          {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
           <div className="class-layout">
             <div className="spell-grid">
               {commonSpells.map((spell) => (

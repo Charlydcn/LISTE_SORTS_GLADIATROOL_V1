@@ -41,9 +41,9 @@ export function ClassPage() {
       </h2>
       <div className="panel-heading-row spells-panel-heading">
         <h3>Sorts</h3>
-        {isAdmin ? <button type="button" className="primary-button" onClick={() => { setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
         <div className="heading-actions"><ResetButton scope="class-spells" resetKey={className} /></div>
       </div>
+      {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
       <div className="class-layout">
         <div className="spell-grid">
           {classSpells.map((spell) => (

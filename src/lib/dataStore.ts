@@ -183,8 +183,10 @@ export const useDataStore = create<DataState>((set, get) => ({
         + (useSessionStore.getState().isAdmin() ? ",updated_by,updated_by_label" : "");
       const { data, error } = await client.from(table).select(select);
       if (error) throw error;
-      const createdTable = isAdmin ? "created_spells" : "public_created_spells";
-      const deletedTable = isAdmin ? "deleted_native_spells" : "public_deleted_native_spells";
+      // Ces vues ne contiennent aucune identité et sont volontairement lisibles
+      // aussi bien par les visiteurs que par les utilisateurs connectés.
+      const createdTable = "public_created_spells";
+      const deletedTable = "public_deleted_native_spells";
       const [createdResult, deletedResult] = await Promise.all([
         client.from(createdTable).select("id,class_name,spell,created_at"),
         client.from(deletedTable).select("class_name,spell_id,deleted_at"),
