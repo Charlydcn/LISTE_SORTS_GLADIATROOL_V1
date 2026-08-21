@@ -11,7 +11,6 @@ const baselineSpellSchema = z
     id: z.number().int(),
     position: z.number().int().optional(),
     nom: z.string().min(1),
-    description: z.string().optional(),
     pa: z.union([z.number(), z.string()]),
     po: z.string(),
     porteeModifiable: z.boolean(),

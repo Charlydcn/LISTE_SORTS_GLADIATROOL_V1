@@ -13,7 +13,6 @@ export interface Spell {
   id: number;
   position?: number;
   nom: string;
-  description?: string;
   pa: number | string;
   po: string;
   porteeModifiable: boolean;

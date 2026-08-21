@@ -5,7 +5,7 @@ import { useSessionStore } from "../lib/sessionStore";
 import { useModalStore } from "../lib/modalStore";
 import { useHistoryStore } from "../lib/historyStore";
 import { displayValue, fieldLabel } from "../lib/utils";
-import { CheckOrCross, ElementIcon, FragmentBr, HistoryIcon, SpellIcon } from "./icons";
+import { CheckOrCross, ElementIcon, HistoryIcon, SpellIcon } from "./icons";
 import { EditableField, InlineEditor } from "./EditableField";
 import { ResetButton } from "./ResetButton";
 import { CommentsSection } from "./CommentsSection";
@@ -160,11 +160,6 @@ export function SpellCard({ spell }: { spell: Spell }) {
       </div>
       <div className="spell-card-actions">
         <ResetButton scope="spell" resetKey={spell.id} />
-      </div>
-      <div className="spell-description">
-        <EditableField entityType="spell" entityKey={spell.id} fieldKey="description" inputType="textarea">
-          <FragmentBr text={String(displayValue(spell.description))} />
-        </EditableField>
       </div>
       <div className="section-heading">Effets</div>
       <div className="effect-tabs" role="tablist" aria-label="Type d'effets">

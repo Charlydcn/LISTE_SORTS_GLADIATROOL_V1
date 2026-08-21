@@ -42,7 +42,6 @@ export function displayValue(value: unknown): string {
 
 export const SPELL_FIELDS = [
   "nom",
-  "description",
   "pa",
   "po",
   "porteeModifiable",
@@ -72,7 +71,6 @@ export const CLASS_STAT_FIELDS = [
 
 export const FIELD_LABELS: Record<string, string> = {
   nom: "Nom",
-  description: "Description",
   pa: "PA",
   po: "PO",
   porteeModifiable: "Portée modifiable",
