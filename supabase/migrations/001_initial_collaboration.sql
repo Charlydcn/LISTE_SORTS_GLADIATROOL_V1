@@ -64,7 +64,7 @@ revoke all on table public.change_history from public, anon, authenticated;
 revoke all on table public.spell_comments from public, anon, authenticated;
 
 grant select on table public.entity_overrides to authenticated;
-grant select, delete on table public.change_history to authenticated;
+grant select on table public.change_history to authenticated;
 grant select, insert, update, delete on table public.spell_comments to authenticated;
 
 create policy entity_overrides_authenticated_read
@@ -73,10 +73,6 @@ create policy entity_overrides_authenticated_read
 
 create policy change_history_authenticated_read
   on public.change_history for select to authenticated
-  using ((select auth.uid()) is not null);
-
-create policy change_history_authenticated_delete
-  on public.change_history for delete to authenticated
   using ((select auth.uid()) is not null);
 
 create policy spell_comments_authenticated_read

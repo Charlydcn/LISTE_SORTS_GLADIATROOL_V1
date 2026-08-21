@@ -40,9 +40,9 @@ Conserver le mot de passe dans `.env.local` (ignoré par Git) ou dans une variab
 
 - `anon` peut lire uniquement `public_entity_overrides` et `public_change_history`, deux vues qui excluent les UUID et libellés des auteurs.
 - `anon` n'a aucun droit sur les tables sources ni sur `spell_comments`.
-- `authenticated` peut lire les auteurs, exécuter l'écriture atomique `apply_override`, supprimer des lignes d'historique et gérer tous les commentaires.
+- `authenticated` peut lire les auteurs, exécuter les écritures métier atomiques et gérer tous les commentaires.
 - Les identités et dates système sont déterminées côté PostgreSQL depuis le JWT signé (`auth.uid()` / email), jamais depuis une valeur libre du navigateur.
-- Supprimer une ligne d'historique ne touche pas à `entity_overrides`.
+- L'historique est un journal d'audit immuable : aucun client ne peut supprimer ses lignes.
 
 ## Développement local
 
