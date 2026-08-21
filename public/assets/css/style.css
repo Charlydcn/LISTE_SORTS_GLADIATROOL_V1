@@ -476,7 +476,7 @@ body{
   border: none;
   outline: none;
   outline-offset: unset;
-  background: radial-gradient(circle at 35% 30%, #2b2f22 0%, #16180f 75%);
+  background: none;
   display: flex;
   align-items: center;
   justify-content: center;
