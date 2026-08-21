@@ -29,6 +29,7 @@ export function SpellIcon({ spell }: { spell: Spell }) {
         src={spell.icone}
         alt={spell.nom}
         loading="lazy"
+        draggable={false}
         onError={() => setFailed(true)}
       />
     );
@@ -38,7 +39,7 @@ export function SpellIcon({ spell }: { spell: Spell }) {
 
 export function TrashIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M9 7V4h6v3m-8 0 1 13h8l1-13M10 11v5m4-5v5" fill="none" stroke="currentColor" strokeWidth="1.8" /></svg>; }
 
-export function DragHandleIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="8" cy="5" r="1.5" /><circle cx="16" cy="5" r="1.5" /><circle cx="8" cy="12" r="1.5" /><circle cx="16" cy="12" r="1.5" /><circle cx="8" cy="19" r="1.5" /><circle cx="16" cy="19" r="1.5" /></svg>; }
+export function DragHandleIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true" fill="currentColor"><circle cx="8" cy="5" r="1.5" /><circle cx="16" cy="5" r="1.5" /><circle cx="8" cy="12" r="1.5" /><circle cx="16" cy="12" r="1.5" /><circle cx="8" cy="19" r="1.5" /><circle cx="16" cy="19" r="1.5" /></svg>; }
 
 export function LoginIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 5h5v14h-5M5 12h10m-3-3 3 3-3 3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>; }
 

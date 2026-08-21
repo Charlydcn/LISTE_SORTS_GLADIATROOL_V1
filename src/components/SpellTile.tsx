@@ -6,6 +6,8 @@ import { useSessionStore } from "../lib/sessionStore";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage } from "../lib/utils";
 
+const SPELL_DRAG_TYPE = "application/x-gladiatrool-spell-id";
+
 interface SpellTileProps {
   spell: Spell;
   selected: boolean;
@@ -34,15 +36,22 @@ export function SpellTile({ spell, selected, onSelect, onDropSpell }: SpellTileP
   function beginDrag(event: React.DragEvent<HTMLButtonElement>) {
     event.stopPropagation();
     event.dataTransfer.effectAllowed = "move";
-    event.dataTransfer.setData("text/plain", String(spell.id));
+    event.dataTransfer.setData(SPELL_DRAG_TYPE, String(spell.id));
   }
 
   return (
     <div
       className={`spell-tile ${selected ? "selected" : ""} ${hasActiveOverride ? "is-overridden" : ""}`}
       onClick={onSelect}
-      onDragOver={onDropSpell ? (event) => event.preventDefault() : undefined}
-      onDrop={onDropSpell ? (event) => { event.preventDefault(); onDropSpell(event.dataTransfer.getData("text/plain")); } : undefined}
+      onDragOver={onDropSpell ? (event) => {
+        if (event.dataTransfer.types.includes(SPELL_DRAG_TYPE)) event.preventDefault();
+      } : undefined}
+      onDrop={onDropSpell ? (event) => {
+        const sourceId = event.dataTransfer.getData(SPELL_DRAG_TYPE);
+        if (!sourceId) return;
+        event.preventDefault();
+        onDropSpell(sourceId);
+      } : undefined}
     >
       <div className="spell-tile-icon">
         <SpellIcon spell={spell} />
