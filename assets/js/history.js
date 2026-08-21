@@ -59,7 +59,17 @@
   }
 
   function renderRows() {
-    if (!state.rows.length) return '<p class="empty-state">Aucune modification enregistrée.</p>';
+    if (!state.rows.length) {
+      const overrideStillExists = state.filters && window.AppStore.hasOverride(
+        state.filters.entityType,
+        state.filters.entityKey,
+        state.filters.fieldKey,
+      );
+      if (overrideStillExists) {
+        return '<p class="history-notice">Cette valeur est modifiée, mais son historique ne contient plus aucune ligne. Une ou plusieurs lignes ont pu être supprimées sans modifier la valeur actuelle.</p>';
+      }
+      return '<p class="empty-state">Aucune modification enregistrée.</p>';
+    }
     return `<div class="history-list">${state.rows.map((row) => `
       <article class="history-entry" data-history-id="${window.escapeAttribute(row.id)}">
         <div class="history-entry-head">

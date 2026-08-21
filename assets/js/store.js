@@ -112,9 +112,39 @@
     return { changed: true, row, historyId: result.history_id };
   }
 
+  function listOverrides({ entityType, entityKeys } = {}) {
+    const keySet = entityKeys ? new Set(entityKeys.map(String)) : null;
+    return [...overrideMap.values()].filter((row) =>
+      (!entityType || row.entity_type === entityType)
+      && (!keySet || keySet.has(String(row.entity_key)))
+    );
+  }
+
+  async function reset(rows) {
+    if (!window.AppSession.isAdmin()) throw new Error("Cette action est réservée aux administrateurs.");
+    if (!rows.length) return 0;
+    const targets = rows.map((row) => ({
+      entity_type: row.entity_type,
+      entity_key: String(row.entity_key),
+      field_key: row.field_key,
+      baseline_value: getBaselineValue(row.entity_type, row.entity_key, row.field_key),
+    }));
+    const { data, error } = await window.AppSupabase.client.rpc("reset_overrides", { p_targets: targets });
+    if (error) throw error;
+
+    rows.forEach((row) => {
+      const baseline = getBaselineValue(row.entity_type, row.entity_key, row.field_key);
+      overrideMap.delete(mapKey(row.entity_type, String(row.entity_key), row.field_key));
+      setEffectiveValue(row.entity_type, String(row.entity_key), row.field_key, baseline);
+    });
+    return Number(data || 0);
+  }
+
   window.AppStore = {
     initialize,
     save,
+    reset,
+    listOverrides,
     getSpellById,
     getEffectiveValue,
     getBaselineValue,

@@ -152,6 +152,11 @@ function statRow(label, entityKey, fieldKey, value, inputType = "text") {
   return `<div class="stat-row"><span class="stat-label">${escapeHtml(label)}</span>${editableField("spell", entityKey, fieldKey, html, inputType)}</div>`;
 }
 
+function resetButton(scope, key, overrideCount) {
+  if (!window.AppSession.isAdmin()) return "";
+  return `<button type="button" class="reset-button" data-reset-scope="${escapeAttribute(scope)}" data-reset-key="${escapeAttribute(key)}" ${overrideCount ? "" : "disabled"}>Réinitialiser</button>`;
+}
+
 function buildCommentsSection(spellId) {
   if (!window.AppSession.isAdmin()) return "";
   return `<section class="comments-section"><h3>Commentaires</h3><div data-comments-for="${spellId}"><p class="loading-state">Chargement des commentaires…</p></div></section>`;
@@ -159,6 +164,7 @@ function buildCommentsSection(spellId) {
 
 function buildCard(spell) {
   const tab = activeEffectTabs.get(String(spell.id)) || "normaux";
+  const overrideCount = window.AppStore.listOverrides({ entityType: "spell", entityKeys: [spell.id] }).length;
   return `<div class="spell-card" data-spell="${spell.id}">
     <div class="spell-header">
       <div class="spell-header-left">
@@ -170,6 +176,7 @@ function buildCard(spell) {
         <div class="pa">${editableField("spell", spell.id, "pa", `${escapeHtml(spell.pa)} PA`, "number")}</div>
       </div>
     </div>
+    <div class="spell-card-actions">${resetButton("spell", spell.id, overrideCount)}</div>
     <div class="section-heading">Effets</div>
     <div class="effect-tabs" role="tablist" aria-label="Type d'effets">
       <button type="button" class="effect-tab ${tab === "normaux" ? "active" : ""}" data-onglet="normaux" role="tab" aria-selected="${tab === "normaux"}">Normaux</button>
@@ -249,7 +256,8 @@ const STAT_DEFINITIONS = [
 function buildClassStatsTable(className) {
   const stats = MORPH_STATS[className];
   if (!stats) return "";
-  return `<section class="class-stats-section"><h3 class="class-stats-title">Caractéristiques</h3>
+  const overrideCount = window.AppStore.listOverrides({ entityType: "class_stat", entityKeys: [className] }).length;
+  return `<section class="class-stats-section"><div class="panel-heading-row"><h3 class="class-stats-title">Caractéristiques</h3>${resetButton("class-stats", className, overrideCount)}</div>
     <div class="class-stats-table">
       <div class="stat-row-cell stat-row-header"><span class="stat-cell-icon-wrap"></span><span class="stat-cell-label">Caractéristique</span><span class="stat-cell-sep"></span><span class="stat-cell-value">Valeur</span></div>
       ${STAT_DEFINITIONS.map(([key, label, icon]) => `<div class="stat-row-cell">
@@ -262,9 +270,12 @@ function buildClassStatsTable(className) {
 
 function renderClass(className) {
   const spells = SPELLS.filter((spell) => spell.classe === className);
+  const spellIds = spells.map((spell) => spell.id);
+  const overrideCount = window.AppStore.listOverrides({ entityType: "spell", entityKeys: spellIds }).length;
   document.getElementById("app").innerHTML = `${renderWarning()}<div class="class-page">
     <a class="back-link" href="#/">← Toutes les classes</a>
     <h2 class="class-heading"><span class="class-heading-icon">${classIconHtml(className)}</span>${escapeHtml(className)}<span class="class-count">(${spells.length} sorts)</span></h2>
+    <div class="panel-heading-row spells-panel-heading"><h3>Sorts</h3>${resetButton("class-spells", className, overrideCount)}</div>
     <div class="class-layout"><div class="spell-grid">${spells.map(buildSpellTile).join("")}</div><aside class="spell-detail" id="spell-detail"><div class="detail-placeholder">Sélectionne un sort pour voir ses détails.</div></aside></div>
     ${buildClassStatsTable(className)}
   </div>`;
@@ -393,6 +404,56 @@ async function saveEditor(editor) {
   }
 }
 
+function overridesForReset(button) {
+  const scope = button.dataset.resetScope;
+  const key = button.dataset.resetKey;
+  if (scope === "spell") {
+    return window.AppStore.listOverrides({ entityType: "spell", entityKeys: [key] });
+  }
+  if (scope === "class-spells") {
+    const spellIds = SPELLS.filter((spell) => spell.classe === key).map((spell) => spell.id);
+    return window.AppStore.listOverrides({ entityType: "spell", entityKeys: spellIds });
+  }
+  if (scope === "class-stats") {
+    return window.AppStore.listOverrides({ entityType: "class_stat", entityKeys: [key] });
+  }
+  return [];
+}
+
+async function performReset(button) {
+  const rows = overridesForReset(button);
+  if (!rows.length) { refreshView(); return; }
+  button.disabled = true;
+  button.textContent = "Réinitialisation…";
+  button.classList.remove("confirming");
+  try {
+    const count = await window.AppStore.reset(rows);
+    showToast(`${count} valeur${count > 1 ? "s" : ""} réinitialisée${count > 1 ? "s" : ""}.`, "success");
+    refreshView();
+  } catch (error) {
+    button.disabled = false;
+    button.dataset.confirming = "false";
+    button.textContent = "Réinitialiser";
+    showToast(errorMessage(error), "error");
+  }
+}
+
+function confirmReset(button) {
+  if (button.dataset.confirming === "true") {
+    performReset(button);
+    return;
+  }
+  button.dataset.confirming = "true";
+  button.textContent = "Vraiment ?";
+  button.classList.add("confirming");
+  window.setTimeout(() => {
+    if (!button.isConnected || button.dataset.confirming !== "true") return;
+    button.dataset.confirming = "false";
+    button.textContent = "Réinitialiser";
+    button.classList.remove("confirming");
+  }, 4000);
+}
+
 document.addEventListener("click", async (event) => {
   const enterGuest = event.target.closest("[data-enter-guest]");
   if (enterGuest) {
@@ -407,6 +468,8 @@ document.addEventListener("click", async (event) => {
     catch (error) { leave.disabled = false; showToast(errorMessage(error), "error"); }
     return;
   }
+  const reset = event.target.closest("[data-reset-scope]");
+  if (reset) { confirmReset(reset); return; }
   if (event.target.closest("[data-global-history]")) {
     const route = getRoute();
     window.AppHistory.open(null, { classFilter: route.view === "class" ? route.className : "" });

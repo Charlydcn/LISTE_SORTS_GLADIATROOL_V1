@@ -16,7 +16,7 @@ Tout utilisateur Supabase authentifié est administrateur. Un visiteur non authe
 
 Le frontend est déjà configuré pour le projet `nfruhrvninbkvtnosgwk`. La Project URL et la publishable key sont publiques par conception.
 
-1. Appliquer `supabase/migrations/001_initial_collaboration.sql` avant le premier déploiement.
+1. Appliquer dans l'ordre tous les fichiers de `supabase/migrations/` qui ne sont pas encore présents sur la base distante.
 2. Dans Supabase Dashboard, créer manuellement les deux utilisateurs dans **Authentication > Users**.
 3. Dans les réglages Authentication, désactiver les nouvelles inscriptions publiques (« Allow new users to sign up »). L'application ne propose de toute façon aucun écran d'inscription.
 
@@ -62,7 +62,7 @@ Ouvrir ensuite l'URL indiquée par le serveur. `file://` ne convient pas.
 
 ## Déploiement Vercel
 
-Après application de la migration et configuration des deux utilisateurs, pousser la branche suivie par Vercel. Aucune variable Vercel privée ni modification du mode de déploiement n'est nécessaire : le site reste entièrement statique.
+Après application des migrations et configuration des deux utilisateurs, pousser la branche suivie par Vercel. Aucune variable Vercel privée ni modification du mode de déploiement n'est nécessaire : le site reste entièrement statique.
 
 ## Secrets
 
