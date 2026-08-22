@@ -122,7 +122,7 @@ export function HistoryModal() {
             </div>
             <p className="history-meta">
               {formatDate(row.changed_at)}
-              {isAdmin ? ` · ${row.changed_by_label || "Auteur inconnu"}` : ""}
+              {isAdmin ? ` · Modifié par ${row.changed_by_label || "Auteur inconnu"}` : ""}
             </p>
           </article>
         ))}
@@ -156,7 +156,7 @@ export function HistoryModal() {
               id="history-search"
               type="search"
               value={search}
-              placeholder="Rechercher un sort, une classe, une propriété…"
+              placeholder="Rechercher un sort, une classe, une propriété ou un pseudo…"
               autoComplete="off"
               onChange={(event) => useHistoryStore.getState().setSearch(event.target.value)}
             />

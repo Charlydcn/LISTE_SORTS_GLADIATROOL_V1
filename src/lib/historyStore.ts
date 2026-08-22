@@ -106,6 +106,10 @@ function searchFilters(search: string, classFilter: string): { entityKeys: strin
   return { entityKeys: [...entityKeys], fieldKeys: [...fieldKeys] };
 }
 
+function escapeOrValue(value: string): string {
+  return value.replace(/[(),]/g, "\\\\$&");
+}
+
 async function fetchPage(
   filters: HistoryFilters,
   offset: number,
@@ -128,8 +132,14 @@ async function fetchPage(
       .eq("field_key", filters.fieldKey);
   } else if (search) {
     const found = searchFilters(search, classFilter);
-    if (!found || !found.entityKeys.length || !found.fieldKeys.length) return [];
-    query = query.in("entity_key", found.entityKeys).in("field_key", found.fieldKeys);
+    const entityMatch =
+      found && found.entityKeys.length && found.fieldKeys.length
+        ? `and(entity_key.in.(${found.entityKeys.map(escapeOrValue).join(",")}),field_key.in.(${found.fieldKeys.map(escapeOrValue).join(",")}))`
+        : "";
+    const authorMatch = isAdmin ? `changed_by_label.ilike.%${escapeOrValue(search.trim())}%` : "";
+    const matches = [entityMatch, authorMatch].filter(Boolean);
+    if (!matches.length) return [];
+    query = query.or(matches.join(","));
   } else if (classFilter) {
     query = query.in("entity_key", classEntityKeys(classFilter) ?? []);
   }

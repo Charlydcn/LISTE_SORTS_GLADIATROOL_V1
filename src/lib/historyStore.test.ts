@@ -22,6 +22,7 @@ function installQuery(response: { data: unknown; error: unknown }) {
   const query = {
     eq: vi.fn(() => query),
     in: vi.fn(() => query),
+    or: vi.fn(() => query),
     order: vi.fn(() => query),
     range: vi.fn(async () => response),
   };
@@ -61,6 +62,7 @@ describe("historique", () => {
     const query = {
       eq: vi.fn(() => query),
       in: vi.fn(() => query),
+      or: vi.fn(() => query),
       order: vi.fn(() => query),
       range: vi.fn()
         .mockResolvedValueOnce({ data: firstPage, error: null })
@@ -79,5 +81,22 @@ describe("historique", () => {
     await useHistoryStore.getState().remove("history-50");
     expect(remove).toHaveBeenCalledWith("id", "history-50");
     expect(useHistoryStore.getState().rows).toHaveLength(50);
+  });
+
+  it("recherche aussi les auteurs dans l'historique global", async () => {
+    const query = {
+      eq: vi.fn(() => query),
+      in: vi.fn(() => query),
+      or: vi.fn(() => query),
+      order: vi.fn(() => query),
+      range: vi.fn(async () => ({ data: [historyRow], error: null })),
+    };
+    supabaseMock.from.mockReturnValue({ select: vi.fn(() => query) });
+    useSessionStore.setState({ mode: "admin", user: { id: "user-1" } as never });
+    useHistoryStore.getState().setSearch("admin@example.test");
+
+    await useHistoryStore.getState().reload();
+
+    expect(query.or).toHaveBeenCalledWith(expect.stringContaining("changed_by_label.ilike.%admin@example.test%"));
   });
 });
