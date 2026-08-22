@@ -8,6 +8,7 @@ import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
 import { useEditingStore } from "../lib/editingStore";
 import { ResetButton } from "./ResetButton";
+import { ExportClassButton } from "./SpellTransferActions";
 
 export function Home() {
   const spells = useDataStore((s) => s.spells);
@@ -47,7 +48,10 @@ export function Home() {
       <div className="common-section">
         <div className="common-heading">
           <button type="button" className={`common-toggle ${commonOpen ? "open" : ""}`} aria-expanded={commonOpen} onClick={() => setCommonOpen((open) => !open)}><span className="common-chevron">▾</span> Sorts communs</button>
-          <div className="heading-actions"><ResetButton scope="class-spells" resetKey="Sorts communs" /></div>
+          <div className="heading-actions">
+            {isAdmin ? <ExportClassButton className="Sorts communs" /> : null}
+            <ResetButton scope="class-spells" resetKey="Sorts communs" />
+          </div>
         </div>
         <div className="common-body" hidden={!commonOpen}>
           {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { useEditingStore.getState().close(); setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}

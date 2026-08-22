@@ -234,6 +234,7 @@ export const useHistoryStore = create<HistoryState>((set, get) => ({
 
   contextLabel(row) {
     const { spells, commonSpells } = useDataStore.getState();
+    if (row.entity_type === "import") return `Import de ${row.changed_by_label || "l’utilisateur"}`;
     if (row.entity_type === "class_stat") return row.entity_key;
     const matches = [...spells, ...commonSpells].filter(
       (spell) => String(spell.id) === String(row.entity_key),

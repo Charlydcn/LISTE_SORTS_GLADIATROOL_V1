@@ -7,6 +7,7 @@ import { CLASSES } from "../lib/dataService";
 import { errorMessage } from "../lib/utils";
 import { HistoryModal } from "./HistoryModal";
 import { HistoryIcon, LoginIcon, LogoutIcon } from "./icons";
+import { ExportGlobalButton, ImportButton } from "./SpellTransferActions";
 
 function currentClassFilter(pathname: string): string {
   const match = pathname.match(/^\/classe\/(.+)$/);
@@ -50,6 +51,8 @@ export function Header() {
         ) : (
           <span className="session-identity guest">Mode invité</span>
         )}
+        {isAdmin ? <ExportGlobalButton /> : null}
+        {isAdmin ? <ImportButton /> : null}
         <button type="button" className="toolbar-button toolbar-icon-button" aria-label="Ouvrir l’historique" title="Ouvrir l’historique" onClick={openGlobalHistory}>
           <HistoryIcon />
         </button>

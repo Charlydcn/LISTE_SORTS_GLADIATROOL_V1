@@ -1,5 +1,5 @@
 begin;
-select plan(51);
+select plan(61);
 
 -- Les migrations sont rejouées par `supabase test db` dans une base locale neuve.
 select has_table('public', 'entity_overrides', 'La table des overrides existe après les migrations');
@@ -26,6 +26,7 @@ select ok(not has_function_privilege('anon', 'public.apply_override(text,text,te
 select ok(not has_function_privilege('anon', 'public.reset_overrides(jsonb)', 'execute'), 'anon ne peut pas appeler reset_overrides');
 select ok(not has_function_privilege('anon', 'public.apply_spell_icon_override(text,text,jsonb)', 'execute'), 'anon ne modifie pas les icones');
 select ok(not has_function_privilege('anon', 'public.reset_spell_class(text,bigint[],jsonb)', 'execute'), 'anon ne réinitialise pas une classe');
+select ok(not has_function_privilege('anon', 'public.import_spell_dump(jsonb)', 'execute'), 'anon ne peut pas importer un dump');
 
 select ok(has_table_privilege('authenticated', 'public.entity_overrides', 'select'), 'authenticated lit les overrides privés');
 select ok(has_table_privilege('authenticated', 'public.change_history', 'delete'), 'authenticated peut supprimer l historique');
@@ -34,6 +35,7 @@ select ok(has_function_privilege('authenticated', 'public.apply_override(text,te
 select ok(has_function_privilege('authenticated', 'public.reset_overrides(jsonb)', 'execute'), 'authenticated peut appeler reset_overrides');
 select ok(has_function_privilege('authenticated', 'public.apply_spell_icon_override(text,text,jsonb)', 'execute'), 'authenticated modifie les icones');
 select ok(has_function_privilege('authenticated', 'public.reset_spell_class(text,bigint[],jsonb)', 'execute'), 'authenticated réinitialise une classe');
+select ok(has_function_privilege('authenticated', 'public.import_spell_dump(jsonb)', 'execute'), 'authenticated peut importer un dump');
 
 set local role authenticated;
 select set_config('request.jwt.claim.sub', '11111111-1111-1111-1111-111111111111', true);
@@ -174,6 +176,22 @@ select is(
   (select created_by_label from public.spell_comments where spell_id = '390'),
   'admin@example.test', 'Le libellé du commentaire provient du JWT'
 );
+
+select throws_ok(
+  $$select * from public.import_spell_dump('{"formatVersion":1,"classes":[{"className":"Iop","stats":null,"baselineStats":null,"spells":[{"id":999,"className":"Iop","native":false,"baseline":null,"spell":{"nom":"Collision","pa":2,"po":"1","porteeModifiable":false,"lancerEnLigne":false,"ligneDeVue":true,"cc":"-","ec":"-","relance":"-","parTour":null,"parCible":null,"commun":false,"effets":[{"onglet":"normaux","texte":"Effet"}],"position":1}}]}]}'::jsonb)$$,
+  '22023', 'Custom spell ID must be at least 1000000',
+  'L import refuse un identifiant personnalisé dans la plage native'
+);
+select is((select count(*) from public.created_spells where id = 999), 0::bigint, 'Un import invalide ne laisse aucune écriture');
+
+create temporary table spell_import_result as
+select * from public.import_spell_dump('{"formatVersion":1,"classes":[{"className":"Iop","stats":null,"baselineStats":null,"spells":[{"id":390,"className":"Iop","native":true,"baseline":{"nom":"Natif","pa":4,"po":"1","porteeModifiable":false,"lancerEnLigne":false,"ligneDeVue":true,"cc":"-","ec":"-","relance":"-","parTour":null,"parCible":null,"effets":[{"onglet":"normaux","texte":"Base"}],"position":1},"spell":{"nom":"Natif importé","pa":5,"po":"1","porteeModifiable":false,"lancerEnLigne":false,"ligneDeVue":true,"cc":"-","ec":"-","relance":"-","parTour":null,"parCible":null,"commun":false,"effets":[{"onglet":"normaux","texte":"Import"}],"position":2}},{"id":1000500,"className":"Iop","native":false,"baseline":null,"spell":{"nom":"Custom importé","pa":3,"po":"1–4","porteeModifiable":true,"lancerEnLigne":false,"ligneDeVue":true,"cc":"1/50","ec":"1/100","relance":"-","parTour":null,"parCible":null,"commun":false,"effets":[{"onglet":"normaux","texte":"Effet"}],"position":3}}]}]}'::jsonb);
+select is((select created_count::text || '/' || updated_count::text from spell_import_result), '1/1', 'L import récapitule les sorts créés et modifiés');
+select is((select count(*) from public.created_spells where id = 1000500 and class_name = 'Iop'), 1::bigint, 'Le sort personnalisé conserve son identifiant exporté');
+select is((select value from public.entity_overrides where entity_type = 'spell' and entity_key = '390' and field_key = 'pa'), '5'::jsonb, 'Les valeurs finales du sort natif sont importées');
+select is((select value from public.entity_overrides where entity_type = 'spell_position' and entity_key = 'Iop/1000500'), '3'::jsonb, 'La position du sort personnalisé est importée');
+select is((select count(*) from public.change_history where entity_type = 'import'), 1::bigint, 'Un import complet ne crée qu une ligne d historique');
+select is((select new_value -> 'classes' -> 'Iop' ->> 'sortsCrees' from public.change_history where entity_type = 'import'), '1', 'L historique contient le résumé par classe');
 
 select * from finish();
 rollback;

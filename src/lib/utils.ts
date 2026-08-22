@@ -92,6 +92,7 @@ export const FIELD_LABELS: Record<string, string> = {
   chance: "Chance",
   agilite: "Agilité",
   initiative: "Initiative",
+  __import__: "Import de données",
 };
 
 export function fieldLabel(field: string): string {

@@ -563,6 +563,11 @@ body{
 .panel-heading-row .class-stats-title{ border: 0; padding: 0; margin: 0; }
 .heading-actions{ display:flex; align-items:center; gap:8px; }
 .heading-actions{ margin-left:auto; }
+.transfer-button{
+  border:1px solid #756f51; border-radius:3px; background:rgba(255,255,255,.06);
+  color:inherit; padding:5px 9px; cursor:pointer; font-size:12px;
+}
+.transfer-button:hover:not(:disabled){ background:rgba(182,141,60,.16); }
 .common-heading{ display:flex; align-items:center; gap:10px; }
 .new-spell-button{
   display: block;

@@ -10,6 +10,7 @@ import { ResetButton } from "./ResetButton";
 import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
 import { useEditingStore } from "../lib/editingStore";
+import { ExportClassButton } from "./SpellTransferActions";
 
 export function ClassPage() {
   const params = useParams<{ classe: string }>();
@@ -44,7 +45,10 @@ export function ClassPage() {
       </h2>
       <div className="panel-heading-row spells-panel-heading">
         <h3>Sorts</h3>
-        <div className="heading-actions"><ResetButton scope="class-spells" resetKey={className} /></div>
+        <div className="heading-actions">
+          {isAdmin ? <ExportClassButton className={className} /> : null}
+          <ResetButton scope="class-spells" resetKey={className} />
+        </div>
       </div>
       {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { useEditingStore.getState().close(); setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
       <div className="class-layout">

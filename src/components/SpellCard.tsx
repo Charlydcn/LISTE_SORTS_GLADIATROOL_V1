@@ -12,6 +12,7 @@ import { CommentsSection } from "./CommentsSection";
 import { HistoryModal } from "./HistoryModal";
 import { SpellImageEditor } from "./SpellImageEditor";
 import { editorKey, useEditingStore } from "../lib/editingStore";
+import { ExportSpellButton } from "./SpellTransferActions";
 
 function EffectRows({ effects, tab }: { effects: Effect[]; tab: EffectTab }) {
   const rows = effects.filter((effect) => effect.onglet === tab);
@@ -161,6 +162,7 @@ export function SpellCard({ spell }: { spell: Spell }) {
         </div>
       </div>
       <div className="spell-card-actions">
+        {isAdmin ? <ExportSpellButton spell={spell} /> : null}
         <ResetButton scope="spell" resetKey={spell.id} />
       </div>
       <div className="section-heading">Effets</div>

@@ -52,7 +52,7 @@ const overrideRowSchema = z.object({
 
 const historyRowSchema = z.object({
   id: z.string().min(1),
-  entity_type: z.enum(["spell", "spell_position", "class_stat"]),
+  entity_type: z.enum(["spell", "spell_position", "class_stat", "import"]),
   entity_key: z.string().min(1),
   field_key: z.string().min(1),
   old_value: z.unknown(),

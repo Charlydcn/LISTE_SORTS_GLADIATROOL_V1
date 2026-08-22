@@ -41,6 +41,14 @@ npm run test:db   # tests pgTAP sur Supabase local uniquement
 npm run test:e2e  # parcours Playwright Chromium (Supabase local requis)
 ```
 
+## Export et import des sorts
+
+Les utilisateurs authentifiés peuvent exporter un sort, une classe, les sorts communs ou tout le
+site. Chaque export est une archive ZIP contenant les valeurs finales en JSON et les icônes dans
+leur format original. L’import central accepte ces ZIP ou un `config.json`, ignore les images et
+applique les données dans une transaction unique. Le format et ses garanties sont documentés dans
+[`docs/EXPORT_IMPORT_SORTS.md`](docs/EXPORT_IMPORT_SORTS.md).
+
 ## Tests automatisés
 
 Les tests Vitest couvrent les validateurs JSON et réponses Supabase, les stores Zustand,

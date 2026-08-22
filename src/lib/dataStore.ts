@@ -4,6 +4,7 @@ import { cloneData, loadBaselineData, type BaselineData } from "./dataService";
 import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
 import { errorMessage } from "./utils";
+import type { ImportPayload } from "./spellTransfer";
 import {
   parseApplyOverrideResult,
   parseCreatedSpellRows,
@@ -99,6 +100,7 @@ interface DataState {
   createSpell: (className: string, spell: Omit<Spell, "id" | "classe" | "morphId">) => Promise<Spell>;
   deleteSpell: (spell: Spell) => Promise<void>;
   restoreNativeSpell: (spell: Spell) => Promise<void>;
+  importDump: (payload: ImportPayload) => Promise<{ created: number; updated: number }>;
   save: (
     entityType: string,
     entityKey: string,
@@ -262,6 +264,19 @@ export const useDataStore = create<DataState>((set, get) => ({
     if (error) throw error;
     set({ deletedNativeSpells: get().deletedNativeSpells.filter((row) => row.class_name !== spell.classe || row.spell_id !== spell.id) });
     get().applyRows(Object.values(get().overrides));
+  },
+
+  async importDump(payload) {
+    if (!useSessionStore.getState().isAdmin()) throw new Error("Cette action est réservée aux utilisateurs connectés.");
+    if (!supabase) throw new Error("Supabase JS n'a pas pu être chargé.");
+    const { data, error } = await supabase.rpc("import_spell_dump", { p_dump: payload });
+    if (error) throw error;
+    const result = Array.isArray(data) ? data[0] : data;
+    if (!result || !Number.isInteger(result.created_count) || !Number.isInteger(result.updated_count)) {
+      throw new Error("L’import n’a retourné aucun récapitulatif valide.");
+    }
+    await get().initialize();
+    return { created: result.created_count, updated: result.updated_count };
   },
 
   async save(entityType, entityKey, fieldKey, newValue) {
