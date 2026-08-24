@@ -68,6 +68,31 @@ export function ElementIcon({ text }: { text: string }) {
   return <img className="element" src={`assets/img/icons/${ELEMENT_FILES[match[1]]}`} alt={match[1]} />;
 }
 
+const TONIC_STAT_ICONS: Array<{ pattern: RegExp; file: string; label: string }> = [
+  { pattern: /\bPA\b/i, file: "PA.svg", label: "PA" },
+  { pattern: /\bPM\b/i, file: "PM.svg", label: "PM" },
+  { pattern: /Vitalité/i, file: "Vita.svg", label: "Vitalité" },
+  { pattern: /\bPV\b/i, file: "PV.svg", label: "PV" },
+  { pattern: /Sagesse/i, file: "Wisdom.svg", label: "Sagesse" },
+  { pattern: /Initiative/i, file: "Ini.svg", label: "Initiative" },
+  { pattern: /Terre/i, file: "EarthDamage.svg", label: "Terre" },
+  { pattern: /Eau/i, file: "WaterDamage.svg", label: "Eau" },
+  { pattern: /Feu/i, file: "FireDamage.svg", label: "Feu" },
+  { pattern: /Air/i, file: "AirDamage.svg", label: "Air" },
+  { pattern: /Neutres?/i, file: "NeutralDamage.svg", label: "Neutre" },
+  { pattern: /Force/i, file: "EarthDamage.svg", label: "Force" },
+  { pattern: /Intelligence/i, file: "FireDamage.svg", label: "Intelligence" },
+  { pattern: /Chance/i, file: "WaterDamage.svg", label: "Chance" },
+  { pattern: /Agilité/i, file: "AirDamage.svg", label: "Agilité" },
+  { pattern: /Dommages?/i, file: "NeutralDamage.svg", label: "Dommages neutres" },
+];
+
+export function TonicEffectIcon({ text }: { text: string }) {
+  const icon = TONIC_STAT_ICONS.find((entry) => entry.pattern.test(text));
+  if (!icon) return null;
+  return <img className="element" src={`assets/img/icons/${icon.file}`} alt={icon.label} />;
+}
+
 export function CheckOrCross({ value }: { value: unknown }) {
   return value ? (
     <span className="stat-icon yes" aria-label="Oui">

@@ -12,7 +12,7 @@ import { useToastStore } from "../lib/toastStore";
 import { errorMessage, fieldLabel } from "../lib/utils";
 import { CommentsSection } from "./CommentsSection";
 import { HistoryModal } from "./HistoryModal";
-import { ClassIcon, HistoryIcon, SpellIcon } from "./icons";
+import { ClassIcon, HistoryIcon, SpellIcon, TonicEffectIcon } from "./icons";
 
 function TonicField({ tonic, field, multiline = false }: { tonic: Tonic; field: "title" | "effects"; multiline?: boolean }) {
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
@@ -49,7 +49,7 @@ function TonicField({ tonic, field, multiline = false }: { tonic: Tonic; field: 
   );
 
   const content = field === "effects"
-    ? (tonic.effects.length ? tonic.effects.map((effect, index) => <div className="effect-row" key={index}>{effect}</div>) : <div className="empty-state">Aucun effet.</div>)
+    ? (tonic.effects.length ? tonic.effects.map((effect, index) => <div className="effect-row" key={index}><TonicEffectIcon text={effect} /><span>{effect}</span></div>) : <div className="empty-state">Aucun effet.</div>)
     : tonic.title;
   return <div className={`tonic-field ${override ? "is-overridden" : ""}`}>{isAdmin ? <button className="editable-trigger" type="button" onClick={() => { setValue(field === "effects" ? tonic.effects.join("\n") : tonic.title); useEditingStore.getState().open(key); }}>{content}</button> : content}{override ? <button className="field-history" type="button" aria-label="Voir l’historique" onClick={history}><HistoryIcon /></button> : null}</div>;
 }
