@@ -13,10 +13,10 @@ import { useEditingStore } from "../lib/editingStore";
 import { ExportClassButton } from "./SpellTransferActions";
 
 export function ClassPage() {
-  const params = useParams<{ classe: string }>();
+  const params = useParams<{ classe: string; spellId?: string }>();
   const className = decodeURIComponent(params.classe || "");
   const spells = useDataStore((s) => s.spells);
-  const [selectedId, setSelectedId] = useState<string | null>(null);
+  const [selectedId, setSelectedId] = useState<string | null>(params.spellId ?? null);
   const [creating, setCreating] = useState(false);
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
 

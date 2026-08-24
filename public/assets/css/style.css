@@ -199,6 +199,7 @@ body {
 .spell-card-actions {
   display: flex;
   justify-content: flex-end;
+  gap: .5rem;
   min-height: 28px;
   padding: 0 18px 6px;
 }
@@ -210,7 +211,7 @@ body {
 .reset-button {
   border: 1px solid #756c4c;
   border-radius: 4px;
-  padding: 5px 9px;
+  padding: 3px 9px;
   background: transparent;
   color: inherit;
   cursor: pointer;
@@ -1859,6 +1860,10 @@ body.modal-open {
 }
 
 .catalog-layout aside { min-width: 0; }
+.catalog-layout > aside {
+  position: sticky;
+  top: .5rem;
+}
 .tonic-groups { display: grid; gap: 16px; }
 .tonic-groups section,
 .restore-panel {
@@ -1887,8 +1892,13 @@ body.modal-open {
 .tonic-list button.selected,
 .mutation-list button:hover,
 .mutation-list button.selected { background: #d8d1b3; color: #1c1a12; border-color: var(--gold); }
-.mutation-list button { display: flex; justify-content: space-between; gap: 10px; }
+.mutation-list button { display: flex; align-items: center; justify-content: space-between; gap: 10px; }
 .mutation-list small { opacity: .7; white-space: nowrap; }
+.mutation-list-main { min-width: 0; display: flex; align-items: center; gap: 8px; }
+.mutation-list-main > span:last-child { overflow: hidden; text-overflow: ellipsis; }
+.mutation-list-icon { flex: 0 0 24px; width: 24px; height: 24px; display: grid; place-items: center; }
+.mutation-list-icon svg,
+.mutation-list-icon img { width: 24px; height: 24px; display: block; }
 
 .tonic-card { width: 100%; }
 .tonic-card-title {
@@ -1915,7 +1925,7 @@ body.modal-open {
 .tonic-creator select { width: 100%; padding: 9px; border: 1px solid var(--border-dark); border-radius: 4px; font: inherit; }
 .tonic-card .effects-box { min-height: 110px; padding: 10px; }
 .tonic-card .effect-row { min-height: 34px; padding: 8px 10px; }
-.danger-button { padding: 7px 11px; border: 1px solid #9e493f; border-radius: 4px; background: #b64d40; color: white; cursor: pointer; }
+.danger-button { padding: 3px 9px; border: 1px solid #9e493f; border-radius: 4px; background: #b64d40; color: white; cursor: pointer; font-size: 11px; font-weight: 700; }
 .danger-button.confirming { background: #7d2118; }
 
 .source-spell { margin: 14px; border: 1px solid var(--border-dark); border-radius: 5px; overflow: hidden; background: #d8d2b4; }
@@ -1923,6 +1933,7 @@ body.modal-open {
 .source-spell-head svg,
 .source-spell-head img { width: 44px; height: 44px; }
 .source-spell-head div { display: flex; flex-direction: column; }
+.source-spell-head a { color: var(--gold-dark); font-weight: 700; text-decoration: underline; text-underline-offset: 2px; }
 .source-spell-head span { font-size: 12px; opacity: .65; }
 .source-effects { display: grid; grid-template-columns: 1fr 1fr; }
 .source-effects > div { padding: 12px; }
@@ -1949,6 +1960,7 @@ body.modal-open {
   .main-navigation { justify-content: space-between; overflow-x: auto; }
   #app-header .app-toolbar { padding: 8px 0; }
   .catalog-layout { grid-template-columns: 1fr; }
+  .catalog-layout > aside { position: static; }
   .spell-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 

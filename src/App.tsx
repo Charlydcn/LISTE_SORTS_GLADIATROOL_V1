@@ -111,6 +111,7 @@ function AppShell() {
           <Route path="/sorts" element={<Home />} />
           <Route path="/classe/:classe" element={<ClassPage />} />
           <Route path="/sorts/classe/:classe" element={<ClassPage />} />
+          <Route path="/sorts/classe/:classe/sort/:spellId" element={<ClassPage />} />
           <Route path="/toniques" element={<TonicsPage />} />
           <Route path="/mutations" element={<MutationsPage />} />
           <Route path="/mutations/:classe" element={<MutationClassPage />} />
