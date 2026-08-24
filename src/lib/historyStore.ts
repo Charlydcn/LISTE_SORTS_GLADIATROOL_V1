@@ -7,6 +7,7 @@ import { supabase } from "./supabase";
 import { HISTORY_PAGE_SIZE } from "./config";
 import { CLASS_STAT_FIELDS, fieldLabel, SPELL_FIELDS, valueText } from "./utils";
 import { parseHistoryRows } from "./validation";
+import { useTonicStore } from "./tonicStore";
 
 export type HistoryFilters = {
   entityType: string;
@@ -63,6 +64,9 @@ function classEntityKeys(classFilter: string): string[] | null {
   const pool =
     classFilter === "Sorts communs" ? commonSpells : spells.filter((spell) => spell.classe === classFilter);
   const keys = [...new Set(pool.map((spell) => String(spell.id)))];
+  useTonicStore.getState().tonics
+    .filter((tonic) => tonic.className === classFilter)
+    .forEach((tonic) => keys.push(String(tonic.id)));
   if (classFilter !== "Sorts communs") keys.push(classFilter);
   return keys;
 }
@@ -92,6 +96,13 @@ function searchFilters(search: string, classFilter: string): { entityKeys: strin
       fields: CLASS_STAT_FIELDS,
     }),
   );
+  useTonicStore.getState().tonics
+    .filter((tonic) => !classFilter || tonic.className === classFilter)
+    .forEach((tonic) => entities.push({
+      key: String(tonic.id),
+      context: `${tonic.title} ${tonic.className ?? ""} ${tonic.kind === "mutation" ? "mutation" : "tonique"} ${tonic.id}`,
+      fields: ["title", "effects", "spellId", "__created__", "__deleted__", "__restored__"],
+    }));
 
   const entityKeys = new Set<string>();
   const fieldKeys = new Set<string>();
@@ -233,6 +244,11 @@ export const useHistoryStore = create<HistoryState>((set, get) => ({
   },
 
   contextLabel(row) {
+    if (row.entity_type === "tonic") {
+      const tonic = useTonicStore.getState().tonics.find((item) => String(item.id) === String(row.entity_key))
+        ?? useTonicStore.getState().baseTonics.find((item) => String(item.id) === String(row.entity_key));
+      return tonic ? `${tonic.kind === "mutation" ? "Mutation" : "Tonique"} · ${tonic.title}` : `Tonique #${row.entity_key}`;
+    }
     const { spells, commonSpells } = useDataStore.getState();
     if (row.entity_type === "import") return `Import de ${row.changed_by_label || "l’utilisateur"}`;
     if (row.entity_type === "class_stat") return row.entity_key;

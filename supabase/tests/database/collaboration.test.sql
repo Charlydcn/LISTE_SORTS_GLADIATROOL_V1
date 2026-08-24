@@ -1,5 +1,5 @@
 begin;
-select plan(61);
+select plan(70);
 
 -- Les migrations sont rejouées par `supabase test db` dans une base locale neuve.
 select has_table('public', 'entity_overrides', 'La table des overrides existe après les migrations');
@@ -192,6 +192,22 @@ select is((select value from public.entity_overrides where entity_type = 'spell'
 select is((select value from public.entity_overrides where entity_type = 'spell_position' and entity_key = 'Iop/1000500'), '3'::jsonb, 'La position du sort personnalisé est importée');
 select is((select count(*) from public.change_history where entity_type = 'import'), 1::bigint, 'Un import complet ne crée qu une ligne d historique');
 select is((select new_value -> 'classes' -> 'Iop' ->> 'sortsCrees' from public.change_history where entity_type = 'import'), '1', 'L historique contient le résumé par classe');
+
+select has_table('public', 'created_tonics', 'La table des toniques personnalisés existe');
+select has_table('public', 'deleted_native_tonics', 'La table des toniques natifs supprimés existe');
+select has_table('public', 'tonic_comments', 'La table des commentaires de toniques existe');
+select has_view('public', 'public_created_tonics', 'La vue publique des toniques personnalisés existe');
+select has_view('public', 'public_deleted_native_tonics', 'La vue publique des toniques natifs supprimés existe');
+select lives_ok(
+  $$select * from public.create_tonic('{"kind":"tonique","category":"palier1","className":null,"title":"Tonique test","effects":["+1 PA"],"spellId":null}'::jsonb)$$,
+  'Un tonique personnalisé peut être créé'
+);
+select ok((select min(id) >= 1000000 from public.created_tonics), 'Les identifiants personnalisés commencent à 1000000');
+select lives_ok(
+  $$select * from public.apply_override('tonic', (select min(id)::text from public.created_tonics), 'title', '"Tonique modifié"'::jsonb, '"Tonique test"'::jsonb)$$,
+  'Le titre d un tonique peut être modifié'
+);
+select is((select value #>> '{}' from public.entity_overrides where entity_type='tonic' and field_key='title' order by updated_at desc limit 1), 'Tonique modifié', 'La modification du tonique est enregistrée');
 
 select * from finish();
 rollback;

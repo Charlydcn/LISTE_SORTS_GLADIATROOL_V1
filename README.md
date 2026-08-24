@@ -1,20 +1,21 @@
 # Liste des sorts Gladiatrool
 
-Application de listing des sorts Dofus Retro, refactorisée en **Vite + React 18 + TypeScript 5**, déployable telle quelle sur Vercel (build statique pur).
+Application collaborative de listing des sorts, toniques et mutations Dofus Retro, refactorisée en **Vite + React 18 + TypeScript 5**, déployable telle quelle sur Vercel (build statique pur).
 
 ## Stack
 
 - **Vite 5** (bundler + dev server) avec `@vitejs/plugin-react`
 - **React 18** (composants, hooks) + `react-dom`
 - **TypeScript 5** (typé, `strict`)
-- **react-router-dom 6** en `HashRouter` (routes `#/` et `#/classe/:classe`, compatibles avec les URL existantes)
+- **react-router-dom 6** en `HashRouter` (`#/sorts`, `#/toniques`, `#/mutations` et leurs pages détaillées)
 - **Zustand 4** (stores : session, données/overrides, historique, modal, toasts)
 - **@supabase/supabase-js** (importé et bundlé, plus de script CDN)
 
 ## Architecture
 
-- Les 13 fichiers `public/data/*.json` et `MORPH_STATS` dans [`src/lib/dataService.ts`](src/lib/dataService.ts) sont la **baseline** et restent la source originale.
-- `public/assets/css/style.css` est importé **tel quel** (aucune modification CSS) via `<link>` dans [`index.html`](index.html) pour garantir un rendu identique.
+- Les fichiers `public/data/*.json`, dont `toniques.json`, et `MORPH_STATS` dans [`src/lib/dataService.ts`](src/lib/dataService.ts) sont la **baseline** et restent la source originale.
+- `public/data/toniques.json` contient 25 toniques et 240 mutations natives ; le dossier de dump source n'est pas nécessaire au fonctionnement.
+- `public/assets/css/style.css` est importé via `<link>` dans [`index.html`](index.html).
 - `public/assets/img/` contient les SVG (260 sorts, 12 classes, 11 icônes).
 - Supabase Auth gère les deux comptes administrateurs.
 - Supabase stocke uniquement les overrides propriété par propriété, leur historique complet et les commentaires.
@@ -100,6 +101,8 @@ Les migrations :
 3. Dans les réglages Authentication, désactiver les nouvelles inscriptions publiques (« Allow new users to sign up »). L'application ne propose de toute façon aucun écran d'inscription.
 
 La migration `005_spell_images.sql` crée le bucket public `spell-images`, autorise les comptes authentifiés à y ajouter ou supprimer des fichiers et ajoute l'override `icone` sans historique. Elle doit être appliquée avant d'utiliser le bouton **Modifier** affiché sur l'icône d'un sort. Le remplacement et la réinitialisation ne suppriment jamais les fichiers présents dans `public/assets/img/`.
+
+La migration `014_tonics_catalog.sql` ajoute le cycle de vie collaboratif des toniques et mutations : création, suppression/restauration des natifs, overrides, historique et commentaires.
 
 Pour le développement et les tests, utiliser uniquement `supabase/config.toml` et
 `npx supabase start` local. Les opérations de liaison, de push ou de reset d'une base

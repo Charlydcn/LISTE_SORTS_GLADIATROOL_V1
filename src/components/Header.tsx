@@ -1,4 +1,4 @@
-import { useLocation } from "react-router-dom";
+import { NavLink, useLocation } from "react-router-dom";
 import { useSessionStore } from "../lib/sessionStore";
 import { useModalStore } from "../lib/modalStore";
 import { useHistoryStore } from "../lib/historyStore";
@@ -10,7 +10,7 @@ import { HistoryIcon, LoginIcon, LogoutIcon } from "./icons";
 import { ExportGlobalButton, ImportButton } from "./SpellTransferActions";
 
 function currentClassFilter(pathname: string): string {
-  const match = pathname.match(/^\/classe\/(.+)$/);
+  const match = pathname.match(/^\/(?:sorts\/classe|classe|mutations)\/(.+)$/);
   if (match) {
     const className = decodeURIComponent(match[1]);
     if (CLASSES.includes(className)) return className;
@@ -45,6 +45,14 @@ export function Header() {
 
   return (
     <header id="app-header">
+      <nav className="main-navigation" aria-label="Navigation principale">
+        <a className="site-title" href="#/sorts">Gladiatrool</a>
+        <div className="navigation-links">
+          <NavLink to="/sorts">Sorts</NavLink>
+          <NavLink to="/toniques">Toniques</NavLink>
+          <NavLink to="/mutations">Mutations</NavLink>
+        </div>
+      </nav>
       <nav className="app-toolbar" aria-label="Actions de session">
         {isAdmin ? (
           <span className="session-identity">{user?.email || "Administrateur"}</span>

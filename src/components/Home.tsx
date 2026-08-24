@@ -34,7 +34,7 @@ export function Home() {
             <a
               key={className}
               className="class-link"
-              href={`#/classe/${encodeURIComponent(className)}`}
+              href={`#/sorts/classe/${encodeURIComponent(className)}`}
             >
               <div className="class-link-icon">
                 <ClassIcon className={className} />

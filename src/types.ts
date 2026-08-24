@@ -43,6 +43,30 @@ export interface OverrideRow {
   updated_by_label?: string;
 }
 
+export type TonicKind = "tonique" | "mutation";
+export type TonicCategory = "palier1" | "palier2" | "rarus" | "mutation";
+
+export interface Tonic {
+  id: number;
+  kind: TonicKind;
+  category: TonicCategory;
+  className: string | null;
+  title: string;
+  effects: string[];
+  spellId: number | null;
+}
+
+export interface CreatedTonicRow {
+  id: number;
+  tonic: Omit<Tonic, "id">;
+  created_at: string;
+}
+
+export interface DeletedNativeTonicRow {
+  tonic_id: number;
+  deleted_at: string;
+}
+
 export interface CreatedSpellRow {
   id: number;
   class_name: string;
@@ -70,7 +94,8 @@ export interface HistoryRow {
 
 export interface CommentRow {
   id: string;
-  spell_id: string;
+  spell_id?: string;
+  tonic_id?: string;
   body: string;
   created_at: string;
   updated_at: string;

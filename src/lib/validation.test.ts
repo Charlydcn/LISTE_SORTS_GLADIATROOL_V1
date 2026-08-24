@@ -6,6 +6,7 @@ import {
   parseOverrideRows,
   parseResetClassResult,
   parseResetCount,
+  parseTonicData,
 } from "./validation";
 
 const spell = {
@@ -40,6 +41,12 @@ describe("validation des données externes", () => {
     expect(() => parseClassData({ classe: "Feca", morphId: 101, sorts: [invalid] }, "feca.json", "Feca", 101)).toThrow(
       "Données invalides dans feca.json - sorts.0.nom",
     );
+  });
+
+  it("valide le catalogue natif des toniques et mutations", () => {
+    const tonic = { id: 16002, kind: "tonique", category: "palier1", className: null, title: "Tonique Actio", effects: ["+1 PA"], spellId: null };
+    expect(parseTonicData({ format: "gladiatrool-tonics", formatVersion: 1, items: [tonic] }, "toniques.json")).toEqual([tonic]);
+    expect(() => parseTonicData({ format: "gladiatrool-tonics", formatVersion: 1, items: [{ ...tonic, effects: "+1 PA" }] }, "toniques.json")).toThrow("items.0.effects");
   });
 
   it("rejette une réponse Supabase invalide", () => {

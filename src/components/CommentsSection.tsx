@@ -122,8 +122,11 @@ function CommentItem({
   );
 }
 
-export function CommentsSection({ spellId }: { spellId: number | string }) {
-  const id = String(spellId);
+export function CommentsSection({ spellId, tonicId }: { spellId?: number | string; tonicId?: number | string }) {
+  const id = String(tonicId ?? spellId);
+  const isTonic = tonicId !== undefined;
+  const table = isTonic ? "tonic_comments" : "spell_comments";
+  const idColumn = isTonic ? "tonic_id" : "spell_id";
   const [comments, setComments] = useState<CommentRow[]>([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState<string | null>(null);
@@ -135,11 +138,11 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
     setLoading(true);
     setError(null);
     const { data, error: err } = await supabase
-      .from("spell_comments")
+      .from(table)
       .select(
-        "id,spell_id,body,created_at,updated_at,created_by_label,updated_by_label",
+        `id,${idColumn},body,created_at,updated_at,created_by_label,updated_by_label`,
       )
-      .eq("spell_id", id)
+      .eq(idColumn, id)
       .order("created_at", { ascending: false });
     if (err) {
       setError(errorMessage(err));
@@ -147,7 +150,7 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
       return;
     }
     try {
-      setComments(parseCommentRows(data ?? [], "la table spell_comments"));
+      setComments(parseCommentRows(data ?? [], `la table ${table}`));
     } catch (validationError) {
       setError(errorMessage(validationError));
     }
@@ -165,7 +168,7 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
     const body = newBody.trim();
     if (!body) return;
     setSubmitting(true);
-    const { error: err } = await supabase.from("spell_comments").insert({ spell_id: id, body });
+    const { error: err } = await supabase.from(table).insert({ [idColumn]: id, body });
     if (err) {
       useToastStore.getState().showToast(errorMessage(err), "error");
       setSubmitting(false);
@@ -180,7 +183,7 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
   async function updateComment(commentId: string, body: string) {
     if (!supabase) return;
     if (!body) return;
-    const { error: err } = await supabase.from("spell_comments").update({ body }).eq("id", commentId);
+    const { error: err } = await supabase.from(table).update({ body }).eq("id", commentId);
     if (err) {
       useToastStore.getState().showToast(errorMessage(err), "error");
       throw err;
@@ -191,7 +194,7 @@ export function CommentsSection({ spellId }: { spellId: number | string }) {
 
   async function removeComment(commentId: string) {
     if (!supabase) return;
-    const { error: err } = await supabase.from("spell_comments").delete().eq("id", commentId);
+    const { error: err } = await supabase.from(table).delete().eq("id", commentId);
     if (err) {
       useToastStore.getState().showToast(errorMessage(err), "error");
       throw err;

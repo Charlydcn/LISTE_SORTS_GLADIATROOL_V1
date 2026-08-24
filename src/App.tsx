@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { HashRouter, Route, Routes } from "react-router-dom";
+import { HashRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useSessionStore } from "./lib/sessionStore";
 import { useDataStore } from "./lib/dataStore";
 import { errorMessage } from "./lib/utils";
@@ -9,6 +9,8 @@ import { Home } from "./components/Home";
 import { ClassPage } from "./components/ClassPage";
 import { Modal } from "./components/Modal";
 import { Toasts } from "./components/Toasts";
+import { MutationClassPage, MutationsPage, TonicsPage } from "./components/TonicPages";
+import { useTonicStore } from "./lib/tonicStore";
 
 function AppShell() {
   const mode = useSessionStore((s) => s.mode);
@@ -32,6 +34,7 @@ function AppShell() {
   useEffect(() => {
     if (mode === "admin" || mode === "guest") {
       void useDataStore.getState().initialize();
+      void useTonicStore.getState().initialize();
     }
   }, [mode]);
 
@@ -104,8 +107,13 @@ function AppShell() {
           </div>
         ) : null}
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Navigate to="/sorts" replace />} />
+          <Route path="/sorts" element={<Home />} />
           <Route path="/classe/:classe" element={<ClassPage />} />
+          <Route path="/sorts/classe/:classe" element={<ClassPage />} />
+          <Route path="/toniques" element={<TonicsPage />} />
+          <Route path="/mutations" element={<MutationsPage />} />
+          <Route path="/mutations/:classe" element={<MutationClassPage />} />
         </Routes>
       </div>
       <Modal />

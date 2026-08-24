@@ -21,7 +21,7 @@ export function ClassPage() {
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
 
   if (!CLASSES.includes(className)) {
-    return <Navigate to="/" replace />;
+    return <Navigate to="/sorts" replace />;
   }
 
   const classSpells = spells
@@ -33,7 +33,7 @@ export function ClassPage() {
 
   return (
     <div className="class-page">
-      <a className="back-link" href="#/">
+      <a className="back-link" href="#/sorts">
         ← Toutes les classes
       </a>
       <h2 className="class-heading">

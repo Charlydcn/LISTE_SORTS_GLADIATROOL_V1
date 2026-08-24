@@ -1,0 +1,3203 @@
+{
+  "format": "gladiatrool-tonics",
+  "formatVersion": 1,
+  "items": [
+    {
+      "id": 16002,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Actio",
+      "effects": [
+        "+1 PA"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16003,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Motio",
+      "effects": [
+        "+1 PM"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16004,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Vitale",
+      "effects": [
+        "+500 Vitalité"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16005,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Terra",
+      "effects": [
+        "+150 Force"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16006,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Ignis",
+      "effects": [
+        "+150 Intelligence"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16007,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Aqua",
+      "effects": [
+        "+150 Chance"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16008,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Aer",
+      "effects": [
+        "+150 Agilité"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16009,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Criticus",
+      "effects": [
+        "+15 Coups critiques"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16010,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Fortis",
+      "effects": [
+        "+15 Dommages"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16011,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Potentia",
+      "effects": [
+        "+100 % dommages"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16012,
+      "kind": "tonique",
+      "category": "palier1",
+      "className": null,
+      "title": "Tonique Tenacitas",
+      "effects": [
+        "+10 Résistance % terre",
+        "+10 Résistance % neutre",
+        "+10 Résistance % eau",
+        "+10 Résistance % air",
+        "+10 Résistance % feu"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16013,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Actio Magnus",
+      "effects": [
+        "+2 PA",
+        "+1 Retrait PM"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16014,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Motio Magnus",
+      "effects": [
+        "+2 PM",
+        "+1 Retrait PA"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16015,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Vitale Magnus",
+      "effects": [
+        "+1000 Vitalité",
+        "-10 Faiblesse % terre",
+        "-10 Faiblesse % neutre",
+        "-10 Faiblesse % eau",
+        "-10 Faiblesse % air",
+        "-10 Faiblesse % feu"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16016,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Terra Magnus",
+      "effects": [
+        "+300 Force",
+        "-150 Agilité"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16017,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Ignis Magnus",
+      "effects": [
+        "-150 Chance",
+        "+300 Intelligence"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16018,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Aqua Magnus",
+      "effects": [
+        "-150 Intelligence",
+        "+300 Chance"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16019,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Aer Magnus",
+      "effects": [
+        "-150 Force",
+        "+300 Agilité"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16020,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Criticus Magnus",
+      "effects": [
+        "+30 Coups critiques",
+        "+100 % dommages"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16021,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Fortis Magnus",
+      "effects": [
+        "+100 % dommages",
+        "+30 Dommages"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16022,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Potentia Magnus",
+      "effects": [
+        "-15 Dommages",
+        "+200 % dommages"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16023,
+      "kind": "tonique",
+      "category": "palier2",
+      "className": null,
+      "title": "Tonique Tenacitas Magnus",
+      "effects": [
+        "+15 Résistance % terre",
+        "+15 Résistance % neutre",
+        "+15 Résistance % eau",
+        "+15 Résistance % air",
+        "+15 Résistance % feu",
+        "-500 Vitalité"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16024,
+      "kind": "tonique",
+      "category": "rarus",
+      "className": null,
+      "title": "Tonique Actio Rarus",
+      "effects": [
+        "+1 PM",
+        "+1 PA"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16025,
+      "kind": "tonique",
+      "category": "rarus",
+      "className": null,
+      "title": "Tonique Potentia Rarus",
+      "effects": [
+        "+100 % dommages",
+        "+15 Dommages"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16026,
+      "kind": "tonique",
+      "category": "rarus",
+      "className": null,
+      "title": "Tonique Vitale Rarus",
+      "effects": [
+        "+1000 Vitalité"
+      ],
+      "spellId": null
+    },
+    {
+      "id": 16027,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Armure Incandescente'",
+      "effects": [
+        "Coups critiques : +30",
+        "Portée : +4"
+      ],
+      "spellId": 1
+    },
+    {
+      "id": 16028,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Aveuglement'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Coups critiques : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 2
+    },
+    {
+      "id": 16029,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Attaque Naturelle'",
+      "effects": [
+        "Dommages : +40",
+        "Coût en PA : -1",
+        "Portée : +1"
+      ],
+      "spellId": 3
+    },
+    {
+      "id": 16030,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Renvoi de Sort'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -2"
+      ],
+      "spellId": 4
+    },
+    {
+      "id": 16031,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Trêve'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 5
+    },
+    {
+      "id": 16032,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Armure Terrestre'",
+      "effects": [
+        "Coups critiques : +30",
+        "Portée : +4"
+      ],
+      "spellId": 6
+    },
+    {
+      "id": 16033,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Bouclier Féca'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +4"
+      ],
+      "spellId": 7
+    },
+    {
+      "id": 16034,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Retour du bâton'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par cible : +2"
+      ],
+      "spellId": 8
+    },
+    {
+      "id": 16035,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Attaque Nuageuse'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Dommages : +60"
+      ],
+      "spellId": 9
+    },
+    {
+      "id": 16036,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Glyphe Enflammé'",
+      "effects": [
+        "Portée : +1",
+        "Lancer en ligne non requis",
+        "Délai de relance : -1"
+      ],
+      "spellId": 10
+    },
+    {
+      "id": 16037,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Téléportation'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 11
+    },
+    {
+      "id": 16038,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Glyphe d'Aveuglement'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 12
+    },
+    {
+      "id": 16039,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Glyphe de Silence'",
+      "effects": [
+        "Portée : +1",
+        "Lancer en ligne non requis",
+        "Délai de relance : -2"
+      ],
+      "spellId": 13
+    },
+    {
+      "id": 16040,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Armure Venteuse'",
+      "effects": [
+        "Coups critiques : +30",
+        "Portée : +4"
+      ],
+      "spellId": 14
+    },
+    {
+      "id": 16041,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Glyphe d'immobilisation'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Coût en PA : -1"
+      ],
+      "spellId": 15
+    },
+    {
+      "id": 16042,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Science du bâton'",
+      "effects": [
+        "Portée : +1",
+        "Délai de relance : -2"
+      ],
+      "spellId": 16
+    },
+    {
+      "id": 16043,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Glyphe Agressif'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 17
+    },
+    {
+      "id": 16044,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Armure Aqueuse'",
+      "effects": [
+        "Coups critiques : +30",
+        "Portée : +4"
+      ],
+      "spellId": 18
+    },
+    {
+      "id": 16045,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Bulle'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par cible : +2"
+      ],
+      "spellId": 19
+    },
+    {
+      "id": 16046,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Feca",
+      "title": "Ton. Mutatio 'Immunité'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 20
+    },
+    {
+      "id": 16047,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Griffe Spectrale'",
+      "effects": [
+        "Coups critiques : +20",
+        "Coût en PA : -1"
+      ],
+      "spellId": 21
+    },
+    {
+      "id": 16048,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Déplacement Félin'",
+      "effects": [
+        "Délai de relance : -3",
+        "Coups critiques : +20"
+      ],
+      "spellId": 22
+    },
+    {
+      "id": 16049,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Cri de l'Ours'",
+      "effects": [
+        "Coups critiques : +25",
+        "Délai de relance : -1"
+      ],
+      "spellId": 23
+    },
+    {
+      "id": 16050,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Corbeau'",
+      "effects": [
+        "Dommages : +20",
+        "Coups critiques : +25"
+      ],
+      "spellId": 24
+    },
+    {
+      "id": 16051,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Soin Animal'",
+      "effects": [
+        "Soins : +30",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 25
+    },
+    {
+      "id": 16052,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Bénédiction Animale'",
+      "effects": [
+        "Délai de relance : -3",
+        "Portée : +4"
+      ],
+      "spellId": 26
+    },
+    {
+      "id": 16053,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Piqûre Motivante'",
+      "effects": [
+        "Coups critiques : +25",
+        "Délai de relance : -2"
+      ],
+      "spellId": 27
+    },
+    {
+      "id": 16054,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Crapaud'",
+      "effects": [
+        "Coups critiques : +30",
+        "Délai de relance : -2"
+      ],
+      "spellId": 28
+    },
+    {
+      "id": 16055,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Crocs du Mulou'",
+      "effects": [
+        "Coups critiques : +25",
+        "Délai de relance : -2"
+      ],
+      "spellId": 29
+    },
+    {
+      "id": 16056,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Fouet'",
+      "effects": [
+        "Lancers par tour : +1",
+        "Lancers par cible : +2"
+      ],
+      "spellId": 30
+    },
+    {
+      "id": 16057,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Dragonnet Rouge'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +3"
+      ],
+      "spellId": 31
+    },
+    {
+      "id": 16058,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Résistance Naturelle'",
+      "effects": [
+        "Coups critiques : +25",
+        "Délai de relance : -1"
+      ],
+      "spellId": 32
+    },
+    {
+      "id": 16059,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Griffe Cinglante'",
+      "effects": [
+        "Dommages : +40",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 33
+    },
+    {
+      "id": 16060,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Tofu'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +2"
+      ],
+      "spellId": 34
+    },
+    {
+      "id": 16061,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Bouftou'",
+      "effects": [
+        "Portée : +2",
+        "Délai de relance : -1"
+      ],
+      "spellId": 35
+    },
+    {
+      "id": 16062,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Frappe du Craqueleur'",
+      "effects": [
+        "Portée : +1",
+        "Coups critiques : +30"
+      ],
+      "spellId": 36
+    },
+    {
+      "id": 16063,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Prespic'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 37
+    },
+    {
+      "id": 16064,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Sanglier'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +3"
+      ],
+      "spellId": 38
+    },
+    {
+      "id": 16065,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Bwork Mage'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +3"
+      ],
+      "spellId": 39
+    },
+    {
+      "id": 16066,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Osamodas",
+      "title": "Ton. Mutatio 'Invocation de Craqueleur'",
+      "effects": [
+        "Portée : +1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 40
+    },
+    {
+      "id": 16067,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Sac Animé'",
+      "effects": [
+        "Portée : +4",
+        "Délai de relance : -1"
+      ],
+      "spellId": 41
+    },
+    {
+      "id": 16068,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Chance'",
+      "effects": [
+        "Délai de relance : -2",
+        "Coups critiques : +30",
+        "Portée : +5"
+      ],
+      "spellId": 42
+    },
+    {
+      "id": 16069,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Lancer de Pelle'",
+      "effects": [
+        "Coups critiques : +20",
+        "Coût en PA : -1"
+      ],
+      "spellId": 43
+    },
+    {
+      "id": 16070,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Roulage de Pelle'",
+      "effects": [
+        "Coups critiques : +25",
+        "Coût en PA : -1"
+      ],
+      "spellId": 44
+    },
+    {
+      "id": 16071,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Clé Réductrice'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coups critiques : +30"
+      ],
+      "spellId": 45
+    },
+    {
+      "id": 16072,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Désinvocation'",
+      "effects": [
+        "Coups critiques : +25",
+        "Lancers par cible : +2"
+      ],
+      "spellId": 46
+    },
+    {
+      "id": 16073,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Boîte de Pandore'",
+      "effects": [
+        "Soins : +30",
+        "Délai de relance : -1"
+      ],
+      "spellId": 47
+    },
+    {
+      "id": 16074,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Remblai'",
+      "effects": [
+        "Dommages : +40",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 48
+    },
+    {
+      "id": 16075,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Pelle Fantomatique'",
+      "effects": [
+        "Dommages : +40",
+        "Coût en PA : -1"
+      ],
+      "spellId": 49
+    },
+    {
+      "id": 16076,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Maladresse'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 50
+    },
+    {
+      "id": 16077,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Lancer de Pièces'",
+      "effects": [
+        "Dommages : +20",
+        "Lancers par cible : +3"
+      ],
+      "spellId": 51
+    },
+    {
+      "id": 16078,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Cupidité'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -3"
+      ],
+      "spellId": 52
+    },
+    {
+      "id": 16079,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Force de l'Age'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 53
+    },
+    {
+      "id": 16080,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Maladresse de Masse'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -3"
+      ],
+      "spellId": 54
+    },
+    {
+      "id": 16081,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Accélération'",
+      "effects": [
+        "Coups critiques : +30",
+        "Délai de relance : -2"
+      ],
+      "spellId": 55
+    },
+    {
+      "id": 16082,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Pelle du Jugement'",
+      "effects": [
+        "Dommages : +40",
+        "Coût en PA : -1"
+      ],
+      "spellId": 56
+    },
+    {
+      "id": 16083,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Pelle Animée'",
+      "effects": [
+        "Portée : +6",
+        "Délai de relance : -1"
+      ],
+      "spellId": 57
+    },
+    {
+      "id": 16084,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Pelle Massacrante'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 58
+    },
+    {
+      "id": 16085,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Corruption'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +3"
+      ],
+      "spellId": 59
+    },
+    {
+      "id": 16086,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Enutrof",
+      "title": "Ton. Mutatio 'Coffre Animé'",
+      "effects": [
+        "Coût en PA : -2",
+        "Portée : +10",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 60
+    },
+    {
+      "id": 16087,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Sournoiserie'",
+      "effects": [
+        "Dommages : +20",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 61
+    },
+    {
+      "id": 16088,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Concentration de Chakra'",
+      "effects": [
+        "Délai de relance : -2",
+        "Portée : +4"
+      ],
+      "spellId": 62
+    },
+    {
+      "id": 16089,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Coup Sournois'",
+      "effects": [
+        "Dommages : +30",
+        "Portée : +1"
+      ],
+      "spellId": 63
+    },
+    {
+      "id": 16090,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Repérage'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 64
+    },
+    {
+      "id": 16091,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège Sournois'",
+      "effects": [
+        "Portée : +3",
+        "Coût en PA : -1"
+      ],
+      "spellId": 65
+    },
+    {
+      "id": 16092,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Poison insidieux'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 66
+    },
+    {
+      "id": 16093,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Peur'",
+      "effects": [
+        "Portée : +1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 67
+    },
+    {
+      "id": 16094,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Fourvoiement'",
+      "effects": [
+        "Coups critiques : +30",
+        "Portée : +2"
+      ],
+      "spellId": 68
+    },
+    {
+      "id": 16095,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège d'Immobilisation'",
+      "effects": [
+        "Coût en PA : -1",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 69
+    },
+    {
+      "id": 16096,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Arnaque'",
+      "effects": [
+        "Portée : +2",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 70
+    },
+    {
+      "id": 16097,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège Empoisonné'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +2"
+      ],
+      "spellId": 71
+    },
+    {
+      "id": 16098,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Invisibilité'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 72
+    },
+    {
+      "id": 16099,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège répulsif'",
+      "effects": [
+        "Coût en PA : -1",
+        "Lancers par tour : +2",
+        "Délai de relance : -1"
+      ],
+      "spellId": 73
+    },
+    {
+      "id": 16100,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Double'",
+      "effects": [
+        "Portée : +1",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 74
+    },
+    {
+      "id": 16101,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Pulsion de Chakra'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +4"
+      ],
+      "spellId": 75
+    },
+    {
+      "id": 16102,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Attaque Mortelle'",
+      "effects": [
+        "Portée : +1",
+        "Coups critiques : +25"
+      ],
+      "spellId": 76
+    },
+    {
+      "id": 16103,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège de Silence'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 77
+    },
+    {
+      "id": 16104,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Invisibilité d'Autrui'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 78
+    },
+    {
+      "id": 16105,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège de Masse'",
+      "effects": [
+        "Portée : +2",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 79
+    },
+    {
+      "id": 16106,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sram",
+      "title": "Ton. Mutatio 'Piège Mortel'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 80
+    },
+    {
+      "id": 16107,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Ralentissement'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Portée : +2"
+      ],
+      "spellId": 81
+    },
+    {
+      "id": 16108,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Contre'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +3"
+      ],
+      "spellId": 82
+    },
+    {
+      "id": 16109,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Aiguille'",
+      "effects": [
+        "Dommages : +30",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 83
+    },
+    {
+      "id": 16110,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Gelure'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Dommages : +30"
+      ],
+      "spellId": 84
+    },
+    {
+      "id": 16111,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Flou'",
+      "effects": [
+        "Coût en PA : -1",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 85
+    },
+    {
+      "id": 16112,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Aiguille Chercheuse'",
+      "effects": [
+        "Portée modifiable",
+        "Portée : +3"
+      ],
+      "spellId": 86
+    },
+    {
+      "id": 16113,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Démotivation'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Portée : +3"
+      ],
+      "spellId": 87
+    },
+    {
+      "id": 16114,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Téléportation'",
+      "effects": [
+        "Délai de relance : -5",
+        "Coût en PA : -1"
+      ],
+      "spellId": 88
+    },
+    {
+      "id": 16115,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Dévouement'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +4"
+      ],
+      "spellId": 89
+    },
+    {
+      "id": 16116,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Fuite'",
+      "effects": [
+        "Lancers par tour : +1",
+        "Portée : +1"
+      ],
+      "spellId": 90
+    },
+    {
+      "id": 16117,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Frappe de Xélor'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 91
+    },
+    {
+      "id": 16118,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Rayon Obscur'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 92
+    },
+    {
+      "id": 16119,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Flétrissement'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Dommages : +30"
+      ],
+      "spellId": 93
+    },
+    {
+      "id": 16120,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Protection Aveuglante'",
+      "effects": [
+        "Portée : +3",
+        "Délai de relance : -2"
+      ],
+      "spellId": 94
+    },
+    {
+      "id": 16121,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Horloge'",
+      "effects": [
+        "Coups critiques : +25",
+        "Portée : +2"
+      ],
+      "spellId": 95
+    },
+    {
+      "id": 16122,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Poussière Temporelle '",
+      "effects": [
+        "Coups critiques : +25",
+        "Coût en PA : -1"
+      ],
+      "spellId": 96
+    },
+    {
+      "id": 16123,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Cadran de Xélor'",
+      "effects": [
+        "Portée : +3",
+        "Délai de relance : -1"
+      ],
+      "spellId": 97
+    },
+    {
+      "id": 16124,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Vol du Temps'",
+      "effects": [
+        "Portée : +2",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 98
+    },
+    {
+      "id": 16125,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Momification'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -5"
+      ],
+      "spellId": 99
+    },
+    {
+      "id": 16126,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Xelor",
+      "title": "Ton. Mutatio 'Sablier de Xélor'",
+      "effects": [
+        "Coups critiques : +30",
+        "Dommages : +30"
+      ],
+      "spellId": 100
+    },
+    {
+      "id": 16127,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Roulette'",
+      "effects": [
+        "Délai de relance : -1",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 101
+    },
+    {
+      "id": 16128,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Pile ou Face'",
+      "effects": [
+        "Coups critiques : +25",
+        "Portée : +3",
+        "Dommages : +20"
+      ],
+      "spellId": 102
+    },
+    {
+      "id": 16129,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Chance d'Ecaflip'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -2"
+      ],
+      "spellId": 103
+    },
+    {
+      "id": 16130,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Trèfle'",
+      "effects": [
+        "Portée : +4",
+        "Délai de relance : -2"
+      ],
+      "spellId": 104
+    },
+    {
+      "id": 16131,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Bond du Félin'",
+      "effects": [
+        "Lancers par tour : +1",
+        "Portée : +1"
+      ],
+      "spellId": 105
+    },
+    {
+      "id": 16132,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Roue de la Fortune'",
+      "effects": [
+        "Portée : +4",
+        "Délai de relance : -2"
+      ],
+      "spellId": 106
+    },
+    {
+      "id": 16133,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Topkaj'",
+      "effects": [
+        "Dommages : +50",
+        "Coups critiques : +25",
+        "Portée : +1"
+      ],
+      "spellId": 107
+    },
+    {
+      "id": 16134,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Esprit Félin'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 108
+    },
+    {
+      "id": 16135,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Bluff'",
+      "effects": [
+        "Coups critiques : +25",
+        "Portée : +2"
+      ],
+      "spellId": 109
+    },
+    {
+      "id": 16136,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Griffe Joueuse'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 110
+    },
+    {
+      "id": 16137,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Contrecoup'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +4"
+      ],
+      "spellId": 111
+    },
+    {
+      "id": 16138,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Griffe de Ceangal'",
+      "effects": [
+        "Coups critiques : +20",
+        "Portée : +1"
+      ],
+      "spellId": 112
+    },
+    {
+      "id": 16139,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Perception'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 113
+    },
+    {
+      "id": 16140,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Rekop'",
+      "effects": [
+        "Dommages : +15",
+        "Portée : +2"
+      ],
+      "spellId": 114
+    },
+    {
+      "id": 16141,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Odorat'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +4"
+      ],
+      "spellId": 115
+    },
+    {
+      "id": 16142,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Langue Râpeuse '",
+      "effects": [
+        "Ligne de vue non requise",
+        "Coups critiques : +10"
+      ],
+      "spellId": 116
+    },
+    {
+      "id": 16143,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Griffe Invocatrice'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 117
+    },
+    {
+      "id": 16144,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Réflexes'",
+      "effects": [
+        "Portée : +4",
+        "Délai de relance : -2"
+      ],
+      "spellId": 118
+    },
+    {
+      "id": 16145,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Tout ou rien'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +5"
+      ],
+      "spellId": 119
+    },
+    {
+      "id": 16146,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Ecaflip",
+      "title": "Ton. Mutatio 'Destin d'Ecaflip'",
+      "effects": [
+        "Dommages : +60",
+        "Portée : +1"
+      ],
+      "spellId": 120
+    },
+    {
+      "id": 16147,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Curatif'",
+      "effects": [
+        "Coups critiques : +20",
+        "Coût en PA : -1"
+      ],
+      "spellId": 121
+    },
+    {
+      "id": 16148,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Blessant'",
+      "effects": [
+        "Dommages : +30",
+        "Coups critiques : +25"
+      ],
+      "spellId": 122
+    },
+    {
+      "id": 16149,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Drainant'",
+      "effects": [
+        "Coups critiques : +35",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 123
+    },
+    {
+      "id": 16150,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Soignant'",
+      "effects": [
+        "Soins : +15",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 124
+    },
+    {
+      "id": 16151,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Interdit'",
+      "effects": [
+        "Portée : +1",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 125
+    },
+    {
+      "id": 16152,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Stimulant'",
+      "effects": [
+        "Coups critiques : +35",
+        "Portée : +4"
+      ],
+      "spellId": 126
+    },
+    {
+      "id": 16153,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Prévention'",
+      "effects": [
+        "Portée : +2",
+        "Délai de relance : -2"
+      ],
+      "spellId": 127
+    },
+    {
+      "id": 16154,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Frayeur'",
+      "effects": [
+        "Portée : +1",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 128
+    },
+    {
+      "id": 16155,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot d'Amitié'",
+      "effects": [
+        "Portée : +2",
+        "Délai de relance : -2"
+      ],
+      "spellId": 129
+    },
+    {
+      "id": 16156,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Revitalisant'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 130
+    },
+    {
+      "id": 16157,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Régénération'",
+      "effects": [
+        "Portée : +2",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 131
+    },
+    {
+      "id": 16158,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot d'Epine'",
+      "effects": [
+        "Portée : +4",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 132
+    },
+    {
+      "id": 16159,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Jouvence'",
+      "effects": [
+        "Coût en PA : -1",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 133
+    },
+    {
+      "id": 16160,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot Vampirique'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 134
+    },
+    {
+      "id": 16161,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Sacrifice'",
+      "effects": [
+        "Soins : +50",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 135
+    },
+    {
+      "id": 16162,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot d'Immobilisation'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Délai de relance : -2"
+      ],
+      "spellId": 136
+    },
+    {
+      "id": 16163,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot d'Envol'",
+      "effects": [
+        "Portée : +4",
+        "Lancers par tour : +1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 137
+    },
+    {
+      "id": 16164,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Silence'",
+      "effects": [
+        "Portée : +2",
+        "Coût en PA : -1"
+      ],
+      "spellId": 138
+    },
+    {
+      "id": 16165,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot d'Altruisme'",
+      "effects": [
+        "Coût en PA : -1",
+        "Coups critiques : +25"
+      ],
+      "spellId": 139
+    },
+    {
+      "id": 16166,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Eniripsa",
+      "title": "Ton. Mutatio 'Mot de Reconstitution'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Délai de relance : -1"
+      ],
+      "spellId": 140
+    },
+    {
+      "id": 16167,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Pression'",
+      "effects": [
+        "Portée : +1",
+        "Dommages : +50"
+      ],
+      "spellId": 141
+    },
+    {
+      "id": 16168,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Bond'",
+      "effects": [
+        "Portée : +1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 142
+    },
+    {
+      "id": 16169,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Intimidation'",
+      "effects": [
+        "Portée : +1",
+        "Ligne de vue non requise",
+        "Dommages : +40"
+      ],
+      "spellId": 143
+    },
+    {
+      "id": 16170,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Compulsion'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +3"
+      ],
+      "spellId": 144
+    },
+    {
+      "id": 16171,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Epée Divine'",
+      "effects": [
+        "Coups critiques : +25",
+        "Portée : +3"
+      ],
+      "spellId": 145
+    },
+    {
+      "id": 16172,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Epée du destin'",
+      "effects": [
+        "Coups critiques : +25",
+        "Dommages : +40"
+      ],
+      "spellId": 146
+    },
+    {
+      "id": 16173,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Guide de Bravoure '",
+      "effects": [
+        "Délai de relance : -1",
+        "Coups critiques : +25"
+      ],
+      "spellId": 147
+    },
+    {
+      "id": 16174,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Amplification'",
+      "effects": [
+        "Portée : +3",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 148
+    },
+    {
+      "id": 16175,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Mutilation'",
+      "effects": [
+        "Coups critiques : +45",
+        "Coût en PA : -1",
+        "Lancers par tour : +2"
+      ],
+      "spellId": 149
+    },
+    {
+      "id": 16176,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Couper'",
+      "effects": [
+        "Portée : +3",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 150
+    },
+    {
+      "id": 16177,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Souffle'",
+      "effects": [
+        "Portée : +3",
+        "Délai de relance : -1"
+      ],
+      "spellId": 151
+    },
+    {
+      "id": 16178,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Epée du Jugement'",
+      "effects": [
+        "Portée modifiable",
+        "Dommages : +30"
+      ],
+      "spellId": 152
+    },
+    {
+      "id": 16179,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Puissance'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1",
+        "Portée : +2"
+      ],
+      "spellId": 153
+    },
+    {
+      "id": 16180,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Epée Destructrice'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +2"
+      ],
+      "spellId": 154
+    },
+    {
+      "id": 16181,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Vitalité'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +3"
+      ],
+      "spellId": 155
+    },
+    {
+      "id": 16182,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Tempête de Puissance'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 156
+    },
+    {
+      "id": 16183,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Epée Céleste'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Dommages : +60"
+      ],
+      "spellId": 157
+    },
+    {
+      "id": 16184,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Concentration'",
+      "effects": [
+        "Dommages : +50",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 158
+    },
+    {
+      "id": 16185,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Colère de Iop'",
+      "effects": [
+        "Coût en PA : -1",
+        "Dommages : +40"
+      ],
+      "spellId": 159
+    },
+    {
+      "id": 16186,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Iop",
+      "title": "Ton. Mutatio 'Epée de Iop'",
+      "effects": [
+        "Dommages : +60",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 160
+    },
+    {
+      "id": 16187,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Magique'",
+      "effects": [
+        "Coût en PA : -1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 161
+    },
+    {
+      "id": 16188,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Tir Critique'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coups critiques : +20"
+      ],
+      "spellId": 162
+    },
+    {
+      "id": 16189,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Glacée'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Dommages : +30"
+      ],
+      "spellId": 163
+    },
+    {
+      "id": 16190,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Empoisonnée'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 164
+    },
+    {
+      "id": 16191,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Enflammée'",
+      "effects": [
+        "Coût en PA : -1",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 165
+    },
+    {
+      "id": 16192,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Tir Puissant'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 166
+    },
+    {
+      "id": 16193,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche d'Expiation'",
+      "effects": [
+        "Coût en PA : -1",
+        "Dommages : +20"
+      ],
+      "spellId": 167
+    },
+    {
+      "id": 16194,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Oeil de Taupe'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -1"
+      ],
+      "spellId": 168
+    },
+    {
+      "id": 16195,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche de Recul'",
+      "effects": [
+        "Coût en PA : -1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 169
+    },
+    {
+      "id": 16196,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche d'Immobilisation'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Dommages : +30"
+      ],
+      "spellId": 170
+    },
+    {
+      "id": 16197,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Punitive'",
+      "effects": [
+        "Coût en PA : -1",
+        "Dommages : +20"
+      ],
+      "spellId": 171
+    },
+    {
+      "id": 16198,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Tir Eloigné'",
+      "effects": [
+        "Coût en PA : -1",
+        "Portée : +2",
+        "Délai de relance : -1"
+      ],
+      "spellId": 172
+    },
+    {
+      "id": 16199,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Harcelante'",
+      "effects": [
+        "Coût en PA : -1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 173
+    },
+    {
+      "id": 16200,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Cinglante'",
+      "effects": [
+        "Coût en PA : -1",
+        "Dommages : +30"
+      ],
+      "spellId": 174
+    },
+    {
+      "id": 16201,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Destructrice'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 175
+    },
+    {
+      "id": 16202,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Persécutrice'",
+      "effects": [
+        "Coups critiques : +30",
+        "Dommages : +30"
+      ],
+      "spellId": 176
+    },
+    {
+      "id": 16203,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Ralentissante'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Coups critiques : +30"
+      ],
+      "spellId": 177
+    },
+    {
+      "id": 16204,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Absorbante'",
+      "effects": [
+        "Coups critiques : +25",
+        "Dommages : +30"
+      ],
+      "spellId": 178
+    },
+    {
+      "id": 16205,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Flèche Explosive'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 179
+    },
+    {
+      "id": 16206,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Crâ",
+      "title": "Ton. Mutatio 'Maîtrise de l'Arc'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 180
+    },
+    {
+      "id": 16207,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Tremblement'",
+      "effects": [
+        "Portée : +3",
+        "Coups critiques : +25"
+      ],
+      "spellId": 181
+    },
+    {
+      "id": 16208,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'La Folle'",
+      "effects": [
+        "Portée : +3",
+        "Délai de relance : -1",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 182
+    },
+    {
+      "id": 16209,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Ronce'",
+      "effects": [
+        "Dommages : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 183
+    },
+    {
+      "id": 16210,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Feu de Brousse'",
+      "effects": [
+        "Dommages : +20",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 184
+    },
+    {
+      "id": 16211,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Herbe Folle'",
+      "effects": [
+        "Lancer en ligne non requis",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 185
+    },
+    {
+      "id": 16212,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Arbre'",
+      "effects": [
+        "Coût en PA : -2",
+        "Portée : +3"
+      ],
+      "spellId": 186
+    },
+    {
+      "id": 16213,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'La Surpuissante'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +3"
+      ],
+      "spellId": 187
+    },
+    {
+      "id": 16214,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Ronce Insolente'",
+      "effects": [
+        "Délai de relance : -1",
+        "Coût en PA : -1"
+      ],
+      "spellId": 188
+    },
+    {
+      "id": 16215,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'La Sacrifiée'",
+      "effects": [
+        "Portée modifiable",
+        "Portée : +3"
+      ],
+      "spellId": 189
+    },
+    {
+      "id": 16216,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'La Gonflable'",
+      "effects": [
+        "Portée : +3",
+        "Coût en PA : -1"
+      ],
+      "spellId": 190
+    },
+    {
+      "id": 16217,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Ronces Multiples'",
+      "effects": [
+        "Lancers par tour : +1",
+        "Dommages : +20"
+      ],
+      "spellId": 191
+    },
+    {
+      "id": 16218,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Ronce Apaisante'",
+      "effects": [
+        "Soins : +100",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 192
+    },
+    {
+      "id": 16219,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'La Bloqueuse'",
+      "effects": [
+        "Portée : +2",
+        "Délai de relance : -1",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 193
+    },
+    {
+      "id": 16220,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Ronces Agressives '",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 194
+    },
+    {
+      "id": 16221,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Larme'",
+      "effects": [
+        "Coups critiques : +30",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 195
+    },
+    {
+      "id": 16222,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Vent Empoisonné'",
+      "effects": [
+        "Portée : +3",
+        "Coups critiques : +25"
+      ],
+      "spellId": 196
+    },
+    {
+      "id": 16223,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Puissance Sylvestre'",
+      "effects": [
+        "Portée : +4",
+        "Délai de relance : -1"
+      ],
+      "spellId": 197
+    },
+    {
+      "id": 16224,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Sacrifice Poupesque'",
+      "effects": [
+        "Portée : +2",
+        "Lancers par tour : +1"
+      ],
+      "spellId": 198
+    },
+    {
+      "id": 16225,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Connaissance des Poupées'",
+      "effects": [
+        "Délai de relance : -3",
+        "Portée : +4"
+      ],
+      "spellId": 199
+    },
+    {
+      "id": 16226,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sadida",
+      "title": "Ton. Mutatio 'Poison Paralysant'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Coups critiques : +30"
+      ],
+      "spellId": 200
+    },
+    {
+      "id": 16227,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Châtiment Forcé'",
+      "effects": [
+        "Coût en PA : -1",
+        "Coups critiques : +15",
+        "Délai de relance : -1"
+      ],
+      "spellId": 431
+    },
+    {
+      "id": 16228,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Pied du Sacrieur'",
+      "effects": [
+        "Portée : +2",
+        "Dommages : +40"
+      ],
+      "spellId": 432
+    },
+    {
+      "id": 16229,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Châtiment Osé'",
+      "effects": [
+        "Coût en PA : -1",
+        "Coups critiques : +15",
+        "Délai de relance : -1"
+      ],
+      "spellId": 433
+    },
+    {
+      "id": 16230,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Attirance'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 434
+    },
+    {
+      "id": 16231,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Transfert de Vie'",
+      "effects": [
+        "Portée : +2",
+        "Coût en PA : -1"
+      ],
+      "spellId": 435
+    },
+    {
+      "id": 16232,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Assaut'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Portée : +2"
+      ],
+      "spellId": 436
+    },
+    {
+      "id": 16233,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Châtiment Agile'",
+      "effects": [
+        "Coût en PA : -1",
+        "Coups critiques : +15",
+        "Délai de relance : -1"
+      ],
+      "spellId": 437
+    },
+    {
+      "id": 16234,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Transposition'",
+      "effects": [
+        "Portée : +4",
+        "Délai de relance : -2"
+      ],
+      "spellId": 438
+    },
+    {
+      "id": 16235,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Dissolution'",
+      "effects": [
+        "Lancers par tour : +1",
+        "Dommages : +40"
+      ],
+      "spellId": 439
+    },
+    {
+      "id": 16236,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Sacrifice'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +2"
+      ],
+      "spellId": 440
+    },
+    {
+      "id": 16237,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Châtiment Vitalesque'",
+      "effects": [
+        "Coût en PA : -1",
+        "Coups critiques : +15",
+        "Délai de relance : -1"
+      ],
+      "spellId": 441
+    },
+    {
+      "id": 16238,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Absorption'",
+      "effects": [
+        "Portée : +2",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 442
+    },
+    {
+      "id": 16239,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Châtiment Spirituel'",
+      "effects": [
+        "Coût en PA : -1",
+        "Coups critiques : +15",
+        "Délai de relance : -1"
+      ],
+      "spellId": 443
+    },
+    {
+      "id": 16240,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Dérobade'",
+      "effects": [
+        "Portée : +3",
+        "Délai de relance : -1"
+      ],
+      "spellId": 444
+    },
+    {
+      "id": 16241,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Coopération'",
+      "effects": [
+        "Délai de relance : -1",
+        "Portée : +4"
+      ],
+      "spellId": 445
+    },
+    {
+      "id": 16242,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Punition'",
+      "effects": [
+        "Coups critiques : +30",
+        "Délai de relance : -1"
+      ],
+      "spellId": 446
+    },
+    {
+      "id": 16243,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Furie'",
+      "effects": [
+        "Portée : +1",
+        "Dommages : +30"
+      ],
+      "spellId": 447
+    },
+    {
+      "id": 16244,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Epée volante'",
+      "effects": [
+        "Délai de relance : -1",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 448
+    },
+    {
+      "id": 16245,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Détour'",
+      "effects": [
+        "Portée : +1",
+        "Lancers par tour : +2"
+      ],
+      "spellId": 449
+    },
+    {
+      "id": 16246,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Sacrieur",
+      "title": "Ton. Mutatio 'Folie sanguinaire'",
+      "effects": [
+        "Coups critiques : +30",
+        "Lancers par tour : +1",
+        "Lancers par cible : +1"
+      ],
+      "spellId": 450
+    },
+    {
+      "id": 16247,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Picole'",
+      "effects": [
+        "Coups critiques : +30"
+      ],
+      "spellId": 686
+    },
+    {
+      "id": 16248,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Poing Enflammé'",
+      "effects": [
+        "Dommages : +30",
+        "Portée : +1"
+      ],
+      "spellId": 687
+    },
+    {
+      "id": 16249,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Vulnérabilité Incandescente'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Portée : +2"
+      ],
+      "spellId": 688
+    },
+    {
+      "id": 16250,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Epouvante'",
+      "effects": [
+        "Lancers par cible : +1",
+        "Portée : +2"
+      ],
+      "spellId": 689
+    },
+    {
+      "id": 16251,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Souffle Alcoolisé'",
+      "effects": [
+        "Dommages : +20",
+        "Portée : +2"
+      ],
+      "spellId": 690
+    },
+    {
+      "id": 16252,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Vulnérabilité Aqueuse'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Portée : +2"
+      ],
+      "spellId": 691
+    },
+    {
+      "id": 16253,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Gueule de Bois'",
+      "effects": [
+        "Coups critiques : +35",
+        "Portée : +1"
+      ],
+      "spellId": 692
+    },
+    {
+      "id": 16254,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Karcham'",
+      "effects": [
+        "Portée : +1"
+      ],
+      "spellId": 693
+    },
+    {
+      "id": 16255,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Vulnérabilité Venteuse'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Portée : +2"
+      ],
+      "spellId": 694
+    },
+    {
+      "id": 16256,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Stabilisation'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Délai de relance : -1"
+      ],
+      "spellId": 695
+    },
+    {
+      "id": 16257,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Chamrak'",
+      "effects": [
+        "Portée : +1",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 696
+    },
+    {
+      "id": 16258,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Vulnérabilité Terrestre'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Portée : +2"
+      ],
+      "spellId": 697
+    },
+    {
+      "id": 16259,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Souillure'",
+      "effects": [
+        "Portée : +1",
+        "Coups critiques : +15"
+      ],
+      "spellId": 698
+    },
+    {
+      "id": 16260,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Lait de Bambou'",
+      "effects": [],
+      "spellId": null
+    },
+    {
+      "id": 16261,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Vague à Lame'",
+      "effects": [
+        "Coups critiques : +25",
+        "Dommages : +50"
+      ],
+      "spellId": 700
+    },
+    {
+      "id": 16262,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Colère de Zatoïshwan'",
+      "effects": [
+        "Coût en PA : -1",
+        "Délai de relance : -2"
+      ],
+      "spellId": 701
+    },
+    {
+      "id": 16263,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Flasque Explosive'",
+      "effects": [
+        "Coups critiques : +30",
+        "Dommages : +30"
+      ],
+      "spellId": 702
+    },
+    {
+      "id": 16264,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Pandatak'",
+      "effects": [
+        "Coups critiques : +30",
+        "Ligne de vue non requise"
+      ],
+      "spellId": 703
+    },
+    {
+      "id": 16265,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Pandanlku'",
+      "effects": [
+        "Ligne de vue non requise",
+        "Coups critiques : +30"
+      ],
+      "spellId": 704
+    },
+    {
+      "id": 16266,
+      "kind": "mutation",
+      "category": "mutation",
+      "className": "Pandawa",
+      "title": "Ton. Mutatio 'Lien Spiritueux'",
+      "effects": [
+        "Délai de relance : -3",
+        "Lancer en ligne non requis"
+      ],
+      "spellId": 705
+    }
+  ]
+}
