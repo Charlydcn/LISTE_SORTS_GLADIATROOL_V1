@@ -202,6 +202,7 @@ body {
   gap: .5rem;
   min-height: 28px;
   padding: 0 18px 6px;
+  margin-top: .5rem;
 }
 
 .common-heading .heading-actions button {
