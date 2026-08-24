@@ -84,7 +84,6 @@ const TONIC_STAT_ICONS: Array<{ pattern: RegExp; file: string; label: string }> 
   { pattern: /Intelligence/i, file: "FireDamage.svg", label: "Intelligence" },
   { pattern: /Chance/i, file: "WaterDamage.svg", label: "Chance" },
   { pattern: /Agilité/i, file: "AirDamage.svg", label: "Agilité" },
-  { pattern: /Dommages?/i, file: "NeutralDamage.svg", label: "Dommages neutres" },
 ];
 
 export function TonicEffectIcon({ text }: { text: string }) {
