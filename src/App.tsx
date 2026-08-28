@@ -11,6 +11,7 @@ import { Modal } from "./components/Modal";
 import { Toasts } from "./components/Toasts";
 import { MutationClassPage, MutationsPage, TonicsPage } from "./components/TonicPages";
 import { useTonicStore } from "./lib/tonicStore";
+import { FloorBonusesPage } from "./components/FloorBonusesPage";
 
 function AppShell() {
   const mode = useSessionStore((s) => s.mode);
@@ -115,6 +116,7 @@ function AppShell() {
           <Route path="/toniques" element={<TonicsPage />} />
           <Route path="/mutations" element={<MutationsPage />} />
           <Route path="/mutations/:classe" element={<MutationClassPage />} />
+          <Route path="/bonus-etage" element={<FloorBonusesPage />} />
         </Routes>
       </div>
       <Modal />

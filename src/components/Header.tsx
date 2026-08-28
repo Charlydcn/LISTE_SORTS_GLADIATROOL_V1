@@ -51,6 +51,7 @@ export function Header() {
           <NavLink to="/sorts">Sorts</NavLink>
           <NavLink to="/toniques">Toniques</NavLink>
           <NavLink to="/mutations">Mutations</NavLink>
+          <NavLink to="/bonus-etage">Bonus d’étage</NavLink>
         </div>
       </nav>
       <nav className="app-toolbar" aria-label="Actions de session">
