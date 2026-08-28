@@ -1861,7 +1861,7 @@ body.modal-open {
 
 .floor-bonuses-row {
   display: grid;
-  grid-template-columns: 90px minmax(0, 1fr) minmax(0, 1fr);
+  grid-template-columns: 90px minmax(0, 1fr);
   gap: 18px;
   padding: 16px 18px;
   border-top: 1px solid rgba(231, 227, 205, .12);
@@ -1871,13 +1871,13 @@ body.modal-open {
 .floor-bonuses-row:nth-child(odd) { background: rgba(255, 255, 255, .025); }
 .floor-bonuses-header { border-top: 0; background: rgba(190, 151, 72, .16) !important; color: #f1e0a5; font-weight: 700; }
 .floor-bonuses-row strong { color: var(--gold); font-size: 20px; }
-.floor-bonuses-row ul { margin: 0; padding-left: 18px; columns: 2; }
-.floor-bonuses-row li { margin: 0 0 4px; break-inside: avoid; }
+.floor-bonuses-row ul { margin: 0; padding: 0; columns: 2; list-style: none; }
+.floor-bonuses-row li { display: flex; align-items: center; gap: 7px; margin: 0 0 6px; break-inside: avoid; }
+.floor-bonuses-row .element { width: 18px; height: 18px; object-fit: contain; flex: 0 0 auto; }
+.floor-bonuses-row em { color: #c7c0a4; font-style: normal; }
 
 @media (max-width: 760px) {
   .floor-bonuses-row { grid-template-columns: 54px 1fr; gap: 12px; }
-  .floor-bonuses-header span:last-child { display: none; }
-  .floor-bonuses-row ul:last-child { grid-column: 2; }
   .floor-bonuses-row ul { columns: 1; }
 }
 

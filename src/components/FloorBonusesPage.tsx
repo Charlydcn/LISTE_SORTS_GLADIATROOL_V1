@@ -1,3 +1,5 @@
+import { TonicEffectIcon } from "./icons";
+
 type Bonus = { label: string; value: number };
 
 const STANDARD_BONUSES: Bonus[] = [
@@ -8,7 +10,7 @@ const STANDARD_BONUSES: Bonus[] = [
   { label: "Chance", value: 50 },
   { label: "Agilité", value: 50 },
   { label: "Dommages", value: 3 },
-  { label: "Dommages en pourcentage", value: 30 },
+  { label: "% Dommages", value: 30 },
   { label: "Soins", value: 5 },
   { label: "Coups critiques", value: 3 },
   { label: "Résistance Terre (%)", value: 1 },
@@ -21,12 +23,8 @@ const STANDARD_BONUSES: Bonus[] = [
 const EXTRA_BONUSES: Record<number, Bonus[]> = {
   6: [{ label: "PA", value: 1 }],
   8: [{ label: "PA", value: 1 }, { label: "PM", value: 1 }],
-  10: [{ label: "Dommages finaux", value: 100 }, { label: "PA", value: 1 }, { label: "PM", value: 1 }],
+  10: [{ label: "% Dommages finaux", value: 100 }, { label: "PA", value: 1 }, { label: "PM", value: 1 }],
 };
-
-function formatBonus(bonus: Bonus, total: number) {
-  return `${bonus.label} +${total}`;
-}
 
 export function FloorBonusesPage() {
   const totals = new Map<string, number>();
@@ -52,14 +50,19 @@ export function FloorBonusesPage() {
       <div className="floor-bonuses-table" role="table" aria-label="Bonus passifs par étage">
         <div className="floor-bonuses-row floor-bonuses-header" role="row">
           <span role="columnheader">Étage</span>
-          <span role="columnheader">Gain à l’étage</span>
-          <span role="columnheader">Total cumulé</span>
+          <span role="columnheader">Gains passifs</span>
         </div>
         {floors.map(({ floor, bonuses, totals: floorTotals }) => (
           <div className="floor-bonuses-row" role="row" key={floor}>
             <strong role="cell">{floor}</strong>
-            <ul role="cell">{bonuses.map((bonus) => <li key={bonus.label}>{formatBonus(bonus, bonus.value)}</li>)}</ul>
-            <ul role="cell">{floorTotals.map((bonus) => <li key={bonus.label}>{formatBonus(bonus, bonus.value)}</li>)}</ul>
+            <ul role="cell">
+              {bonuses.map((bonus, index) => (
+                <li key={bonus.label}>
+                  <TonicEffectIcon text={bonus.label} />
+                  <span>{bonus.label} +{bonus.value} <em>(Total : {floorTotals[index].value})</em></span>
+                </li>
+              ))}
+            </ul>
           </div>
         ))}
       </div>
