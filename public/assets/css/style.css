@@ -1876,6 +1876,48 @@ body.modal-open {
 .floor-bonuses-row .element { width: 18px; height: 18px; object-fit: contain; flex: 0 0 auto; }
 .floor-bonuses-row em { color: #c7c0a4; font-style: normal; }
 
+.monsters-table-wrapper {
+  max-width: 1240px;
+  margin: 0 auto 50px;
+  overflow-x: auto;
+  border: 1px solid rgba(231, 227, 205, .2);
+  border-radius: 8px;
+}
+
+.monsters-table {
+  width: 100%;
+  border-collapse: collapse;
+  color: #e7e1c8;
+}
+
+.monsters-table th,
+.monsters-table td {
+  padding: 12px 18px;
+  text-align: left;
+  border-top: 1px solid rgba(231, 227, 205, .12);
+}
+
+.monsters-table thead th {
+  border-top: 0;
+  background: rgba(190, 151, 72, .16);
+}
+
+.monsters-table th button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  color: #f1e0a5;
+  font: inherit;
+  font-weight: 700;
+  cursor: pointer;
+}
+
+.monsters-table th button:hover { color: #fff5d5; }
+.monsters-table tbody tr:nth-child(even) { background: rgba(255, 255, 255, .025); }
+.monsters-table td:first-child { width: 65%; }
+.monsters-table td a { color: #e7c77f; }
+.monsters-table td a:hover { color: #fff5d5; }
+
 @media (max-width: 760px) {
   .floor-bonuses-row { grid-template-columns: 54px 1fr; gap: 12px; }
   .floor-bonuses-row ul { columns: 1; }

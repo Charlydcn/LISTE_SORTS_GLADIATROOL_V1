@@ -52,6 +52,7 @@ export function Header() {
           <NavLink to="/toniques">Toniques</NavLink>
           <NavLink to="/mutations">Mutations</NavLink>
           <NavLink to="/bonus-etage">Bonus d’étage</NavLink>
+          <NavLink to="/monstres">Monstres</NavLink>
         </div>
       </nav>
       <nav className="app-toolbar" aria-label="Actions de session">

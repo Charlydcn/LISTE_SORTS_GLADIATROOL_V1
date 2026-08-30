@@ -1,0 +1,3992 @@
+[
+  {
+    "monster_id": "2319",
+    "nom": "Chafemal le Bagarreur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2439",
+    "nom": "Crolnareff l'Exil",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2385",
+    "nom": "Abrakadnuzar",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2415",
+    "nom": "Bulsavon le Gonfl",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2350",
+    "nom": "Radoutable le Craint",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2276",
+    "nom": "Ribibi le Cher",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2285",
+    "nom": "Scorpitène l'Enflammé",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2311",
+    "nom": "Arabord la Cruche",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2392",
+    "nom": "Arakozette l'Intrépide",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2416",
+    "nom": "Bworkasse le Dégoutant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2498",
+    "nom": "Grandilok le Clameur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2308",
+    "nom": "Wokènrôl le Danseur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2573",
+    "nom": "Koktèle le Secoué",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "44",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2339",
+    "nom": "Picht le Brioch",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "45",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2299",
+    "nom": "Tronkoneuz la Tranchante",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "45",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2559",
+    "nom": "Cruskof le Rustre",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2560",
+    "nom": "Crusmeyer le Pervers",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2558",
+    "nom": "Crustensyl le Pragmatique",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2557",
+    "nom": "Crustterus l'Organique",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2384",
+    "nom": "Aboudbra le Porteur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2391",
+    "nom": "Ameur la Laide",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2433",
+    "nom": "Codenlgaz le Problème",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2493",
+    "nom": "Ginsenk le Stimulant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2508",
+    "nom": "Kiroyal le Sirupeux",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2525",
+    "nom": "Let le Rond",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2539",
+    "nom": "Nelvin le Boulet",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2540",
+    "nom": "Nipulnislip l'Exhibitionniste",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2585",
+    "nom": "Osuxion le Vampirique",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2289",
+    "nom": "Susbewl l'Hypocrite",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "47",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2320",
+    "nom": "Chafmarcel le Fêtard",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2322",
+    "nom": "Chalan le Commerçant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2423",
+    "nom": "Chamitant le Dillettante",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2442",
+    "nom": "Doktopuss le Maléfique",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2328",
+    "nom": "Forboyar l'Enigmatique",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2568",
+    "nom": "Germinol l'Indigent",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2517",
+    "nom": "Koalastrof la Naturelle",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2575",
+    "nom": "Ouashouash l'Exubérant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2524",
+    "nom": "Ouassébo l'Esthète",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2616",
+    "nom": "Ouature la Mobile",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2279",
+    "nom": "Sampi l'Eternel",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2389",
+    "nom": "Abrakildas le Vénérable",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "49",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2420",
+    "nom": "Cavordemal le Sorcier",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "50",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2438",
+    "nom": "Cramikaz le Suicidaire",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2505",
+    "nom": "Kannémik le Maigre",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2502",
+    "nom": "Kannibal le Lecteur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2506",
+    "nom": "Kannisterik le Forcen",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2507",
+    "nom": "Kapota la Fraise",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2592",
+    "nom": "Pandimaensh l'Animateur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2422",
+    "nom": "Chafrit le Barbare",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "52",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2556",
+    "nom": "Craquetou le Fissur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "52",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2593",
+    "nom": "Pandimy le Contagieux",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "52",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2359",
+    "nom": "Maître Onom le Régulier",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "54",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2589",
+    "nom": "Ougaould le Parasite",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "57",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2455",
+    "nom": "Dragalgan l'Effervescent",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2459",
+    "nom": "Dragioli le Succulent",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2451",
+    "nom": "Dragsta le Détendu",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2369",
+    "nom": "Dragstik le Frustre",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2367",
+    "nom": "Dragstore le Généraliste",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2453",
+    "nom": "Dragtopaile l'Excavateur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2368",
+    "nom": "Dragtula l'Ancien",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2457",
+    "nom": "Dragybuss le Sucr",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2527",
+    "nom": "Léopolnor le Barde",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2273",
+    "nom": "Ratlbol l'Aigri",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2287",
+    "nom": "Serpistule le Purulent",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2561",
+    "nom": "Crathdogue le Cruel",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2482",
+    "nom": "Fossamoel le Juteux",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2572",
+    "nom": "Kilimanj'haro le Grimpeur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2598",
+    "nom": "Pangraive le Militant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2547",
+    "nom": "Toufou le Ben",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2386",
+    "nom": "Abraklette le Fondant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2429",
+    "nom": "Koamag'oel le Défiguré",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2577",
+    "nom": "Meuroup le Prêtre",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2464",
+    "nom": "Dragdikal le Décisif",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2452",
+    "nom": "Dragobert le Monarque",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2398",
+    "nom": "Bambono le Divin",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "97",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2519",
+    "nom": "Koalvissie le Chauve",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "97",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2550",
+    "nom": "Brouste l'Humiliant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2514",
+    "nom": "Koalaboi le Calorifère",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2528",
+    "nom": "Mamakomou l'âge",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2534",
+    "nom": "Momikonos la Bandelette",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2562",
+    "nom": "Diskord le Belliqueux",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "99",
+    "etages_eligibles": "7",
+    "maps_eligibles": "15048",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2360",
+    "nom": "Ecorfé la Vive",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "101",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2363",
+    "nom": "Bouliver le Géant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "107",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2278",
+    "nom": "Soryonara le Poli",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "107",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2460",
+    "nom": "Drageaufol la Joyeuse",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2454",
+    "nom": "Dragminster le Magicien",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2456",
+    "nom": "Dragtarus le Bellâtre",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2458",
+    "nom": "Draquetteur le Voleur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2565",
+    "nom": "Floanna la Blonde",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "109",
+    "etages_eligibles": "7,8",
+    "maps_eligibles": "15048,15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2526",
+    "nom": "Mahoku le Bott",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "110",
+    "etages_eligibles": "8",
+    "maps_eligibles": "15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2307",
+    "nom": "Wara l'Amer",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "110",
+    "etages_eligibles": "8",
+    "maps_eligibles": "15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2566",
+    "nom": "Gastroth la Contagieuse",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "111",
+    "etages_eligibles": "8",
+    "maps_eligibles": "15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2512",
+    "nom": "Kitsoufre l'Explosif",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "111",
+    "etages_eligibles": "8",
+    "maps_eligibles": "15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2546",
+    "nom": "Bitoven le Musicien",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "113",
+    "etages_eligibles": "8",
+    "maps_eligibles": "15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2569",
+    "nom": "Guerumoth le Collant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "119",
+    "etages_eligibles": "8",
+    "maps_eligibles": "15056",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2462",
+    "nom": "Drakolage le Tentateur",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2567",
+    "nom": "Faufoll la Joyeuse",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2531",
+    "nom": "Maître Koantik le Théoricien",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2361",
+    "nom": "Tourbiket le Virevoletant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "121",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2383",
+    "nom": "Poolopo la Traditionnelle",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "124",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2544",
+    "nom": "Abrakine le Sombre",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "125",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2300",
+    "nom": "Trooyé l'Oxydé",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "125",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2587",
+    "nom": "Seripoth l'Ennemi",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "130",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2570",
+    "nom": "Kaskapointhe la Couverte",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "132",
+    "etages_eligibles": "9",
+    "maps_eligibles": "15064",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2382",
+    "nom": "Toutouf le Velu",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "143",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2578",
+    "nom": "Don Kizoth l'Obstin",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "148",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2381",
+    "nom": "Abrinos le Clair",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "152",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2553",
+    "nom": "Chamilero le Malchanceux",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "169",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2303",
+    "nom": "YokaiKoral le Duel",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "170",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2370",
+    "nom": "Fansissla l'âne",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "180",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2469",
+    "nom": "Fanstatik l'Etonnant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "180",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2601",
+    "nom": "Tromplamor le Survivant",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "181",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "2552",
+    "nom": "Chamoute le Duveteux",
+    "categorie_gladiatrool": "ARCHIMONSTRE",
+    "niveau_grade_5": "190",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Archimonstre",
+    "source_categorie": "type_78"
+  },
+  {
+    "monster_id": "669",
+    "nom": "Craqueleur Légendaire",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "140",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Montagne",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "107",
+    "nom": "Dark Vlad",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "140",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Nuit",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "940",
+    "nom": "Rat Blanc",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "140",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Ville",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "939",
+    "nom": "Rat Noir",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "140",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Ville",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "568",
+    "nom": "Tanukouï San",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "140",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Pandala",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1188",
+    "nom": "Blop Multicolore Royal",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "170",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Plaine",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1027",
+    "nom": "Corailleur Magistral",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "170",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "86",
+    "nom": "Gelé e Royale Fraise",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "170",
+    "etages_eligibles": "5,6,7,8",
+    "maps_eligibles": "15032,15040,15048,15056",
+    "type_libelle": "Foret",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1051",
+    "nom": "Gourlo le Terrible",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "190",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "232",
+    "nom": "Meulou",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "198",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Foret",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "251",
+    "nom": "Crocoburio",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "200",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Marecage",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "289",
+    "nom": "Maître Corbac",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "200",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Plaine",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "226",
+    "nom": "Moon",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "200",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "180",
+    "nom": "Wa Wabbit",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "200",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Ile Wabbit",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "670",
+    "nom": "Koulosse",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "220",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "780",
+    "nom": "Skeunk",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "220",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "173",
+    "nom": "Abraknyde Ancestral",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Foret",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "612",
+    "nom": "Maître Pandore",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Pandala",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1087",
+    "nom": "Tynril Ahuri",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1072",
+    "nom": "Tynril Consterné",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1085",
+    "nom": "Tynril Déconcert",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1086",
+    "nom": "Tynril Perfide",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "430",
+    "nom": "Gelée Royale Citron",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "280",
+    "etages_eligibles": "8,9",
+    "maps_eligibles": "15056,15064",
+    "type_libelle": "Foret",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "478",
+    "nom": "Bworker",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "440",
+    "etages_eligibles": "9,10",
+    "maps_eligibles": "15064,15072",
+    "type_libelle": "Montagne",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "827",
+    "nom": "Minotot",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "440",
+    "etages_eligibles": "9,10",
+    "maps_eligibles": "15064,15072",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1071",
+    "nom": "Silf le Rasboul Majeur",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "440",
+    "etages_eligibles": "9,10",
+    "maps_eligibles": "15064,15072",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "943",
+    "nom": "Sphincter Cell",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "440",
+    "etages_eligibles": "9,10",
+    "maps_eligibles": "15064,15072",
+    "type_libelle": "Ville",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "854",
+    "nom": "Crocabulia",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "480",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Foret",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "605",
+    "nom": "Péki Péki",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "840",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "257",
+    "nom": "Chêne Mou",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "920",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Foret",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "866",
+    "nom": "Grasmera",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "920",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Divers",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "865",
+    "nom": "Grozilla",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "920",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Divers",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1045",
+    "nom": "Kimbo",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "990",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "1195",
+    "nom": "Qu'Tan",
+    "categorie_gladiatrool": "BOSS",
+    "niveau_grade_5": "999",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Divers",
+    "source_categorie": "BOSS_ID"
+  },
+  {
+    "monster_id": "54",
+    "nom": "Chafer",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "261",
+    "nom": "Crocodaille",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Marecage",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "269",
+    "nom": "Kwakere de Flamme",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "271",
+    "nom": "Kwakere de Glace",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "270",
+    "nom": "Kwakere de Terre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "272",
+    "nom": "Kwakere de Vent",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "40",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "650",
+    "nom": "Abrakne",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "518",
+    "nom": "Bulbuisson",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "465",
+    "nom": "Rat d'Egoutant malade",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "108",
+    "nom": "Rib",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "298",
+    "nom": "Scorbute",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "42",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Landes",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "520",
+    "nom": "Araknawa",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "259",
+    "nom": "Arakne Majeure",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "876",
+    "nom": "Bwork",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2664",
+    "nom": "Bwork en fuite",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "99",
+    "nom": "Grand Pa Wabbit",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Wabbit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "413",
+    "nom": "Larve Rubis",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "43",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "209",
+    "nom": "Kokoko",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "44",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "924",
+    "nom": "Pichon Kloune",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "45",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Plages",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "256",
+    "nom": "Tronknyde",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "45",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1060",
+    "nom": "Crustorail Kouraçao",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1061",
+    "nom": "Crustorail Malibout",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1063",
+    "nom": "Crustorail Morito",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1062",
+    "nom": "Crustorail Passaoh",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "46",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "917",
+    "nom": "Araknotron",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "990",
+    "nom": "Araknotron Irascible",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "671",
+    "nom": "Bouftou des Cavernes",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "447",
+    "nom": "Chaman d'Egoutant",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "818",
+    "nom": "Corbac Apprivois",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "747",
+    "nom": "DoK Alako",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "119",
+    "nom": "Forgeron Sombre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "668",
+    "nom": "Gamino",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "748",
+    "nom": "Koalak Immature",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "496",
+    "nom": "Le Ouassingue",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1096",
+    "nom": "Le Ouassingue Entourb",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1011",
+    "nom": "Maman Tofu obèse",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "674",
+    "nom": "Poupée Emeraude",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "297",
+    "nom": "Sanglier Des Plaines",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "795",
+    "nom": "Scarafeuille Noir",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "48",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "989",
+    "nom": "Abraknyde Irascible",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "49",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "254",
+    "nom": "Abraknyde Vénérable",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "49",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "429",
+    "nom": "Gelée Citron",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "49",
+    "etages_eligibles": "1",
+    "maps_eligibles": "15000",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "343",
+    "nom": "Cavalier Porkass",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "50",
+    "etages_eligibles": "1,2",
+    "maps_eligibles": "15000,15008",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "483",
+    "nom": "Craqueboule",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "50",
+    "etages_eligibles": "1,2",
+    "maps_eligibles": "15000,15008",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2788",
+    "nom": "Tofu Très Maléfique",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "50",
+    "etages_eligibles": "1,2",
+    "maps_eligibles": "15000,15008",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "293",
+    "nom": "Craqueleur des plaines",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "211",
+    "nom": "Kanniboul Archer",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "213",
+    "nom": "Kanniboul Jav",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "214",
+    "nom": "Kanniboul Sarbak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "212",
+    "nom": "Kanniboul Thierry",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "826",
+    "nom": "Kirboule l'Erod",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "517",
+    "nom": "Pandit",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "51",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1026",
+    "nom": "Craqueboule Poli",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "52",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "566",
+    "nom": "Pandikaze",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "52",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "578",
+    "nom": "Pandikaze aérien",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "53",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "181",
+    "nom": "Wobot",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "53",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Wabbit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "371",
+    "nom": "Maître Bolet",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "54",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "579",
+    "nom": "Pandikaze vertige",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "55",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "301",
+    "nom": "Ouginak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "57",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Landes",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "672",
+    "nom": "Boufcoul",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "90",
+    "nom": "DragOeuf Blanc immature",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "170",
+    "nom": "DragOeuf de Saphir immature",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "75",
+    "nom": "DragOeuf Doré immature",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "82",
+    "nom": "DragOeuf Noir immature",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "885",
+    "nom": "Dragoss Blanc",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "884",
+    "nom": "Dragoss de Saphir",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "886",
+    "nom": "Dragoss Doré",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "848",
+    "nom": "Dragoss Noir",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "535",
+    "nom": "Léopardo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "442",
+    "nom": "Rat d'Egoutant",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "829",
+    "nom": "Serpiplume",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "808",
+    "nom": "Tofu Ventripotent",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "58",
+    "etages_eligibles": "2",
+    "maps_eligibles": "15008",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1182",
+    "nom": "Blopignon",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1022",
+    "nom": "Corailleur",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1065",
+    "nom": "Palmifleur Malibout",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1067",
+    "nom": "Palmifleur Morito",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1066",
+    "nom": "Palmifleur Passaoh",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2790",
+    "nom": "Pioussère",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2791",
+    "nom": "Sousouris Agressive",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1183",
+    "nom": "Tronkoblop",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "60",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "531",
+    "nom": "Kitsou Nae",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "61",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "547",
+    "nom": "Pandalette Ivre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "66",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "522",
+    "nom": "Cooleuvre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "67",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "819",
+    "nom": "Buveur",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "828",
+    "nom": "Dégelé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "600",
+    "nom": "Don Duss Ang",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "76",
+    "nom": "DragOeuf Blanc",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "88",
+    "nom": "DragOeuf de Saphir",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "87",
+    "nom": "DragOeuf Doré",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "89",
+    "nom": "DragOeuf Noir",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "752",
+    "nom": "Koalak Coco",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "753",
+    "nom": "Koalak Griotte",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "751",
+    "nom": "Koalak Indigo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "754",
+    "nom": "Koalak Reinette",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "449",
+    "nom": "Rat d'Hyoactif",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "820",
+    "nom": "Renarbo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "68",
+    "etages_eligibles": "2,3",
+    "maps_eligibles": "15008,15016",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1181",
+    "nom": "Gloutoblop",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "70",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1064",
+    "nom": "Palmifleur Kouraçao",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "70",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1013",
+    "nom": "Papa Tofu obèse",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "70",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "804",
+    "nom": "Tofoune",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "70",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1012",
+    "nom": "Tofu obèse Gavé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "70",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "601",
+    "nom": "Don Dorgan",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "72",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "932",
+    "nom": "Fantôme Apero",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "73",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "380",
+    "nom": "Fantôme Arepo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "73",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1076",
+    "nom": "Chiendent",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "74",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "231",
+    "nom": "Canon Dorf",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "75",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "229",
+    "nom": "Nakunbra",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "75",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "249",
+    "nom": "Oni",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "75",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1050",
+    "nom": "Le Flib",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "76",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "263",
+    "nom": "Chef Crocodaille",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "77",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Marecage",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "93",
+    "nom": "DragOeuf Blanc éveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "95",
+    "nom": "DragOeuf de Saphir éveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "94",
+    "nom": "DragOeuf Doré éveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "91",
+    "nom": "DragOeuf Noir éveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "855",
+    "nom": "Dragueuse",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "749",
+    "nom": "Guerrier Koalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1068",
+    "nom": "Mufafah",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1074",
+    "nom": "Nerbe",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "581",
+    "nom": "Pandulkaze",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "78",
+    "etages_eligibles": "3",
+    "maps_eligibles": "15016",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1049",
+    "nom": "Barbroussa",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "590",
+    "nom": "Fantôme Tanuki Chan",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "594",
+    "nom": "Fantôme Tanuki Chan",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "595",
+    "nom": "Fantôme Tanuki Chan",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "596",
+    "nom": "Fantôme Tanuki Chan",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "598",
+    "nom": "Fantôme Tanuki Chan",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "287",
+    "nom": "Kanigrou",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "102",
+    "nom": "Mulou",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "552",
+    "nom": "Musha L'Oni",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "534",
+    "nom": "Pandawa Ivre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1048",
+    "nom": "Sparo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "182",
+    "nom": "Wabbit Gm",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "80",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Ile Wabbit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "530",
+    "nom": "Kitsou Nere",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "81",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "746",
+    "nom": "Warko Marron",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "82",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "519",
+    "nom": "Bulbig",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "83",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "253",
+    "nom": "Abraknyde Sombre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "84",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "991",
+    "nom": "Abraknyde Sombre Irascible",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "84",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "525",
+    "nom": "Braconnier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "85",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "580",
+    "nom": "Pandikwakaze",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "85",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "216",
+    "nom": "Gloutovore",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "88",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "824",
+    "nom": "Horace le Corbac Apprivois",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "88",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "785",
+    "nom": "Koalak Forestier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "88",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "786",
+    "nom": "Pékeualak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "88",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "784",
+    "nom": "Piralak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "88",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "791",
+    "nom": "Trooll Apprivois",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "88",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1069",
+    "nom": "Kido",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "89",
+    "etages_eligibles": "4",
+    "maps_eligibles": "15024",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1019",
+    "nom": "Bitouf des Plaines",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1025",
+    "nom": "Craqueleur Poli",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "761",
+    "nom": "Fossoyeur Koalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1070",
+    "nom": "Kilibriss",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "549",
+    "nom": "Pandule",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "807",
+    "nom": "Tofuzmo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "90",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "651",
+    "nom": "Abrakne Sombre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "992",
+    "nom": "Abrakne Sombre Irascible",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "759",
+    "nom": "Chevaucheur Koalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "666",
+    "nom": "Dragodinde Dorée Sauvage",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1046",
+    "nom": "Meupette",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "92",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "894",
+    "nom": "Aerohouctor le Guerrier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "895",
+    "nom": "Aquabralak le Guerrier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "291",
+    "nom": "Chafer Archer",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "290",
+    "nom": "Chafer Lancier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "853",
+    "nom": "Dragoeuf Guerrier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "862",
+    "nom": "Dragoeuf Volant",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "893",
+    "nom": "Ignelicrobur le Guerrier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "495",
+    "nom": "La Ouassingue",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "521",
+    "nom": "Micromata",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "892",
+    "nom": "Terrakoubiak le Guerrier",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "96",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "546",
+    "nom": "Bambouto Sacr",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "97",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "744",
+    "nom": "Koalak Sanguin",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "97",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1073",
+    "nom": "Brouture",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "825",
+    "nom": "Kapotie le Buveur",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "756",
+    "nom": "Koalak Farouche",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "479",
+    "nom": "Mama Bwork",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "755",
+    "nom": "Mama Koalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "760",
+    "nom": "Momie Koalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "823",
+    "nom": "Rono le Renarbo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "98",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Plaine",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1055",
+    "nom": "Disciple Zoth",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "99",
+    "etages_eligibles": "4,5",
+    "maps_eligibles": "15024,15032",
+    "type_libelle": "Canopee embrumee",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "607",
+    "nom": "Guerrier Pandikaze",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "100",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "941",
+    "nom": "Rat Bajoie",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "100",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "938",
+    "nom": "Rat Basher",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "100",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "936",
+    "nom": "Rat Batteur",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "100",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "937",
+    "nom": "Rat Klure",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "100",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "599",
+    "nom": "Zilla",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "100",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1075",
+    "nom": "Fécorce",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "101",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "292",
+    "nom": "Chafer d'élite",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "104",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1059",
+    "nom": "Bourbassingue",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "107",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "528",
+    "nom": "Soryo Firefoux",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "107",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "878",
+    "nom": "Dragoss Blanc Eveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "905",
+    "nom": "Dragoss de Saphir Eveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "879",
+    "nom": "Dragoss Doré Eveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "858",
+    "nom": "Dragoss Noir Eveillé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "805",
+    "nom": "Tofu Mutant",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "108",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1029",
+    "nom": "Floribonde",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "109",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "529",
+    "nom": "Maho Firefoux",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "110",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "942",
+    "nom": "Rat Croc",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "110",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "935",
+    "nom": "Rat de Marais",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "110",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ville",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "745",
+    "nom": "Warko Violet",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "110",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1053",
+    "nom": "Gamine Zoth",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "111",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Canopee embrumee",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "532",
+    "nom": "Kitsou Nufeu",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "111",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1041",
+    "nom": "Bitouf Sombre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "113",
+    "etages_eligibles": "5",
+    "maps_eligibles": "15032",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "904",
+    "nom": "Aerotrugobur le Malveillant",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "118",
+    "etages_eligibles": "5,6",
+    "maps_eligibles": "15032,15040",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "877",
+    "nom": "Aqualikros l'Impitoyable",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "118",
+    "etages_eligibles": "5,6",
+    "maps_eligibles": "15032,15040",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "902",
+    "nom": "Ignerkocropos l'Affamé",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "118",
+    "etages_eligibles": "5,6",
+    "maps_eligibles": "15032,15040",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "903",
+    "nom": "Terraburkal le Perfide",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "118",
+    "etages_eligibles": "5,6",
+    "maps_eligibles": "15032,15040",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1054",
+    "nom": "Guerrier Zoth",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "119",
+    "etages_eligibles": "5,6",
+    "maps_eligibles": "15032,15040",
+    "type_libelle": "Canopee embrumee",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1178",
+    "nom": "Champa Explosif",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "832",
+    "nom": "Déminoboule",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "681",
+    "nom": "Diamantine",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "763",
+    "nom": "Drakoalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "673",
+    "nom": "Emeraude",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "789",
+    "nom": "Fantôme d'Aventurier Arepo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "790",
+    "nom": "Fantôme d'Aventurier Brave",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "783",
+    "nom": "Fauchalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "758",
+    "nom": "Maître Koalak",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "831",
+    "nom": "Mominotor",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "677",
+    "nom": "Rubise",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "675",
+    "nom": "Saphira",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "120",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Village eleveur",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1058",
+    "nom": "Tourbassingue",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "121",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1043",
+    "nom": "Poolay",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "124",
+    "etages_eligibles": "6,7",
+    "maps_eligibles": "15040,15048",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1077",
+    "nom": "Abrakleur Sombre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "125",
+    "etages_eligibles": "6,7,8",
+    "maps_eligibles": "15040,15048,15056",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2611",
+    "nom": "Minotoror",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "125",
+    "etages_eligibles": "6,7,8",
+    "maps_eligibles": "15040,15048,15056",
+    "type_libelle": "Ile Minotoror",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "233",
+    "nom": "Trooll",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "125",
+    "etages_eligibles": "6,7,8",
+    "maps_eligibles": "15040,15048,15056",
+    "type_libelle": "Foret",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1056",
+    "nom": "Sergent Zoth",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "130",
+    "etages_eligibles": "6,7,8,9",
+    "maps_eligibles": "15040,15048,15056,15064",
+    "type_libelle": "Canopee embrumee",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1044",
+    "nom": "Kaskargo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "132",
+    "etages_eligibles": "6,7,8,9",
+    "maps_eligibles": "15040,15048,15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "486",
+    "nom": "Bwork Elémental d'Air",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "133",
+    "etages_eligibles": "6,7,8,9",
+    "maps_eligibles": "15040,15048,15056,15064",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "485",
+    "nom": "Bwork Elémental d'Eau",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "133",
+    "etages_eligibles": "6,7,8,9",
+    "maps_eligibles": "15040,15048,15056,15064",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "484",
+    "nom": "Bwork Elémental de Feu",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "133",
+    "etages_eligibles": "6,7,8,9",
+    "maps_eligibles": "15040,15048,15056,15064",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "487",
+    "nom": "Bwork Elémental de Terre",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "133",
+    "etages_eligibles": "6,7,8,9",
+    "maps_eligibles": "15040,15048,15056,15064",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "788",
+    "nom": "Fantôme d'Aventurier Ardent",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "140",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1020",
+    "nom": "Bitouf Aérien",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "143",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "378",
+    "nom": "Fantôme Ardent",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "146",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "379",
+    "nom": "Fantôme Brave",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "146",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1052",
+    "nom": "Maître Zoth",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "148",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Canopee embrumee",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2786",
+    "nom": "Vampire Dupyr",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "150",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1047",
+    "nom": "Abrakleur Clair",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "152",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1154",
+    "nom": "Champaknyde",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "169",
+    "etages_eligibles": "7,8,9",
+    "maps_eligibles": "15048,15056,15064",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1093",
+    "nom": "Chevalier Noir et Rose",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "170",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "527",
+    "nom": "Yokai Firefoux",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "170",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "586",
+    "nom": "Fantôme Léopardo",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "180",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "583",
+    "nom": "Fantôme Pandikaze",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "180",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1153",
+    "nom": "Tromperelle",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "181",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "488",
+    "nom": "Cybwork",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "185",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1155",
+    "nom": "Champodonte",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "190",
+    "etages_eligibles": "8,9,10",
+    "maps_eligibles": "15056,15064,15072",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1158",
+    "nom": "Champ à Gnons",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "201",
+    "etages_eligibles": "9,10",
+    "maps_eligibles": "15064,15072",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1157",
+    "nom": "Champbis",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "204",
+    "etages_eligibles": "9,10",
+    "maps_eligibles": "15064,15072",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "589",
+    "nom": "Fantôme Pandule",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "210",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "225",
+    "nom": "Darkli Moon",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "220",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Ile Moon",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "585",
+    "nom": "Fantôme Soryo Firefoux",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "220",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2680",
+    "nom": "Kreuvète la Bwork Ingénue",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "220",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Montagne",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "2685",
+    "nom": "Kruorre le Chafer Ha",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "220",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Nuit",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1156",
+    "nom": "Champmane",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "224",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Champs",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "1057",
+    "nom": "Roissingue",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "239",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Ile Otomai",
+    "source_categorie": "filtres normaux"
+  },
+  {
+    "monster_id": "537",
+    "nom": "Pandore",
+    "categorie_gladiatrool": "NORMAL",
+    "niveau_grade_5": "240",
+    "etages_eligibles": "10",
+    "maps_eligibles": "15072",
+    "type_libelle": "Pandala",
+    "source_categorie": "filtres normaux"
+  }
+]
