@@ -18,4 +18,14 @@ describe("MonstersPage", () => {
     const levels = screen.getAllByRole("cell").filter((cell) => /^\d+$/.test(cell.textContent ?? ""));
     expect(Number(levels[0].textContent)).toBeLessThanOrEqual(Number(levels[1].textContent));
   });
+
+  it("filtre le pool par étage, catégorie et recherche", async () => {
+    const user = userEvent.setup();
+    render(<MonstersPage />);
+    await user.selectOptions(screen.getByLabelText("Pool"), "1");
+    await user.selectOptions(screen.getByLabelText("Catégorie"), "NORMAL");
+    await user.type(screen.getByLabelText("Rechercher"), "Chafer");
+    expect(screen.getByRole("link", { name: "Chafer" })).toBeInTheDocument();
+    expect(screen.queryByRole("link", { name: "Chafemal le Bagarreur" })).not.toBeInTheDocument();
+  });
 });
