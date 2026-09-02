@@ -81,6 +81,7 @@ export interface DeletedNativeSpellRow {
 }
 
 export type SpellSyncOrigin = "native_inchange" | "native_modifie" | "personnalise" | "non_configuree";
+export type SpellSyncScope = "morph" | "invocation";
 
 /** Mapping deliberately kept outside spell sheets and their edit history. */
 export interface SpellSyncMapping {
@@ -89,6 +90,8 @@ export interface SpellSyncMapping {
   server_spell_id: number | null;
   replaces_server_spell_id: number | null;
   origine: SpellSyncOrigin;
+  scope: SpellSyncScope;
+  monster_template_id: number | null;
   shortcut_position: number | null;
 }
 

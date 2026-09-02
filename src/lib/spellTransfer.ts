@@ -249,6 +249,8 @@ function auditMapping(className: string, spellId: number, mappings: SpellSyncMap
     server_spell_id: null,
     replaces_server_spell_id: null,
     origine: "non_configuree",
+    scope: "morph",
+    monster_template_id: null,
     shortcut_position: null,
   };
 }
@@ -260,6 +262,8 @@ function auditSpell(spell: Spell, snapshot: TransferSnapshot) {
     serverSpellId: mapping.server_spell_id,
     replacesServerSpellId: mapping.replaces_server_spell_id,
     origine: mapping.origine,
+    scope: mapping.scope,
+    monsterTemplateId: mapping.monster_template_id,
     shortcutPosition: mapping.shortcut_position,
     cataloguePosition: spell.position ?? null,
     nom: spell.nom,
@@ -295,6 +299,8 @@ export async function buildGlobalAuditV2(snapshot: TransferSnapshot): Promise<Sp
           serverSpellId: mapping.server_spell_id,
           replacesServerSpellId: mapping.replaces_server_spell_id,
           origine: mapping.origine,
+          scope: mapping.scope,
+          monsterTemplateId: mapping.monster_template_id,
           shortcutPosition: mapping.shortcut_position,
         };
       }),
@@ -307,7 +313,7 @@ export async function buildGlobalAuditV2(snapshot: TransferSnapshot): Promise<Sp
       spells: snapshot.commonSpells.map((spell) => auditSpell(spell, snapshot)),
       suppressedSpells: snapshot.deletedNativeSpells.filter((row) => row.class_name === "Sorts communs").map((row) => {
         const mapping = auditMapping("Sorts communs", row.spell_id, snapshot.spellSyncMappings);
-        return { catalogueSpellId: row.spell_id, serverSpellId: mapping.server_spell_id, replacesServerSpellId: mapping.replaces_server_spell_id, origine: mapping.origine, shortcutPosition: mapping.shortcut_position };
+        return { catalogueSpellId: row.spell_id, serverSpellId: mapping.server_spell_id, replacesServerSpellId: mapping.replaces_server_spell_id, origine: mapping.origine, scope: mapping.scope, monsterTemplateId: mapping.monster_template_id, shortcutPosition: mapping.shortcut_position };
       }),
     },
   ];

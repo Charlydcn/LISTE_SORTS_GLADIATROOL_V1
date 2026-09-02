@@ -217,7 +217,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       const [createdResult, deletedResult, mappingsResult] = await Promise.all([
         client.from(createdTable).select("id,class_name,spell,created_at"),
         client.from(deletedTable).select("class_name,spell_id,deleted_at"),
-        client.from("public_spell_sync_mappings").select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,shortcut_position"),
+        client.from("public_spell_sync_mappings").select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,scope,monster_template_id,shortcut_position"),
       ]);
       if (createdResult.error) throw createdResult.error;
       if (deletedResult.error) throw deletedResult.error;
@@ -295,10 +295,13 @@ export const useDataStore = create<DataState>((set, get) => ({
     if (mapping.shortcut_position !== null && mapping.shortcut_position < 0) {
       throw new Error("La position de raccourci doit être positive ou nulle.");
     }
+    if (mapping.scope === "invocation" && mapping.monster_template_id === null) {
+      throw new Error("Un sort d’invocation requiert son template monstre.");
+    }
     const { data, error } = await supabase
       .from("spell_sync_mappings")
       .upsert(mapping, { onConflict: "class_name,catalogue_spell_id" })
-      .select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,shortcut_position")
+      .select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,scope,monster_template_id,shortcut_position")
       .single();
     if (error) throw error;
     const saved = parseSpellSyncMappings([data], "la réponse de spell_sync_mappings")[0];

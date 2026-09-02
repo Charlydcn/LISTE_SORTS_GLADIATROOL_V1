@@ -23,6 +23,8 @@ export function SpellSyncMappingEditor({ spell }: { spell: Spell }) {
   ));
   const [origin, setOrigin] = useState<SpellSyncOrigin>(existing?.origine ?? "non_configuree");
   const [serverId, setServerId] = useState(existing?.server_spell_id?.toString() ?? "");
+  const [scope, setScope] = useState(existing?.scope ?? "morph");
+  const [monsterTemplateId, setMonsterTemplateId] = useState(existing?.monster_template_id?.toString() ?? "");
   const [replacesId, setReplacesId] = useState(existing?.replaces_server_spell_id?.toString() ?? "");
   const [shortcutPosition, setShortcutPosition] = useState(existing?.shortcut_position?.toString() ?? "");
   const [busy, setBusy] = useState(false);
@@ -30,6 +32,8 @@ export function SpellSyncMappingEditor({ spell }: { spell: Spell }) {
   useEffect(() => {
     setOrigin(existing?.origine ?? "non_configuree");
     setServerId(existing?.server_spell_id?.toString() ?? "");
+    setScope(existing?.scope ?? "morph");
+    setMonsterTemplateId(existing?.monster_template_id?.toString() ?? "");
     setReplacesId(existing?.replaces_server_spell_id?.toString() ?? "");
     setShortcutPosition(existing?.shortcut_position?.toString() ?? "");
   }, [existing]);
@@ -45,7 +49,9 @@ export function SpellSyncMappingEditor({ spell }: { spell: Spell }) {
         server_spell_id: serverSpellId,
         replaces_server_spell_id: nullableInteger(replacesId, "ID remplacé"),
         origine: origin,
-        shortcut_position: nullableInteger(shortcutPosition, "Position de raccourci"),
+        scope,
+        monster_template_id: scope === "invocation" ? nullableInteger(monsterTemplateId, "Template monstre") : null,
+        shortcut_position: scope === "invocation" ? null : nullableInteger(shortcutPosition, "Position de raccourci"),
       };
       await useDataStore.getState().saveSpellSyncMapping(mapping);
       useToastStore.getState().showToast("Mapping serveur enregistré.", "success");
@@ -62,9 +68,10 @@ export function SpellSyncMappingEditor({ spell }: { spell: Spell }) {
       <p>Identité catalogue : #{spell.id}. La position est le raccourci serveur converti depuis l’hexadécimal, pas le rang visuel.</p>
       <div className="spell-sync-grid">
         <label>Nature<select value={origin} onChange={(event) => setOrigin(event.target.value as SpellSyncOrigin)}>{origins.map((item) => <option key={item.value} value={item.value}>{item.label}</option>)}</select></label>
+        <label>Contexte<select value={scope} onChange={(event) => setScope(event.target.value as "morph" | "invocation")}><option value="morph">Sort de morph</option><option value="invocation">Sort d’invocation</option></select></label>
         <label>ID sort serveur<input disabled={origin === "non_configuree"} value={serverId} inputMode="numeric" onChange={(event) => setServerId(event.target.value)} /></label>
         <label>ID serveur remplacé<input value={replacesId} inputMode="numeric" onChange={(event) => setReplacesId(event.target.value)} /></label>
-        <label>Position raccourci<input value={shortcutPosition} inputMode="numeric" onChange={(event) => setShortcutPosition(event.target.value)} /></label>
+        {scope === "invocation" ? <label>Template monstre<input value={monsterTemplateId} inputMode="numeric" onChange={(event) => setMonsterTemplateId(event.target.value)} /></label> : <label>Position raccourci<input value={shortcutPosition} inputMode="numeric" onChange={(event) => setShortcutPosition(event.target.value)} /></label>}
       </div>
       <button className="secondary-button" type="button" disabled={busy} onClick={() => void save()}>{busy ? "Enregistrement…" : "Enregistrer le mapping"}</button>
     </details>

@@ -99,6 +99,8 @@ const spellSyncMappingSchema = z.object({
   server_spell_id: z.number().int().positive().nullable(),
   replaces_server_spell_id: z.number().int().positive().nullable(),
   origine: z.enum(["native_inchange", "native_modifie", "personnalise", "non_configuree"]),
+  scope: z.enum(["morph", "invocation"]),
+  monster_template_id: z.number().int().positive().nullable(),
   shortcut_position: z.number().int().nonnegative().nullable(),
 });
 

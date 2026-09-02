@@ -23,7 +23,7 @@ async function sha256(value: unknown): Promise<string> {
 
 function mappingFor(mappings: any[], className: string, catalogueSpellId: number) {
   return mappings.find((item) => item.class_name === className && item.catalogue_spell_id === catalogueSpellId) ?? {
-    server_spell_id: null, replaces_server_spell_id: null, origine: "non_configuree", shortcut_position: null,
+    server_spell_id: null, replaces_server_spell_id: null, origine: "non_configuree", scope: "morph", monster_template_id: null, shortcut_position: null,
   };
 }
 
@@ -32,6 +32,7 @@ function exportSpell(spell: any, mappings: any[]) {
   return {
     catalogueSpellId: spell.id, serverSpellId: mapping.server_spell_id,
     replacesServerSpellId: mapping.replaces_server_spell_id, origine: mapping.origine,
+    scope: mapping.scope, monsterTemplateId: mapping.monster_template_id,
     shortcutPosition: mapping.shortcut_position, cataloguePosition: spell.position ?? null,
     nom: spell.nom, pa: spell.pa, po: spell.po, porteeModifiable: spell.porteeModifiable,
     lancerEnLigne: spell.lancerEnLigne, ligneDeVue: spell.ligneDeVue, cc: spell.cc,
@@ -52,7 +53,7 @@ Deno.serve(async (request) => {
       client.from("public_entity_overrides").select("entity_type,entity_key,field_key,value"),
       client.from("public_created_spells").select("id,class_name,spell"),
       client.from("public_deleted_native_spells").select("class_name,spell_id"),
-      client.from("public_spell_sync_mappings").select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,shortcut_position"),
+      client.from("public_spell_sync_mappings").select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,scope,monster_template_id,shortcut_position"),
       ...classes.map(async ([, , file]) => {
         const response = await fetch(`${baseUrl}/data/${file}`);
         if (!response.ok) throw new Error(`Baseline unavailable: ${file}`);
@@ -97,7 +98,7 @@ Deno.serve(async (request) => {
         spells: spells.sort((a, b) => (a.position ?? Number.MAX_SAFE_INTEGER) - (b.position ?? Number.MAX_SAFE_INTEGER)).map((spell) => exportSpell(spell, mappings)),
         suppressedSpells: deleted.filter((row: any) => row.class_name === className).map((row: any) => {
           const mapping = mappingFor(mappings, className, row.spell_id);
-          return { catalogueSpellId: row.spell_id, serverSpellId: mapping.server_spell_id, replacesServerSpellId: mapping.replaces_server_spell_id, origine: mapping.origine, shortcutPosition: mapping.shortcut_position };
+          return { catalogueSpellId: row.spell_id, serverSpellId: mapping.server_spell_id, replacesServerSpellId: mapping.replaces_server_spell_id, origine: mapping.origine, scope: mapping.scope, monsterTemplateId: mapping.monster_template_id, shortcutPosition: mapping.shortcut_position };
         }),
       };
     };
