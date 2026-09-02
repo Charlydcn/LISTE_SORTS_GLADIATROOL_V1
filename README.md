@@ -2,6 +2,63 @@
 
 Application collaborative de listing des sorts, toniques et mutations Dofus Retro, refactorisée en **Vite + React 18 + TypeScript 5**, déployable telle quelle sur Vercel (build statique pur).
 
+## Audit catalogue ↔ serveur Dofus : guide d’utilisation
+
+### Le besoin
+
+Le catalogue est le support d’équilibrage : ses fiches peuvent être modifiées sans que le serveur Dofus soit automatiquement modifié. Une fiche du catalogue n’est pas nécessairement le même sort que celui utilisé par le serveur : une fiche native peut représenter un sort serveur personnalisé qui remplace un sort vanilla.
+
+L’objectif est donc de détecter de façon fiable les écarts entre le catalogue et les sorts Gladiatrool réellement actifs, sans jamais laisser le site écrire dans MariaDB, Java ou Flash.
+
+### La solution
+
+Le catalogue produit un export d’audit JSON v2. Le projet Dofus lit ensuite cet export et compare les données à l’état du serveur en lecture seule. Le flux est volontairement à sens unique :
+
+```text
+Catalogue + Supabase ── export JSON ──> outil d’audit du projet Dofus
+                                         │
+                                         └── rapport d’écarts à examiner
+```
+
+Le site **ne se connecte pas** au PC serveur Dofus et ne lit pas directement sa base MariaDB. Le futur outil du dépôt Dofus est responsable de lire MariaDB, `full_morphs` et les données réellement actives.
+
+### Les mappings : le carnet d’adresses
+
+Un mapping relie une fiche du catalogue au sort actif côté serveur. Il ne modifie ni la fiche, ni son historique, ni le serveur.
+
+| Champ | Rôle |
+| --- | --- |
+| `catalogueSpellId` | ID stable de la fiche dans le catalogue. |
+| `serverSpellId` | ID du sort effectivement lu dans `spells` côté serveur. |
+| `replacesServerSpellId` | Sort vanilla/serveur qui doit être absent de la morph lorsqu’il est remplacé ; sinon `null`. |
+| `origine` | `native_inchange`, `native_modifie`, `personnalise` ou `non_configuree`. |
+| `shortcutPosition` | Position de raccourci de `full_morphs.spells`, convertie de l’hexadécimal en entier décimal. Ce n’est pas le rang visuel de la fiche. |
+
+Exemple : une fiche catalogue `#66` peut être liée au sort serveur `#10000`, lequel remplace `#66` dans la morph.
+
+### État actuel
+
+- 255 mappings certains ont été importés.
+- 12 sorts personnalisés restent volontairement `non_configuree` : aucune correspondance n’a été déduite.
+- Les 8 sorts communs restent hors de cet import initial.
+- La fonction publique de lecture seule est disponible à l’adresse :
+  `https://nfruhrvninbkvtnosgwk.supabase.co/functions/v1/export-gladiatrool-v2`.
+
+### Utilisation, étape par étape
+
+1. Modifiez normalement les sorts dans le catalogue. L’historique existant continue de fonctionner sans changement.
+2. Pour une exception de mapping, connectez-vous en administrateur, ouvrez la fiche puis dépliez **Synchronisation serveur**. Corrigez uniquement les IDs et la position fournis par l’analyse du projet Dofus.
+3. Cliquez sur **Export audit v2** dans la barre supérieure pour télécharger l’état effectif actuel du catalogue.
+4. Donnez ce JSON à l’outil ou à l’IA du projet Dofus. Il doit lire le serveur en lecture seule, résoudre les morphs actifs et produire un rapport : identique, différent, absent, ou non comparable.
+5. Appliquez les corrections côté Dofus uniquement après analyse : SQL, Java ou Flash selon le cas. Le JSON n’écrit jamais sur le serveur.
+6. Relancez ensuite l’audit pour vérifier le résultat.
+
+### Limites actuelles
+
+- Les effets sont exportés comme texte informatif. Ils ne constituent pas encore une comparaison technique fiable des effets SQL/Java/Flash.
+- Le rapport d’audit côté projet Dofus doit encore être finalisé puis éventuellement réimporté dans le catalogue pour afficher un statut visuel `synchronisé` / `différent` sur chaque fiche.
+- Les mappings et l’endpoint sont publics, car le catalogue GitHub et son export sont publics. Ne placez jamais de mots de passe MariaDB, clés `service_role` ou secrets de déploiement dans cet export.
+
 ## Stack
 
 - **Vite 5** (bundler + dev server) avec `@vitejs/plugin-react`
