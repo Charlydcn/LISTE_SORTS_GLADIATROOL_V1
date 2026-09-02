@@ -1,10 +1,11 @@
 import JSZip from "jszip";
 import { z, ZodError } from "zod";
-import type { ClassStats, Spell } from "../types";
+import type { ClassStats, DeletedNativeSpellRow, Spell, SpellSyncMapping } from "../types";
 import { CLASS_FILES, CLASSES } from "./dataService";
 
 export const SPELL_DUMP_FORMAT = "gladiatrool-spells";
 export const SPELL_DUMP_VERSION = 1;
+export const SPELL_AUDIT_SCHEMA_VERSION = 2;
 export const MAX_IMPORT_BYTES = 25 * 1024 * 1024;
 
 export type DumpScope = "spell" | "class" | "common";
@@ -56,6 +57,17 @@ export interface TransferSnapshot {
   commonSpells: Spell[];
   morphStats: Record<string, ClassStats>;
   customSpellKeys: Set<string>;
+  deletedNativeSpells: DeletedNativeSpellRow[];
+  spellSyncMappings: SpellSyncMapping[];
+}
+
+export interface SpellAuditV2Document {
+  format: "gladiatrool-spell-audit";
+  schemaVersion: typeof SPELL_AUDIT_SCHEMA_VERSION;
+  exportedAt: string;
+  contentHash: string;
+  effectsComparison: "informational_text_only";
+  classes: unknown[];
 }
 
 export interface ImportSpellPayload {
@@ -214,6 +226,100 @@ function download(blob: Blob, filename: string): void {
   URL.revokeObjectURL(url);
 }
 
+function canonicalize(value: unknown): unknown {
+  if (Array.isArray(value)) return value.map(canonicalize);
+  if (value && typeof value === "object") {
+    return Object.fromEntries(Object.entries(value as Record<string, unknown>)
+      .sort(([left], [right]) => left.localeCompare(right))
+      .map(([key, item]) => [key, canonicalize(item)]));
+  }
+  return value;
+}
+
+async function contentHash(value: unknown): Promise<string> {
+  const bytes = new TextEncoder().encode(JSON.stringify(canonicalize(value)));
+  const digest = await crypto.subtle.digest("SHA-256", bytes);
+  return Array.from(new Uint8Array(digest)).map((byte) => byte.toString(16).padStart(2, "0")).join("");
+}
+
+function auditMapping(className: string, spellId: number, mappings: SpellSyncMapping[]): SpellSyncMapping {
+  return mappings.find((item) => item.class_name === className && item.catalogue_spell_id === spellId) ?? {
+    class_name: className,
+    catalogue_spell_id: spellId,
+    server_spell_id: null,
+    replaces_server_spell_id: null,
+    origine: "non_configuree",
+    shortcut_position: null,
+  };
+}
+
+function auditSpell(spell: Spell, snapshot: TransferSnapshot) {
+  const mapping = auditMapping(spell.classe, spell.id, snapshot.spellSyncMappings);
+  return {
+    catalogueSpellId: spell.id,
+    serverSpellId: mapping.server_spell_id,
+    replacesServerSpellId: mapping.replaces_server_spell_id,
+    origine: mapping.origine,
+    shortcutPosition: mapping.shortcut_position,
+    cataloguePosition: spell.position ?? null,
+    nom: spell.nom,
+    pa: spell.pa,
+    po: spell.po,
+    porteeModifiable: spell.porteeModifiable,
+    lancerEnLigne: spell.lancerEnLigne,
+    ligneDeVue: spell.ligneDeVue,
+    cc: spell.cc,
+    ec: spell.ec,
+    relance: spell.relance,
+    parTour: spell.parTour,
+    parCible: spell.parCible,
+    commun: spell.commun,
+    effets: spell.effets,
+  };
+}
+
+/** Effective, read-only audit contract. Effects deliberately remain descriptive text. */
+export async function buildGlobalAuditV2(snapshot: TransferSnapshot): Promise<SpellAuditV2Document> {
+  const classes = [
+    ...CLASS_FILES.map((entry) => ({
+      classId: entry.morphId - 100,
+      className: entry.name,
+      morphId: entry.morphId,
+      gradeId: 6,
+      spells: snapshot.spells.filter((spell) => spell.classe === entry.name)
+        .map((spell) => auditSpell(spell, snapshot)),
+      suppressedSpells: snapshot.deletedNativeSpells.filter((row) => row.class_name === entry.name).map((row) => {
+        const mapping = auditMapping(entry.name, row.spell_id, snapshot.spellSyncMappings);
+        return {
+          catalogueSpellId: row.spell_id,
+          serverSpellId: mapping.server_spell_id,
+          replacesServerSpellId: mapping.replaces_server_spell_id,
+          origine: mapping.origine,
+          shortcutPosition: mapping.shortcut_position,
+        };
+      }),
+    })),
+    {
+      classId: null,
+      className: "Sorts communs",
+      morphId: null,
+      gradeId: null,
+      spells: snapshot.commonSpells.map((spell) => auditSpell(spell, snapshot)),
+      suppressedSpells: snapshot.deletedNativeSpells.filter((row) => row.class_name === "Sorts communs").map((row) => {
+        const mapping = auditMapping("Sorts communs", row.spell_id, snapshot.spellSyncMappings);
+        return { catalogueSpellId: row.spell_id, serverSpellId: mapping.server_spell_id, replacesServerSpellId: mapping.replaces_server_spell_id, origine: mapping.origine, shortcutPosition: mapping.shortcut_position };
+      }),
+    },
+  ];
+  const hashed = { format: "gladiatrool-spell-audit" as const, schemaVersion: SPELL_AUDIT_SCHEMA_VERSION as 2, effectsComparison: "informational_text_only" as const, classes };
+  return { ...hashed, exportedAt: new Date().toISOString(), contentHash: await contentHash(hashed) };
+}
+
+export async function exportGlobalAuditV2(snapshot: TransferSnapshot): Promise<void> {
+  const document = await buildGlobalAuditV2(snapshot);
+  download(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" }), "gladiatrool-audit-v2.json");
+}
+
 async function finishZip(zip: JSZip, filename: string): Promise<void> {
   const blob = await zip.generateAsync({ type: "blob", compression: "DEFLATE", compressionOptions: { level: 6 } });
   download(blob, filename);
@@ -335,11 +441,15 @@ export function transferSnapshot(input: {
   commonSpells: Spell[];
   morphStats: Record<string, ClassStats>;
   createdSpells: Array<{ id: number; class_name: string }>;
+  deletedNativeSpells?: DeletedNativeSpellRow[];
+  spellSyncMappings?: SpellSyncMapping[];
 }): TransferSnapshot {
   return {
     spells: input.spells,
     commonSpells: input.commonSpells,
     morphStats: input.morphStats,
     customSpellKeys: new Set(input.createdSpells.map((row) => `${row.class_name}\u0000${row.id}`)),
+    deletedNativeSpells: input.deletedNativeSpells ?? [],
+    spellSyncMappings: input.spellSyncMappings ?? [],
   };
 }

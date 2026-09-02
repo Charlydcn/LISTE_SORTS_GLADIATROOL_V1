@@ -2059,6 +2059,13 @@ body.modal-open {
 .restore-panel { margin-top: 16px; }
 .restore-panel strong { margin-bottom: 5px; }
 
+.spell-sync-mapping { margin-top: 16px; border: 1px solid var(--border-dark); border-radius: 8px; padding: 10px; }
+.spell-sync-mapping summary { cursor: pointer; font-weight: 700; }
+.spell-sync-mapping p { margin: 10px 0; color: var(--muted); font-size: 0.9rem; }
+.spell-sync-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 10px; margin-bottom: 10px; }
+.spell-sync-grid label { display: grid; gap: 4px; font-size: 0.9rem; }
+.spell-sync-grid input, .spell-sync-grid select { min-width: 0; }
+
 @media (max-width: 850px) {
   #app-header { align-items: stretch; flex-direction: column; gap: 0; }
   .main-navigation { justify-content: space-between; overflow-x: auto; }
@@ -2066,6 +2073,7 @@ body.modal-open {
   .catalog-layout { grid-template-columns: 1fr; }
   .catalog-layout > aside { position: static; max-height: none; overflow: visible; }
   .spell-picker { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .spell-sync-grid { grid-template-columns: 1fr; }
 }
 
 @media (max-width: 560px) {

@@ -6,6 +6,7 @@ import { errorMessage } from "../lib/utils";
 import {
   buildImportPayload,
   exportClass,
+  exportGlobalAuditV2,
   exportGlobal,
   exportSpell,
   transferSnapshot,
@@ -29,6 +30,22 @@ export function ExportGlobalButton() {
     }
   }
   return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter tout"}</button>;
+}
+
+export function ExportAuditV2Button() {
+  const [busy, setBusy] = useState(false);
+  async function run() {
+    setBusy(true);
+    try {
+      await exportGlobalAuditV2(snapshot());
+      useToastStore.getState().showToast("Export d’audit v2 téléchargé.", "success");
+    } catch (error) {
+      useToastStore.getState().showToast(errorMessage(error), "error");
+    } finally {
+      setBusy(false);
+    }
+  }
+  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Export audit v2"}</button>;
 }
 
 export function ExportClassButton({ className }: { className: string }) {

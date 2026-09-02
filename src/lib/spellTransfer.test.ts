@@ -1,7 +1,7 @@
 import { afterEach, describe, expect, it, vi } from "vitest";
 import JSZip from "jszip";
 import type { Spell } from "../types";
-import { buildImportPayload, exportClass, transferSnapshot } from "./spellTransfer";
+import { buildGlobalAuditV2, buildImportPayload, exportClass, transferSnapshot } from "./spellTransfer";
 
 const native: Spell = {
   id: 141, position: 1, nom: "Pression", pa: 2, po: "1–2",
@@ -82,5 +82,19 @@ describe("export ZIP", () => {
     expect(config.classe.caracteristiques).toEqual({ vie: 850 });
     expect(config.sorts[0]).toMatchObject({ id: 141, origine: "native", icone: { format: "svg" } });
     expect(await zip.file("icones/141-pression.svg")!.async("text")).toBe(svg);
+  });
+});
+
+describe("export d’audit v2", () => {
+  it("garde l’identité catalogue et signale un mapping absent sans le déduire", async () => {
+    const document = await buildGlobalAuditV2(transferSnapshot({
+      spells: [native], commonSpells: [], morphStats: { Iop: { vie: 850 } }, createdSpells: [],
+    }));
+    const iop = document.classes.find((item: any) => item.className === "Iop") as any;
+    expect(document).toMatchObject({ format: "gladiatrool-spell-audit", schemaVersion: 2, effectsComparison: "informational_text_only" });
+    expect(document.contentHash).toMatch(/^[a-f0-9]{64}$/);
+    expect(iop.spells[0]).toMatchObject({
+      catalogueSpellId: 141, serverSpellId: null, origine: "non_configuree", shortcutPosition: null,
+    });
   });
 });

@@ -13,6 +13,7 @@ import { HistoryModal } from "./HistoryModal";
 import { SpellImageEditor } from "./SpellImageEditor";
 import { editorKey, useEditingStore } from "../lib/editingStore";
 import { ExportSpellButton } from "./SpellTransferActions";
+import { SpellSyncMappingEditor } from "./SpellSyncMappingEditor";
 
 function EffectRows({ effects, tab }: { effects: Effect[]; tab: EffectTab }) {
   const rows = effects.filter((effect) => effect.onglet === tab);
@@ -251,6 +252,7 @@ export function SpellCard({ spell }: { spell: Spell }) {
           </div>
         </div>
       </div>
+      {isAdmin ? <SpellSyncMappingEditor spell={spell} /> : null}
       {isAdmin ? <CommentsSection spellId={spell.id} /> : null}
     </div>
   );

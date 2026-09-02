@@ -1,5 +1,5 @@
 import { z, ZodError } from "zod";
-import type { CommentRow, CreatedSpellRow, CreatedTonicRow, DeletedNativeSpellRow, DeletedNativeTonicRow, HistoryRow, OverrideRow, Spell, Tonic } from "../types";
+import type { CommentRow, CreatedSpellRow, CreatedTonicRow, DeletedNativeSpellRow, DeletedNativeTonicRow, HistoryRow, OverrideRow, Spell, SpellSyncMapping, Tonic } from "../types";
 
 const effectSchema = z.object({
   onglet: z.enum(["normaux", "critiques"]),
@@ -93,6 +93,14 @@ const createdSpellRowSchema = z.object({ id: z.number().int(), class_name: z.str
 const deletedNativeSpellRowSchema = z.object({ class_name: z.string().min(1), spell_id: z.number().int(), deleted_at: z.string().min(1) });
 const createdTonicRowSchema = z.object({ id: z.number().int(), tonic: tonicSchema.omit({ id: true }), created_at: z.string().min(1) });
 const deletedNativeTonicRowSchema = z.object({ tonic_id: z.number().int(), deleted_at: z.string().min(1) });
+const spellSyncMappingSchema = z.object({
+  class_name: z.string().min(1),
+  catalogue_spell_id: z.number().int().positive(),
+  server_spell_id: z.number().int().positive().nullable(),
+  replaces_server_spell_id: z.number().int().positive().nullable(),
+  origine: z.enum(["native_inchange", "native_modifie", "personnalise", "non_configuree"]),
+  shortcut_position: z.number().int().nonnegative().nullable(),
+});
 
 const applyOverrideResultSchema = z.object({
   override_id: z.string().nullable(),
@@ -189,6 +197,10 @@ export function parseCreatedTonicRows(value: unknown, source: string): CreatedTo
 
 export function parseDeletedNativeTonicRows(value: unknown, source: string): DeletedNativeTonicRow[] {
   return parseWithSource(z.array(deletedNativeTonicRowSchema), value, source) as DeletedNativeTonicRow[];
+}
+
+export function parseSpellSyncMappings(value: unknown, source: string): SpellSyncMapping[] {
+  return parseWithSource(z.array(spellSyncMappingSchema), value, source) as SpellSyncMapping[];
 }
 
 export function parseApplyOverrideResult(value: unknown): {

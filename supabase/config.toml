@@ -1,5 +1,8 @@
 project_id = "gladiatrool-sorts"
 
+[functions.export-gladiatrool-v2]
+verify_jwt = false
+
 [api]
 enabled = true
 port = 54321

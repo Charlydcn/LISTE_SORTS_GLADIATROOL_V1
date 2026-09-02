@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { ClassStats, CreatedSpellRow, DeletedNativeSpellRow, OverrideRow, Spell } from "../types";
+import type { ClassStats, CreatedSpellRow, DeletedNativeSpellRow, OverrideRow, Spell, SpellSyncMapping } from "../types";
 import { cloneData, loadBaselineData, type BaselineData } from "./dataService";
 import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
@@ -10,6 +10,7 @@ import {
   parseCreatedSpellRows,
   parseDeletedNativeSpellRows,
   parseOverrideRows,
+  parseSpellSyncMappings,
   parseResetClassResult,
   parseResetCount,
 } from "./validation";
@@ -93,6 +94,7 @@ interface DataState {
   overrides: Record<string, OverrideRow>;
   createdSpells: CreatedSpellRow[];
   deletedNativeSpells: DeletedNativeSpellRow[];
+  spellSyncMappings: SpellSyncMapping[];
   loadBaseline: () => Promise<BaselineData>;
   resetEffective: () => void;
   applyRows: (rows: OverrideRow[]) => void;
@@ -101,6 +103,7 @@ interface DataState {
   deleteSpell: (spell: Spell) => Promise<void>;
   restoreNativeSpell: (spell: Spell) => Promise<void>;
   importDump: (payload: ImportPayload) => Promise<{ created: number; updated: number }>;
+  saveSpellSyncMapping: (mapping: SpellSyncMapping) => Promise<void>;
   save: (
     entityType: string,
     entityKey: string,
@@ -132,6 +135,7 @@ export const useDataStore = create<DataState>((set, get) => ({
   overrides: {},
   createdSpells: [],
   deletedNativeSpells: [],
+  spellSyncMappings: [],
 
   async loadBaseline() {
     const baseline = await loadBaselineData();
@@ -210,15 +214,18 @@ export const useDataStore = create<DataState>((set, get) => ({
       // aussi bien par les visiteurs que par les utilisateurs connectés.
       const createdTable = "public_created_spells";
       const deletedTable = "public_deleted_native_spells";
-      const [createdResult, deletedResult] = await Promise.all([
+      const [createdResult, deletedResult, mappingsResult] = await Promise.all([
         client.from(createdTable).select("id,class_name,spell,created_at"),
         client.from(deletedTable).select("class_name,spell_id,deleted_at"),
+        client.from("public_spell_sync_mappings").select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,shortcut_position"),
       ]);
       if (createdResult.error) throw createdResult.error;
       if (deletedResult.error) throw deletedResult.error;
+      if (mappingsResult.error) throw mappingsResult.error;
       set({
         createdSpells: parseCreatedSpellRows(createdResult.data ?? [], `la table ${createdTable}`),
         deletedNativeSpells: parseDeletedNativeSpellRows(deletedResult.data ?? [], `la table ${deletedTable}`),
+        spellSyncMappings: parseSpellSyncMappings(mappingsResult.data ?? [], "la vue public_spell_sync_mappings"),
       });
       get().applyRows(parseOverrideRows(data ?? [], `la table ${table}`));
     } catch (error) {
@@ -277,6 +284,30 @@ export const useDataStore = create<DataState>((set, get) => ({
     }
     await get().initialize();
     return { created: result.created_count, updated: result.updated_count };
+  },
+
+  async saveSpellSyncMapping(mapping) {
+    if (!useSessionStore.getState().isAdmin()) throw new Error("Cette action est réservée aux administrateurs.");
+    if (!supabase) throw new Error("Supabase JS n'a pas pu être chargé.");
+    if (mapping.origine === "non_configuree" ? mapping.server_spell_id !== null : mapping.server_spell_id === null) {
+      throw new Error("Un ID serveur est requis sauf pour une fiche non configurée.");
+    }
+    if (mapping.shortcut_position !== null && mapping.shortcut_position < 0) {
+      throw new Error("La position de raccourci doit être positive ou nulle.");
+    }
+    const { data, error } = await supabase
+      .from("spell_sync_mappings")
+      .upsert(mapping, { onConflict: "class_name,catalogue_spell_id" })
+      .select("class_name,catalogue_spell_id,server_spell_id,replaces_server_spell_id,origine,shortcut_position")
+      .single();
+    if (error) throw error;
+    const saved = parseSpellSyncMappings([data], "la réponse de spell_sync_mappings")[0];
+    set({
+      spellSyncMappings: [
+        ...get().spellSyncMappings.filter((item) => item.class_name !== saved.class_name || item.catalogue_spell_id !== saved.catalogue_spell_id),
+        saved,
+      ],
+    });
   },
 
   async save(entityType, entityKey, fieldKey, newValue) {

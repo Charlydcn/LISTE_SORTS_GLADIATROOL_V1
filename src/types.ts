@@ -80,6 +80,18 @@ export interface DeletedNativeSpellRow {
   deleted_at: string;
 }
 
+export type SpellSyncOrigin = "native_inchange" | "native_modifie" | "personnalise" | "non_configuree";
+
+/** Mapping deliberately kept outside spell sheets and their edit history. */
+export interface SpellSyncMapping {
+  class_name: string;
+  catalogue_spell_id: number;
+  server_spell_id: number | null;
+  replaces_server_spell_id: number | null;
+  origine: SpellSyncOrigin;
+  shortcut_position: number | null;
+}
+
 export interface HistoryRow {
   id: string;
   entity_type: string;
