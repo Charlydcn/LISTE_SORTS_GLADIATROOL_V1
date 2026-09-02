@@ -36,6 +36,19 @@ Un mapping relie une fiche du catalogue au sort actif côté serveur. Il ne modi
 
 Exemple : une fiche catalogue `#66` peut être liée au sort serveur `#10000`, lequel remplace `#66` dans la morph.
 
+#### Quand renseigner « Synchronisation serveur » ?
+
+Un nouveau sort créé dans le catalogue n’a pas encore d’ID Dofus : il doit donc rester `non_configuree` au départ.
+
+La procédure correcte est :
+
+1. créer et équilibrer la fiche dans le catalogue ;
+2. demander à l’IA du projet Dofus de créer ou d’intégrer le sort côté serveur ;
+3. une fois le sort réellement créé dans `spells` et ajouté à la morph, récupérer son ID serveur et son raccourci actif ;
+4. ouvrir la fiche catalogue, déplier **Synchronisation serveur**, puis renseigner ces informations.
+
+Autrement dit, ce panneau ne sert ni à éditer le sort, ni à le déployer. Il sert uniquement à dire à l’audit : « pour cette fiche catalogue, voici le sort serveur à vérifier ». Les mappings déjà certains n’ont pas besoin d’être modifiés. Utilisez-le seulement pour un nouveau sort, un remplacement de sort vanilla ou une correction d’identité signalée par l’audit.
+
 ### État actuel
 
 - 255 mappings certains ont été importés.
