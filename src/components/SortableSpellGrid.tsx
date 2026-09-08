@@ -1,4 +1,4 @@
-import { useEffect, useMemo, useRef, useState } from "react";
+import { useEffect, useMemo, useRef, useState, type CSSProperties } from "react";
 import {
   closestCenter,
   DndContext,
@@ -55,6 +55,9 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
   const byId = new Map(spells.map((spell) => [String(spell.id), spell]));
   const visibleSpells = ids.map((id) => byId.get(id)).filter((spell): spell is Spell => Boolean(spell));
   const activeSpell = activeId ? byId.get(activeId) : null;
+  const gridStyle = {
+    "--spell-grid-rows": Math.max(1, Math.ceil(visibleSpells.length / 2)),
+  } as CSSProperties;
 
   function handleDragStart(event: DragStartEvent) {
     setActiveId(String(event.active.id));
@@ -103,7 +106,7 @@ export function SortableSpellGrid({ className, spells, selectedId, onSelect }: S
       onDragEnd={(event) => void handleDragEnd(event)}
     >
       <SortableContext items={ids} strategy={rectSwappingStrategy}>
-        <div className="spell-grid">
+        <div className="spell-grid" style={gridStyle}>
           {visibleSpells.map((spell) => (
             <SpellTile
               key={spell.id}
