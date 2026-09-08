@@ -1467,6 +1467,10 @@ button:disabled {
   font-size: 10px;
 }
 
+.effects-editable .effect-row:first-child {
+  padding-right: 112px;
+}
+
 .effects-editable .inline-editor {
   display: flex;
   padding: 10px;
