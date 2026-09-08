@@ -49,6 +49,7 @@ export function Header() {
         <a className="site-title" href="#/sorts">Gladiatrool</a>
         <div className="navigation-links">
           <NavLink to="/sorts">Sorts</NavLink>
+          <NavLink to="/caracteristiques">Caractéristiques</NavLink>
           <NavLink to="/toniques">Toniques</NavLink>
           <NavLink to="/mutations">Mutations</NavLink>
           <NavLink to="/bonus-etage">Bonus d’étage</NavLink>

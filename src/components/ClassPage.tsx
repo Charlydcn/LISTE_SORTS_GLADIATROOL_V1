@@ -5,7 +5,6 @@ import { CLASSES } from "../lib/dataService";
 import { ClassIcon } from "./icons";
 import { SortableSpellGrid } from "./SortableSpellGrid";
 import { SpellCard } from "./SpellCard";
-import { ClassStatsTable } from "./ClassStatsTable";
 import { ResetButton } from "./ResetButton";
 import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
@@ -61,7 +60,6 @@ export function ClassPage() {
           )}
         </aside>
       </div>
-      <ClassStatsTable className={className} />
     </div>
   );
 }

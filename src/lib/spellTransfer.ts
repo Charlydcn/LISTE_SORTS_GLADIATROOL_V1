@@ -7,6 +7,8 @@ export const SPELL_DUMP_FORMAT = "gladiatrool-spells";
 export const SPELL_DUMP_VERSION = 1;
 export const SPELL_AUDIT_SCHEMA_VERSION = 2;
 export const MAX_IMPORT_BYTES = 25 * 1024 * 1024;
+export const CHARACTERISTICS_EXPORT_FORMAT = "gladiatrool-characteristics";
+export const CHARACTERISTICS_EXPORT_VERSION = 1;
 
 export type DumpScope = "spell" | "class" | "common";
 export type SpellOrigin = "native" | "personnalise";
@@ -68,6 +70,13 @@ export interface SpellAuditV2Document {
   contentHash: string;
   effectsComparison: "informational_text_only";
   classes: unknown[];
+}
+
+export interface CharacteristicsExportDocument {
+  format: typeof CHARACTERISTICS_EXPORT_FORMAT;
+  formatVersion: typeof CHARACTERISTICS_EXPORT_VERSION;
+  exporteLe: string;
+  classes: Array<{ classe: string; morphId: number | null; caracteristiques: ClassStats }>;
 }
 
 export interface ImportSpellPayload {
@@ -324,6 +333,24 @@ export async function buildGlobalAuditV2(snapshot: TransferSnapshot): Promise<Sp
 export async function exportGlobalAuditV2(snapshot: TransferSnapshot): Promise<void> {
   const document = await buildGlobalAuditV2(snapshot);
   download(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" }), "gladiatrool-audit-v2.json");
+}
+
+export function buildCharacteristicsExport(snapshot: TransferSnapshot): CharacteristicsExportDocument {
+  return {
+    format: CHARACTERISTICS_EXPORT_FORMAT,
+    formatVersion: CHARACTERISTICS_EXPORT_VERSION,
+    exporteLe: new Date().toISOString(),
+    classes: CLASS_FILES.map((entry) => ({
+      classe: entry.name,
+      morphId: entry.morphId,
+      caracteristiques: snapshot.morphStats[entry.name] ?? {},
+    })),
+  };
+}
+
+export async function exportCharacteristics(snapshot: TransferSnapshot): Promise<void> {
+  const document = buildCharacteristicsExport(snapshot);
+  download(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" }), "gladiatrool-caracteristiques.json");
 }
 
 async function finishZip(zip: JSZip, filename: string): Promise<void> {

@@ -2,6 +2,7 @@ import { useDataStore } from "../lib/dataStore";
 import { displayValue } from "../lib/utils";
 import { EditableField } from "./EditableField";
 import { ResetButton } from "./ResetButton";
+import { ClassIcon } from "./icons";
 
 const STAT_DEFINITIONS: [string, string, string][] = [
   ["vie", "PV", "PV.svg"],
@@ -16,19 +17,27 @@ const STAT_DEFINITIONS: [string, string, string][] = [
   ["agilite", "Agilité", "AirDamage.svg"],
 ];
 
-export function ClassStatsTable({ className }: { className: string }) {
+export function ClassStatsTable({ className, compact = false }: { className: string; compact?: boolean }) {
   const stats = useDataStore((s) => s.morphStats[className]);
   if (!stats) return null;
 
   return (
-    <section className="class-stats-section">
-      <div className="panel-heading-row">
-        <h3 className="class-stats-title">Caractéristiques</h3>
-        <ResetButton scope="class-stats" resetKey={className} />
-      </div>
+    <section className={`class-stats-section${compact ? " class-stats-panel" : ""}`}>
+      {!compact ? (
+        <div className="panel-heading-row">
+          <h3 className="class-stats-title">Caractéristiques</h3>
+          <ResetButton scope="class-stats" resetKey={className} />
+        </div>
+      ) : (
+        <div className="class-stats-panel-actions">
+          <ResetButton scope="class-stats" resetKey={className} />
+        </div>
+      )}
       <div className="class-stats-table">
         <div className="stat-row-cell stat-row-header">
-          <span className="stat-cell-icon-wrap"></span>
+          <span className="stat-cell-icon-wrap class-stat-class-icon" title={className}>
+            <ClassIcon className={className} title={className} />
+          </span>
           <span className="stat-cell-label">Caractéristique</span>
           <span className="stat-cell-sep"></span>
           <span className="stat-cell-value">Valeur</span>

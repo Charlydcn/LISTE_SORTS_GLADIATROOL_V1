@@ -8,12 +8,29 @@ import {
   exportClass,
   exportGlobalAuditV2,
   exportGlobal,
+  exportCharacteristics,
   exportSpell,
   transferSnapshot,
 } from "../lib/spellTransfer";
 
 function snapshot() {
   return transferSnapshot(useDataStore.getState());
+}
+
+export function ExportCharacteristicsButton() {
+  const [busy, setBusy] = useState(false);
+  async function run() {
+    setBusy(true);
+    try {
+      await exportCharacteristics(snapshot());
+      useToastStore.getState().showToast("Export des caractéristiques téléchargé.", "success");
+    } catch (error) {
+      useToastStore.getState().showToast(errorMessage(error), "error");
+    } finally {
+      setBusy(false);
+    }
+  }
+  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter JSON"}</button>;
 }
 
 export function ExportGlobalButton() {

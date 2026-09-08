@@ -45,10 +45,10 @@ export function LoginIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"
 
 export function LogoutIcon() { return <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M10 5H5v14h5m9-7H9m3-3-3 3 3 3" fill="none" stroke="currentColor" strokeWidth="1.8" strokeLinecap="round" strokeLinejoin="round" /></svg>; }
 
-export function ClassIcon({ className }: { className: string }) {
+export function ClassIcon({ className, title }: { className: string; title?: string }) {
   const url = CLASS_ICONS[className];
   if (url) {
-    return <img className="class-icon-img" src={url} alt={className} loading="lazy" />;
+    return <img className="class-icon-img" src={url} alt={className} title={title} loading="lazy" />;
   }
   return <DefaultIcon />;
 }

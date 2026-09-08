@@ -13,6 +13,7 @@ import { MutationClassPage, MutationsPage, TonicsPage } from "./components/Tonic
 import { useTonicStore } from "./lib/tonicStore";
 import { FloorBonusesPage } from "./components/FloorBonusesPage";
 import { MonstersPage } from "./components/MonstersPage";
+import { StatsPage } from "./components/StatsPage";
 
 function AppShell() {
   const mode = useSessionStore((s) => s.mode);
@@ -111,6 +112,7 @@ function AppShell() {
         <Routes>
           <Route path="/" element={<Navigate to="/sorts" replace />} />
           <Route path="/sorts" element={<Home />} />
+          <Route path="/caracteristiques" element={<StatsPage />} />
           <Route path="/classe/:classe" element={<ClassPage />} />
           <Route path="/sorts/classe/:classe" element={<ClassPage />} />
           <Route path="/sorts/classe/:classe/sort/:spellId" element={<ClassPage />} />
