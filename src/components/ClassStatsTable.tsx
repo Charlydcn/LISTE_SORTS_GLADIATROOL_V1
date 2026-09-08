@@ -20,6 +20,8 @@ const STAT_DEFINITIONS: [string, string, string][] = [
 export function ClassStatsTable({ className, compact = false }: { className: string; compact?: boolean }) {
   const stats = useDataStore((s) => s.morphStats[className]);
   if (!stats) return null;
+  const elementalTotal = ["force", "intelligence", "chance", "agilite"]
+    .reduce((total, key) => total + (Number(stats[key]) || 0), 0);
 
   return (
     <section className={`class-stats-section${compact ? " class-stats-panel" : ""}`}>
@@ -62,6 +64,10 @@ export function ClassStatsTable({ className, compact = false }: { className: str
             </span>
           </div>
         ))}
+        <div className="class-stats-total" aria-label={`Total élémentaire : ${elementalTotal}`}>
+          <span>Total élémentaire</span>
+          <strong>{displayValue(elementalTotal)}</strong>
+        </div>
       </div>
     </section>
   );
