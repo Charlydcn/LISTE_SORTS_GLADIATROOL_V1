@@ -32,7 +32,12 @@ export function ClassStatsTable({ className, compact = false }: { className: str
         </div>
       ) : (
         <div className="class-stats-panel-actions">
-          <span className="class-stats-panel-name">{className}</span>
+          <a
+            className="class-stats-panel-name"
+            href={`#/sorts/classe/${encodeURIComponent(className)}`}
+          >
+            {className}
+          </a>
           <ResetButton scope="class-stats" resetKey={className} disabledWhenEmpty={false} />
         </div>
       )}

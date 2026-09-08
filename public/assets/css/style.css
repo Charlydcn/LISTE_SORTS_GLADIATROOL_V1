@@ -676,6 +676,12 @@ body {
   color: #f1e9c9;
   font-size: 18px;
   font-weight: 700;
+  text-decoration: none;
+}
+
+.class-stats-panel-name:hover {
+  color: var(--gold);
+  text-decoration: underline;
 }
 
 .class-stats-panel-actions .reset-button {
