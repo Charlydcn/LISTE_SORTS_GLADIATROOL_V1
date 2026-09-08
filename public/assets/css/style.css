@@ -1540,6 +1540,25 @@ body.modal-open {
   padding: 16px;
 }
 
+.export-options p {
+  margin: 0 0 16px;
+}
+
+.export-options-actions {
+  display: flex;
+  gap: 10px;
+}
+
+.export-options-actions button {
+  flex: 1;
+  display: grid;
+  gap: 4px;
+}
+
+.export-options-actions small {
+  font-weight: 400;
+}
+
 .history-controls {
   display: flex;
   align-items: center;

@@ -201,12 +201,13 @@ async function buildDocument(
   className: string,
   spells: Spell[],
   snapshot: TransferSnapshot,
+  includeImages: boolean,
 ): Promise<SpellDumpDocument> {
   const ordered = [...spells].sort((a, b) => (a.position ?? Number.MAX_SAFE_INTEGER) - (b.position ?? Number.MAX_SAFE_INTEGER));
   const dumped = await Promise.all(ordered.map(async (spell): Promise<DumpSpell> => ({
     ...withoutRuntimeFields(spell),
     origine: snapshot.customSpellKeys.has(customKey(spell)) ? "personnalise" : "native",
-    icone: await addSpellIcon(zip, folder, spell),
+    icone: includeImages ? await addSpellIcon(zip, folder, spell) : { fichier: null, format: null, typeMime: null },
   } as unknown as DumpSpell)));
   const document: SpellDumpDocument = {
     format: SPELL_DUMP_FORMAT,
@@ -358,33 +359,46 @@ async function finishZip(zip: JSZip, filename: string): Promise<void> {
   download(blob, filename);
 }
 
-export async function exportSpell(spell: Spell, snapshot: TransferSnapshot): Promise<void> {
+export async function exportSpell(spell: Spell, snapshot: TransferSnapshot, includeImages = true): Promise<void> {
+  if (!includeImages) {
+    const zip = new JSZip();
+    const document = await buildDocument(zip, "", "spell", spell.classe, [spell], snapshot, false);
+    download(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" }), `sort-${spell.id}-${slug(spell.nom)}.json`);
+    return;
+  }
   const zip = new JSZip();
-  await buildDocument(zip, "", "spell", spell.classe, [spell], snapshot);
+  await buildDocument(zip, "", "spell", spell.classe, [spell], snapshot, true);
   await finishZip(zip, `sort-${spell.id}-${slug(spell.nom)}.zip`);
 }
 
-export async function exportClass(className: string, snapshot: TransferSnapshot): Promise<void> {
+export async function exportClass(className: string, snapshot: TransferSnapshot, includeImages = true): Promise<void> {
   const spells = className === "Sorts communs"
     ? snapshot.commonSpells
     : snapshot.spells.filter((spell) => spell.classe === className);
   if (!spells.length) throw new Error(`Aucun sort à exporter pour ${className}.`);
   const zip = new JSZip();
-  await buildDocument(zip, "", className === "Sorts communs" ? "common" : "class", className, spells, snapshot);
+  const document = await buildDocument(zip, "", className === "Sorts communs" ? "common" : "class", className, spells, snapshot, includeImages);
+  if (!includeImages) {
+    download(new Blob([JSON.stringify(document, null, 2)], { type: "application/json" }), `${slug(className)}-sorts.json`);
+    return;
+  }
   await finishZip(zip, `${slug(className)}-sorts.zip`);
 }
 
-export async function exportGlobal(snapshot: TransferSnapshot): Promise<void> {
+export async function exportGlobal(snapshot: TransferSnapshot, includeImages = true): Promise<void> {
   const zip = new JSZip();
+  const documents: SpellDumpDocument[] = [];
   const entries: Array<{ classe: string; config: string; nombreSorts: number }> = [];
   for (const className of CLASSES) {
     const spells = snapshot.spells.filter((spell) => spell.classe === className);
     const folder = `classes/${slug(className)}/`;
-    await buildDocument(zip, folder, "class", className, spells, snapshot);
+    const document = await buildDocument(zip, folder, "class", className, spells, snapshot, includeImages);
+    documents.push(document);
     entries.push({ classe: className, config: `${folder}config.json`, nombreSorts: spells.length });
   }
   const commonFolder = "sorts-communs/";
-  await buildDocument(zip, commonFolder, "common", "Sorts communs", snapshot.commonSpells, snapshot);
+  const commonDocument = await buildDocument(zip, commonFolder, "common", "Sorts communs", snapshot.commonSpells, snapshot, includeImages);
+  documents.push(commonDocument);
   entries.push({ classe: "Sorts communs", config: `${commonFolder}config.json`, nombreSorts: snapshot.commonSpells.length });
   zip.file("manifest.json", JSON.stringify({
     format: SPELL_DUMP_FORMAT,
@@ -393,6 +407,10 @@ export async function exportGlobal(snapshot: TransferSnapshot): Promise<void> {
     exporteLe: new Date().toISOString(),
     classes: entries,
   }, null, 2));
+  if (!includeImages) {
+    download(new Blob([JSON.stringify({ format: SPELL_DUMP_FORMAT, formatVersion: SPELL_DUMP_VERSION, scope: "global", exporteLe: new Date().toISOString(), classes: documents }, null, 2)], { type: "application/json" }), "gladiatrool-export-global.json");
+    return;
+  }
   await finishZip(zip, "gladiatrool-export-global.zip");
 }
 

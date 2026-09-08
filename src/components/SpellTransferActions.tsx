@@ -1,6 +1,7 @@
-import { useRef, useState, type ChangeEvent } from "react";
+import { useRef, useState, type ChangeEvent, type ReactNode } from "react";
 import type { Spell } from "../types";
 import { useDataStore } from "../lib/dataStore";
+import { useModalStore } from "../lib/modalStore";
 import { useToastStore } from "../lib/toastStore";
 import { errorMessage } from "../lib/utils";
 import {
@@ -16,68 +17,60 @@ function snapshot() {
   return transferSnapshot(useDataStore.getState());
 }
 
-export function ExportCharacteristicsButton() {
+function ExportOptions({ onExport }: { onExport: (includeImages: boolean) => Promise<void> }) {
   const [busy, setBusy] = useState(false);
-  async function run() {
+
+  async function choose(includeImages: boolean) {
     setBusy(true);
+    useModalStore.getState().close();
     try {
-      await exportCharacteristics(snapshot());
-      useToastStore.getState().showToast("Export des caractéristiques téléchargé.", "success");
+      await onExport(includeImages);
     } catch (error) {
       useToastStore.getState().showToast(errorMessage(error), "error");
     } finally {
       setBusy(false);
     }
   }
-  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter JSON"}</button>;
+
+  return (
+    <div className="export-options">
+      <p>Choisis le format de téléchargement.</p>
+      <div className="export-options-actions">
+        <button type="button" className="transfer-button" disabled={busy} onClick={() => void choose(false)}>
+          Sans image
+          <small>JSON brut uniquement</small>
+        </button>
+        <button type="button" className="primary-button" disabled={busy} onClick={() => void choose(true)}>
+          Avec image
+          <small>Comportement actuel (ZIP)</small>
+        </button>
+      </div>
+    </div>
+  );
+}
+
+function openExportOptions(title: string, onExport: (includeImages: boolean) => Promise<void>) {
+  useModalStore.getState().open(title, <ExportOptions onExport={onExport} />);
+}
+
+function ExportButton({ className, label, onExport }: { className: string; label: ReactNode; onExport: (includeImages: boolean) => Promise<void> }) {
+  return <button type="button" className={className} onClick={() => openExportOptions("Options d’export", onExport)}>{label}</button>;
+}
+
+export function ExportCharacteristicsButton() {
+  return <ExportButton className="toolbar-button" label="Exporter JSON" onExport={async () => { await exportCharacteristics(snapshot()); useToastStore.getState().showToast("Export des caractéristiques téléchargé.", "success"); }} />;
 }
 
 export function ExportAuditV2Button() {
-  const [busy, setBusy] = useState(false);
-  async function run() {
-    setBusy(true);
-    try {
-      await exportGlobalAuditV2(snapshot());
-      useToastStore.getState().showToast("Export d’audit v2 téléchargé.", "success");
-    } catch (error) {
-      useToastStore.getState().showToast(errorMessage(error), "error");
-    } finally {
-      setBusy(false);
-    }
-  }
-  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Full export"}</button>;
+  return <ExportButton className="toolbar-button" label="Full export" onExport={async () => { await exportGlobalAuditV2(snapshot()); useToastStore.getState().showToast("Export d’audit v2 téléchargé.", "success"); }} />;
 }
 
 export function ExportClassButton({ className }: { className: string }) {
-  const [busy, setBusy] = useState(false);
-  async function run() {
-    setBusy(true);
-    try {
-      await exportClass(className, snapshot());
-      useToastStore.getState().showToast(`Export de ${className} téléchargé.`, "success");
-    } catch (error) {
-      useToastStore.getState().showToast(errorMessage(error), "error");
-    } finally {
-      setBusy(false);
-    }
-  }
-  return <button type="button" className="transfer-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter"}</button>;
+  return <ExportButton className="transfer-button" label="Exporter" onExport={async (includeImages) => { await exportClass(className, snapshot(), includeImages); useToastStore.getState().showToast(`Export de ${className} téléchargé.`, "success"); }} />;
 }
 
 export function ExportSpellButton({ spell }: { spell: Spell }) {
-  const [busy, setBusy] = useState(false);
-  async function run() {
-    setBusy(true);
-    try {
-      await exportSpell(spell, snapshot());
-      useToastStore.getState().showToast(`Export du sort #${spell.id} téléchargé.`, "success");
-    } catch (error) {
-      useToastStore.getState().showToast(errorMessage(error), "error");
-    } finally {
-      setBusy(false);
-    }
-  }
-  return <button type="button" className="transfer-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter ce sort"}</button>;
+  return <ExportButton className="transfer-button" label="Exporter ce sort" onExport={async (includeImages) => { await exportSpell(spell, snapshot(), includeImages); useToastStore.getState().showToast(`Export du sort #${spell.id} téléchargé.`, "success"); }} />;
 }
 
 export function ImportButton() {
