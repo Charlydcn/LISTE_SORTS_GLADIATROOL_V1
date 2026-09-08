@@ -7,7 +7,6 @@ import {
   buildImportPayload,
   exportClass,
   exportGlobalAuditV2,
-  exportGlobal,
   exportCharacteristics,
   exportSpell,
   transferSnapshot,
@@ -33,22 +32,6 @@ export function ExportCharacteristicsButton() {
   return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter JSON"}</button>;
 }
 
-export function ExportGlobalButton() {
-  const [busy, setBusy] = useState(false);
-  async function run() {
-    setBusy(true);
-    try {
-      await exportGlobal(snapshot());
-      useToastStore.getState().showToast("Export global téléchargé.", "success");
-    } catch (error) {
-      useToastStore.getState().showToast(errorMessage(error), "error");
-    } finally {
-      setBusy(false);
-    }
-  }
-  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Exporter tout"}</button>;
-}
-
 export function ExportAuditV2Button() {
   const [busy, setBusy] = useState(false);
   async function run() {
@@ -62,7 +45,7 @@ export function ExportAuditV2Button() {
       setBusy(false);
     }
   }
-  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Export audit v2"}</button>;
+  return <button type="button" className="toolbar-button" disabled={busy} onClick={() => void run()}>{busy ? "Export…" : "Full export"}</button>;
 }
 
 export function ExportClassButton({ className }: { className: string }) {

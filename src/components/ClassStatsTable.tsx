@@ -30,7 +30,8 @@ export function ClassStatsTable({ className, compact = false }: { className: str
         </div>
       ) : (
         <div className="class-stats-panel-actions">
-          <ResetButton scope="class-stats" resetKey={className} />
+          <span className="class-stats-panel-name">{className}</span>
+          <ResetButton scope="class-stats" resetKey={className} disabledWhenEmpty={false} />
         </div>
       )}
       <div className="class-stats-table">

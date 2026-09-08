@@ -7,7 +7,7 @@ import { CLASSES } from "../lib/dataService";
 import { errorMessage } from "../lib/utils";
 import { HistoryModal } from "./HistoryModal";
 import { HistoryIcon, LoginIcon, LogoutIcon } from "./icons";
-import { ExportAuditV2Button, ExportGlobalButton, ImportButton } from "./SpellTransferActions";
+import { ExportAuditV2Button, ImportButton } from "./SpellTransferActions";
 
 function currentClassFilter(pathname: string): string {
   const match = pathname.match(/^\/(?:sorts\/classe|classe|mutations)\/(.+)$/);
@@ -46,7 +46,6 @@ export function Header() {
   return (
     <header id="app-header">
       <nav className="main-navigation" aria-label="Navigation principale">
-        <a className="site-title" href="#/sorts">Gladiatrool</a>
         <div className="navigation-links">
           <NavLink to="/sorts">Sorts</NavLink>
           <NavLink to="/caracteristiques">Caractéristiques</NavLink>
@@ -62,7 +61,6 @@ export function Header() {
         ) : (
           <span className="session-identity guest">Mode invité</span>
         )}
-        {isAdmin ? <ExportGlobalButton /> : null}
         {isAdmin ? <ExportAuditV2Button /> : null}
         {isAdmin ? <ImportButton /> : null}
         <button type="button" className="toolbar-button toolbar-icon-button" aria-label="Ouvrir l’historique" title="Ouvrir l’historique" onClick={openGlobalHistory}>

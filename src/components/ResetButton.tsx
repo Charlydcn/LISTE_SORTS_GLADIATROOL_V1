@@ -9,9 +9,10 @@ import { removeStoredSpellImages } from "../lib/spellImageService";
 interface ResetButtonProps {
   scope: string;
   resetKey: string | number;
+  disabledWhenEmpty?: boolean;
 }
 
-export function ResetButton({ scope, resetKey }: ResetButtonProps) {
+export function ResetButton({ scope, resetKey, disabledWhenEmpty = true }: ResetButtonProps) {
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
   const overrides = useDataStore((s) => s.overrides);
   const spells = useDataStore((s) => s.spells);
@@ -54,6 +55,10 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
   const resetCount = rows.length + customRows.length + restoredCount;
 
   async function performReset() {
+    if (resetCount === 0) {
+      useToastStore.getState().showToast("Aucune modification à réinitialiser.", "info");
+      return;
+    }
     setBusy(true);
     setConfirming(false);
     try {
@@ -100,7 +105,7 @@ export function ResetButton({ scope, resetKey }: ResetButtonProps) {
     <button
       type="button"
       className={`reset-button ${confirming ? "confirming" : ""}`}
-      disabled={resetCount === 0 || busy}
+      disabled={(disabledWhenEmpty && resetCount === 0) || busy}
       onClick={handleClick}
     >
       {busy ? "Réinitialisation…" : confirming ? "Vraiment ?" : "Réinitialiser"}
