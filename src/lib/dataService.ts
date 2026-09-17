@@ -1,5 +1,5 @@
-import type { ClassStats, Spell } from "../types";
-import { parseClassData, parseCommonData } from "./validation";
+import type { ClassStats, Spell, Weapon } from "../types";
+import { parseClassData, parseCommonData, parseWeaponData } from "./validation";
 
 export interface ClassFile {
   name: string;
@@ -62,6 +62,7 @@ export interface BaselineData {
   baseSpells: Spell[];
   baseCommonSpells: Spell[];
   baseMorphStats: Record<string, ClassStats>;
+  baseWeapons: Weapon[];
 }
 
 function assertSharedSpellsAreIdentical(spells: Omit<Spell, "classe" | "morphId">[]): void {
@@ -110,5 +111,9 @@ export async function loadBaselineData(): Promise<BaselineData> {
 
   const baseMorphStats = cloneData(BASE_MORPH_STATS);
 
-  return { baseSpells, baseCommonSpells, baseMorphStats };
+  const weaponsResponse = await fetch("data/armes.json");
+  if (!weaponsResponse.ok) throw new Error("Impossible de charger armes.json");
+  const weapons = parseWeaponData(await weaponsResponse.json(), "armes.json");
+
+  return { baseSpells, baseCommonSpells, baseMorphStats, baseWeapons: weapons };
 }

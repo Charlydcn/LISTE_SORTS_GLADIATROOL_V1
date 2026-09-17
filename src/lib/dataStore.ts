@@ -1,5 +1,5 @@
 import { create } from "zustand";
-import type { ClassStats, CreatedSpellRow, DeletedNativeSpellRow, OverrideRow, Spell, SpellSyncMapping } from "../types";
+import type { ClassStats, CreatedSpellRow, DeletedNativeSpellRow, OverrideRow, Spell, SpellSyncMapping, Weapon } from "../types";
 import { cloneData, loadBaselineData, type BaselineData } from "./dataService";
 import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
@@ -51,6 +51,7 @@ function setEffectiveValue(
   spells: Spell[],
   commonSpells: Spell[],
   morphStats: Record<string, ClassStats>,
+  weapons: Weapon[],
   entityType: string,
   entityKey: string,
   fieldKey: string,
@@ -72,6 +73,14 @@ function setEffectiveValue(
   }
   if (entityType === "class_stat" && morphStats[entityKey]) {
     morphStats[entityKey][fieldKey] = value as number;
+    return;
+  }
+  if (entityType === "weapon") {
+    const weapon = weapons.find((item) => item.classe === entityKey);
+    if (weapon) {
+      if (fieldKey === "effets") weapon.effets = Array.isArray(value) ? value.map(String) : [];
+      else (weapon as unknown as Record<string, unknown>)[fieldKey] = value;
+    }
   }
 }
 
@@ -88,9 +97,11 @@ interface DataState {
   baseSpells: Spell[];
   baseCommonSpells: Spell[];
   baseMorphStats: Record<string, ClassStats>;
+  baseWeapons: Weapon[];
   spells: Spell[];
   commonSpells: Spell[];
   morphStats: Record<string, ClassStats>;
+  weapons: Weapon[];
   overrides: Record<string, OverrideRow>;
   createdSpells: CreatedSpellRow[];
   deletedNativeSpells: DeletedNativeSpellRow[];
@@ -129,9 +140,11 @@ export const useDataStore = create<DataState>((set, get) => ({
   baseSpells: [],
   baseCommonSpells: [],
   baseMorphStats: {},
+  baseWeapons: [],
   spells: [],
   commonSpells: [],
   morphStats: {},
+  weapons: [],
   overrides: {},
   createdSpells: [],
   deletedNativeSpells: [],
@@ -143,6 +156,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       baseSpells: baseline.baseSpells,
       baseCommonSpells: baseline.baseCommonSpells,
       baseMorphStats: baseline.baseMorphStats,
+      baseWeapons: baseline.baseWeapons,
     });
     return baseline;
   },
@@ -152,6 +166,7 @@ export const useDataStore = create<DataState>((set, get) => ({
       spells: cloneData(get().baseSpells),
       commonSpells: cloneData(get().baseCommonSpells),
       morphStats: cloneData(get().baseMorphStats),
+      weapons: cloneData(get().baseWeapons),
     });
   },
 
@@ -165,15 +180,17 @@ export const useDataStore = create<DataState>((set, get) => ({
       if (spell.commun) commonSpells.push(spell); else spells.push(spell);
     });
     const morphStats = cloneData(get().baseMorphStats);
+    const weapons = cloneData(get().baseWeapons);
     const overrides: Record<string, OverrideRow> = {};
     rows.forEach((row) => {
       overrides[mapKey(row.entity_type, row.entity_key, row.field_key)] = row;
-      setEffectiveValue(spells, commonSpells, morphStats, row.entity_type, row.entity_key, row.field_key, row.value);
+      setEffectiveValue(spells, commonSpells, morphStats, weapons, row.entity_type, row.entity_key, row.field_key, row.value);
     });
     set({
       spells,
       commonSpells,
       morphStats,
+      weapons,
       overrides,
       status: "ready",
       loadError: "",
@@ -360,8 +377,9 @@ export const useDataStore = create<DataState>((set, get) => ({
     const spells = cloneData(get().spells);
     const commonSpells = cloneData(get().commonSpells);
     const morphStats = cloneData(get().morphStats);
-    setEffectiveValue(spells, commonSpells, morphStats, entityType, String(entityKey), fieldKey, newValue);
-    set({ spells, commonSpells, morphStats, overrides });
+    const weapons = cloneData(get().weapons);
+    setEffectiveValue(spells, commonSpells, morphStats, weapons, entityType, String(entityKey), fieldKey, newValue);
+    set({ spells, commonSpells, morphStats, weapons, overrides });
 
     return { changed: true, row, historyId: result.history_id ?? undefined };
   },
@@ -386,12 +404,13 @@ export const useDataStore = create<DataState>((set, get) => ({
     const spells = cloneData(get().spells);
     const commonSpells = cloneData(get().commonSpells);
     const morphStats = cloneData(get().morphStats);
+    const weapons = cloneData(get().weapons);
     rows.forEach((row) => {
       const baseline = get().getBaselineValue(row.entity_type, row.entity_key, row.field_key);
       delete overrides[mapKey(row.entity_type, String(row.entity_key), row.field_key)];
-      setEffectiveValue(spells, commonSpells, morphStats, row.entity_type, String(row.entity_key), row.field_key, baseline);
+      setEffectiveValue(spells, commonSpells, morphStats, weapons, row.entity_type, String(row.entity_key), row.field_key, baseline);
     });
-    set({ spells, commonSpells, morphStats, overrides });
+    set({ spells, commonSpells, morphStats, weapons, overrides });
     return parseResetCount(data);
   },
 
@@ -411,7 +430,8 @@ export const useDataStore = create<DataState>((set, get) => ({
     const rows = Object.values(get().overrides).filter(
       (row) => (row.entity_type === "spell" && allIds.has(String(row.entity_key)))
         || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${className}/`))
-        || (row.entity_type === "class_stat" && row.entity_key === className),
+        || (row.entity_type === "class_stat" && row.entity_key === className)
+        || (row.entity_type === "weapon" && row.entity_key === className),
     );
     const targets = rows.map((row) => ({
       entity_type: row.entity_type,
@@ -432,7 +452,8 @@ export const useDataStore = create<DataState>((set, get) => ({
     Object.values(overrides).forEach((row) => {
       if ((row.entity_type === "spell" && allIds.has(String(row.entity_key)))
         || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${className}/`))
-        || (row.entity_type === "class_stat" && row.entity_key === className)) {
+        || (row.entity_type === "class_stat" && row.entity_key === className)
+        || (row.entity_type === "weapon" && row.entity_key === className)) {
         delete overrides[mapKey(row.entity_type, String(row.entity_key), row.field_key)];
       }
     });
@@ -488,6 +509,10 @@ export const useDataStore = create<DataState>((set, get) => ({
       if (fieldKey === "effets.critiques") return effectLines(spell, "critiques");
       return cloneData((spell as Record<string, unknown>)[fieldKey]);
     }
+    if (entityType === "weapon") {
+      const weapon = get().weapons.find((item) => item.classe === entityKey);
+      return weapon ? cloneData((weapon as unknown as Record<string, unknown>)[fieldKey]) : undefined;
+    }
     return cloneData(get().morphStats[entityKey]?.[fieldKey]);
   },
 
@@ -508,6 +533,10 @@ export const useDataStore = create<DataState>((set, get) => ({
       if (fieldKey === "effets.normaux") return effectLines(spell, "normaux");
       if (fieldKey === "effets.critiques") return effectLines(spell, "critiques");
       return cloneData((spell as Record<string, unknown>)[fieldKey]);
+    }
+    if (entityType === "weapon") {
+      const weapon = get().baseWeapons.find((item) => item.classe === entityKey);
+      return weapon ? cloneData((weapon as unknown as Record<string, unknown>)[fieldKey]) : undefined;
     }
     return cloneData(get().baseMorphStats[entityKey]?.[fieldKey]);
   },

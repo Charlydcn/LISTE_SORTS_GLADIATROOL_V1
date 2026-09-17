@@ -540,6 +540,11 @@ body {
   gap: 18px;
 }
 
+.class-browse {
+  flex: 1 1 auto;
+  min-width: 0;
+}
+
 .spell-grid {
   flex: 1 1 auto;
   display: grid;
@@ -629,6 +634,107 @@ body {
 
 .spell-detail .spell-card {
   width: 100%;
+}
+
+.weapon-card {
+  margin-top: 18px;
+  width: 100%;
+}
+
+.weapon-header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  min-height: 74px;
+  padding: 12px 14px;
+  background: var(--cream-row-a);
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.weapon-icon {
+  width: 58px;
+  height: 58px;
+  flex: 0 0 58px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--border-dark);
+  border-radius: 6px;
+  background: var(--cream);
+}
+
+.weapon-icon img {
+  width: 46px;
+  height: 46px;
+}
+
+.weapon-name-block {
+  min-width: 0;
+  flex: 1 1 auto;
+}
+
+.weapon-name-block h3 {
+  margin: 0;
+  font-size: 18px;
+  overflow-wrap: anywhere;
+}
+
+.weapon-name-block span {
+  color: var(--text-muted);
+  font-size: 12px;
+}
+
+.weapon-stats-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  border-bottom: 1px solid var(--border-dark);
+}
+
+.weapon-stat-row {
+  min-height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 8px;
+  padding: 7px 10px;
+  background: var(--cream-row-a);
+  border-bottom: 1px solid rgba(90, 87, 56, .18);
+}
+
+.weapon-stat-row:nth-child(odd) {
+  border-right: 1px solid rgba(90, 87, 56, .28);
+}
+
+.weapon-stat-row .stat-label {
+  font-size: 12px;
+}
+
+.weapon-stat-row .editable-field,
+.weapon-stat-row .field-value {
+  text-align: right;
+}
+
+.weapon-type-value {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.weapon-type-value img {
+  width: 20px;
+  height: 20px;
+}
+
+.weapon-select-editor {
+  min-width: 0;
+  justify-content: flex-end;
+}
+
+.weapon-select-editor select {
+  max-width: 125px;
+}
+
+.weapon-effects-box {
+  min-height: 110px;
 }
 
 .spell-detail .detail-placeholder {
@@ -1884,6 +1990,14 @@ body.modal-open {
     grid-template-columns: 1fr;
     grid-template-rows: none;
     grid-auto-flow: row;
+  }
+
+  .weapon-stats-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .weapon-stat-row:nth-child(odd) {
+    border-right: 0;
   }
 
   .class-stats-table {

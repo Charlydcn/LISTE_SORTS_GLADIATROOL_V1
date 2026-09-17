@@ -10,11 +10,13 @@ import { SpellCreator } from "./SpellCreator";
 import { useSessionStore } from "../lib/sessionStore";
 import { useEditingStore } from "../lib/editingStore";
 import { ExportClassButton } from "./SpellTransferActions";
+import { WeaponCard } from "./WeaponCard";
 
 export function ClassPage() {
   const params = useParams<{ classe: string; spellId?: string }>();
   const className = decodeURIComponent(params.classe || "");
   const spells = useDataStore((s) => s.spells);
+  const weapon = useDataStore((s) => s.weapons.find((item) => item.classe === className));
   const [selectedId, setSelectedId] = useState<string | null>(params.spellId ?? null);
   const [creating, setCreating] = useState(false);
   const isAdmin = useSessionStore((s) => s.mode) === "admin";
@@ -51,7 +53,10 @@ export function ClassPage() {
       </div>
       {isAdmin ? <button type="button" className="new-spell-button" onClick={() => { useEditingStore.getState().close(); setCreating(true); setSelectedId(null); }}>Nouveau sort</button> : null}
       <div className="class-layout">
-        <SortableSpellGrid className={className} spells={classSpells} selectedId={selectedId} onSelect={(spell) => { useEditingStore.getState().close(); setCreating(false); setSelectedId(String(spell.id)); }} />
+        <div className="class-browse">
+          <SortableSpellGrid className={className} spells={classSpells} selectedId={selectedId} onSelect={(spell) => { useEditingStore.getState().close(); setCreating(false); setSelectedId(String(spell.id)); }} />
+          {weapon ? <WeaponCard weapon={weapon} /> : null}
+        </div>
         <aside className="spell-detail" id="spell-detail">
           {creating ? <SpellCreator className={className} onCreated={(spell) => { setCreating(false); setSelectedId(String(spell.id)); }} /> : selected ? (
             <SpellCard key={selected.id} spell={selected} />

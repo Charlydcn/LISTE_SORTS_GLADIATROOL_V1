@@ -1,0 +1,18 @@
+{
+  "format": "gladiatrool-weapons",
+  "formatVersion": 1,
+  "items": [
+    { "classe": "Feca", "nom": "Bâton de Feca", "pa": 4, "cc": "1/40", "bonusCc": "+5", "typeArme": "Bâton", "effets": ["Dommages : 5 à 10 (neutre)", "Dommages : 5 à 10 (feu)", "Dommages : 5 à 10 (terre)", "-1 PA"] },
+    { "classe": "Osamodas", "nom": "Marteau Osamodas", "pa": 4, "cc": "1/50", "bonusCc": "+10", "typeArme": "Marteau", "effets": ["Dommages : 1 à 15 (neutre)", "Dommages : 1 à 15 (feu)", "Dommages : 1 à 15 (terre)", "-1 PA"] },
+    { "classe": "Enutrof", "nom": "Pelle Enutrof", "pa": 4, "cc": "1/50", "bonusCc": "+5", "typeArme": "Pelle", "effets": ["Dommages : 7 à 10 (feu)", "Dommages : 7 à 10 (eau)", "Dommages : 7 à 10 (terre)", "Dommages : 7 à 10 (air)", "-1 PA"] },
+    { "classe": "Sram", "nom": "Dagues Sram", "pa": 3, "cc": "1/30", "bonusCc": "+15", "typeArme": "Dagues", "effets": ["Vol de vie : 8 à 10 (air)", "Vol de vie : 8 à 10 (terre)", "-1 PA"] },
+    { "classe": "Xelor", "nom": "Marteau Xelor", "pa": 4, "cc": "1/50", "bonusCc": "+10", "typeArme": "Marteau", "effets": ["Dommages : 6 à 8 (feu)", "Dommages : 6 à 8 (eau)", "Dommages : 6 à 8 (terre)", "Dommages : 6 à 8 (air)", "-1 PA"] },
+    { "classe": "Ecaflip", "nom": "Epée Ecaflip", "pa": 4, "cc": "1/40", "bonusCc": "+15", "typeArme": "Épée", "effets": ["Dommages : 2 à 13 (feu)", "Dommages : 2 à 13 (eau)", "Dommages : 2 à 13 (terre)", "Dommages : 2 à 13 (air)", "-1 PA"] },
+    { "classe": "Eniripsa", "nom": "Baguette d'Eniripsa", "pa": 4, "cc": "1/50", "bonusCc": "+10", "typeArme": "Baguette", "effets": ["Dommages : 5 à 7 (feu)", "Dommages : 5 à 7 (terre)", "Dommages : 5 à 7 (air)", "-1 PA"] },
+    { "classe": "Iop", "nom": "Epée de Iop", "pa": 4, "cc": "1/40", "bonusCc": "+15", "typeArme": "Épée", "effets": ["Dommages : 9 à 13 (neutre)", "Dommages : 9 à 13 (terre)", "Dommages : 9 à 13 (air)", "-1 PA"] },
+    { "classe": "Crâ", "nom": "Arc de Crâ", "pa": 4, "cc": "1/30", "bonusCc": "+10", "typeArme": "Arc", "effets": ["Dommages : 6 à 9 (feu)", "Dommages : 6 à 9 (eau)", "Dommages : 6 à 9 (terre)", "Dommages : 6 à 9 (air)", "-1 PA"] },
+    { "classe": "Sadida", "nom": "Bâton de Sadida", "pa": 4, "cc": "1/40", "bonusCc": "+5", "typeArme": "Bâton", "effets": ["Dommages : 4 à 8 (feu)", "Dommages : 4 à 8 (eau)", "Dommages : 4 à 8 (terre)", "Dommages : 4 à 8 (air)", "-1 PA"] },
+    { "classe": "Sacrieur", "nom": "Dagues Sacrieur", "pa": 3, "cc": "1/35", "bonusCc": "+15", "typeArme": "Dagues", "effets": ["Dommages : 4 à 5 (feu)", "Dommages : 4 à 5 (eau)", "Dommages : 4 à 5 (terre)", "Dommages : 4 à 5 (air)", "-1 PA"] },
+    { "classe": "Pandawa", "nom": "Hache du Pandawa", "pa": 4, "cc": "1/50", "bonusCc": "+5", "typeArme": "Hache", "effets": ["Dommages : 4 à 14 (feu)", "Dommages : 4 à 14 (eau)", "Dommages : 4 à 14 (terre)", "Dommages : 4 à 14 (air)", "-1 PA"] }
+  ]
+}

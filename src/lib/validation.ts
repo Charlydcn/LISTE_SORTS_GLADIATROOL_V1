@@ -1,5 +1,5 @@
 import { z, ZodError } from "zod";
-import type { CommentRow, CreatedSpellRow, CreatedTonicRow, DeletedNativeSpellRow, DeletedNativeTonicRow, HistoryRow, OverrideRow, Spell, SpellSyncMapping, Tonic } from "../types";
+import { WEAPON_TYPES, type CommentRow, type CreatedSpellRow, type CreatedTonicRow, type DeletedNativeSpellRow, type DeletedNativeTonicRow, type HistoryRow, type OverrideRow, type Spell, type SpellSyncMapping, type Tonic, type Weapon, type WeaponType } from "../types";
 
 const effectSchema = z.object({
   onglet: z.enum(["normaux", "critiques"]),
@@ -54,9 +54,25 @@ const tonicDataSchema = z.object({
   items: z.array(tonicSchema),
 });
 
+const weaponSchema = z.object({
+  classe: z.string().min(1),
+  nom: z.string().min(1),
+  pa: z.number().int().nonnegative(),
+  cc: z.string().min(1),
+  bonusCc: z.string(),
+  typeArme: z.string().min(1),
+  effets: z.array(z.string()),
+});
+
+const weaponDataSchema = z.object({
+  format: z.literal("gladiatrool-weapons"),
+  formatVersion: z.literal(1),
+  items: z.array(weaponSchema),
+});
+
 const overrideRowSchema = z.object({
   id: z.string().min(1),
-  entity_type: z.enum(["spell", "spell_position", "class_stat", "tonic"]),
+  entity_type: z.enum(["spell", "spell_position", "class_stat", "tonic", "weapon"]),
   entity_key: z.string().min(1),
   field_key: z.string().min(1),
   value: z.unknown(),
@@ -68,7 +84,7 @@ const overrideRowSchema = z.object({
 
 const historyRowSchema = z.object({
   id: z.string().min(1),
-  entity_type: z.enum(["spell", "spell_position", "class_stat", "tonic", "import"]),
+  entity_type: z.enum(["spell", "spell_position", "class_stat", "tonic", "weapon", "import"]),
   entity_key: z.string().min(1),
   field_key: z.string().min(1),
   old_value: z.unknown(),
@@ -171,6 +187,19 @@ export function parseCommonData(
 
 export function parseTonicData(value: unknown, source: string): Tonic[] {
   return parseWithSource(tonicDataSchema, value, source).items as Tonic[];
+}
+
+export function parseWeaponData(value: unknown, source: string): Weapon[] {
+  const parsed = parseWithSource(weaponDataSchema, value, source);
+  return parsed.items.map((weapon) => {
+    const typeArme = WEAPON_TYPES.includes(weapon.typeArme as WeaponType)
+      ? weapon.typeArme as WeaponType
+      : "Épée";
+    if (typeArme !== weapon.typeArme) {
+      console.warn(`Type d’arme inconnu dans ${source} pour ${weapon.classe} : ${weapon.typeArme}. Utilisation de Épée.`);
+    }
+    return { ...weapon, typeArme } as Weapon;
+  });
 }
 
 export function parseOverrideRows(value: unknown, source: string): OverrideRow[] {

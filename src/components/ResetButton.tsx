@@ -38,7 +38,12 @@ export function ResetButton({ scope, resetKey, disabledWhenEmpty = true }: Reset
     rows = Object.values(overrides).filter(
       (row) => (row.entity_type === "spell" && ids.includes(String(row.entity_key)))
         || (row.entity_type === "spell_position" && row.entity_key.startsWith(`${String(resetKey)}/`))
-        || (row.entity_type === "class_stat" && row.entity_key === String(resetKey)),
+        || (row.entity_type === "class_stat" && row.entity_key === String(resetKey))
+        || (row.entity_type === "weapon" && row.entity_key === String(resetKey)),
+    );
+  } else if (scope === "weapon") {
+    rows = Object.values(overrides).filter(
+      (row) => row.entity_type === "weapon" && String(row.entity_key) === String(resetKey),
     );
   } else if (scope === "class-stats") {
     rows = Object.values(overrides).filter(

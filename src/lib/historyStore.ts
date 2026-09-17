@@ -103,6 +103,13 @@ function searchFilters(search: string, classFilter: string): { entityKeys: strin
       context: `${tonic.title} ${tonic.className ?? ""} ${tonic.kind === "mutation" ? "mutation" : "tonique"} ${tonic.id}`,
       fields: ["title", "effects", "spellId", "__created__", "__deleted__", "__restored__"],
     }));
+  useDataStore.getState().weapons
+    .filter((weapon) => !classFilter || classFilter !== "Sorts communs" && weapon.classe === classFilter)
+    .forEach((weapon) => entities.push({
+      key: weapon.classe,
+      context: `${weapon.nom} ${weapon.classe} arme corps à corps`,
+      fields: ["pa", "cc", "bonusCc", "typeArme", "effets"],
+    }));
 
   const entityKeys = new Set<string>();
   const fieldKeys = new Set<string>();
@@ -252,6 +259,11 @@ export const useHistoryStore = create<HistoryState>((set, get) => ({
     const { spells, commonSpells } = useDataStore.getState();
     if (row.entity_type === "import") return `Import de ${row.changed_by_label || "l’utilisateur"}`;
     if (row.entity_type === "class_stat") return row.entity_key;
+    if (row.entity_type === "weapon") {
+      const weapon = useDataStore.getState().weapons.find((item) => item.classe === row.entity_key)
+        ?? useDataStore.getState().baseWeapons.find((item) => item.classe === row.entity_key);
+      return weapon ? `${weapon.classe} · ${weapon.nom}` : `Arme · ${row.entity_key}`;
+    }
     const matches = [...spells, ...commonSpells].filter(
       (spell) => String(spell.id) === String(row.entity_key),
     );

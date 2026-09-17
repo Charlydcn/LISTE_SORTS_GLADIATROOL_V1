@@ -43,6 +43,19 @@ export interface OverrideRow {
   updated_by_label?: string;
 }
 
+export const WEAPON_TYPES = ["Arc", "Baguette", "Bâton", "Dagues", "Épée", "Hache", "Marteau", "Pelle"] as const;
+export type WeaponType = (typeof WEAPON_TYPES)[number];
+
+export interface Weapon {
+  classe: string;
+  nom: string;
+  pa: number;
+  cc: string;
+  bonusCc: string;
+  typeArme: WeaponType;
+  effets: string[];
+}
+
 export type TonicKind = "tonique" | "mutation";
 export type TonicCategory = "palier1" | "palier2" | "rarus" | "mutation";
 
