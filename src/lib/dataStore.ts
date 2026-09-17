@@ -4,6 +4,7 @@ import { cloneData, loadBaselineData, type BaselineData } from "./dataService";
 import { useSessionStore } from "./sessionStore";
 import { supabase } from "./supabase";
 import { errorMessage } from "./utils";
+import { weaponNameForType } from "./weaponUtils";
 import type { ImportPayload } from "./spellTransfer";
 import {
   parseApplyOverrideResult,
@@ -79,6 +80,11 @@ function setEffectiveValue(
     const weapon = weapons.find((item) => item.classe === entityKey);
     if (weapon) {
       if (fieldKey === "effets") weapon.effets = Array.isArray(value) ? value.map(String) : [];
+      else if (fieldKey === "typeArme") {
+        const nextType = value as Weapon["typeArme"];
+        weapon.nom = weaponNameForType(weapon.nom, weapon.typeArme, nextType);
+        weapon.typeArme = nextType;
+      }
       else (weapon as unknown as Record<string, unknown>)[fieldKey] = value;
     }
   }
