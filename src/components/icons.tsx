@@ -54,18 +54,27 @@ export function ClassIcon({ className, title }: { className: string; title?: str
 }
 
 const ELEMENT_FILES: Record<string, string> = {
-  Eau: "WaterDamage.svg",
-  Terre: "EarthDamage.svg",
-  Air: "AirDamage.svg",
-  Feu: "FireDamage.svg",
-  Neutre: "NeutralDamage.svg",
+  eau: "WaterDamage.svg",
+  terre: "EarthDamage.svg",
+  air: "AirDamage.svg",
+  feu: "FireDamage.svg",
+  neutre: "NeutralDamage.svg",
+};
+
+const ELEMENT_LABELS: Record<string, string> = {
+  eau: "Eau",
+  terre: "Terre",
+  air: "Air",
+  feu: "Feu",
+  neutre: "Neutre",
 };
 
 export function ElementIcon({ text }: { text: string }) {
-  if (!/(Dommages|Dommage|Vole)/.test(text)) return null;
-  const match = text.match(/\((Eau|Terre|Air|Feu|Neutre)\)/);
+  if (!/(Dommages|Dommage|Vole)/i.test(text)) return null;
+  const match = text.match(/\((Eau|Terre|Air|Feu|Neutre)\)/i);
   if (!match) return null;
-  return <img className="element" src={`assets/img/icons/${ELEMENT_FILES[match[1]]}`} alt={match[1]} />;
+  const element = match[1].toLocaleLowerCase("fr");
+  return <img className="element" src={`assets/img/icons/${ELEMENT_FILES[element]}`} alt={ELEMENT_LABELS[element]} />;
 }
 
 const TONIC_STAT_ICONS: Array<{ pattern: RegExp; file: string; label: string }> = [
